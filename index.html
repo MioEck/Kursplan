@@ -3,7 +3,16 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
-<title>Kursplan</title>
+<title>Busfahrer Kursplan</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#f5a623">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Kursplan">
+<link rel="apple-touch-icon" href="icon-512.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0f1117;--s1:#1a1d27;--s2:#22263a;--acc:#f5a623;--txt:#eef0f8;--mut:#6b7199;--brd:#2e3350;--red:#ef4444;--grn:#2ecc71;}
@@ -1543,6 +1552,15 @@ setInterval(function() {
 renderTabs();
 renderLines();
 
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('sw.js')
+      .then(function(r){ console.log('SW OK'); })
+      .catch(function(e){ console.log('SW Fehler:', e); });
+  });
+}
 </script>
 </body>
 </html>
