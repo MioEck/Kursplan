@@ -986,29 +986,34 @@ const SEED = {
 const STOP_COORDS = {}; // Koordinaten werden per 📍 selbst eingemessen
 
 // STATE
-const VER = 'v16';
+const VER = 'v21';
+// Harten Reset erzwingen - löscht alten Cache komplett
+localStorage.removeItem('kp_data');
+localStorage.removeItem('kp_ver');
+localStorage.removeItem('kp_coords');
 (function() {
-  // Immer SEED laden - vergleiche Haltestellen-Anzahl
-  var needReset = true;
   try {
     var sd = localStorage.getItem('kp_data');
+    var needReset = true;
     if (sd) {
       var parsed = JSON.parse(sd);
-      // Zähle alle Haltestellen
       var total = 0;
       for (var i = 0; i < parsed.kurse.length; i++) {
-        var lines = parsed.kurse[i].lines || [];
-        for (var j = 0; j < lines.length; j++) {
-          total += (lines[j].stops || []).length;
+        var ls = parsed.kurse[i].lines || [];
+        for (var j = 0; j < ls.length; j++) {
+          total += (ls[j].stops || []).length;
         }
       }
-      // SEED hat 1048 Haltestellen - wenn weniger gespeichert, reset
+      // Kurs 212 hat jetzt Stops - mind. 1000 gesamt nötig
       if (total >= 1000 && localStorage.getItem('kp_ver') === VER) {
         needReset = false;
       }
     }
-  } catch(e) {}
-  if (needReset) {
+    if (needReset) {
+      localStorage.setItem('kp_data', JSON.stringify(SEED));
+      localStorage.setItem('kp_ver', VER);
+    }
+  } catch(e) {
     localStorage.setItem('kp_data', JSON.stringify(SEED));
     localStorage.setItem('kp_ver', VER);
   }
