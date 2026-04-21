@@ -1,45 +1,20 @@
-var CACHE = 'kursplan-v17';
+const CACHE = 'kursplan-v1';
+const ASSETS = ['/', '/index.html', '/manifest.json', '/icon-192.png', '/icon-512.png'];
 
-self.addEventListener('install', function(e) {
-  e.waitUntil(
-    caches.open(CACHE).then(function(cache) {
-      return cache.addAll(['/', '/index.html', '/reset.html']);
-    }).then(function() {
-      return self.skipWaiting();
-    })
-  );
+self.addEventListener('install', e => {
+  e.waitUntil(caches.open(CACHE).then(c => c.addAll(ASSETS)));
+  self.skipWaiting();
 });
 
-self.addEventListener('activate', function(e) {
-  e.waitUntil(
-    caches.keys().then(function(keys) {
-      return Promise.all(
-        keys.filter(function(k) { return k !== CACHE; })
-            .map(function(k) { return caches.delete(k); })
-      );
-    }).then(function() {
-      return self.clients.claim();
-    })
-  );
+self.addEventListener('activate', e => {
+  e.waitUntil(caches.keys().then(keys =>
+    Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k)))
+  ));
+  self.clients.claim();
 });
 
-self.addEventListener('fetch', function(e) {
-  // Netzwerk zuerst, dann Cache als Fallback
+self.addEventListener('fetch', e => {
   e.respondWith(
-    fetch(e.request)
-      .then(function(response) {
-        // Antwort in Cache speichern
-        var clone = response.clone();
-        caches.open(CACHE).then(function(cache) {
-          cache.put(e.request, clone);
-        });
-        return response;
-      })
-      .catch(function() {
-        // Offline: aus Cache laden
-        return caches.match(e.request).then(function(cached) {
-          return cached || caches.match('/index.html');
-        });
-      })
+    caches.match(e.request).then(cached => cached || fetch(e.request).catch(() => caches.match('/index.html')))
   );
 });
