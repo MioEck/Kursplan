@@ -97,6 +97,9 @@ main{padding:12px 16px 100px;}
 .se-row .ti{width:66px;flex:none;}
 .se-row button{background:none;border:none;color:var(--mut);font-size:17px;cursor:pointer;}
 .asb{background:var(--s2);border:1px dashed var(--brd);color:var(--mut);border-radius:8px;padding:7px;width:100%;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:13px;margin-top:2px;}
+.lch{position:relative;}
+.lch-clock{display:none;position:absolute;top:10px;right:14px;background:var(--s2);border:1.5px solid var(--brd);border-radius:12px;padding:8px 14px;font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:2px;color:var(--txt);line-height:1;pointer-events:none;z-index:5;}
+.lc.exp .lch-clock{display:block;}
 </style>
 </head>
 <body>
@@ -233,9 +236,92 @@ const SEED = {
     {
       id: 'kurs212', name: 'Kurs 212', datum: '2026-04-13',
       lines: [
-        { id:'m1', linienNr:'711', fahrtNr:'3711002', start:'Vogelsang-Grünholz, ZOB', end:'Eckernförde, Bahnhof/ZOB', startTime:'05:10', endTime:'05:43', stops:[] },
-        { id:'m2', linienNr:'700', fahrtNr:'3700003', start:'Eckernförde, Bahnhof/ZOB', end:'Rendsburg, Stadttheater/ZOB', startTime:'06:02', endTime:'06:44', stops:[] },
-        { id:'m3', linienNr:'700', fahrtNr:'3700006', start:'Rendsburg, Bahnhofstr./ZOB', end:'Eckernförde, Bahnhof/ZOB', startTime:'06:47', endTime:'07:28', stops:[] }
+        { id:'m1', linienNr:'711', fahrtNr:'3711002', start:'Vogelsang-Grünholz, ZOB', end:'Eckernförde, Bahnhof/ZOB', startTime:'05:10', endTime:'05:43',
+          stops:[
+            {time:'05:10',name:'Vogelsang-Grünholz, ZOB'},
+            {time:'05:13',name:'Kratt'},
+            {time:'05:14',name:'Söby, Brücke'},
+            {time:'05:15',name:'Söby, Neu-Seeholz'},
+            {time:'05:16',name:'Holzdorf, Dorfstraße'},
+            {time:'05:17',name:'Holzdorf, Moorbrücke'},
+            {time:'05:19',name:'Loose'},
+            {time:'05:22',name:'Barkelsby, Schwansenstraße'},
+            {time:'05:23',name:'Barkelsby, Rommelsworth'},
+            {time:'05:24',name:'Barkelsby, Grundschule'},
+            {time:'05:25',name:'Barkelsby, Westerschauer Weg'},
+            {time:'05:29',name:'Eckernförde, Kreiskrankenhaus'},
+            {time:'05:30',name:'Eckernförde, Friedhof Schleswiger Straße'},
+            {time:'05:31',name:'Eckernförde, Gorch-Fock-Straße'},
+            {time:'05:31',name:'Eckernförde, J.-H.-Fehrs-Weg'},
+            {time:'05:32',name:'Eckernförde, Mühlenberg'},
+            {time:'05:33',name:'Eckernförde, Gaehtjestraße'},
+            {time:'05:37',name:'Eckernförde, Rathaus'},
+            {time:'05:43',name:'Eckernförde, Bahnhof/ZOB'}
+          ]},
+        { id:'m2', linienNr:'700', fahrtNr:'3700003', start:'Eckernförde, Bahnhof/ZOB', end:'Rendsburg, Stadttheater/ZOB', startTime:'06:02', endTime:'06:44',
+          stops:[
+            {time:'06:02',name:'Eckernförde, Bahnhof/ZOB'},
+            {time:'06:04',name:'Eckernförde, Admiral-Scheer-Straße'},
+            {time:'06:05',name:'Eckernförde, Rendsburger Straße'},
+            {time:'06:07',name:'Eckernförde, Domsland B 203'},
+            {time:'06:08',name:'Friedensthal, An der Bundesstraße'},
+            {time:'06:09',name:'Goosefeld, Landkrug'},
+            {time:'06:10',name:'Groß Wittensee, Wohldmaas'},
+            {time:'06:11',name:'Groß Wittensee, Timmermeß'},
+            {time:'06:12',name:'Groß Wittensee, Söhr'},
+            {time:'06:14',name:'Groß Wittensee, Damendorfer Straße'},
+            {time:'06:16',name:'Groß Wittensee, Kirchenweg'},
+            {time:'06:17',name:'Groß Wittensee, Kirchhorster Weg'},
+            {time:'06:19',name:'Klein Wittensee'},
+            {time:'06:22',name:'Holzbunge, Nord'},
+            {time:'06:22',name:'Holzbunge, Hauptstraße'},
+            {time:'06:23',name:'Neu Duvenstedt, Hegenholt'},
+            {time:'06:24',name:'Neu Duvenstedt'},
+            {time:'06:26',name:'Borgstedt, Rossahlredder'},
+            {time:'06:27',name:'Büdelsdorf, Neuer Wall'},
+            {time:'06:28',name:'Büdelsdorf, Brandheide'},
+            {time:'06:29',name:'Büdelsdorf, Rosenweg'},
+            {time:'06:30',name:'Büdelsdorf, Berliner Straße'},
+            {time:'06:31',name:'Büdelsdorf, Kampstraße'},
+            {time:'06:31',name:'Büdelsdorf, Lindenstraße'},
+            {time:'06:32',name:'Büdelsdorf, Parkallee'},
+            {time:'06:33',name:'Büdelsdorf, Carlshütte'},
+            {time:'06:34',name:'Büdelsdorf, Rondo'},
+            {time:'06:36',name:'Rendsburg, Thormannplatz'},
+            {time:'06:38',name:'Rendsburg, Schiffbrückenplatz'},
+            {time:'06:44',name:'Rendsburg, Stadttheater/ZOB'}
+          ]},
+        { id:'m3', linienNr:'700', fahrtNr:'3700006', start:'Rendsburg, Bahnhofstraße/ZOB', end:'Eckernförde, Bahnhof/ZOB', startTime:'06:47', endTime:'07:28',
+          stops:[
+            {time:'06:47',name:'Rendsburg, Bahnhofstraße/ZOB'},
+            {time:'06:50',name:'Rendsburg, Schlossplatz'},
+            {time:'06:51',name:'Büdelsdorf, Rondo'},
+            {time:'06:52',name:'Büdelsdorf, Carlshütte'},
+            {time:'06:53',name:'Büdelsdorf, Lindenstraße'},
+            {time:'06:54',name:'Büdelsdorf, Kampstraße'},
+            {time:'06:55',name:'Büdelsdorf, Berliner Straße'},
+            {time:'06:56',name:'Büdelsdorf, Rosenweg'},
+            {time:'06:57',name:'Büdelsdorf, Brandheide'},
+            {time:'06:58',name:'Büdelsdorf, Neuer Wall'},
+            {time:'06:59',name:'Borgstedt, Rossahlredder'},
+            {time:'07:01',name:'Neu Duvenstedt'},
+            {time:'07:02',name:'Neu Duvenstedt, Hegenholt'},
+            {time:'07:03',name:'Holzbunge, Hauptstraße'},
+            {time:'07:06',name:'Holzbunge, Nord'},
+            {time:'07:08',name:'Klein Wittensee'},
+            {time:'07:10',name:'Groß Wittensee, Kirchhorster Weg'},
+            {time:'07:12',name:'Groß Wittensee, Kirchenweg'},
+            {time:'07:13',name:'Groß Wittensee, Damendorfer Straße'},
+            {time:'07:14',name:'Groß Wittensee, Söhr'},
+            {time:'07:15',name:'Groß Wittensee, Timmermeß'},
+            {time:'07:15',name:'Groß Wittensee, Wohldmaas'},
+            {time:'07:17',name:'Goosefeld, Landkrug'},
+            {time:'07:18',name:'Friedensthal, An der Bundesstraße'},
+            {time:'07:19',name:'Eckernförde, Domsland B 203'},
+            {time:'07:21',name:'Eckernförde, Rendsburger Straße'},
+            {time:'07:22',name:'Eckernförde, Admiral-Scheer-Straße'},
+            {time:'07:28',name:'Eckernförde, Bahnhof/ZOB'}
+          ]}
       ]
     },
     {
@@ -893,20 +979,27 @@ const STOP_COORDS = {}; // Koordinaten werden per 📍 selbst eingemessen
 // STATE
 const VER = 'v16';
 (function() {
+  // Immer SEED laden - vergleiche Haltestellen-Anzahl
+  var needReset = true;
   try {
-    var sv = localStorage.getItem('kp_ver');
     var sd = localStorage.getItem('kp_data');
-    var need = ['kurs211','kurs212','kurs213','kurs214','kurs215','kurs216','kurs217'];
-    var reset = (sv !== VER);
-    if (!reset && sd) {
-      var ids = JSON.parse(sd).kurse.map(function(k){return k.id;});
-      reset = need.some(function(id){return ids.indexOf(id) < 0;});
+    if (sd) {
+      var parsed = JSON.parse(sd);
+      // Zähle alle Haltestellen
+      var total = 0;
+      for (var i = 0; i < parsed.kurse.length; i++) {
+        var lines = parsed.kurse[i].lines || [];
+        for (var j = 0; j < lines.length; j++) {
+          total += (lines[j].stops || []).length;
+        }
+      }
+      // SEED hat 1048 Haltestellen - wenn weniger gespeichert, reset
+      if (total >= 1000 && localStorage.getItem('kp_ver') === VER) {
+        needReset = false;
+      }
     }
-    if (reset) {
-      localStorage.setItem('kp_data', JSON.stringify(SEED));
-      localStorage.setItem('kp_ver', VER);
-    }
-  } catch(e) {
+  } catch(e) {}
+  if (needReset) {
     localStorage.setItem('kp_data', JSON.stringify(SEED));
     localStorage.setItem('kp_ver', VER);
   }
@@ -1164,6 +1257,13 @@ function luStops() {
 
 // HELPERS
 function uid() { return Math.random().toString(36).slice(2,9); }
+function getCurrentTime() {
+  var n = new Date();
+  var h = String(n.getHours()).padStart(2,'0');
+  var m = String(n.getMinutes()).padStart(2,'0');
+  var s = String(n.getSeconds()).padStart(2,'0');
+  return h + ':' + m + ':' + s;
+}
 function esc(s) {
   return String(s || '').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
@@ -1301,6 +1401,13 @@ function renderLines() {
        hdr.querySelector('.dbtn'),
        hdr);
 
+    // Uhr oben rechts im Header
+    var clockDiv = document.createElement('div');
+    clockDiv.className = 'lch-clock';
+    clockDiv.id = 'clock-' + l.id;
+    clockDiv.textContent = getCurrentTime();
+    hdr.appendChild(clockDiv);
+
     var card = document.createElement('div');
     card.className = 'lc' + (isExp ? ' exp' : '');
     card.appendChild(hdr);
@@ -1418,6 +1525,21 @@ function saveKursF() {
 // INIT
 document.getElementById('hd').textContent = new Date().toLocaleDateString('de-DE',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
 setInterval(luStops, 30000);
+setInterval(function() {
+  var t = getCurrentTime();
+  var clocks = document.querySelectorAll('.lch-clock');
+  for (var i = 0; i < clocks.length; i++) clocks[i].textContent = t;
+}, 1000);
+// Direkt prüfen ob kurs212 Haltestellen hat
+(function(){
+  var k212 = null;
+  for(var i=0;i<D.kurse.length;i++){ if(D.kurse[i].id==='kurs212'){k212=D.kurse[i];break;} }
+  if(k212 && k212.lines && k212.lines[0] && (!k212.lines[0].stops || k212.lines[0].stops.length===0)){
+    // Cache ist veraltet - sofort neu laden
+    localStorage.setItem('kp_data', JSON.stringify(SEED));
+    D = JSON.parse(JSON.stringify(SEED));
+  }
+})();
 renderTabs();
 renderLines();
 
