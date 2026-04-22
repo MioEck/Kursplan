@@ -1,0 +1,27 @@
+{
+  "name": "Busfahrer Kursplan",
+  "short_name": "Kursplan",
+  "description": "Kursplan-App für Busfahrer mit GPS-Haltestellenerkennung",
+  "start_url": "/Kursplan/",
+  "scope": "/Kursplan/",
+  "display": "standalone",
+  "background_color": "#0f1117",
+  "theme_color": "#f5a623",
+  "orientation": "portrait",
+  "lang": "de",
+  "categories": ["productivity", "navigation"],
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
