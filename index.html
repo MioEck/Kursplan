@@ -110,6 +110,26 @@ main{padding:12px 16px 100px;}
 .export-btn{background:var(--s2);border:1.5px solid var(--brd);color:var(--txt);border-radius:10px;padding:8px 14px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;}
 .export-btn:hover{border-color:var(--acc);color:var(--acc);}
 .export-btn.imp:hover{border-color:var(--grn);color:var(--grn);}
+/* Notiz Popup */
+.notiz-popup{display:none;position:fixed;bottom:90px;left:16px;right:16px;z-index:500;animation:slideUp .3s ease;}
+.notiz-popup.show{display:block;}
+@keyframes slideUp{from{transform:translateY(20px);opacity:0;}to{transform:translateY(0);opacity:1;}}
+.notiz-card{background:var(--acc);border-radius:18px;padding:16px 18px;box-shadow:0 8px 32px rgba(245,166,35,.4);}
+.notiz-card-header{display:flex;align-items:center;gap:10px;margin-bottom:8px;}
+.notiz-card-icon{font-size:22px;}
+.notiz-card-title{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:1px;color:#0f1117;flex:1;}
+.notiz-card-close{background:rgba(0,0,0,.15);border:none;border-radius:8px;width:28px;height:28px;font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;color:#0f1117;}
+.notiz-card-text{font-size:15px;font-weight:600;color:#0f1117;line-height:1.4;}
+.notiz-card-stop{font-size:12px;color:rgba(0,0,0,.5);margin-top:4px;}
+/* Notiz bearbeiten Modal */
+.notiz-edit-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.78);z-index:600;align-items:flex-end;justify-content:center;}
+.notiz-edit-overlay.open{display:flex;}
+.notiz-edit-modal{background:var(--s1);border-radius:22px 22px 0 0;padding:22px 18px 30px;width:100%;max-width:560px;border:1px solid var(--brd);border-bottom:none;}
+.notiz-edit-modal h3{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;margin-bottom:6px;}
+.notiz-edit-modal p{font-size:13px;color:var(--mut);margin-bottom:14px;}
+.notiz-textarea{width:100%;background:var(--bg);border:1.5px solid var(--brd);color:var(--txt);border-radius:12px;padding:12px;font-family:'DM Sans',sans-serif;font-size:15px;outline:none;resize:none;height:100px;}
+.notiz-textarea:focus{border-color:var(--acc);}
+.notiz-actions{display:flex;gap:10px;margin-top:12px;}
 .match-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:400;flex-direction:column;}
 .match-overlay.open{display:flex;}
 .match-header{background:var(--bg);padding:16px;border-bottom:1px solid var(--brd);display:flex;align-items:center;gap:12px;flex-shrink:0;}
@@ -1408,6 +1428,7 @@ function toggleGps() {
             status.textContent = '📍 ' + Math.round(nearD) + 'm → ' + nearName;
           }
           luStops();
+        checkNotizForCurrentStop();
         });
       },
       function(err) {
@@ -1638,6 +1659,15 @@ function renderLines() {
           })(s.name);
           row.appendChild(pinBtn);
         }
+        // Notiz Button
+        var notizBtn = document.createElement('button');
+        notizBtn.style.cssText = 'background:none;border:none;font-size:16px;cursor:pointer;padding:2px 4px;opacity:' + (notizen[s.name] ? '1' : '0.3') + ';flex-shrink:0;';
+        notizBtn.textContent = notizen[s.name] ? '📋' : '📝';
+        notizBtn.title = 'Notiz bearbeiten';
+        (function(sname) {
+          notizBtn.onclick = function(e) { e.stopPropagation(); openNotizEdit(sname); };
+        })(s.name);
+        row.appendChild(notizBtn);
         stopsDiv.appendChild(row);
       }
     }
@@ -1794,7 +1824,10 @@ function saveKursF() {
 
 // INIT
 document.getElementById('hd').textContent = new Date().toLocaleDateString('de-DE',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
-setInterval(luStops, 30000);
+setInterval(function(){
+  luStops();
+  checkNotizForCurrentStop();
+}, 30000);
 setInterval(function() {
   var t = getCurrentTime();
   var clocks = document.querySelectorAll('.lch-clock');
@@ -2156,6 +2189,82 @@ function confirmMatch(stopName, osmName, score) {
   renderMatchList();
 }
 
+// ── HALTESTELLENNOTIZEN ───────────────────────────────
+var notizen = {};
+try { notizen = JSON.parse(localStorage.getItem('kp_notizen') || '{}'); } catch(e) {}
+
+var notizEditStop = '';
+var lastNotizShown = '';
+var notizPopupTimer = null;
+
+function saveNotizen() {
+  localStorage.setItem('kp_notizen', JSON.stringify(notizen));
+}
+
+function openNotizEdit(stopName) {
+  notizEditStop = stopName;
+  document.getElementById('notizEditStopName').textContent = stopName;
+  document.getElementById('notizTextarea').value = notizen[stopName] || '';
+  document.getElementById('notizEditOverlay').classList.add('open');
+}
+function closeNotizEdit() {
+  document.getElementById('notizEditOverlay').classList.remove('open');
+}
+function saveNotiz() {
+  var text = document.getElementById('notizTextarea').value.trim();
+  if (text) {
+    notizen[notizEditStop] = text;
+  } else {
+    delete notizen[notizEditStop];
+  }
+  saveNotizen();
+  closeNotizEdit();
+  renderLines();
+}
+function deleteNotiz() {
+  delete notizen[notizEditStop];
+  saveNotizen();
+  closeNotizEdit();
+  renderLines();
+}
+
+function showNotizPopup(stopName, text) {
+  if (lastNotizShown === stopName) return; // nicht nochmal zeigen
+  lastNotizShown = stopName;
+  document.getElementById('notizPopupText').textContent = text;
+  document.getElementById('notizPopupStop').textContent = stopName;
+  document.getElementById('notizPopup').classList.add('show');
+  // Automatisch nach 10 Sek. schließen
+  if (notizPopupTimer) clearTimeout(notizPopupTimer);
+  notizPopupTimer = setTimeout(closeNotizPopup, 10000);
+}
+function closeNotizPopup() {
+  document.getElementById('notizPopup').classList.remove('show');
+  if (notizPopupTimer) clearTimeout(notizPopupTimer);
+}
+
+// Prüft ob aktuelle Haltestelle eine Notiz hat
+function checkNotizForCurrentStop() {
+  if (!expId) return;
+  var kurs = null;
+  for (var i=0;i<D.kurse.length;i++){if(D.kurse[i].id===D.activeKurs){kurs=D.kurse[i];break;}}
+  if (!kurs) return;
+  var line = null;
+  for (var i=0;i<kurs.lines.length;i++){if(kurs.lines[i].id===expId){line=kurs.lines[i];break;}}
+  if (!line || !line.stops) return;
+  // Finde aktuelle Haltestelle
+  for (var i=0;i<line.stops.length;i++) {
+    var el = document.getElementById('sx'+line.id+i);
+    if (el && el.className.indexOf('cur') >= 0) {
+      var stopName = line.stops[i].name;
+      if (notizen[stopName] && lastNotizShown !== stopName) {
+        showNotizPopup(stopName, notizen[stopName]);
+      }
+      break;
+    }
+  }
+}
+
 renderTabs();
 renderLines();
 
@@ -2178,6 +2287,34 @@ if ('serviceWorker' in navigator) {
   <div class="match-status" id="matchStatus">Lade OpenStreetMap-Daten...</div>
   <div class="match-list" id="matchList">
     <div class="match-loading">⏳ Bitte GPS einschalten und warten...</div>
+  </div>
+</div>
+
+<!-- Notiz Popup -->
+<div class="notiz-popup" id="notizPopup">
+  <div class="notiz-card">
+    <div class="notiz-card-header">
+      <span class="notiz-card-icon">📋</span>
+      <span class="notiz-card-title">HINWEIS</span>
+      <button class="notiz-card-close" onclick="closeNotizPopup()">✕</button>
+    </div>
+    <div class="notiz-card-text" id="notizPopupText"></div>
+    <div class="notiz-card-stop" id="notizPopupStop"></div>
+  </div>
+</div>
+
+<!-- Notiz bearbeiten -->
+<div class="notiz-edit-overlay" id="notizEditOverlay" onclick="if(event.target===this)closeNotizEdit()">
+  <div class="notiz-edit-modal">
+    <h3>HALTESTELLENNOTIZ</h3>
+    <p id="notizEditStopName" style="color:var(--acc);font-weight:600;font-size:14px;margin-bottom:4px;"></p>
+    <p>Notiz die angezeigt wird wenn du diese Haltestelle erreichst:</p>
+    <textarea class="notiz-textarea" id="notizTextarea" placeholder="z.B. Warten 5 Min auf Anschluss 711&#10;Anschlusssicherung beachten&#10;Schulkinder einsteigen lassen"></textarea>
+    <div class="notiz-actions">
+      <button class="bs" onclick="closeNotizEdit()">Abbrechen</button>
+      <button class="bp" onclick="saveNotiz()" style="flex:1">Speichern</button>
+      <button class="bs" onclick="deleteNotiz()" style="color:var(--red)">🗑</button>
+    </div>
   </div>
 </div>
 </body>
