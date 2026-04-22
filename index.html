@@ -106,6 +106,10 @@ main{padding:12px 16px 100px;}
 .se-row .ti{width:66px;flex:none;}
 .se-row button{background:none;border:none;color:var(--mut);font-size:17px;cursor:pointer;}
 .asb{background:var(--s2);border:1px dashed var(--brd);color:var(--mut);border-radius:8px;padding:7px;width:100%;cursor:pointer;font-family:'DM Sans',sans-serif;font-size:13px;margin-top:2px;}
+.export-bar{display:flex;gap:8px;padding:10px 16px;border-bottom:1px solid var(--brd);flex-wrap:wrap;}
+.export-btn{background:var(--s2);border:1.5px solid var(--brd);color:var(--txt);border-radius:10px;padding:8px 14px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;}
+.export-btn:hover{border-color:var(--acc);color:var(--acc);}
+.export-btn.imp:hover{border-color:var(--grn);color:var(--grn);}
 .lch{position:relative;}
 .lch-clock{display:none;position:absolute;top:10px;right:14px;background:var(--s2);border:1.5px solid var(--brd);border-radius:12px;padding:8px 14px;font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:2px;color:var(--txt);line-height:1;pointer-events:none;z-index:5;}
 .lc.exp .lch-clock{display:block;}
@@ -125,6 +129,11 @@ main{padding:12px 16px 100px;}
   <span id="gpsStatus">Suche Standort...</span>
 </div>
 <div class="tabs" id="tabs"></div>
+<div class="export-bar">
+  <button class="export-btn" onclick="exportCoords()">💾 Koordinaten exportieren</button>
+  <button class="export-btn imp" onclick="document.getElementById('importFile').click()">📂 Koordinaten importieren</button>
+  <input type="file" id="importFile" accept=".json" style="display:none" onchange="importCoords(event)">
+</div>
 <main>
   <div id="kh" class="kh" style="display:none">
     <div><div class="kt" id="ktn"></div><div class="ks" id="ks"></div></div>
@@ -1271,6 +1280,46 @@ function luStops() {
 
 // HELPERS
 function uid() { return Math.random().toString(36).slice(2,9); }
+
+function exportCoords() {
+  var coords = {};
+  try { coords = JSON.parse(localStorage.getItem('kp_coords') || '{}'); } catch(e) {}
+  var count = Object.keys(coords).length;
+  if (count === 0) { alert('Keine Koordinaten vorhanden. Bitte erst rote Punkte antippen.'); return; }
+  var json = JSON.stringify(coords, null, 2);
+  var blob = new Blob([json], {type: 'application/json'});
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = 'kp_coords_' + new Date().toISOString().slice(0,10) + '.json';
+  a.click();
+  URL.revokeObjectURL(url);
+  alert('✅ ' + count + ' Koordinaten exportiert!');
+}
+
+function importCoords(event) {
+  var file = event.target.files[0];
+  if (!file) return;
+  var reader = new FileReader();
+  reader.onload = function(e) {
+    try {
+      var newCoords = JSON.parse(e.target.result);
+      var existing = {};
+      try { existing = JSON.parse(localStorage.getItem('kp_coords') || '{}'); } catch(err) {}
+      // Zusammenführen - neue überschreiben alte
+      var merged = Object.assign({}, existing, newCoords);
+      localStorage.setItem('kp_coords', JSON.stringify(merged));
+      var count = Object.keys(newCoords).length;
+      alert('✅ ' + count + ' Koordinaten importiert!');
+      renderLines();
+    } catch(err) {
+      alert('❌ Fehler beim Importieren: ' + err.message);
+    }
+  };
+  reader.readAsText(file);
+  // Reset file input
+  event.target.value = '';
+}
 function getCurrentTime() {
   var n = new Date();
   var h = String(n.getHours()).padStart(2,'0');
