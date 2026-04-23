@@ -110,6 +110,12 @@ main{padding:12px 16px 100px;}
 .export-btn{background:var(--s2);border:1.5px solid var(--brd);color:var(--txt);border-radius:10px;padding:8px 14px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px;}
 .export-btn:hover{border-color:var(--acc);color:var(--acc);}
 .export-btn.imp:hover{border-color:var(--grn);color:var(--grn);}
+.sync-bar{background:var(--s2);border-bottom:1px solid var(--brd);padding:8px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.sync-btn{background:var(--acc);color:#0f1117;border:none;border-radius:10px;padding:9px 16px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:14px;cursor:pointer;display:flex;align-items:center;gap:6px;}
+.sync-btn:disabled{opacity:.5;cursor:not-allowed;}
+.sync-status{font-size:12px;color:var(--mut);flex:1;}
+.sync-status.ok{color:var(--grn);}
+.sync-status.err{color:var(--red);}
 /* Notiz Popup */
 .notiz-popup{display:none;position:fixed;bottom:90px;left:16px;right:16px;z-index:500;animation:slideUp .3s ease;}
 .notiz-popup.show{display:block;}
@@ -178,6 +184,11 @@ main{padding:12px 16px 100px;}
   <button class="export-btn imp" onclick="document.getElementById('importNotizFile').click()" style="border-color:#3b82f6;color:#3b82f6">📂 Notizen importieren</button>
   <input type="file" id="importNotizFile" accept=".json" style="display:none" onchange="importNotizen(event)">
   <input type="file" id="importFile" accept=".json" style="display:none" onchange="importCoords(event)">
+</div>
+<div class="sync-bar">
+  <button class="sync-btn" id="syncBtn" onclick="syncToGitHub()">☁️ Speichern</button>
+  <button class="sync-btn" style="background:var(--s2);color:var(--txt);border:1.5px solid var(--brd)" onclick="loadFromGitHub()">🔄 Laden</button>
+  <span class="sync-status" id="syncStatus">Nicht synchronisiert</span>
 </div>
 <main>
   <div id="kh" class="kh" style="display:none">
@@ -2301,6 +2312,111 @@ function checkNotizForCurrentStop() {
     }
   }
 }
+
+// ── GITHUB SYNC ───────────────────────────────────────
+var GITHUB_TOKEN = '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';
+var GITHUB_REPO = 'MioEck/Kursplan';
+var GITHUB_FILE = 'data.json';
+var GITHUB_API = 'https://api.github.com/repos/' + GITHUB_REPO + '/contents/' + GITHUB_FILE;
+
+function getDataBundle() {
+  var coords = {};
+  var notizen = {};
+  try { coords = JSON.parse(localStorage.getItem('kp_coords') || '{}'); } catch(e) {}
+  try { notizen = JSON.parse(localStorage.getItem('kp_notizen') || '{}'); } catch(e) {}
+  return { coords: coords, notizen: notizen, version: VER, saved: new Date().toISOString() };
+}
+
+function setDataBundle(bundle) {
+  if (bundle.coords) localStorage.setItem('kp_coords', JSON.stringify(bundle.coords));
+  if (bundle.notizen) {
+    localStorage.setItem('kp_notizen', JSON.stringify(bundle.notizen));
+    notizen = bundle.notizen;
+  }
+}
+
+function setSyncStatus(msg, type) {
+  var el = document.getElementById('syncStatus');
+  el.textContent = msg;
+  el.className = 'sync-status' + (type ? ' ' + type : '');
+}
+
+function syncToGitHub() {
+  var btn = document.getElementById('syncBtn');
+  btn.disabled = true;
+  setSyncStatus('⏳ Wird gespeichert...');
+  
+  var data = getDataBundle();
+  var content = btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2))));
+  
+  // First get current SHA (needed for update)
+  fetch(GITHUB_API, {
+    headers: {
+      'Authorization': 'token ' + GITHUB_TOKEN,
+      'Accept': 'application/vnd.github.v3+json'
+    }
+  })
+  .then(function(r) { return r.json(); })
+  .then(function(existing) {
+    var body = {
+      message: 'Kursplan Sync ' + new Date().toLocaleString('de-DE'),
+      content: content
+    };
+    if (existing.sha) body.sha = existing.sha;
+    
+    return fetch(GITHUB_API, {
+      method: 'PUT',
+      headers: {
+        'Authorization': 'token ' + GITHUB_TOKEN,
+        'Accept': 'application/vnd.github.v3+json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    });
+  })
+  .then(function(r) {
+    if (r.ok) {
+      setSyncStatus('✅ Gespeichert: ' + new Date().toLocaleTimeString('de-DE'), 'ok');
+    } else {
+      return r.json().then(function(e) { throw new Error(e.message); });
+    }
+  })
+  .catch(function(err) {
+    setSyncStatus('❌ Fehler: ' + err.message, 'err');
+  })
+  .finally(function() {
+    btn.disabled = false;
+  });
+}
+
+function loadFromGitHub() {
+  setSyncStatus('⏳ Wird geladen...');
+  fetch(GITHUB_API, {
+    headers: {
+      'Authorization': 'token ' + GITHUB_TOKEN,
+      'Accept': 'application/vnd.github.v3+json'
+    }
+  })
+  .then(function(r) {
+    if (!r.ok) throw new Error('Datei nicht gefunden');
+    return r.json();
+  })
+  .then(function(data) {
+    var content = JSON.parse(decodeURIComponent(escape(atob(data.content))));
+    setDataBundle(content);
+    setSyncStatus('✅ Geladen: ' + new Date().toLocaleTimeString('de-DE'), 'ok');
+    renderLines();
+  })
+  .catch(function(err) {
+    setSyncStatus('❌ ' + err.message, 'err');
+  });
+}
+
+// Beim Start automatisch laden
+window.addEventListener('load', function() {
+  setTimeout(loadFromGitHub, 2000);
+});
+
 
 renderTabs();
 renderLines();
