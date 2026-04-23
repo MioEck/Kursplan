@@ -1,8 +1,19 @@
 {
   "coords": {},
   "notizen": {
-    "Holtsee, Habyer Straße": "Warten auf den 725 aus Eckernförde Anschluss Garantie"
+    "Holtsee, Habyer Straße": [
+      {
+        "text": "Warten auf den 725 aus Eckernförde Anschluss Garantie",
+        "time": "",
+        "linie": ""
+      },
+      {
+        "text": "Warten auf den 725 aus Eckernförde Anschluss Garantie. Meistens kommt ein Kind",
+        "time": "13:34",
+        "linie": "737"
+      }
+    ]
   },
   "version": "v21",
-  "saved": "2026-04-23T04:36:44.639Z"
+  "saved": "2026-04-23T07:07:51.513Z"
 }
