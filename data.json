@@ -12,8 +12,15 @@
         "time": "13:34",
         "linie": "737"
       }
+    ],
+    "Owschlag, ZOB/Bahnhof (ab)": [
+      {
+        "text": "Zug abwarten aus Hamburg",
+        "time": "05:47",
+        "linie": "725"
+      }
     ]
   },
   "version": "v21",
-  "saved": "2026-04-23T07:07:51.513Z"
+  "saved": "2026-04-23T18:15:28.812Z"
 }
