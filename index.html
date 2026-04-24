@@ -51,20 +51,20 @@ main{padding:12px 16px 100px;}
 .lc.exp{border-color:var(--acc);}
 .lch{display:grid;grid-template-columns:94px 1fr auto;gap:10px;align-items:center;padding:12px 14px;cursor:pointer;user-select:none;}
 .lb{width:90px;min-height:54px;border-radius:10px;background:var(--s2);border:1.5px solid var(--brd);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;padding:4px;}
-.bl{font-size:10px;color:var(--mut);text-transform:uppercase;letter-spacing:1px;font-weight:600;}
-.bn{font-family:'Bebas Neue',sans-serif;font-size:14px;color:var(--acc);line-height:1;}
-.bfl{font-size:9px;color:var(--mut);text-transform:uppercase;margin-top:2px;}
-.bf{font-family:'Bebas Neue',sans-serif;font-size:19px;color:var(--txt);line-height:1;}
+.bl{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:1px;font-weight:600;}
+.bn{font-family:'Bebas Neue',sans-serif;font-size:18px;color:var(--acc);line-height:1;}
+.bfl{font-size:11px;color:var(--mut);text-transform:uppercase;margin-top:2px;}
+.bf{font-family:'Bebas Neue',sans-serif;font-size:24px;color:var(--txt);line-height:1;}
 .li{min-width:0;}
-.lr{font-weight:600;font-size:18px;display:flex;align-items:center;gap:5px;flex-wrap:wrap;}
+.lr{font-weight:600;font-size:22px;display:flex;align-items:center;gap:5px;flex-wrap:wrap;}
 .ar{color:var(--mut);}
-.lt{display:flex;gap:10px;margin-top:4px;font-size:18px;color:var(--mut);}
+.lt{display:flex;gap:10px;margin-top:4px;font-size:22px;color:var(--mut);}
 .ca{display:flex;gap:5px;margin-top:5px;}
-.ca button{border:none;background:var(--s2);color:var(--mut);border-radius:6px;padding:3px 8px;font-size:11px;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.ca button{border:none;background:var(--s2);color:var(--mut);border-radius:6px;padding:5px 10px;font-size:14px;cursor:pointer;font-family:'DM Sans',sans-serif;}
 .ca button:hover{background:var(--acc);color:#0f1117;}
 .ca .dbtn:hover{background:var(--red);color:#fff;}
 .ri{text-align:right;flex-shrink:0;display:flex;flex-direction:column;align-items:flex-end;gap:4px;}
-.dp{background:var(--s2);border-radius:8px;padding:4px 9px;font-size:12px;font-weight:500;}
+.dp{background:var(--s2);border-radius:8px;padding:6px 12px;font-size:15px;font-weight:500;}
 .ea{font-size:16px;color:var(--mut);transition:transform .25s;}
 .lc.exp .ea{transform:rotate(180deg);color:var(--acc);}
 .sp{display:none;border-top:1px solid var(--brd);padding:0 14px 14px;}
@@ -111,6 +111,11 @@ main{padding:12px 16px 100px;}
 .export-btn:hover{border-color:var(--acc);color:var(--acc);}
 .export-btn.imp:hover{border-color:var(--grn);color:var(--grn);}
 .sync-bar{background:var(--s2);border-bottom:1px solid var(--brd);padding:8px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;}
+.lock-btn{background:none;border:none;font-size:22px;cursor:pointer;padding:4px 8px;line-height:1;}
+.admin-only{display:none;}
+.admin-only.visible{display:flex;}
+.admin-btn-inline{display:none;}
+.admin-btn-inline.visible{display:inline-flex;}
 .sync-btn{background:var(--acc);color:#0f1117;border:none;border-radius:10px;padding:9px 16px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:14px;cursor:pointer;display:flex;align-items:center;gap:6px;}
 .sync-btn:disabled{opacity:.5;cursor:not-allowed;}
 .sync-status{font-size:12px;color:var(--mut);flex:1;}
@@ -166,6 +171,7 @@ main{padding:12px 16px 100px;}
 <header>
   <div class="logo">🚌</div>
   <div class="htxt"><h1>KURSPLAN <span style="font-size:13px;font-weight:400;color:var(--mut);letter-spacing:1px;vertical-align:middle">v21</span></h1><p id="hd"></p></div>
+  <button class="lock-btn" id="lockBtn" onclick="toggleLock()" title="Admin">🔒</button>
   <button id="gpsBtn" onclick="toggleGps()">
     <span style="font-size:20px;line-height:1">📍</span>
     <span id="gpsLbl">GPS AUS</span>
@@ -176,16 +182,10 @@ main{padding:12px 16px 100px;}
   <span id="gpsStatus">Suche Standort...</span>
 </div>
 <div class="tabs" id="tabs"></div>
-<div class="export-bar">
-  <button class="export-btn" onclick="exportCoords()">💾 Koordinaten exportieren</button>
-  <button class="export-btn imp" onclick="document.getElementById('importFile').click()">📂 Koordinaten importieren</button>
+<div class="export-bar admin-only" id="exportBar">
   <button class="export-btn" onclick="openMatchTool()" style="border-color:#8b5cf6;color:#8b5cf6">🗺 Haltestellen abgleichen</button>
-  <button class="export-btn" onclick="exportNotizen()" style="border-color:#3b82f6;color:#3b82f6">💾 Notizen exportieren</button>
-  <button class="export-btn imp" onclick="document.getElementById('importNotizFile').click()" style="border-color:#3b82f6;color:#3b82f6">📂 Notizen importieren</button>
-  <input type="file" id="importNotizFile" accept=".json" style="display:none" onchange="importNotizen(event)">
-  <input type="file" id="importFile" accept=".json" style="display:none" onchange="importCoords(event)">
 </div>
-<div class="sync-bar">
+<div class="sync-bar admin-only" id="syncBar">
   <button class="sync-btn" id="syncBtn" onclick="syncToGitHub()">☁️ Speichern</button>
   <button class="sync-btn" style="background:var(--s2);color:var(--txt);border:1.5px solid var(--brd)" onclick="loadFromGitHub()">🔄 Laden</button>
   <button class="sync-btn" style="background:var(--s2);color:var(--mut);border:1.5px solid var(--brd);font-size:12px" onclick="setGithubToken()">🔑 Token</button>
@@ -194,12 +194,12 @@ main{padding:12px 16px 100px;}
 <main>
   <div id="kh" class="kh" style="display:none">
     <div><div class="kt" id="ktn"></div><div class="ks" id="ks"></div></div>
-    <button class="bs" onclick="openKursEdit()" style="border-radius:10px;padding:6px 12px;font-size:13px">✏️ Bearbeiten</button>
+    <button class="bs admin-btn-inline" id="kursEditBtn" onclick="openKursEdit()" style="border-radius:10px;padding:6px 12px;font-size:13px">✏️ Bearbeiten</button>
   </div>
   <div class="ll" id="ll"></div>
   <div class="empty" id="em"><div class="bi">🚌</div><p>Kurs auswählen oder neu anlegen</p></div>
 </main>
-<button class="fab" onclick="openLineModal()">+ Linie hinzufügen</button>
+<button class="fab admin-btn-inline" id="addLineBtn" onclick="openLineModal()">+ Linie hinzufügen</button>
 
 <div class="ov" id="ovLine" onclick="if(event.target===this)closeOv('ovLine')">
   <div class="mo">
@@ -1271,7 +1271,14 @@ var D = JSON.parse(localStorage.getItem('kp_data'));
 var eLid = null, eKid = null, expId = null;
 var gwId = null, gPos = null;
 
-function persist() { localStorage.setItem('kp_data', JSON.stringify(D)); }
+function persist() {
+  localStorage.setItem('kp_data', JSON.stringify(D));
+  // Auto-sync zu GitHub nach 3 Sekunden (debounced)
+  if (window._autoSyncTimer) clearTimeout(window._autoSyncTimer);
+  window._autoSyncTimer = setTimeout(function() {
+    if (GITHUB_TOKEN) syncToGitHub(true);
+  }, 3000);
+}
 
 // GPS
 function getCoords() {
@@ -1711,7 +1718,8 @@ function renderLines() {
         // Notiz Button
         var notizBtn = document.createElement('button');
         var hasNotiz = notizen[s.name] && (Array.isArray(notizen[s.name]) ? notizen[s.name].length > 0 : true);
-        notizBtn.style.cssText = 'background:none;border:none;font-size:16px;cursor:pointer;padding:2px 4px;opacity:' + (hasNotiz ? '1' : '0.3') + ';flex-shrink:0;';
+        notizBtn.className = 'notiz-btn-admin'; notizBtn.style.display = isAdmin ? '' : 'none';
+        notizBtn.style.cssText = notizBtn.style.cssText || 'background:none;border:none;font-size:16px;cursor:pointer;padding:2px 4px;opacity:' + (hasNotiz ? '1' : '0.3') + ';flex-shrink:0;';
         notizBtn.textContent = hasNotiz ? '📋' : '📝';
         notizBtn.title = 'Notiz bearbeiten';
         (function(sname, stime, slinie) {
@@ -1764,6 +1772,8 @@ function renderLines() {
     card.appendChild(panel);
     ll.appendChild(card);
   }
+  // Admin-Modus auf neue Karten anwenden
+  if (typeof isAdmin !== 'undefined') setAdminMode(isAdmin);
 }
 
 function toggleStops(id) { expId = (expId === id) ? null : id;  renderLines(); }
@@ -2394,7 +2404,14 @@ function getDataBundle() {
   var notizen = {};
   try { coords = JSON.parse(localStorage.getItem('kp_coords') || '{}'); } catch(e) {}
   try { notizen = JSON.parse(localStorage.getItem('kp_notizen') || '{}'); } catch(e) {}
-  return { coords: coords, notizen: notizen, version: VER, saved: new Date().toISOString() };
+  return {
+    coords: coords,
+    notizen: notizen,
+    kurse: D.kurse,
+    activeKurs: D.activeKurs,
+    version: VER,
+    saved: new Date().toISOString()
+  };
 }
 
 function setDataBundle(bundle) {
@@ -2402,6 +2419,23 @@ function setDataBundle(bundle) {
   if (bundle.notizen) {
     localStorage.setItem('kp_notizen', JSON.stringify(bundle.notizen));
     notizen = bundle.notizen;
+  }
+  if (bundle.kurse && bundle.kurse.length > 0) {
+    // Nur überschreiben wenn data.json neuere Daten hat
+    var bundleTotal = 0;
+    bundle.kurse.forEach(function(k){
+      (k.lines||[]).forEach(function(l){ bundleTotal += (l.stops||[]).length; });
+    });
+    var localTotal = 0;
+    D.kurse.forEach(function(k){
+      (k.lines||[]).forEach(function(l){ localTotal += (l.stops||[]).length; });
+    });
+    // Nimm die Version mit mehr Daten
+    if (bundleTotal >= localTotal) {
+      D.kurse = bundle.kurse;
+      if (bundle.activeKurs) D.activeKurs = bundle.activeKurs;
+      localStorage.setItem('kp_data', JSON.stringify(D));
+    }
   }
 }
 
@@ -2411,10 +2445,10 @@ function setSyncStatus(msg, type) {
   el.className = 'sync-status' + (type ? ' ' + type : '');
 }
 
-function syncToGitHub() {
+function syncToGitHub(silent) {
   var btn = document.getElementById('syncBtn');
-  btn.disabled = true;
-  setSyncStatus('⏳ Wird gespeichert...');
+  if (!silent) btn.disabled = true;
+  if (!silent) setSyncStatus('⏳ Wird gespeichert...');
   
   var data = getDataBundle();
   var content = btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2))));
@@ -2446,7 +2480,8 @@ function syncToGitHub() {
   })
   .then(function(r) {
     if (r.ok) {
-      setSyncStatus('✅ Gespeichert: ' + new Date().toLocaleTimeString('de-DE'), 'ok');
+      if (!silent) setSyncStatus('✅ Gespeichert: ' + new Date().toLocaleTimeString('de-DE'), 'ok');
+      else setSyncStatus('✅ Auto-gespeichert: ' + new Date().toLocaleTimeString('de-DE'), 'ok');
     } else {
       return r.json().then(function(e) { throw new Error(e.message); });
     }
@@ -2455,7 +2490,7 @@ function syncToGitHub() {
     setSyncStatus('❌ Fehler: ' + err.message, 'err');
   })
   .finally(function() {
-    btn.disabled = false;
+    if (!silent) btn.disabled = false;
   });
 }
 
@@ -2488,8 +2523,52 @@ window.addEventListener('load', function() {
 });
 
 
+// ── PASSWORTSCHUTZ ────────────────────────────────────
+var ADMIN_PW = '1345';
+var isAdmin = false;
+
+function toggleLock() {
+  if (isAdmin) {
+    // Ausloggen
+    isAdmin = false;
+    setAdminMode(false);
+    document.getElementById('lockBtn').textContent = '🔒';
+  } else {
+    var pw = prompt('Passwort eingeben:');
+    if (pw === ADMIN_PW) {
+      isAdmin = true;
+      setAdminMode(true);
+      document.getElementById('lockBtn').textContent = '🔓';
+    } else if (pw !== null) {
+      alert('Falsches Passwort');
+    }
+  }
+}
+
+function setAdminMode(on) {
+  // Sync + Export Bar
+  document.getElementById('syncBar').classList.toggle('visible', on);
+  document.getElementById('exportBar').classList.toggle('visible', on);
+  // Kurs bearbeiten
+  var keb = document.getElementById('kursEditBtn');
+  if (keb) keb.classList.toggle('visible', on);
+  // Linie hinzufügen
+  var alb = document.getElementById('addLineBtn');
+  if (alb) alb.classList.toggle('visible', on);
+  // Alle Bearbeiten/Löschen Buttons in Linienkarten
+  document.querySelectorAll('.ebtn, .dbtn').forEach(function(b) {
+    b.style.display = on ? '' : 'none';
+  });
+  // Notiz-Buttons (📝) nur im Admin sichtbar
+  document.querySelectorAll('.notiz-btn-admin').forEach(function(b) {
+    b.style.display = on ? '' : 'none';
+  });
+}
+
+
 renderTabs();
 renderLines();
+setAdminMode(isAdmin);
 
 </script>
 <script>
