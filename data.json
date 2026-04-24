@@ -301,7 +301,7 @@
           "id": "l3",
           "linienNr": "736",
           "fahrtNr": "3736002",
-          "start": "Eckernförde, Bahnhof/ZOB",
+          "start": "Eckernförde, Bahnhof/ZOB  D",
           "end": "Neudorf, B76",
           "startTime": "07:02",
           "endTime": "07:13",
@@ -5124,5 +5124,5 @@
   ],
   "activeKurs": "kurs211",
   "version": "v21",
-  "saved": "2026-04-24T04:48:28.542Z"
+  "saved": "2026-04-24T04:49:00.462Z"
 }
