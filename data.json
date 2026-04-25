@@ -9536,7 +9536,7 @@
           "id": "p2",
           "linienNr": "746",
           "fahrtNr": "3746004",
-          "start": "Eckernförde, Bahnhof/ZOB",
+          "start": "Eckernförde, Bahnhof/ZOB D",
           "end": "Surendorf, Schule",
           "startTime": "08:02",
           "endTime": "08:28",
@@ -13125,5 +13125,5 @@
   ],
   "activeKurs": "kurs213",
   "version": "v21",
-  "saved": "2026-04-25T04:38:38.756Z"
+  "saved": "2026-04-25T04:39:35.458Z"
 }
