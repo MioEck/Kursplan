@@ -1,5 +1,8006 @@
 {
-  "coords": {},
+  "coords": {
+    "Danziger Weg": [
+      53.918425,
+      9.865619
+    ],
+    "Düvelsbrook": [
+      54.1673125,
+      10.4237806
+    ],
+    "Delingsdorf, Dorfstraße": [
+      53.7081922,
+      10.2517675
+    ],
+    "Ahrensburg, Helgolandring": [
+      53.6862427,
+      10.2425261
+    ],
+    "Delingsdorf, Timmerhorner Straße": [
+      53.7095151,
+      10.2474303
+    ],
+    "Wielen, Twiete": [
+      54.1964874,
+      10.3418761
+    ],
+    "Harksheide, Grootkoppelstraße": [
+      53.7142304,
+      10.0089585
+    ],
+    "Ahrensburg, Kornkamp (Springer)": [
+      53.6866499,
+      10.2565366
+    ],
+    "Quickborn-Heide, Friedrichsgaber Straße (West)": [
+      53.7518329,
+      9.9328844
+    ],
+    "Quickborn-Heide, Lerchenweg": [
+      53.7533428,
+      9.9389212
+    ],
+    "Stuvenborn, Dorfplatz": [
+      53.8513508,
+      10.1257739
+    ],
+    "Leezen, Marktplatz": [
+      53.8664909,
+      10.251976
+    ],
+    "Stubben, Am Dorfplatz": [
+      53.7324586,
+      10.4299102
+    ],
+    "Stubben, Oldesloer Straße": [
+      53.7336849,
+      10.4389456
+    ],
+    "Beethovenstraße": [
+      54.0772037,
+      9.9685603
+    ],
+    "Hahnenkamp": [
+      53.8730507,
+      10.616485
+    ],
+    "Hugo-Distler-Straße": [
+      53.8697996,
+      10.6458652
+    ],
+    "Hofland": [
+      53.8689117,
+      10.6182984
+    ],
+    "Lübecker Nachrichten / Eichenallee": [
+      53.855014,
+      10.6305374
+    ],
+    "Schönböckener Hauptstraße": [
+      53.8694972,
+      10.6287384
+    ],
+    "Rapsacker": [
+      53.8694825,
+      10.633381
+    ],
+    "Schönböckener Straße": [
+      53.869374,
+      10.6424284
+    ],
+    "Bauernweg": [
+      53.870663,
+      10.6222838
+    ],
+    "Hudekamp": [
+      53.8519704,
+      10.6338248
+    ],
+    "Auf der Heide": [
+      53.8532922,
+      10.635604
+    ],
+    "Grapengießerstraße": [
+      53.8586732,
+      10.6380566
+    ],
+    "Grapengießerstraße Mitte": [
+      53.8606454,
+      10.6350647
+    ],
+    "Leinweberstraße": [
+      53.8624315,
+      10.6318306
+    ],
+    "Lohgerberstraße": [
+      53.8614572,
+      10.6293341
+    ],
+    "Drechslerstraße": [
+      53.8613309,
+      10.6093588
+    ],
+    "Steinmetzstraße": [
+      54.0768774,
+      9.9721296
+    ],
+    "Ginsterweg": [
+      53.8531882,
+      10.6401254
+    ],
+    "Bad Segeberg, Oldesloer Straße": [
+      53.931338,
+      10.317344
+    ],
+    "Stubben, Am Schmidtsteich": [
+      53.7368654,
+      10.4411635
+    ],
+    "Sophienhof, Alte B76": [
+      54.2095944,
+      10.333651
+    ],
+    "Trent Abzw": [
+      54.1976075,
+      10.3517091
+    ],
+    "Spenglerstraße": [
+      53.8555628,
+      10.5993095
+    ],
+    "Taschenmacherstraße": [
+      53.8674678,
+      10.611709
+    ],
+    "Hutmacherring": [
+      53.8651145,
+      10.602994
+    ],
+    "Zinngießerstraße": [
+      53.8623244,
+      10.6037743
+    ],
+    "Stellmacherstraße": [
+      53.8598531,
+      10.6057075
+    ],
+    "Verbindungsstraße": [
+      53.8563612,
+      10.603556
+    ],
+    "Tiefental": [
+      54.2022922,
+      10.3296499
+    ],
+    "Sophienhof": [
+      54.2103472,
+      10.3365821
+    ],
+    "Rotenhauser Feld": [
+      53.8584757,
+      10.6440502
+    ],
+    "Schmachthagen, Ehrenmal": [
+      53.7476586,
+      10.4189388
+    ],
+    "Rudolf-Weißmann Straße": [
+      54.0703618,
+      9.9919628
+    ],
+    "Ringstraße": [
+      54.0703237,
+      9.997253
+    ],
+    "Bornhövedstraße": [
+      53.8849523,
+      10.6590785
+    ],
+    "Buntekuh": [
+      53.8558987,
+      10.6401509
+    ],
+    "Hohenstiege": [
+      53.8505148,
+      10.6302802
+    ],
+    "Hansfelde": [
+      53.8405358,
+      10.5948858
+    ],
+    "Poggenpohl": [
+      53.8472999,
+      10.6124516
+    ],
+    "Moltsfelde": [
+      54.0356878,
+      10.0150139
+    ],
+    "Hartwigswalder Straße": [
+      54.0392886,
+      10.0124367
+    ],
+    "Bahnhof Boostedt": [
+      54.0154573,
+      10.0171503
+    ],
+    "Von-dem-Borne-Straße": [
+      54.013108,
+      10.0214831
+    ],
+    "Boostedt, Industriestraße": [
+      54.0218733,
+      10.0192075
+    ],
+    "Schmachthagen, Schulsteig": [
+      53.749657,
+      10.4164524
+    ],
+    "Schmachthagen, Dorfstraße 6": [
+      53.7502421,
+      10.4095492
+    ],
+    "Schmachthagen, Dorfstraße 1": [
+      53.7502562,
+      10.4054216
+    ],
+    "Barkhorst, Mühlenweg": [
+      53.7419776,
+      10.3708747
+    ],
+    "Kaltenkirchen, Heideweg": [
+      53.8242191,
+      9.9366648
+    ],
+    "Ratzbek, Dorfstraße": [
+      53.841177,
+      10.553627
+    ],
+    "Eckernschmiede, Abzweigung Ratzbek": [
+      53.8367206,
+      10.5554949
+    ],
+    "Gut Stegen": [
+      53.7643384,
+      10.1503637
+    ],
+    "Groß Wesenberg, Mühlenkamp": [
+      53.8225621,
+      10.5365661
+    ],
+    "Hamberge, Am Travehang": [
+      53.8395342,
+      10.5874761
+    ],
+    "Moorgarten": [
+      53.809714,
+      10.5769453
+    ],
+    "Klein Rönnau, Plöner Eck": [
+      53.961063,
+      10.3201291
+    ],
+    "Klein Rönnau, Am Dorfplatz": [
+      53.9639254,
+      10.3255601
+    ],
+    "Klein Rönnau, Timmerbarg": [
+      53.9643495,
+      10.3293827
+    ],
+    "Klein Schenkenberg": [
+      53.7964195,
+      10.560414
+    ],
+    "Kaltenkirchen, GS Flottkamp": [
+      53.8252711,
+      9.9581214
+    ],
+    "Kaltenkirchen, Flottkamp (SZ)": [
+      53.8329141,
+      9.9617363
+    ],
+    "A Kaltenkirchen (Ostseite)": [
+      53.8339818,
+      9.9680378
+    ],
+    "Kaltenkirchen, Pommernring": [
+      53.8352729,
+      9.9721728
+    ],
+    "Kaltenkirchen, Friedenstraße": [
+      53.8387386,
+      9.9587183
+    ],
+    "Luise-Otto-Weg": [
+      53.8420767,
+      9.9598747
+    ],
+    "Kaltenkirchen, Anne-Frank-Weg": [
+      53.8433626,
+      9.9578391
+    ],
+    "Bad Segeberg, Strandbad Ihlsee": [
+      53.956542,
+      10.3056487
+    ],
+    "Lindhofstraße": [
+      53.9506688,
+      10.3120666
+    ],
+    "Bad Segeberg, Turnierplatz": [
+      53.9463342,
+      10.3074219
+    ],
+    "Stipsdorf, Kinderheim": [
+      53.9407155,
+      10.3362548
+    ],
+    "Bad Segeberg, Rathaus": [
+      53.9365559,
+      10.3140323
+    ],
+    "Bad Segeberg, Oberbergstraße": [
+      53.9350887,
+      10.3199359
+    ],
+    "Nienhüsen": [
+      53.8154993,
+      10.5885616
+    ],
+    "Grote Bleeken": [
+      53.8205588,
+      10.5912592
+    ],
+    "Holderbusch": [
+      53.8220954,
+      10.5937865
+    ],
+    "Hellkamp": [
+      53.8245729,
+      10.5986388
+    ],
+    "Holzkoppel": [
+      53.8256541,
+      10.6010362
+    ],
+    "Im Block": [
+      53.8320072,
+      10.6097651
+    ],
+    "Buchenstücken": [
+      53.8287966,
+      10.6043828
+    ],
+    "Im Schlag": [
+      53.8361567,
+      10.6146981
+    ],
+    "Reußkamp": [
+      53.8376955,
+      10.6179477
+    ],
+    "Pennmoor": [
+      53.8387033,
+      10.6243083
+    ],
+    "Mollhagen, Sprenger Weg": [
+      53.7029546,
+      10.383859
+    ],
+    "Tremsbüttel, Feuerwehrhaus": [
+      53.7422744,
+      10.3097264
+    ],
+    "Alter Bahnhof": [
+      54.0208936,
+      10.0599432
+    ],
+    "Ahrensburg, Husumweg": [
+      53.6836417,
+      10.2487441
+    ],
+    "Harksheide, Stüberg": [
+      53.7214506,
+      10.0138683
+    ],
+    "Harksheide, Falkenbergstraße": [
+      53.7113029,
+      10.0083007
+    ],
+    "Cashagener Mühle": [
+      53.952044,
+      10.5436791
+    ],
+    "Pronstorf, Redderkate": [
+      53.9548447,
+      10.5371371
+    ],
+    "Bargerhof": [
+      53.9134565,
+      10.6306643
+    ],
+    "Glashütte / Bockshagen": [
+      53.9720537,
+      10.5390965
+    ],
+    "Reinsbeker Straße": [
+      53.8855412,
+      10.6532246
+    ],
+    "Stockelsdorf, Rathausmarkt": [
+      53.8872465,
+      10.6480371
+    ],
+    "Glashütte, Siegfriedstraße": [
+      53.7034158,
+      10.0598456
+    ],
+    "Tangstedt (OD), Puckaff": [
+      53.7142609,
+      10.0777684
+    ],
+    "Tangstedt (OD), Ziegenkoppel": [
+      53.7214037,
+      10.0720076
+    ],
+    "Tangstedt (OD), Wiesenweg": [
+      53.7251683,
+      10.074816
+    ],
+    "Tangstedt (OD), Herrendamm": [
+      53.7301515,
+      10.0797026
+    ],
+    "Tangstedt (OD), Rathaus": [
+      53.7326033,
+      10.0850237
+    ],
+    "Tangstedt (OD), Hauptstraße": [
+      53.7344329,
+      10.0837782
+    ],
+    "Tangstedt (OD), Harksheider Weg": [
+      53.7356319,
+      10.0760292
+    ],
+    "Wilstedt, Gewerbegebiet": [
+      53.7434008,
+      10.0685197
+    ],
+    "Wilstedt, Dorfplatz": [
+      53.7466484,
+      10.06705
+    ],
+    "Wilstedt, Weg am Sportplatz": [
+      53.7496434,
+      10.0641051
+    ],
+    "Wilstedt, Loheweg": [
+      53.7480201,
+      10.0619583
+    ],
+    "Wilstedt, Dorfring": [
+      53.7453013,
+      10.0611064
+    ],
+    "Wilstedt, Achtern Diek": [
+      53.7436009,
+      10.0630311
+    ],
+    "Wilstedt, Waldstraße": [
+      53.7288102,
+      10.0570116
+    ],
+    "Wilstedt, Birkenweg": [
+      53.7280301,
+      10.0518229
+    ],
+    "Wilstedt, Heidestraße": [
+      53.7305145,
+      10.0476369
+    ],
+    "Wilstedt, Ginsterweg": [
+      53.7329387,
+      10.0451036
+    ],
+    "Harkshörn, Harckesheyde (Ost)": [
+      53.7235372,
+      10.0240079
+    ],
+    "Schmalfeld, Schmalfelder Au": [
+      53.8817937,
+      9.9820938
+    ],
+    "Schmalstede West": [
+      54.1968925,
+      10.0280728
+    ],
+    "Bordesholm Kreuzung": [
+      54.1754584,
+      10.0276087
+    ],
+    "Bordesholm Markt": [
+      54.1745275,
+      10.0312667
+    ],
+    "Bordesholm Christuskirche": [
+      54.1733659,
+      10.0380257
+    ],
+    "Negenharrie, Ortsmitte": [
+      54.1442522,
+      10.0759324
+    ],
+    "Großharrie Brauner Hirsch": [
+      54.133101,
+      10.0931096
+    ],
+    "Bönebüttel, Dorf": [
+      54.0789184,
+      10.0576736
+    ],
+    "Bönebüttel, Kummerfelder Weg": [
+      54.0689276,
+      10.0593979
+    ],
+    "Diekkamp": [
+      54.0512567,
+      10.0350069
+    ],
+    "Grellenkamp": [
+      54.0522893,
+      10.0318
+    ],
+    "Grellenkamp/Husberger Weg": [
+      54.0525794,
+      10.0333365
+    ],
+    "Kummerfelder Straße": [
+      54.0521372,
+      10.0207171
+    ],
+    "Würen": [
+      54.0523646,
+      10.0267144
+    ],
+    "Vossgang": [
+      54.0496574,
+      10.0218717
+    ],
+    "Gadelander Straße": [
+      54.0534385,
+      10.0004916
+    ],
+    "Rathaus": [
+      54.0702458,
+      9.9878418
+    ],
+    "Falderapark": [
+      54.0702454,
+      9.9621245
+    ],
+    "Badendorf, Mitteltor": [
+      53.8653075,
+      10.5746747
+    ],
+    "Badendorf, Dorfstraße": [
+      53.8696854,
+      10.5831536
+    ],
+    "Badendorf, Zur Wüstenei": [
+      53.8720579,
+      10.59172
+    ],
+    "Steinrader Damm": [
+      53.876294,
+      10.6149786
+    ],
+    "Suterland": [
+      53.8762845,
+      10.6114077
+    ],
+    "Groß Kummerfeld, Rehmkoppel": [
+      54.0479653,
+      10.0667871
+    ],
+    "Groß Kummerfeld, Birkenallee": [
+      54.0477346,
+      10.070783
+    ],
+    "Groß Kummerfeld, Birkenallee Mitte": [
+      54.047559,
+      10.0756418
+    ],
+    "Gymnasium": [
+      54.128633,
+      9.9867911
+    ],
+    "HAKO": [
+      53.7993806,
+      10.348446
+    ],
+    "Blumendorf": [
+      53.795767,
+      10.3285062
+    ],
+    "Floggensee, B75": [
+      53.776259,
+      10.2735093
+    ],
+    "Bargfeld-Rögen, Steinklinken": [
+      53.768084,
+      10.2371352
+    ],
+    "Bargfeld-Rögen, Rögener Weg": [
+      53.7667299,
+      10.2270722
+    ],
+    "Bargfeld-Stegen, Hartwigsahl": [
+      53.7649477,
+      10.2122365
+    ],
+    "Bargfeld-Stegen, Gräberkater Weg": [
+      53.7651638,
+      10.2010934
+    ],
+    "Bargfeld-Stegen, Kirche": [
+      53.7645474,
+      10.180228
+    ],
+    "Bargfeld-Stegen, Krögersweg": [
+      53.7571057,
+      10.1474555
+    ],
+    "Ehlersberg, Rader Weg": [
+      53.7525326,
+      10.1370722
+    ],
+    "Kayhude, Heidkrug": [
+      53.7497795,
+      10.1262988
+    ],
+    "Tangstedt (OD), B 432": [
+      53.7274617,
+      10.1007779
+    ],
+    "Tangstedt (OD), Bützberg": [
+      53.7297704,
+      10.0953297
+    ],
+    "Gut Rethfurt": [
+      53.7451559,
+      10.1218779
+    ],
+    "Bargfeld-Stegen, Krankenhaus": [
+      53.7588618,
+      10.1548842
+    ],
+    "Elmenhorst, Sülfelder Straße": [
+      53.7666153,
+      10.2645307
+    ],
+    "Krämerwende": [
+      53.8669068,
+      10.606401
+    ],
+    "Roggenhorster Straße": [
+      53.8625187,
+      10.6074273
+    ],
+    "Postfeld": [
+      54.2095938,
+      10.2107755
+    ],
+    "Ruschwegen": [
+      54.2083048,
+      10.1913336
+    ],
+    "Tannenbergstraße": [
+      53.9029733,
+      10.6635068
+    ],
+    "Kolberger Straße": [
+      53.901597,
+      10.6609462
+    ],
+    "Bergstraße": [
+      53.8991116,
+      10.6568786
+    ],
+    "Kalübbe, Alte Schule": [
+      54.1193655,
+      10.2842473
+    ],
+    "Kalübbe, Konditorei Hansen": [
+      54.1182743,
+      10.2798372
+    ],
+    "Perdoel, Abzweigung": [
+      54.112641,
+      10.2577941
+    ],
+    "Groß Kummerfeld, Husberger Weg": [
+      54.0513129,
+      10.0743854
+    ],
+    "Am Sünderbek": [
+      54.0491725,
+      10.041039
+    ],
+    "Ahrensbök, Neuhof": [
+      53.983795,
+      10.5820828
+    ],
+    "Dunkelsdorf, Dunkelsdorfer Weg": [
+      53.9737769,
+      10.591826
+    ],
+    "Dunkelsdorf, Bokhof": [
+      53.9681365,
+      10.601275
+    ],
+    "Dakendorf, Abzw. Böbs": [
+      53.9627915,
+      10.6061232
+    ],
+    "Pohnsdorf Gastwirtschaft": [
+      53.9325117,
+      10.6340643
+    ],
+    "Curau, Lübecker Landstraße": [
+      53.9504164,
+      10.6236133
+    ],
+    "Curaufelde": [
+      53.9468869,
+      10.6267059
+    ],
+    "Pohnsdorf Abzw. Bad Schwartau": [
+      53.9269702,
+      10.6366892
+    ],
+    "U Ohlstedt": [
+      53.6953581,
+      10.1381828
+    ],
+    "Bredenbekstraße": [
+      53.6928165,
+      10.1322155
+    ],
+    "Alsterblick": [
+      53.6992516,
+      10.1236304
+    ],
+    "Wohldorf": [
+      53.7036321,
+      10.1199837
+    ],
+    "Duvenstedter Triftweg": [
+      53.7056682,
+      10.1168904
+    ],
+    "Trilluper Weg": [
+      53.7075747,
+      10.1096766
+    ],
+    "Lohe": [
+      53.7087447,
+      10.1052673
+    ],
+    "Mesterbrooksweg": [
+      53.7051884,
+      10.1030549
+    ],
+    "Specksaalredder": [
+      53.7013904,
+      10.1035918
+    ],
+    "Bökenbarg": [
+      53.6964704,
+      10.1002047
+    ],
+    "Arfrade, West": [
+      53.914383,
+      10.6075935
+    ],
+    "Arfrade, Hauptstraße": [
+      53.9150959,
+      10.6018288
+    ],
+    "Stockelsdorf, Bäckergang": [
+      53.8960304,
+      10.6471044
+    ],
+    "Hallenbad": [
+      53.9334907,
+      10.3056343
+    ],
+    "Vicelinkirche": [
+      53.8049471,
+      10.3627494
+    ],
+    "Sandkamp": [
+      53.7991413,
+      10.3432681
+    ],
+    "Braak": [
+      54.1034227,
+      10.5854807
+    ],
+    "Schwienkuhlen, Abzweig": [
+      54.0644687,
+      10.5781884
+    ],
+    "Neuenweide": [
+      54.053126,
+      10.5628821
+    ],
+    "Siblin, Ortsmitte": [
+      54.0489079,
+      10.5593136
+    ],
+    "Barghorst, Dörpstraat": [
+      54.0240508,
+      10.5644878
+    ],
+    "Ahrensbök, Am Jägerhof": [
+      54.0182305,
+      10.5712036
+    ],
+    "Holstendorf, Haßberg": [
+      54.0279508,
+      10.59656
+    ],
+    "Holstendorf, Steenkrug": [
+      54.0323508,
+      10.6076314
+    ],
+    "Wulfsdorf (OH)": [
+      54.0149074,
+      10.6478778
+    ],
+    "Ahrensbök, Havekost": [
+      54.0178597,
+      10.6210544
+    ],
+    "Groß Wesenberg, Dorfplatz": [
+      53.8193467,
+      10.5398997
+    ],
+    "Lokfelder Heckkaten (Süd)": [
+      53.8136295,
+      10.4979544
+    ],
+    "Voßfelder Straße": [
+      53.824549,
+      10.489769
+    ],
+    "Steinfelderhude (Ost)": [
+      53.8212033,
+      10.4446567
+    ],
+    "Bad Oldesloe, Kneeden": [
+      53.8165066,
+      10.4268143
+    ],
+    "Schützenstraße": [
+      53.8098824,
+      10.3654316
+    ],
+    "Bad Segeberg, Marktplatz": [
+      53.9357457,
+      10.3092371
+    ],
+    "Geschendorf, Im Winkel (Ost)": [
+      53.9221346,
+      10.450867
+    ],
+    "Weede, Weeder Dorfstraße": [
+      53.9227441,
+      10.371585
+    ],
+    "Bad Segeberg, Lübecker Landstraße": [
+      53.9316953,
+      10.3237676
+    ],
+    "Bad Segeberg, Amtsgericht": [
+      53.9328562,
+      10.321342
+    ],
+    "Schackendorf, Waidmannsheil": [
+      53.9461899,
+      10.2789355
+    ],
+    "Bad Segeberg, Am Wasserwerk": [
+      53.9389373,
+      10.2903736
+    ],
+    "Stolpe, Oberdorf": [
+      54.1332363,
+      10.2147418
+    ],
+    "Stolpe, Kieler Kamp": [
+      54.1502947,
+      10.2058688
+    ],
+    "Quisdorf": [
+      54.1203446,
+      10.5694941
+    ],
+    "Appelwarder": [
+      54.1613668,
+      10.4054935
+    ],
+    "Tramm Abzw": [
+      54.1674588,
+      10.3958854
+    ],
+    "Wittmoldt, Abzw. B76": [
+      54.1776593,
+      10.3810917
+    ],
+    "Eichhorst": [
+      54.186911,
+      10.3664462
+    ],
+    "Gießelrade": [
+      54.0529042,
+      10.5995548
+    ],
+    "Bad Segeberg, Kurhausstraße (Süd)": [
+      53.9384467,
+      10.3071539
+    ],
+    "Bad Segeberg, Kreishaus": [
+      53.9364007,
+      10.3040516
+    ],
+    "Bad Segeberg, Imkerschule": [
+      53.9341231,
+      10.289669
+    ],
+    "Steinhorst, Mühlenbrook": [
+      53.7282567,
+      10.4652044
+    ],
+    "Oberbüssauer Weg": [
+      53.8397969,
+      10.6299109
+    ],
+    "Hamberge, Schulstraße": [
+      53.8383478,
+      10.5791009
+    ],
+    "Wilhelminenstraße": [
+      54.0991459,
+      9.9895079
+    ],
+    "Eckhorst, Rödenweg": [
+      53.8960049,
+      10.5990598
+    ],
+    "Eckhorst, Altes Ende": [
+      53.8944492,
+      10.6032596
+    ],
+    "Mönkhagen, BAB-Auffahrt": [
+      53.898965,
+      10.5725456
+    ],
+    "Mönkhagen, Neuhof": [
+      53.9116339,
+      10.5361861
+    ],
+    "Langniendorf, Hauptstraße 13": [
+      53.9122731,
+      10.5234587
+    ],
+    "Rickling, Alte Gönnebeker Straße": [
+      54.0122933,
+      10.1631451
+    ],
+    "Wesenberg, Hof Springbek": [
+      53.8304747,
+      10.5301789
+    ],
+    "Eckernschmiede, Bahnbrücke": [
+      53.8347542,
+      10.5467399
+    ],
+    "Bichel, Ort": [
+      54.0827543,
+      10.440913
+    ],
+    "Wöbs, Ortsmitte": [
+      54.0735,
+      10.458802
+    ],
+    "Hassendorf, Nord": [
+      54.0784961,
+      10.499977
+    ],
+    "Liensfeld, Im Dorfe": [
+      54.0897889,
+      10.5498391
+    ],
+    "Majenfelde, An der Meierei": [
+      54.1102364,
+      10.5427134
+    ],
+    "Majenfelde, Steindamm": [
+      54.1031705,
+      10.5287387
+    ],
+    "Hutzfeld, Gemeindeverwaltung": [
+      54.0901232,
+      10.4859225
+    ],
+    "Kuhlenbrook": [
+      54.0579613,
+      10.4283051
+    ],
+    "Kreuzfeld": [
+      54.1480841,
+      10.5199091
+    ],
+    "Hutzfeld, Heinrich-Harms-Schule": [
+      54.0896351,
+      10.4747276
+    ],
+    "Im Sande": [
+      54.0958994,
+      10.3729852
+    ],
+    "Hornsdorf": [
+      54.0597955,
+      10.3806324
+    ],
+    "Klenzau, Ortsmitte": [
+      54.0890208,
+      10.5760856
+    ],
+    "Seedorf, Seekamp": [
+      54.0487669,
+      10.4607507
+    ],
+    "Bahrenkrug, Abzweigung": [
+      54.0444181,
+      10.4580061
+    ],
+    "Benstaben (West)": [
+      53.8167486,
+      10.4530516
+    ],
+    "Sehmsdorf, Dorfstraße": [
+      53.8110086,
+      10.4143
+    ],
+    "Wesenberg, Herweg": [
+      53.8304349,
+      10.5346481
+    ],
+    "Sehmsdorf, Düpenau": [
+      53.8070509,
+      10.423694
+    ],
+    "Bad Oldesloe, Umspannwerk": [
+      53.8106425,
+      10.4033433
+    ],
+    "Sehmsdorfer Straße": [
+      53.8080654,
+      10.3937865
+    ],
+    "Heilshoop, Hauptstraße 4": [
+      53.8861435,
+      10.5322356
+    ],
+    "Heilshoop, Altenschleuse": [
+      53.8907116,
+      10.5278243
+    ],
+    "Heilshoop, Alte Schule": [
+      53.8886911,
+      10.5392882
+    ],
+    "Heilshoop, Reinfelder Straße 38": [
+      53.8810761,
+      10.5248782
+    ],
+    "Horsdorferfelde": [
+      53.9526981,
+      10.6719054
+    ],
+    "Benstaben (Mitte)": [
+      53.8152688,
+      10.4592869
+    ],
+    "Benstaben (Süd)": [
+      53.8118152,
+      10.4605234
+    ],
+    "Klein Barnitz, Abzweigung": [
+      53.8106334,
+      10.4796161
+    ],
+    "Klein Barnitz, Ortsmitte": [
+      53.8111042,
+      10.4807879
+    ],
+    "Groß Barnitz, Dieckkamp": [
+      53.8058362,
+      10.4939908
+    ],
+    "Groß Barnitz, Westerauer Straße": [
+      53.805977,
+      10.500486
+    ],
+    "Groß Barnitz, Abzweigung Lokfeld": [
+      53.8061126,
+      10.5045881
+    ],
+    "Klein Wesenberg, Haupstraße 27": [
+      53.8067485,
+      10.5485417
+    ],
+    "Groß Schenkenberg, Grinauer Straße": [
+      53.7940422,
+      10.5652485
+    ],
+    "Grinau, Kropsöhler Weg": [
+      53.7724941,
+      10.5470119
+    ],
+    "Oersdorf, Dorfstraße": [
+      53.8402215,
+      9.992765
+    ],
+    "Ammersbek, Pumpenhaus": [
+      53.706619,
+      10.2270307
+    ],
+    "Auf der Reihe": [
+      53.8773582,
+      10.6457509
+    ],
+    "Hutzfeld, Alte Schule": [
+      54.0925785,
+      10.4766762
+    ],
+    "Ammersbek, Alter Teichweg": [
+      53.7106286,
+      10.2173998
+    ],
+    "Bad Segeberg, Berliner Straße": [
+      53.9565235,
+      10.2935741
+    ],
+    "Bad Segeberg, Ihlwaldfriedhof": [
+      53.9595862,
+      10.2917596
+    ],
+    "Bad Segeberg, Liliencronweg": [
+      53.9319538,
+      10.2916327
+    ],
+    "G. Hauptmann-Schule": [
+      53.8986754,
+      10.6623633
+    ],
+    "Hohlweg": [
+      53.8961643,
+      10.6527906
+    ],
+    "Nettelsee, Ortsmitte": [
+      54.1771294,
+      10.1932461
+    ],
+    "Dosenbek, Ort": [
+      54.1688416,
+      10.1466211
+    ],
+    "Ahrensbök, Wildkoppel": [
+      54.0146142,
+      10.5148309
+    ],
+    "Pfingstberg": [
+      54.1246493,
+      10.4742071
+    ],
+    "Theresienhof": [
+      54.1911185,
+      10.401966
+    ],
+    "Bimöhlen, Hof Weide": [
+      53.942714,
+      10.0225249
+    ],
+    "Ratzeburger Straße": [
+      53.8024593,
+      10.3997701
+    ],
+    "Finanzamt": [
+      54.1492559,
+      10.4605616
+    ],
+    "Bickbüschen": [
+      53.8071518,
+      10.3559411
+    ],
+    "Grabau, Lindenallee": [
+      53.8032645,
+      10.2742348
+    ],
+    "Grabau, Dorfstraße": [
+      53.8037083,
+      10.2750926
+    ],
+    "Bad Oldesloe, Glinde 1-15": [
+      53.8032171,
+      10.3054518
+    ],
+    "Rade (OD), B 432": [
+      53.7395392,
+      10.1185231
+    ],
+    "Westerau, Abzweigung Schürensöhlen": [
+      53.7718306,
+      10.4836299
+    ],
+    "Westerau, Ratzeburger Straße": [
+      53.7751408,
+      10.4821477
+    ],
+    "Westerau, Neue Straße": [
+      53.7755115,
+      10.4842264
+    ],
+    "Ahrensfelde, B 208": [
+      53.7644136,
+      10.4958006
+    ],
+    "Dersau, Schule": [
+      54.1171439,
+      10.3370616
+    ],
+    "Dersau, Mühle": [
+      54.1209968,
+      10.3346313
+    ],
+    "Gut Horst, Abzw.": [
+      54.1541929,
+      10.2872908
+    ],
+    "Klein Wesenberg, Am Kirchberg": [
+      53.8133145,
+      10.5435785
+    ],
+    "Bartelsholz": [
+      53.8206022,
+      10.5732576
+    ],
+    "Leckerhölken, Gasthof": [
+      54.1621304,
+      10.1310705
+    ],
+    "Kleinmeinsdorf, B76": [
+      54.1336444,
+      10.5055722
+    ],
+    "A Kaltenkirchen (Westseite)": [
+      53.8340495,
+      9.9676516
+    ],
+    "Teichbrücke": [
+      54.0730756,
+      9.985718
+    ],
+    "Otto-Schumann-Straße": [
+      53.68209,
+      10.2259176
+    ],
+    "Rosenweg": [
+      53.6838236,
+      10.2224851
+    ],
+    "Henstedt, Kirche": [
+      53.7908126,
+      10.006199
+    ],
+    "Aschenputtelweg": [
+      53.8445404,
+      10.6287925
+    ],
+    "Zarpen, Kirche": [
+      53.8712288,
+      10.518367
+    ],
+    "Zarpen, Schule": [
+      53.8753131,
+      10.5145964
+    ],
+    "Zarpen, Rehhorster Straße": [
+      53.8669219,
+      10.5076334
+    ],
+    "Zarpen, Heilsaubrücke": [
+      53.8695838,
+      10.5207108
+    ],
+    "A Henstedt-Ulzburg": [
+      53.79549,
+      9.9821647
+    ],
+    "Bockhorn, Försterei": [
+      53.9201543,
+      10.0927836
+    ],
+    "Hagenstraße": [
+      53.8103237,
+      10.3742525
+    ],
+    "Bf. Bargteheide": [
+      53.7283585,
+      10.2686889
+    ],
+    "Rögen": [
+      53.8002225,
+      10.3414127
+    ],
+    "Neritz, Herrenweg": [
+      53.7856727,
+      10.2908098
+    ],
+    "Bargfeld-Stegen, Feuerwehr": [
+      53.7676369,
+      10.1876447
+    ],
+    "Ahrensburg, Rosenhof": [
+      53.682644,
+      10.2408453
+    ],
+    "Ahrensburg, Kremerberg": [
+      53.6941001,
+      10.2417919
+    ],
+    "Ahrensburg, Jungborn": [
+      53.6835568,
+      10.2315681
+    ],
+    "Ammersbek, Schneiderberg": [
+      53.6939026,
+      10.2174062
+    ],
+    "Heidmühlen, Wahlstedter Straße": [
+      53.9717328,
+      10.0863376
+    ],
+    "Schönmoor, Kirschenweg": [
+      53.9837532,
+      10.141112
+    ],
+    "Braak, Feldweg": [
+      54.0087202,
+      10.0894443
+    ],
+    "Oberkleveez, Kindergarten": [
+      54.1478428,
+      10.4907932
+    ],
+    "Am Storchennest": [
+      53.9103123,
+      9.8663252
+    ],
+    "Kayhude, Segeberger Straße": [
+      53.7573208,
+      10.1296236
+    ],
+    "Königsweg": [
+      53.9099166,
+      9.8763939
+    ],
+    "Pommernweg": [
+      53.9033983,
+      9.8699057
+    ],
+    "Noldestraße": [
+      54.0622837,
+      10.0064637
+    ],
+    "Fabrik": [
+      54.0611782,
+      10.0102288
+    ],
+    "Dahlkamp": [
+      53.9221782,
+      9.8669167
+    ],
+    "Bornhöved, Adolfplatz": [
+      54.0693378,
+      10.2269051
+    ],
+    "Pohnsdorf Umspannwerk": [
+      53.9204169,
+      10.6397265
+    ],
+    "Maienbeeck (Ost)": [
+      53.9214049,
+      9.8798252
+    ],
+    "Graf-Stolberg-Straße": [
+      53.9289919,
+      9.8880557
+    ],
+    "Fuhlendorfer Weg": [
+      53.9258661,
+      9.8865995
+    ],
+    "Stockelsdorf, Abzweig Gewerbegebiet": [
+      53.9042754,
+      10.6415442
+    ],
+    "Bargerbrück": [
+      53.9099443,
+      10.6403219
+    ],
+    "Ahrensburg, An der Strusbek (Mitte)": [
+      53.6891627,
+      10.2657647
+    ],
+    "Groß Kummerfeld, Hauptstraße": [
+      54.0483896,
+      10.0701598
+    ],
+    "Mönkhagen, An der Bundesstraße (Ost)": [
+      53.898831,
+      10.5770816
+    ],
+    "Groß Steinrade, Breden": [
+      53.8728391,
+      10.5985428
+    ],
+    "Krogaspe, Am Aalbek": [
+      54.1209197,
+      9.9436516
+    ],
+    "Loop Hauptstraße": [
+      54.1478284,
+      9.9510017
+    ],
+    "Schönbek, Ortsmitte": [
+      54.163329,
+      9.9744766
+    ],
+    "Bordesholm Haidkrug": [
+      54.1875299,
+      10.0253249
+    ],
+    "Neversdorf, Hauptstraße": [
+      53.8646988,
+      10.2865258
+    ],
+    "Wittorf Mitte": [
+      54.0535361,
+      9.9690342
+    ],
+    "Henstedt, Schlesienstraße": [
+      53.793283,
+      10.0062585
+    ],
+    "Ulzburg, Schulzentrum": [
+      53.790982,
+      9.9912266
+    ],
+    "Hitzhusen, Baßkate": [
+      53.9302965,
+      9.8465008
+    ],
+    "Hinter der Bahn": [
+      53.9770963,
+      9.9614832
+    ],
+    "Bad Bramstedt Klashorn": [
+      53.9041358,
+      9.9418997
+    ],
+    "Hauptstraße": [
+      54.0759621,
+      10.0037612
+    ],
+    "Prehnsfelder Weg": [
+      54.0929168,
+      9.9588802
+    ],
+    "Krankenhaus": [
+      53.8115021,
+      10.3643101
+    ],
+    "Am Glindhorst": [
+      53.8076987,
+      10.3890732
+    ],
+    "Hebbelstraße": [
+      53.8027102,
+      10.3816349
+    ],
+    "Masurenwegschule": [
+      53.8050039,
+      10.3912626
+    ],
+    "Mährischer Berg": [
+      53.8064423,
+      10.3681888
+    ],
+    "Salinenstraße": [
+      53.8060622,
+      10.368736
+    ],
+    "Lübecker Straße": [
+      53.810846,
+      10.3766469
+    ],
+    "Feuerwache": [
+      53.8115439,
+      10.3813712
+    ],
+    "Kurparkallee": [
+      53.8070806,
+      10.3755542
+    ],
+    "Schule am Kurpark": [
+      53.8011099,
+      10.3762398
+    ],
+    "Meisenweg": [
+      54.0704378,
+      9.9647063
+    ],
+    "Moordamm": [
+      53.8023776,
+      10.368551
+    ],
+    "Am Bürgerpark": [
+      53.8092922,
+      10.3686142
+    ],
+    "Travebad": [
+      53.8118145,
+      10.3686958
+    ],
+    "Sodwiese, Stocksee": [
+      54.0874506,
+      10.3411932
+    ],
+    "Stocksee, Am Dorfplatz": [
+      54.0895207,
+      10.3465224
+    ],
+    "Stocksee, Dorfstraße": [
+      54.0937462,
+      10.3481102
+    ],
+    "Stocksee Moorkaten": [
+      54.0808525,
+      10.3294548
+    ],
+    "Nehmten, Abzweigung": [
+      54.1063521,
+      10.3469014
+    ],
+    "Ascheberg, Bahnhof": [
+      54.1480672,
+      10.3395235
+    ],
+    "Ascheberg, Abzw. Bahnhof": [
+      54.1476122,
+      10.342016
+    ],
+    "Reinfeld, Marktstraße": [
+      53.8316776,
+      10.4887095
+    ],
+    "Körliner Straße": [
+      53.826338,
+      10.4973096
+    ],
+    "Reinfeld, Eichenweg": [
+      53.8325484,
+      10.472421
+    ],
+    "Reinfeld, Segeberger Straße": [
+      53.8317921,
+      10.4752662
+    ],
+    "Neuer Garten": [
+      53.8321846,
+      10.4803319
+    ],
+    "Reinfeld, Bolande": [
+      53.8336048,
+      10.4650718
+    ],
+    "Reinfeld, Pommernweg": [
+      53.8327488,
+      10.4691378
+    ],
+    "Bf. Bad Oldesloe (ZOB)": [
+      53.8049918,
+      10.3813086
+    ],
+    "Schmalstede, Ort": [
+      54.1958732,
+      10.0294033
+    ],
+    "Ulzburg-Süd, Auf dem Damm": [
+      53.7707718,
+      9.9813553
+    ],
+    "Ulzburg-Süd, Dammstücken": [
+      53.7712766,
+      9.9908193
+    ],
+    "Henstedt, Schäferberg": [
+      53.7918893,
+      9.9988649
+    ],
+    "Ziegelhofer Weg": [
+      54.1095618,
+      10.1261517
+    ],
+    "Brügge Grundschule": [
+      54.1776593,
+      10.0709725
+    ],
+    "Groß Buchwald, Dorfplatz": [
+      54.1627785,
+      10.085042
+    ],
+    "Wittmoldt, Wendeplatz": [
+      54.1742611,
+      10.3518866
+    ],
+    "Wittmoldt, Abzweig B76": [
+      54.1766366,
+      10.3817166
+    ],
+    "Neumünster Holstenhallen": [
+      54.0922185,
+      9.9740844
+    ],
+    "Robert-Koch-Straße": [
+      54.0881778,
+      9.9762945
+    ],
+    "Medenbreite": [
+      53.8725505,
+      10.6253528
+    ],
+    "Nuelsenstraße": [
+      53.874281,
+      10.6318853
+    ],
+    "Uhlenhörn": [
+      53.8754156,
+      10.6369261
+    ],
+    "Am Mailand": [
+      53.8763621,
+      10.6403814
+    ],
+    "Postillionweg": [
+      53.8807074,
+      10.6539866
+    ],
+    "Wankendorf, Lindemann": [
+      54.1154255,
+      10.2072489
+    ],
+    "Wankendorf, Schule": [
+      54.1166648,
+      10.2038719
+    ],
+    "Wakendorf II, Sandbergstraße": [
+      53.789239,
+      10.089332
+    ],
+    "Wakendorf II, Kulturzentrum": [
+      53.7863906,
+      10.0773792
+    ],
+    "Wakendorf II, Schule": [
+      53.7835636,
+      10.0829032
+    ],
+    "Stegelkamp, Am Endern": [
+      53.7895202,
+      10.0647333
+    ],
+    "Götzberg": [
+      53.7929215,
+      10.0435922
+    ],
+    "Henstedt, Vogelsang": [
+      53.7937473,
+      10.0304539
+    ],
+    "Henstedt, Krummacker": [
+      53.7887491,
+      10.0141085
+    ],
+    "Henstedt, Teichstraße": [
+      53.7867862,
+      10.0051723
+    ],
+    "Amalie-Dietrich-Straße": [
+      53.8018273,
+      10.3541323
+    ],
+    "Nienwohld, Moorweg": [
+      53.7829905,
+      10.1869465
+    ],
+    "Nienwohld, Dorfstraße": [
+      53.7849458,
+      10.1910375
+    ],
+    "Sülfeld, Am Markt": [
+      53.8004805,
+      10.2313578
+    ],
+    "Brügmann-Ring": [
+      53.9210661,
+      9.895381
+    ],
+    "Düsternhoop": [
+      53.9232097,
+      9.8896909
+    ],
+    "Ascheberg, Trentrade": [
+      54.1504828,
+      10.3285053
+    ],
+    "Kieler Straße 270": [
+      54.0949112,
+      9.9885576
+    ],
+    "Bosau, Brackrade": [
+      54.1008847,
+      10.479781
+    ],
+    "Böbs, Lindenweg": [
+      53.9799438,
+      10.629629
+    ],
+    "Schwochel": [
+      53.9953616,
+      10.6256249
+    ],
+    "Glasau, Grenzweg": [
+      54.0651767,
+      10.5075766
+    ],
+    "Hassendorf, Wöbser Weg": [
+      54.0750038,
+      10.5006142
+    ],
+    "Sarau, Schulstraße": [
+      54.0526225,
+      10.5300595
+    ],
+    "Sarau, Mühlenberg": [
+      54.057357,
+      10.5317208
+    ],
+    "Glasau, Nesselteich": [
+      54.045491,
+      10.5315823
+    ],
+    "Glasau, Ort": [
+      54.0604258,
+      10.5196592
+    ],
+    "Neuglasau, Abzweigung": [
+      54.0401647,
+      10.5377961
+    ],
+    "Glasau, Neuland": [
+      54.0358531,
+      10.5465907
+    ],
+    "Scheidekate bei Barghorst": [
+      54.0310621,
+      10.5544393
+    ],
+    "Friedrichsgabe, Weg am Denkmal": [
+      53.7165371,
+      9.9994897
+    ],
+    "Friedrichsgabe, Harckesheyde (West)": [
+      53.7234404,
+      9.9988771
+    ],
+    "Friedrichsgabe, Bahnhofstraße": [
+      53.7283132,
+      9.9973474
+    ],
+    "Harksheide, Johann-Hinrich-Wichern-Straße": [
+      53.7244745,
+      10.0087338
+    ],
+    "Harksheide, Falkenbergstraße (Nord)": [
+      53.7235151,
+      10.0172653
+    ],
+    "Harksheide, Steindamm": [
+      53.718684,
+      10.0105813
+    ],
+    "Harksheide, Harckestwiete": [
+      53.7235176,
+      9.9994468
+    ],
+    "Harksheide, Harckesstieg": [
+      53.7250791,
+      10.0042164
+    ],
+    "Harksheide, Schulweg": [
+      53.7195433,
+      10.0031908
+    ],
+    "Harksheide, Falkenhorst": [
+      53.7105533,
+      10.0093006
+    ],
+    "Harksheide, Theodor-Storm-Straße": [
+      53.7103411,
+      10.0158768
+    ],
+    "Harksheide, Schützenwall": [
+      53.7078711,
+      10.0230202
+    ],
+    "Harksheide, Stormarnstraße": [
+      53.7081656,
+      10.0193483
+    ],
+    "Barghorst, Buschool": [
+      54.0220401,
+      10.567777
+    ],
+    "Ahrensbök, Steindamm": [
+      53.9929481,
+      10.5778276
+    ],
+    "Badendorf, Gemeinschaftshaus": [
+      53.8680149,
+      10.5738053
+    ],
+    "Curau, Dorfstraße": [
+      53.9488892,
+      10.6185253
+    ],
+    "Dissau, Post": [
+      53.9385721,
+      10.5980342
+    ],
+    "Arfrade, Hähnenkamp": [
+      53.9247352,
+      10.6128118
+    ],
+    "Dissau, Mühle": [
+      53.9336602,
+      10.6010293
+    ],
+    "Arfrade Abzw.": [
+      53.9177735,
+      10.6221928
+    ],
+    "Dissau, Gastwirtschaft": [
+      53.9410938,
+      10.5985607
+    ],
+    "Sedanstraße": [
+      54.0816239,
+      9.9792695
+    ],
+    "Heideweg": [
+      53.8058099,
+      9.9779946
+    ],
+    "Sportplatz": [
+      54.1262194,
+      9.9867918
+    ],
+    "Fliegenfelde": [
+      53.8512507,
+      10.5407319
+    ],
+    "Kieler Kamp": [
+      54.1489577,
+      10.4529467
+    ],
+    "Scharweg": [
+      54.1590063,
+      10.4341263
+    ],
+    "Bösdorf": [
+      54.1392544,
+      10.488639
+    ],
+    "Schillener Straße": [
+      54.1566643,
+      10.4437467
+    ],
+    "Springender Hirsch": [
+      54.0265195,
+      10.0180973
+    ],
+    "Kirche": [
+      54.0101731,
+      10.0255648
+    ],
+    "Bönebüttel, Aufeld": [
+      54.0835867,
+      10.0214413
+    ],
+    "Tasdorf, Kiefernweg": [
+      54.0926315,
+      10.0281421
+    ],
+    "Behl Siedlung": [
+      54.1762777,
+      10.4573077
+    ],
+    "Sülfeld, Schule": [
+      53.8004254,
+      10.2344534
+    ],
+    "Sülfeld, Zuckerhut": [
+      53.8042818,
+      10.2200587
+    ],
+    "Ulzburg, Kirche": [
+      53.7884064,
+      9.9794597
+    ],
+    "Ulzburg, Virchowring": [
+      53.7903267,
+      9.9824153
+    ],
+    "Ulzburg, An der Pinnau": [
+      53.78443,
+      9.9763812
+    ],
+    "Friedrichsgabe, Schule": [
+      53.7314338,
+      9.9954994
+    ],
+    "Harksheide, Zwickmöhlen": [
+      53.7387844,
+      9.9957783
+    ],
+    "Harksheide, Am Gehölz": [
+      53.7430917,
+      9.9960866
+    ],
+    "Harksheide, SOS-Kinderdorf": [
+      53.7470251,
+      9.9962974
+    ],
+    "Friedrichsgabe, Irisgang": [
+      53.7330913,
+      9.9964603
+    ],
+    "A Quickborner Straße": [
+      53.7339039,
+      9.9913447
+    ],
+    "Ulzburg-Süd, Suhlenkamp": [
+      53.774256,
+      9.978336
+    ],
+    "Ulzburg-Süd, Birkenhof": [
+      53.7778896,
+      9.9782273
+    ],
+    "Friedrichsgabe, Habichtweg": [
+      53.7176888,
+      9.9876715
+    ],
+    "Oskar-Alexander-Straße": [
+      53.9123894,
+      9.8904355
+    ],
+    "Padenstedt, Schule": [
+      54.0490203,
+      9.9252926
+    ],
+    "Ehndorf, Störstraße": [
+      54.0535788,
+      9.9169197
+    ],
+    "Padenstedt, Meierei": [
+      54.0488568,
+      9.9167396
+    ],
+    "Industriestraße": [
+      54.1207446,
+      9.9959176
+    ],
+    "Krokusweg": [
+      54.0988851,
+      10.0068055
+    ],
+    "Preetzer Landstraße": [
+      54.1064243,
+      9.9987914
+    ],
+    "Dorfstraße": [
+      54.1265898,
+      9.9949317
+    ],
+    "Einfeld Alte Schanze": [
+      54.1398273,
+      10.0101642
+    ],
+    "Pappelweg": [
+      54.1061101,
+      10.0033635
+    ],
+    "Neue Straße/Einfeld Bhf.": [
+      54.1289787,
+      9.996292
+    ],
+    "Rotdornallee": [
+      54.1024189,
+      10.0035191
+    ],
+    "Krückenkrug/Kieler Straße": [
+      54.1148831,
+      9.9942346
+    ],
+    "Krückenkrug": [
+      54.1145771,
+      9.992974
+    ],
+    "Bordesholm Verwaltungsakademie": [
+      54.1776427,
+      10.0155732
+    ],
+    "Alsenplatz": [
+      54.0915255,
+      10.0067911
+    ],
+    "Waldschlößchen": [
+      54.1083521,
+      9.9922331
+    ],
+    "Tasdorf, Ortsmitte": [
+      54.0953734,
+      10.0311807
+    ],
+    "Bogenstraße": [
+      54.0621907,
+      9.9577601
+    ],
+    "Franz-Wieman-Straße": [
+      54.0636647,
+      9.9625279
+    ],
+    "Falderastraße": [
+      54.064827,
+      9.9667832
+    ],
+    "Steinfeld, Ortsmitte": [
+      53.8328973,
+      10.427202
+    ],
+    "Negernbötel, Dorfstraße": [
+      53.9827213,
+      10.2489393
+    ],
+    "Kleinkummerfeld, Segeberger Chaussee": [
+      54.0347506,
+      10.0671554
+    ],
+    "Depot": [
+      53.9997944,
+      10.0052729
+    ],
+    "Kirchbarkau, Schule": [
+      54.2123759,
+      10.1408844
+    ],
+    "Rotenhahn": [
+      53.9271913,
+      10.2485509
+    ],
+    "Hartenholm, Am Dorfplatz": [
+      53.9006714,
+      10.0606876
+    ],
+    "Bark, Segeberger Straße": [
+      53.9107495,
+      10.1862312
+    ],
+    "Steinfeld, Siedlung": [
+      53.8364298,
+      10.4384146
+    ],
+    "Eisenbahnbrücke": [
+      53.8196882,
+      10.4321611
+    ],
+    "Bad Bramstedt, Weddelbrooker Straße": [
+      53.9017251,
+      9.883103
+    ],
+    "Parkstraße": [
+      53.9083518,
+      9.8852856
+    ],
+    "Am Köhlerhof": [
+      53.9107813,
+      9.8830131
+    ],
+    "Groß Kummerfeld, Brammerhörn": [
+      54.0401637,
+      10.1285613
+    ],
+    "Willingrade, Dorfstraße": [
+      54.0288385,
+      10.1152555
+    ],
+    "Rickling, Försterweg": [
+      54.0164644,
+      10.168308
+    ],
+    "Groß Kummerfeld, Marienhof": [
+      54.042278,
+      10.1195692
+    ],
+    "Gustav-Schatz-Weg": [
+      53.8980593,
+      9.8687223
+    ],
+    "Bimöhlen, Am Hallohberg": [
+      53.9376983,
+      9.9431101
+    ],
+    "Fuhlendorf, Im Winkel": [
+      53.9451592,
+      9.8942079
+    ],
+    "Wiemersdorf, Fuhlendorfer Weg": [
+      53.9509521,
+      9.8989964
+    ],
+    "Wildpark Eekholt": [
+      53.9481916,
+      10.029809
+    ],
+    "Hasenkrug, Heidestraße": [
+      53.9850848,
+      9.846437
+    ],
+    "Hardebek, Schulstraße": [
+      53.9885746,
+      9.870296
+    ],
+    "Stolpe, Mühlenberg": [
+      54.1386033,
+      10.2283398
+    ],
+    "Gut Depenau": [
+      54.1586896,
+      10.2327056
+    ],
+    "Kirchbarkau Dorfstraße": [
+      54.207991,
+      10.1488409
+    ],
+    "Kirchbarkau": [
+      54.2113735,
+      10.1452483
+    ],
+    "Wahlstorf, Gut": [
+      54.1948462,
+      10.3102812
+    ],
+    "Stubbendorf": [
+      53.8270107,
+      10.5096265
+    ],
+    "Husberg, Dorfstraße": [
+      54.0698116,
+      10.047401
+    ],
+    "Hardebek, Kampstraße": [
+      53.985413,
+      9.8559001
+    ],
+    "Armstedt, Dorfstraße": [
+      53.9706153,
+      9.8508551
+    ],
+    "Borstel (Bad Bramstedt), Hagener Weg": [
+      53.9672568,
+      9.8004797
+    ],
+    "Ilsebillweg": [
+      53.8426043,
+      10.6333552
+    ],
+    "Schönmörchenstraße": [
+      54.0489953,
+      10.0060223
+    ],
+    "Rendsburger Straße": [
+      54.085719,
+      9.9779047
+    ],
+    "Lahnstraße": [
+      54.0481283,
+      10.0014499
+    ],
+    "Kampstraße": [
+      54.0499553,
+      10.0034079
+    ],
+    "Asperkamp": [
+      54.0491472,
+      10.0156778
+    ],
+    "Weserstraße": [
+      54.0482403,
+      9.9859836
+    ],
+    "Elbestraße": [
+      54.0518274,
+      9.9877779
+    ],
+    "Elsterweg": [
+      54.049076,
+      10.0106445
+    ],
+    "Am Graben": [
+      54.0479365,
+      9.9961831
+    ],
+    "Baumarkt": [
+      54.0449651,
+      10.0077085
+    ],
+    "Latendorf, Alte Landstraße": [
+      53.9988775,
+      10.0608026
+    ],
+    "Saalestraße/DOC": [
+      54.0446215,
+      9.9841575
+    ],
+    "Großenaspe, Freiweide": [
+      53.9844233,
+      9.9861507
+    ],
+    "Fuhlendorf, Dorfstraße": [
+      53.9435575,
+      9.8830298
+    ],
+    "Barmissen": [
+      54.2049409,
+      10.174815
+    ],
+    "Depenau, Brücke": [
+      54.1567413,
+      10.2349152
+    ],
+    "Barmisserfeld": [
+      54.2147489,
+      10.1756835
+    ],
+    "Kühren": [
+      54.198984,
+      10.2600232
+    ],
+    "Kühren-Kleinkühren": [
+      54.207963,
+      10.2474587
+    ],
+    "Steinritzen": [
+      54.181203,
+      10.448949
+    ],
+    "Johann-Hinrich-Fehrs-Straße": [
+      53.97052,
+      9.9670123
+    ],
+    "Helmoldstraße": [
+      54.0588273,
+      9.9713759
+    ],
+    "Kiefernweg": [
+      54.0564041,
+      9.9685427
+    ],
+    "Mühlenstraße": [
+      54.0534098,
+      9.9763799
+    ],
+    "Wasbeker Straße 240": [
+      54.0701211,
+      9.9524221
+    ],
+    "Wasbeker Straße": [
+      54.0708571,
+      9.9716566
+    ],
+    "Baumschulenweg (Richtung Wasbek)": [
+      54.0705231,
+      9.9574504
+    ],
+    "Wasbek Bullenbek": [
+      54.0694466,
+      9.9270468
+    ],
+    "Rutenkamp": [
+      54.0706274,
+      9.9681328
+    ],
+    "Neritz, Rötenweg": [
+      53.7847085,
+      10.2839097
+    ],
+    "Reinfeld, Travenhof": [
+      53.8196284,
+      10.4570147
+    ],
+    "Groß Kummerfeld, Schulstraße": [
+      54.0480645,
+      10.0802378
+    ],
+    "Husberger Moor, Klinkenberg": [
+      54.0595454,
+      10.1197798
+    ],
+    "Heischredder": [
+      54.0731733,
+      10.0221588
+    ],
+    "Waldwiesenweg": [
+      54.0723897,
+      10.0135127
+    ],
+    "Neumünster, Bönebütteler Weg": [
+      54.072945,
+      10.0291317
+    ],
+    "Ellerau, Alvesloher Straße": [
+      53.7550567,
+      9.9151883
+    ],
+    "Ellerau, Steindamm": [
+      53.7519099,
+      9.9186659
+    ],
+    "Ellerau, Grundschule": [
+      53.7577539,
+      9.9198955
+    ],
+    "Schanzenbarg 33": [
+      53.8076917,
+      10.4005853
+    ],
+    "Am Tegel": [
+      53.8047233,
+      10.400644
+    ],
+    "Schanzenbarg 20": [
+      53.8083513,
+      10.401673
+    ],
+    "Schanzenbarg 2": [
+      53.8091147,
+      10.3990172
+    ],
+    "Borstel (Sülfeld), B432": [
+      53.823492,
+      10.1900235
+    ],
+    "Borstel (Sülfeld), Wedenkamp": [
+      53.8252567,
+      10.1865931
+    ],
+    "Tungendorf-Dorf": [
+      54.0996608,
+      10.0127405
+    ],
+    "Bockhorn, Am Schillersberg": [
+      53.9198654,
+      10.1392706
+    ],
+    "Hitzhusen (West)": [
+      53.9259317,
+      9.8469714
+    ],
+    "Pahleck": [
+      53.8037815,
+      10.4000355
+    ],
+    "Rathjensdorf, Lange Reihe": [
+      54.1883751,
+      10.4148279
+    ],
+    "Perdoel, Bahnhof": [
+      54.1198307,
+      10.2515383
+    ],
+    "Drögeneck": [
+      53.8793526,
+      10.6193578
+    ],
+    "Langniendorf, Steinkoppel": [
+      53.9101325,
+      10.5266938
+    ],
+    "Lindenkamp": [
+      53.8015719,
+      10.3565687
+    ],
+    "Tierpark": [
+      54.0894558,
+      9.9460058
+    ],
+    "Oeringer Damm": [
+      53.8314452,
+      10.1151161
+    ],
+    "Holm bei Seth": [
+      53.8391301,
+      10.1933475
+    ],
+    "Itzstedt, Steindamm": [
+      53.8061227,
+      10.1558751
+    ],
+    "Groß Steinrade/Teich": [
+      53.8808857,
+      10.6224254
+    ],
+    "Max-Hamerich-Straße": [
+      53.8847933,
+      10.6422551
+    ],
+    "Bei den Tannen": [
+      53.8830599,
+      10.6371682
+    ],
+    "Morierhof": [
+      53.8831424,
+      10.6323918
+    ],
+    "Morier Straße": [
+      53.8825306,
+      10.6276755
+    ],
+    "Konradstraße": [
+      53.8854534,
+      10.6456823
+    ],
+    "Plön, Spitzenort": [
+      54.1476552,
+      10.3971335
+    ],
+    "Ascheberger Straße": [
+      54.1531677,
+      10.4047436
+    ],
+    "Bordesholm Dreiecksplatz": [
+      54.1758782,
+      10.0225615
+    ],
+    "Einfelder Straße": [
+      54.1280552,
+      9.9936073
+    ],
+    "Kisdorferwohld, Wakendorfer Straße": [
+      53.8188179,
+      10.0809937
+    ],
+    "Hüttblek, Hökerbarg": [
+      53.8398042,
+      10.073577
+    ],
+    "Timmaspe, Alter Bahnhof": [
+      54.1364057,
+      9.906355
+    ],
+    "Timmaspe, Ortsmitte": [
+      54.1410454,
+      9.8906512
+    ],
+    "Sievershütten, Mühlenstraße": [
+      53.8417281,
+      10.1067072
+    ],
+    "Waldshagen": [
+      54.1204916,
+      10.4444744
+    ],
+    "Augstfelde": [
+      54.1288686,
+      10.4516792
+    ],
+    "Schwiddeldei": [
+      54.1357448,
+      10.3322331
+    ],
+    "Pehmen": [
+      54.0785463,
+      10.3993999
+    ],
+    "Dersau, Windmühlenkamp": [
+      54.1148956,
+      10.3421212
+    ],
+    "Reinfeld, Im Tannengrund": [
+      53.8398503,
+      10.4986278
+    ],
+    "Krems I": [
+      53.8773497,
+      10.2629517
+    ],
+    "Meddewade, Alte Dorfstraße": [
+      53.8085629,
+      10.4391205
+    ],
+    "Meddewade, Wikingerweg": [
+      53.8114924,
+      10.4385343
+    ],
+    "Meddewade, Schlossweg": [
+      53.8112393,
+      10.4409059
+    ],
+    "Meddewade, Freestot": [
+      53.8046115,
+      10.4394803
+    ],
+    "Föhrden-Barl, Wiebke-Kruse-Straße": [
+      53.9287121,
+      9.7926768
+    ],
+    "Bark, Fasanenweg": [
+      53.9136528,
+      10.170611
+    ],
+    "Hipperstraße": [
+      54.1578004,
+      10.438773
+    ],
+    "Trentseeweg": [
+      54.1627802,
+      10.4084607
+    ],
+    "Neutramm": [
+      54.1786241,
+      10.3830169
+    ],
+    "Oering, Schule": [
+      53.8244618,
+      10.1484597
+    ],
+    "Oering, B432": [
+      53.8179226,
+      10.1729563
+    ],
+    "Oering, Mühle": [
+      53.8289795,
+      10.1435327
+    ],
+    "Övelgönne": [
+      54.1631005,
+      10.4274392
+    ],
+    "Katholische Kirche": [
+      54.1620623,
+      10.4132601
+    ],
+    "Sandkaten": [
+      54.1465823,
+      10.458005
+    ],
+    "Oberkleveez, Abzw. Niederkleveez": [
+      54.1487136,
+      10.5011641
+    ],
+    "Markt": [
+      53.8379594,
+      9.9626143
+    ],
+    "Blunk, Bargenhöven": [
+      53.9963239,
+      10.3144358
+    ],
+    "Warder, Kirche": [
+      53.9789471,
+      10.3778053
+    ],
+    "Warderfelde, Schule": [
+      53.9634237,
+      10.3818271
+    ],
+    "Quaal, Lerchenweg": [
+      53.9615869,
+      10.372381
+    ],
+    "Hamdorf": [
+      53.9813991,
+      10.2789313
+    ],
+    "Krems II": [
+      53.9888738,
+      10.3549762
+    ],
+    "Warderbrück": [
+      53.9817941,
+      10.3673181
+    ],
+    "Abzweigung Quaal": [
+      53.9677242,
+      10.3586853
+    ],
+    "Bargfeld-Stegen, Rathkrügen": [
+      53.7657518,
+      10.1895209
+    ],
+    "Ravensbusch": [
+      53.8900384,
+      10.6413778
+    ],
+    "Volkshaus": [
+      54.091415,
+      9.9969498
+    ],
+    "Stockelsdorf, Schulweg": [
+      53.8884312,
+      10.6415875
+    ],
+    "Andersenring": [
+      53.8421777,
+      10.6250204
+    ],
+    "Bruchweg": [
+      53.8439357,
+      10.6348322
+    ],
+    "Stockelsdorf, Altenheim": [
+      53.8948605,
+      10.636019
+    ],
+    "Bohnrader Weg": [
+      53.8972867,
+      10.6392576
+    ],
+    "Ahrensböker Straße": [
+      53.8981603,
+      10.6456093
+    ],
+    "Segeberger Straße": [
+      53.8916234,
+      10.6323957
+    ],
+    "Stockelsdorf, Marienburgstraße": [
+      53.8889675,
+      10.6472943
+    ],
+    "Sterntalerweg": [
+      53.8414407,
+      10.6295239
+    ],
+    "Am Grenzwall": [
+      53.8781967,
+      10.6488854
+    ],
+    "Stockelsdorf, Gewerbegebiet": [
+      53.9060965,
+      10.6479443
+    ],
+    "Rethwisch, Altenweide": [
+      53.7748549,
+      10.4702924
+    ],
+    "Lokfeld": [
+      53.8097227,
+      10.5052247
+    ],
+    "Westerau, Feuerwehr": [
+      53.778534,
+      10.4912466
+    ],
+    "Stockelsdorf, Haupt-/Realschule": [
+      53.8981689,
+      10.6463839
+    ],
+    "Vinzier, Schulweg": [
+      53.8192113,
+      10.2926376
+    ],
+    "Pölitz, Hauptstraße": [
+      53.772995,
+      10.3817896
+    ],
+    "Wührenbeksweg": [
+      54.051346,
+      9.9658437
+    ],
+    "Fuchsweg": [
+      54.0520903,
+      9.9612455
+    ],
+    "Pölitz, Schulstraße": [
+      53.7735769,
+      10.3830066
+    ],
+    "Pölitz, Blumenberg": [
+      53.7721053,
+      10.388255
+    ],
+    "Kiek In / VHS": [
+      54.065495,
+      9.9826515
+    ],
+    "Bissee": [
+      54.1894637,
+      10.1136981
+    ],
+    "Wahlstorf, Ort": [
+      54.1781699,
+      10.2949276
+    ],
+    "Kleinkummerfeld, Feldstraße": [
+      54.0329613,
+      10.0682698
+    ],
+    "Quickborn-Heide, Carl-Zeiss-Straße": [
+      53.7471953,
+      9.9365383
+    ],
+    "Quickborn-Heide, Pascalkehre": [
+      53.7438548,
+      9.9413519
+    ],
+    "Quickborn-Heide, Grandweg": [
+      53.746397,
+      9.9428343
+    ],
+    "Bf. Gartenholz": [
+      53.6879687,
+      10.2520158
+    ],
+    "Quickborn-Heide, Max-Weber-Straße": [
+      53.7440967,
+      9.9350457
+    ],
+    "Plöner Straße": [
+      54.0720372,
+      10.013372
+    ],
+    "Ulmenkamp": [
+      53.8001172,
+      10.360834
+    ],
+    "Friedhof": [
+      53.8368161,
+      9.9535999
+    ],
+    "Ammersbek, Joostredder": [
+      53.7006555,
+      10.2227589
+    ],
+    "Bf. Gartenholz (Westseite)": [
+      53.6881126,
+      10.2507093
+    ],
+    "Rodomstorstraße": [
+      54.1649642,
+      10.4208752
+    ],
+    "Reinsbek, Ahornweg": [
+      53.922433,
+      10.5263242
+    ],
+    "Reinsbek, Am Wald (Ost)": [
+      53.9256714,
+      10.5259952
+    ],
+    "Reinsbek, Am Bahndamm": [
+      53.9254953,
+      10.5255408
+    ],
+    "Großharrie, Dorfmitte": [
+      54.1190159,
+      10.0482494
+    ],
+    "Am Ruthenberg": [
+      54.0694917,
+      10.0145602
+    ],
+    "Großharrie Feldscheide": [
+      54.1222623,
+      10.063133
+    ],
+    "Großharrie, Abzw. Kleinharrie": [
+      54.1205359,
+      10.0599402
+    ],
+    "Großharrie, Meierei": [
+      54.1188294,
+      10.0543806
+    ],
+    "Hohenhorst": [
+      54.1720645,
+      9.9955802
+    ],
+    "Mühbrook, Süd": [
+      54.1513171,
+      10.0156689
+    ],
+    "Mühbrook, Seeblick": [
+      54.1560234,
+      10.0126812
+    ],
+    "Schlamersdorf, Am Markt": [
+      54.0391552,
+      10.3922732
+    ],
+    "Weidenweg": [
+      53.8900947,
+      10.6357297
+    ],
+    "Hamburger Straße": [
+      53.8499544,
+      10.6368812
+    ],
+    "Stadtheide": [
+      54.1515507,
+      10.4652123
+    ],
+    "Dodau": [
+      54.1317868,
+      10.5292603
+    ],
+    "Schiffsthal": [
+      54.1642735,
+      10.418643
+    ],
+    "Harkshörn, Am Stammgleis (West)": [
+      53.7357315,
+      10.0174048
+    ],
+    "Pölitz, Rümpeler Weg": [
+      53.7772701,
+      10.3743728
+    ],
+    "Zarpen, Abzweigung Fliegenfelde": [
+      53.8592867,
+      10.5412367
+    ],
+    "Zarpenerhof": [
+      53.8650656,
+      10.5267378
+    ],
+    "Dahmsdorf": [
+      53.8616379,
+      10.5545528
+    ],
+    "Stover, BAB-Brücke": [
+      54.1158746,
+      9.9473061
+    ],
+    "Carlstraße": [
+      54.0806743,
+      9.9754
+    ],
+    "Stover Rungestraße": [
+      54.1007111,
+      9.9684293
+    ],
+    "Krogaspe, Hauptstraße": [
+      54.1315744,
+      9.9293071
+    ],
+    "Forstweg": [
+      54.085902,
+      9.9685543
+    ],
+    "Designer Outlet": [
+      54.0438755,
+      9.9800887
+    ],
+    "Stover, Reiterhof": [
+      54.1066378,
+      9.966812
+    ],
+    "Spreestraße": [
+      54.0474346,
+      9.9731834
+    ],
+    "Krogaspe, Annental": [
+      54.1277789,
+      9.9369329
+    ],
+    "Ulmenweg": [
+      53.7315805,
+      10.2853682
+    ],
+    "Krokamp": [
+      54.0503592,
+      9.9747507
+    ],
+    "Padenstedt, Kamp": [
+      54.0502669,
+      9.9452944
+    ],
+    "Rendsburger Straße 349": [
+      54.1040675,
+      9.9675437
+    ],
+    "Havelstraße": [
+      54.045289,
+      9.9722337
+    ],
+    "Christiansweg": [
+      54.107231,
+      9.9862475
+    ],
+    "Enenvelde": [
+      54.1165273,
+      9.9915605
+    ],
+    "Tennishalle": [
+      54.1039771,
+      9.9855628
+    ],
+    "Waldorfschule": [
+      54.1124288,
+      9.9839235
+    ],
+    "Parchimer Straße": [
+      54.1143988,
+      9.9828475
+    ],
+    "Ilsahl": [
+      54.085815,
+      9.9973438
+    ],
+    "Gutenbergstraße": [
+      54.0840014,
+      9.9851885
+    ],
+    "Tensfeld Moorblick": [
+      54.0306029,
+      10.3089744
+    ],
+    "Trappenkamp, Kirche": [
+      54.0405522,
+      10.2151591
+    ],
+    "Bornhöved, Schwedenring": [
+      54.0659108,
+      10.2331376
+    ],
+    "Bornhöved,Moorblick": [
+      54.0621758,
+      10.2267378
+    ],
+    "Bornhöved, Moorblick": [
+      54.0630181,
+      10.2261343
+    ],
+    "Fuhlenpott": [
+      53.8729965,
+      10.3638656
+    ],
+    "Seefeld, Kreuzung": [
+      53.848234,
+      10.3740994
+    ],
+    "Klein Gladebrügge, Traventhaler Straße": [
+      53.9143502,
+      10.3182743
+    ],
+    "Norderstedt, Stadtpark": [
+      53.7117518,
+      10.017954
+    ],
+    "Rehhorst, Am Blink": [
+      53.8731924,
+      10.4718438
+    ],
+    "Rehhorst, Pöhlser Straße": [
+      53.8765873,
+      10.4697973
+    ],
+    "Diekhof": [
+      53.9740873,
+      10.5028027
+    ],
+    "Löptin, Dorfplatz": [
+      54.1753078,
+      10.2159395
+    ],
+    "Quickborn-Heide, Kiefernhain": [
+      53.7528177,
+      9.9672899
+    ],
+    "Quickborn-Heide, Waldschule": [
+      53.7538792,
+      9.9622973
+    ],
+    "Kisdorf, An de Loh": [
+      53.8104167,
+      10.0198769
+    ],
+    "Kisdorf, Am Sportplatz": [
+      53.8102489,
+      10.0085631
+    ],
+    "Quickborn-Heide, Hermann-Löns-Straße": [
+      53.7492342,
+      9.9583468
+    ],
+    "Quickborn-Heide, Lornsenstraße": [
+      53.7451871,
+      9.9548067
+    ],
+    "Quickborn-Heide, Heideweg": [
+      53.7485887,
+      9.9635321
+    ],
+    "Reinfeld, Heilsauring": [
+      53.8400552,
+      10.49736
+    ],
+    "Heilsauring": [
+      53.839707,
+      10.496557
+    ],
+    "Reinfeld, Seerosenweg": [
+      53.8409513,
+      10.4939512
+    ],
+    "Reinfeld, Lilienweg": [
+      53.8393478,
+      10.4936689
+    ],
+    "Reinfeld, Schützenstraße": [
+      53.837493,
+      10.4928121
+    ],
+    "Reinfeld, Innsbrucker Straße": [
+      53.8357251,
+      10.4905583
+    ],
+    "Bf. Reinfeld": [
+      53.8297345,
+      10.4924904
+    ],
+    "Reinfeld, Grootkoppel": [
+      53.8277681,
+      10.5041475
+    ],
+    "Reinfeld, Feldstraße (Nord)": [
+      53.8305607,
+      10.5008335
+    ],
+    "Reinfeld, Matthias-Claudius-Schule": [
+      53.8332467,
+      10.4871407
+    ],
+    "Reinfeld, Schulzentrum": [
+      53.8369736,
+      10.4963792
+    ],
+    "Wasbek Höhnerkamp": [
+      54.0702383,
+      9.9173455
+    ],
+    "Wasbek, Industriestraße": [
+      54.0708143,
+      9.9082088
+    ],
+    "Wasbek, Kirche": [
+      54.0712648,
+      9.9034488
+    ],
+    "Wasbek Meierei": [
+      54.0721489,
+      9.8972019
+    ],
+    "Wasbek, Kindergarten": [
+      54.0738727,
+      9.8985806
+    ],
+    "Wasbek, Hermann-Claudius-Schule": [
+      54.0754699,
+      9.9002164
+    ],
+    "Freesenburg": [
+      54.0695093,
+      9.9419844
+    ],
+    "Groß Rönnau, Brookhof": [
+      53.985273,
+      10.3137447
+    ],
+    "Groß Boden, Feuerwehrhaus": [
+      53.7527351,
+      10.4532861
+    ],
+    "Tensfeld, Siedlung": [
+      54.0494723,
+      10.317905
+    ],
+    "Dersau, B430": [
+      54.1300064,
+      10.3280005
+    ],
+    "Plön, Koppelsberg": [
+      54.1524744,
+      10.3885385
+    ],
+    "Ahrensbök, Spechserholz": [
+      54.0186483,
+      10.5920796
+    ],
+    "Ahrensbök, Mühlenberg": [
+      54.0152955,
+      10.5723855
+    ],
+    "Ahrensbök, Helldahl": [
+      54.020106,
+      10.6035206
+    ],
+    "Plön, Hinterste Wache": [
+      54.1554283,
+      10.3837047
+    ],
+    "Ascheberg, Am Hörn": [
+      54.1561377,
+      10.3347592
+    ],
+    "Dörnick": [
+      54.1574786,
+      10.3772891
+    ],
+    "Tramm, Ort": [
+      54.1718523,
+      10.4038788
+    ],
+    "Tramm, Siedlung": [
+      54.1828305,
+      10.4025531
+    ],
+    "Gönnebek, Dörpplatz": [
+      54.0487536,
+      10.1784605
+    ],
+    "Husberger Moor (West)": [
+      54.0661213,
+      10.0886042
+    ],
+    "Bornhöved, Schule": [
+      54.0710768,
+      10.2242468
+    ],
+    "Bornhöved, Bahnhofstraße": [
+      54.0719366,
+      10.2267915
+    ],
+    "Langereihe": [
+      54.1081053,
+      10.1590614
+    ],
+    "Bockelhorn": [
+      54.1092833,
+      10.1743666
+    ],
+    "Feuerwehr": [
+      54.0086245,
+      10.0322772
+    ],
+    "Kleinkummerfeld, Am Bahnhof": [
+      54.0208841,
+      10.0585604
+    ],
+    "Ammersbek, Beekkamp": [
+      53.6862874,
+      10.1603536
+    ],
+    "Ammersbek, Rathaus": [
+      53.6907364,
+      10.16864
+    ],
+    "Ammersbek, Lehmkuhle": [
+      53.6926168,
+      10.1724005
+    ],
+    "Ammersbek, Laberg": [
+      53.6983193,
+      10.1843465
+    ],
+    "Ammersbek, Hunnau": [
+      53.7007179,
+      10.1925097
+    ],
+    "Ammersbek, Bramkampredder": [
+      53.7049662,
+      10.2058164
+    ],
+    "Ammersbek, Schäferdresch": [
+      53.7084238,
+      10.2121082
+    ],
+    "Ammersbek, Tannenkoppelweg": [
+      53.7109403,
+      10.2166179
+    ],
+    "Timmerhorn, Op'n Sand": [
+      53.7128031,
+      10.2201373
+    ],
+    "Bargteheide, Lohe": [
+      53.7246304,
+      10.2555944
+    ],
+    "Bargteheide, Friedhof": [
+      53.7262699,
+      10.2480052
+    ],
+    "Bargteheide, Kirche": [
+      53.7285821,
+      10.2560026
+    ],
+    "Bargteheide, Am Markt": [
+      53.7288391,
+      10.2600869
+    ],
+    "Bargteheide, Rathaus": [
+      53.7298189,
+      10.2674004
+    ],
+    "Ammersbek, Bünningstedter Feldweg": [
+      53.7095109,
+      10.2233972
+    ],
+    "Südfriedhof": [
+      54.0710135,
+      10.0051163
+    ],
+    "Dersau, Vogelsang": [
+      54.1178739,
+      10.3550649
+    ],
+    "Glasholz": [
+      54.1489442,
+      10.3156796
+    ],
+    "Wahlstorf, Johannrade": [
+      54.1842099,
+      10.3005301
+    ],
+    "Jersbek, Langereihe 7": [
+      53.7402433,
+      10.2072665
+    ],
+    "Nienwohld, Altes Torfredder": [
+      53.7885791,
+      10.2002463
+    ],
+    "Jersbek, Soltenbek": [
+      53.7452352,
+      10.2130996
+    ],
+    "Bargteheide, Mühlenstraße": [
+      53.735817,
+      10.2623514
+    ],
+    "Bargteheide, Am Redder": [
+      53.7213169,
+      10.2754542
+    ],
+    "Bargteheide, Am Volkspark (1)": [
+      53.7258588,
+      10.2472094
+    ],
+    "Bargteheide, Am Volkspark (2)": [
+      53.7256926,
+      10.2474728
+    ],
+    "Bargteheide, Am Volkspark (3)": [
+      53.7255091,
+      10.2477305
+    ],
+    "Bargteheide, Am Volkspark (4)": [
+      53.7253591,
+      10.2479353
+    ],
+    "Bargteheide, Am Volkspark (6)": [
+      53.7250191,
+      10.2484301
+    ],
+    "Bargteheide, Am Volkspark (7)": [
+      53.7248364,
+      10.2486862
+    ],
+    "Bargteheide, Am Volkspark (8)": [
+      53.7246809,
+      10.248981
+    ],
+    "Bargteheide, Am Volkspark (10)": [
+      53.7243424,
+      10.2494986
+    ],
+    "Bargteheide, Am Volkspark (5)": [
+      53.7251796,
+      10.2481727
+    ],
+    "Bargteheide, Am Volkspark (9)": [
+      53.7245,
+      10.2492275
+    ],
+    "Bargteheide, Malepartus": [
+      53.7347129,
+      10.2837131
+    ],
+    "Bargteheide, Schulzentrum": [
+      53.7253072,
+      10.2600093
+    ],
+    "Timmerhorn, Klein Hansdorfer Straße": [
+      53.7138526,
+      10.2188574
+    ],
+    "Bargteheide, Holsteiner Straße": [
+      53.7376995,
+      10.2646627
+    ],
+    "Bargteheide, Lindenstraße": [
+      53.7271945,
+      10.2567015
+    ],
+    "Bargteheide, Neue Straße": [
+      53.7333767,
+      10.2502822
+    ],
+    "Mönkenbrook, Hüls": [
+      53.7488913,
+      10.2700076
+    ],
+    "Elmenhorst, Rokshorst": [
+      53.7643779,
+      10.2691589
+    ],
+    "A Ulzburg Süd": [
+      53.7738504,
+      9.9734239
+    ],
+    "Gem.-Schule Brachenfeld": [
+      54.0715582,
+      10.00831
+    ],
+    "Parkcenter": [
+      54.0752651,
+      9.9856059
+    ],
+    "Joachimstraße": [
+      54.07826,
+      9.9882137
+    ],
+    "Bismarckstraße": [
+      54.0815289,
+      9.9922173
+    ],
+    "Busbetriebshof": [
+      54.0836748,
+      9.9786168
+    ],
+    "Braak, Dorfstraße": [
+      54.0100471,
+      10.0881
+    ],
+    "Jersbek, Barockgarten": [
+      53.7420111,
+      10.2197149
+    ],
+    "Klein Hansdorf, Am Wischhof": [
+      53.7203798,
+      10.2129281
+    ],
+    "Käthe-Kollwitz-Str.": [
+      54.067298,
+      10.0182473
+    ],
+    "August-Macke-Str.": [
+      54.0648482,
+      10.0176932
+    ],
+    "Baumschulenweg (Richtung Bahnhof)": [
+      54.0703766,
+      9.9574417
+    ],
+    "Schlangenredder": [
+      53.9286373,
+      10.3199831
+    ],
+    "Bad Segeberg, KiTa Christiansfelde": [
+      53.9278114,
+      10.3226357
+    ],
+    "Bad Segeberg, Julius-Leber-Straße": [
+      53.928053,
+      10.3268615
+    ],
+    "Bad Segeberg, EKZ Christiansfelde": [
+      53.9282614,
+      10.3291347
+    ],
+    "Bad Segeberg, Kuckucksbarg": [
+      53.9306694,
+      10.3311667
+    ],
+    "Willingrade, Willingrader Straße": [
+      54.0249117,
+      10.1036122
+    ],
+    "Waldhof": [
+      54.0405654,
+      10.0524128
+    ],
+    "Kiebitzweg": [
+      54.2145683,
+      10.2659764
+    ],
+    "Fichtestadion": [
+      54.2186462,
+      10.2706605
+    ],
+    "Niederkleveez": [
+      54.1577957,
+      10.4952385
+    ],
+    "Brachenfeld": [
+      54.07843,
+      10.0122386
+    ],
+    "Gemeindehaus": [
+      54.1216254,
+      9.9829495
+    ],
+    "Krummacker": [
+      54.1242336,
+      9.9844168
+    ],
+    "Braak, Ringstraße": [
+      54.0141727,
+      10.0708868
+    ],
+    "Gadeland, Kirche": [
+      54.0486434,
+      10.0244824
+    ],
+    "Sachsenring": [
+      54.0666141,
+      9.9976096
+    ],
+    "Mainstraße": [
+      54.0476499,
+      9.9890092
+    ],
+    "Hüttenkamp": [
+      54.1178431,
+      9.9948599
+    ],
+    "Bordesholm Grüner Kamp": [
+      54.1789522,
+      10.0264519
+    ],
+    "Delingsdorf, Lohe": [
+      53.7021397,
+      10.2487628
+    ],
+    "Ahrensburg, An der Strusbek (Süd)": [
+      53.685071,
+      10.2666807
+    ],
+    "Ahrensburg, Ewige Weide": [
+      53.6882596,
+      10.2559375
+    ],
+    "Ahrensburg, Kornkamp (Mitte)": [
+      53.6843848,
+      10.2568899
+    ],
+    "Ahrensburg, Kurt-Fischer-Straße (Nord)": [
+      53.6894961,
+      10.2613429
+    ],
+    "Ahrensburg, Norderoogstieg": [
+      53.689558,
+      10.2501675
+    ],
+    "Ahrensburg, Nordstrandring": [
+      53.6866265,
+      10.2500737
+    ],
+    "Ahrensburg, Olandstieg": [
+      53.6884591,
+      10.2447618
+    ],
+    "Franz-Daniel-Hagelstein-Weg": [
+      53.8183726,
+      10.3939944
+    ],
+    "Latendorf, Abzw. Boostedt": [
+      54.0072727,
+      10.0597956
+    ],
+    "Brokstedt, Bahnhof": [
+      53.9890662,
+      9.823822
+    ],
+    "Delingsdorf, Mittelweg": [
+      53.7018634,
+      10.2525381
+    ],
+    "Wiemersdorf, Neue Dorfstraße": [
+      53.9569277,
+      9.9042349
+    ],
+    "Oderstraße 50": [
+      54.043526,
+      9.9881367
+    ],
+    "Sonnenhof": [
+      54.0437576,
+      9.9921253
+    ],
+    "Harwehgraben": [
+      54.0438768,
+      9.9958255
+    ],
+    "Allerstraße": [
+      54.0440218,
+      9.999314
+    ],
+    "Dithmarscher Straße": [
+      54.0626779,
+      9.9918232
+    ],
+    "Nettelsee, Ehrenmal": [
+      54.1735791,
+      10.1877496
+    ],
+    "CITTI-Park": [
+      53.8580947,
+      10.6262972
+    ],
+    "Am Hohenkamp": [
+      53.8075091,
+      10.3611246
+    ],
+    "Elly-Heuss-Knapp-Straße": [
+      53.7972211,
+      10.4066273
+    ],
+    "Famila": [
+      53.7999594,
+      10.4045684
+    ],
+    "Rethwischfeld, Alte Ratzeburger Landstraße": [
+      53.7955528,
+      10.4034792
+    ],
+    "Finkenweg": [
+      53.7991349,
+      10.3658266
+    ],
+    "Königstraße": [
+      53.8084441,
+      10.3694262
+    ],
+    "Lily-Braun-Straße (Nord)": [
+      53.8016429,
+      10.4031572
+    ],
+    "Teichkoppel": [
+      53.7931604,
+      10.41098
+    ],
+    "Timm-Kröger-Weg": [
+      53.8064059,
+      10.3602797
+    ],
+    "Zur Düpenau": [
+      53.7956726,
+      10.4080872
+    ],
+    "Wiemerskamp, Ehlersberger Weg": [
+      53.7372666,
+      10.1540686
+    ],
+    "Ulzburg-Süd, Kranichstraße": [
+      53.7748333,
+      9.9775346
+    ],
+    "Bargfeld-Stegen, Mittelweg": [
+      53.7674839,
+      10.1867285
+    ],
+    "Herrenbranden": [
+      53.902066,
+      10.4643389
+    ],
+    "Rehhorst, Up'n Knust": [
+      53.8799192,
+      10.4662527
+    ],
+    "Nahe, Wakendorfer Straße": [
+      53.7980337,
+      10.1440208
+    ],
+    "Quickborn-Heide, Feldweg": [
+      53.7373017,
+      9.9667595
+    ],
+    "Friedrichsgabe, Beim Umspannwerk": [
+      53.7388552,
+      9.9834229
+    ],
+    "Quickborn-Heide, Ulzburger Landstraße": [
+      53.7434471,
+      9.9524763
+    ],
+    "Quickborn-Heide, Hinrich-Fehrs-Straße": [
+      53.75301,
+      9.9605959
+    ],
+    "A Tanneneck": [
+      53.755003,
+      9.9431017
+    ],
+    "Quickborn-Heide, Kiefernweg": [
+      53.7585078,
+      9.9515801
+    ],
+    "Ellerau, Moortwiete": [
+      53.7586462,
+      9.9401019
+    ],
+    "Ellerau, Vorderer Kamp": [
+      53.7611696,
+      9.9292984
+    ],
+    "Grotholt Redder": [
+      54.1153888,
+      10.5521825
+    ],
+    "Oderstraße 44": [
+      54.0432521,
+      9.9852475
+    ],
+    "Bosau, Sandlid": [
+      54.1071342,
+      10.4323484
+    ],
+    "Osterkirche": [
+      54.1598236,
+      10.4401468
+    ],
+    "Kayhude, Schulstraße": [
+      53.7575785,
+      10.1317122
+    ],
+    "Klinik Hahnknüll": [
+      54.097561,
+      9.9475854
+    ],
+    "Ehndorf, Friedenseichenplatz": [
+      54.0520744,
+      9.8950751
+    ],
+    "Karpe, Barkhof": [
+      54.1657851,
+      10.3543004
+    ],
+    "Dörnick, Fuchsberg": [
+      54.1577981,
+      10.3772608
+    ],
+    "Dörnick, Dorf": [
+      54.1633611,
+      10.3612205
+    ],
+    "Karpe, Meierei": [
+      54.1651435,
+      10.3330735
+    ],
+    "Rathjensdorf, Lindemann": [
+      54.1852268,
+      10.4287224
+    ],
+    "Naherwohld": [
+      53.7801098,
+      10.1278546
+    ],
+    "Rhen, Alsterquelle": [
+      53.7635618,
+      9.997861
+    ],
+    "Warnau, Ort": [
+      54.1874061,
+      10.162507
+    ],
+    "Mövenstieg": [
+      54.2164402,
+      10.2682407
+    ],
+    "Griesenbötel": [
+      54.0650502,
+      10.1403098
+    ],
+    "Rendswühren, Petersberg": [
+      54.0686082,
+      10.1326649
+    ],
+    "Frankenstraße": [
+      54.059767,
+      9.994295
+    ],
+    "Ulzburg, Heinrich-Sebelien-Straße": [
+      53.8007847,
+      9.9785257
+    ],
+    "Ulzburg, Brahmkoppel": [
+      53.8102969,
+      9.9779476
+    ],
+    "Ulzburg, Gutenbergstraße": [
+      53.803792,
+      9.978193
+    ],
+    "Ulzburg, Kurt-Körber-Straße": [
+      53.8104577,
+      9.975303
+    ],
+    "Ulzburg, Lise-Meitner-Straße": [
+      53.8090192,
+      9.9666575
+    ],
+    "Am Badesteig": [
+      53.9196183,
+      9.8849823
+    ],
+    "Ehlersberg, Ehlersberger Weg": [
+      53.7515385,
+      10.1370036
+    ],
+    "Timmerhorn, Parkring": [
+      53.7117924,
+      10.2234366
+    ],
+    "Ruhwinkel": [
+      54.0900416,
+      10.2200923
+    ],
+    "Bad Segeberg, Möbel Kraft": [
+      53.9381239,
+      10.297143
+    ],
+    "Ulzburg, Ulzburger Straße": [
+      53.8044512,
+      9.9841721
+    ],
+    "Rhen, Industriestraße": [
+      53.7601871,
+      9.9836353
+    ],
+    "Itzstedt, Lindenbergredder": [
+      53.8101629,
+      10.1626212
+    ],
+    "Heidmühlen, Dorfstraße": [
+      53.9714467,
+      10.0844447
+    ],
+    "Latendorf, Hinterm Mühlenberg": [
+      53.9855772,
+      10.0696977
+    ],
+    "Rhen, Paracelsus-Klinik": [
+      53.7494743,
+      10.0086595
+    ],
+    "Rhen, Alter Postweg": [
+      53.7599355,
+      9.996887
+    ],
+    "Kisdorf, Grootredder": [
+      53.8076355,
+      10.007141
+    ],
+    "Kisdorf, Bismarckplatz": [
+      53.8114506,
+      10.0091264
+    ],
+    "Berufsschule": [
+      54.072761,
+      9.966007
+    ],
+    "Flensburger Straße": [
+      54.0593493,
+      9.9488609
+    ],
+    "Husumer Straße": [
+      54.057024,
+      9.9383735
+    ],
+    "Meldorfer Straße": [
+      54.0577954,
+      9.9429118
+    ],
+    "Schleswiger Straße": [
+      54.0610222,
+      9.9543066
+    ],
+    "Bordesholm Bahnhof": [
+      54.1747748,
+      10.0436995
+    ],
+    "Holstendorf, Ortsmitte": [
+      54.0348552,
+      10.6014385
+    ],
+    "Holstendorf, Hufenkoppel": [
+      54.0287787,
+      10.5973924
+    ],
+    "Schwienkuhlen, Ort": [
+      54.0638511,
+      10.5807983
+    ],
+    "Ahrensbök, Diestelkamp": [
+      54.0528815,
+      10.5826792
+    ],
+    "Kisdorferwohld, Segeberger Str.": [
+      53.8206889,
+      10.0812593
+    ],
+    "Obernwohlde, Dorfplatz": [
+      53.925525,
+      10.5744251
+    ],
+    "Bönebüttel Siedlung": [
+      54.0759664,
+      10.0405916
+    ],
+    "Gut Wulksfelde": [
+      53.7180225,
+      10.1109414
+    ],
+    "Rade (OD), Auf dem Kamp": [
+      53.7405567,
+      10.1306646
+    ],
+    "Rade (OD), Schule": [
+      53.7335372,
+      10.1263812
+    ],
+    "Tangstedt (OD), Eichholzkoppel": [
+      53.7321523,
+      10.0938464
+    ],
+    "Tangstedt (OD), Schule": [
+      53.7297989,
+      10.0858321
+    ],
+    "Wiemerskamp, Hirschweg": [
+      53.7351643,
+      10.1526842
+    ],
+    "Wragekamp": [
+      53.7114127,
+      10.1069464
+    ],
+    "Lokfelder Heckkaten (Nord)": [
+      53.8161331,
+      10.4953263
+    ],
+    "Jersbek, Langereihe 58": [
+      53.737736,
+      10.1983417
+    ],
+    "Jersbek, Sportplatz": [
+      53.745461,
+      10.214313
+    ],
+    "Ulzburg-Süd, Hogenmoor": [
+      53.7701369,
+      9.9790022
+    ],
+    "Klein Hansdorf, Hansdorfer Redder": [
+      53.7204712,
+      10.2282946
+    ],
+    "Elmenhorst, Siebenbergen": [
+      53.7505972,
+      10.2627913
+    ],
+    "Mönkenbrook, Heideweg": [
+      53.7576504,
+      10.2778252
+    ],
+    "Bahnhof Kupfermühle": [
+      53.7622235,
+      10.3298253
+    ],
+    "Tremsbüttel, Fischbeker Weg": [
+      53.7498746,
+      10.3075418
+    ],
+    "Tremsbüttel, Rehbrook": [
+      53.7348239,
+      10.3222306
+    ],
+    "Tremsbüttel, Up de Vorburg": [
+      53.7371767,
+      10.3049209
+    ],
+    "Veit-Stoß-Ring": [
+      54.0686795,
+      10.0176701
+    ],
+    "Hasenkrug": [
+      53.8200113,
+      10.4542661
+    ],
+    "Fehrenbötel, Hoheluft": [
+      53.9866315,
+      10.1862453
+    ],
+    "Wilstedt, Badesee Costa Kiesa": [
+      53.735013,
+      10.0414336
+    ],
+    "Bordesholm Bürgerhaus": [
+      54.1772222,
+      10.0060666
+    ],
+    "Bargteheide, Langenhorst": [
+      53.7157571,
+      10.2931991
+    ],
+    "Hammoor, Alte Dorfstraße": [
+      53.7140137,
+      10.3121123
+    ],
+    "Hammoor, Bachstraße": [
+      53.7130281,
+      10.3208224
+    ],
+    "Hammoor, Feldkoppel": [
+      53.713239,
+      10.3117066
+    ],
+    "Hammoor, Hauptstraße": [
+      53.7128318,
+      10.3218676
+    ],
+    "Todendorf, Altenfelder Straße 7": [
+      53.6990117,
+      10.3597172
+    ],
+    "Todendorf, Höltenklink": [
+      53.7105619,
+      10.3431965
+    ],
+    "Todendorf, Mehrzweckhaus": [
+      53.6935518,
+      10.3501138
+    ],
+    "Todendorf, Moorweg": [
+      53.7031309,
+      10.3424398
+    ],
+    "Schule": [
+      54.0093025,
+      10.0169965
+    ],
+    "Twiete": [
+      54.0102818,
+      10.0144198
+    ],
+    "Rümpel, Eichengrund": [
+      53.7835129,
+      10.3490219
+    ],
+    "Rümpel, Lindenstraße": [
+      53.7838714,
+      10.3517321
+    ],
+    "Rümpel, Roter Hahn": [
+      53.788771,
+      10.3534377
+    ],
+    "Rethwischmühle, Am Mühlenberg": [
+      53.7874161,
+      10.4103085
+    ],
+    "Rethwischfeld, Alte Schule": [
+      53.7919448,
+      10.4077551
+    ],
+    "Nahe, Lüttmoor": [
+      53.7888677,
+      10.1355236
+    ],
+    "Kisdorf, Schule": [
+      53.8078949,
+      10.0109366
+    ],
+    "Groß Niendorf, B432": [
+      53.8513154,
+      10.2424356
+    ],
+    "Borstel (Sülfeld), Holmer Weg/B432": [
+      53.831338,
+      10.2078927
+    ],
+    "Hitzhusen, Schule": [
+      53.9183592,
+      9.8500488
+    ],
+    "Dakendorfer Gründen": [
+      53.9466058,
+      10.5758581
+    ],
+    "Elmenhorst, Schulstraße": [
+      53.7628582,
+      10.2615738
+    ],
+    "Stadtschule": [
+      53.8071107,
+      10.3730368
+    ],
+    "Ahrensburg, Kurt-Fischer-Straße (Mitte)": [
+      53.6865816,
+      10.2613083
+    ],
+    "Ahrensburg, Stormarner Werkstätten": [
+      53.6841115,
+      10.2616257
+    ],
+    "Pölitzfeld": [
+      53.7563346,
+      10.382549
+    ],
+    "Barkhorst, Kindergarten": [
+      53.7446641,
+      10.3764103
+    ],
+    "Rethwischdorf, Kirchberg": [
+      53.7818748,
+      10.4422951
+    ],
+    "Nahe, Mühlenstraße": [
+      53.7916425,
+      10.1377368
+    ],
+    "Krummbek, Gut Krummbek": [
+      53.7501126,
+      10.3976647
+    ],
+    "Schwienköben": [
+      53.7615902,
+      10.4103008
+    ],
+    "Trenthorst, Gut": [
+      53.791832,
+      10.5306411
+    ],
+    "Trenthorst, Scharberg": [
+      53.7939519,
+      10.5387948
+    ],
+    "Quickborn-Heide, An der Schmiede": [
+      53.7496556,
+      9.9346468
+    ],
+    "Ecke Hahnknüll": [
+      54.0936677,
+      9.9473986
+    ],
+    "Kayhude, Naherfurth": [
+      53.7673279,
+      10.1254424
+    ],
+    "Nahe, Dorfstraße": [
+      53.7958038,
+      10.1357455
+    ],
+    "Nahe, Schule": [
+      53.7886424,
+      10.1325559
+    ],
+    "Oering, Wickedekamp": [
+      53.8303294,
+      10.1228506
+    ],
+    "Sievershütten, Heide": [
+      53.8273633,
+      10.1023068
+    ],
+    "Itzstedt, Ole Koppel": [
+      53.8110045,
+      10.1566773
+    ],
+    "Bad Segeberg, Neurologisches Zentrum": [
+      53.9499551,
+      10.2946265
+    ],
+    "Bad Segeberg, Glindenberg": [
+      53.9473619,
+      10.2966346
+    ],
+    "Bad Segeberg, Mühlenberg": [
+      53.9369695,
+      10.2937531
+    ],
+    "Elmenhorst, Bargerhorst": [
+      53.7754865,
+      10.2466397
+    ],
+    "Elmenhorst, Scheidekate": [
+      53.7805785,
+      10.2426159
+    ],
+    "Leezen, Seestraße": [
+      53.8701041,
+      10.2550244
+    ],
+    "Strukdorf, Waldstraße": [
+      53.9203859,
+      10.4854917
+    ],
+    "Kisdorf, Schmiedeberg": [
+      53.8107768,
+      10.0132723
+    ],
+    "Kisdorfer Mühle": [
+      53.8059126,
+      10.0048223
+    ],
+    "Alveslohe, Denkmal": [
+      53.786912,
+      9.9144349
+    ],
+    "Hoffnung, In de Möschen": [
+      53.7865124,
+      9.8767508
+    ],
+    "Hoffnung, Bilser Straße": [
+      53.7837291,
+      9.8988004
+    ],
+    "Kaden": [
+      53.7835572,
+      9.9471545
+    ],
+    "Jersbek, Hartwigsahler Weg": [
+      53.7514391,
+      10.2040587
+    ],
+    "Langeln, Auf dem Bek": [
+      53.794714,
+      9.8608756
+    ],
+    "Bargfeld-Stegen, Brooklande": [
+      53.770306,
+      10.1862146
+    ],
+    "Bargfeld-Stegen, Schule": [
+      53.7643568,
+      10.183454
+    ],
+    "Nienwohld, Trift": [
+      53.7867556,
+      10.1963137
+    ],
+    "Borstel (Sülfeld), Am Schmiedeholz": [
+      53.8235466,
+      10.1942059
+    ],
+    "Borstel (Sülfeld), Borsteler Hof": [
+      53.8168836,
+      10.2039793
+    ],
+    "Borstel (Sülfeld), Prehshorst": [
+      53.817508,
+      10.2120454
+    ],
+    "Sülfeld, Sülfelder Brücke": [
+      53.8048003,
+      10.2423394
+    ],
+    "Sülfeld, Vierthof": [
+      53.808122,
+      10.2089183
+    ],
+    "A Nützen": [
+      53.8636445,
+      9.9186673
+    ],
+    "Heidmoor, Wieseneck": [
+      53.8684324,
+      9.8164188
+    ],
+    "Lentföhrden, Feuerwehr": [
+      53.8730054,
+      9.8833275
+    ],
+    "Mönkloh, Lutzhorner Straße": [
+      53.8873665,
+      9.790386
+    ],
+    "Alveslohe, Brunskamp": [
+      53.810342,
+      9.9097367
+    ],
+    "Alveslohe, Buschweg": [
+      53.8011277,
+      9.91642
+    ],
+    "Alveslohe, Schule": [
+      53.7902468,
+      9.914572
+    ],
+    "Borstel (Sülfeld), Ziegeleiweg": [
+      53.8310472,
+      10.1851492
+    ],
+    "Seth, Im weißen Moor": [
+      53.8521662,
+      10.1670058
+    ],
+    "Seth, Lehmkuhlenring": [
+      53.8403398,
+      10.180718
+    ],
+    "Seth, Steindamm": [
+      53.8469,
+      10.175145
+    ],
+    "Sievershütten, Hasenhörn": [
+      53.8444981,
+      10.1111256
+    ],
+    "Stuvenborn, Am Sportfeld": [
+      53.8478217,
+      10.1176837
+    ],
+    "Blunk, Bahnhofstraße": [
+      54.0083725,
+      10.3167971
+    ],
+    "Struvenhütten, Im Wiesengrund": [
+      53.8660569,
+      10.0512032
+    ],
+    "Bredenbekshorst": [
+      53.8645593,
+      10.078502
+    ],
+    "Kattendorf, Feuerwehr": [
+      53.8435374,
+      10.0234672
+    ],
+    "Kattendorf, Winsener Straße": [
+      53.8417107,
+      10.0234983
+    ],
+    "Kattendorferweeden": [
+      53.8396926,
+      10.0426799
+    ],
+    "Struvenhütten, Schulstraße": [
+      53.8638821,
+      10.0584172
+    ],
+    "Winsen (bei Kaltenkirchen)": [
+      53.8308419,
+      10.0157326
+    ],
+    "Kaltenkirchen, GS Am Lakweg (Schulzentrum Ⅱ)": [
+      53.8394192,
+      9.9762513
+    ],
+    "Bad Segeberg, Leopardstraße (Nord)": [
+      53.9390245,
+      10.2738433
+    ],
+    "Schürensöhlen, Am Putteich": [
+      53.7631753,
+      10.4715174
+    ],
+    "Alt Erfrade": [
+      54.0325546,
+      10.2772948
+    ],
+    "Moorkaten": [
+      53.8227742,
+      9.9143926
+    ],
+    "Nützen, Feuerwehr": [
+      53.864307,
+      9.9230157
+    ],
+    "Abzweig Steinfeld": [
+      53.8194155,
+      10.4328373
+    ],
+    "SWN Kundenzentrum": [
+      54.0745697,
+      9.9836901
+    ],
+    "Ascheberg, Neue Heimat": [
+      54.1538034,
+      10.359095
+    ],
+    "Fischbek bei Bargteheide": [
+      53.765023,
+      10.2837986
+    ],
+    "Elmenhorst, Gemeindezentrum": [
+      53.7626309,
+      10.262724
+    ],
+    "Elmenhorst, Manhagen": [
+      53.7672166,
+      10.2639288
+    ],
+    "Elmenhorst, Papenborn": [
+      53.773457,
+      10.2500986
+    ],
+    "Nienwohldrögen, Dorfmitte": [
+      53.7783584,
+      10.2268391
+    ],
+    "Nienwohldrögen, Hohenbergen": [
+      53.7782538,
+      10.2327478
+    ],
+    "Bad Oldesloe, Glinde 21-28": [
+      53.8031092,
+      10.3127192
+    ],
+    "Grabau, Rosenstraße": [
+      53.8042049,
+      10.2736943
+    ],
+    "Neverstaven": [
+      53.8294065,
+      10.2544781
+    ],
+    "Nütschau, Alte Schmiede": [
+      53.8169026,
+      10.3204285
+    ],
+    "Tralau, Heidick": [
+      53.8293248,
+      10.2738178
+    ],
+    "Vinzier, Siedlung": [
+      53.8167311,
+      10.3105048
+    ],
+    "Malkendorf": [
+      53.9676602,
+      10.6563091
+    ],
+    "Ahrensburg, Auestieg": [
+      53.6866423,
+      10.2358133
+    ],
+    "Ahrensburg, Pellwormstieg": [
+      53.6852495,
+      10.2419554
+    ],
+    "Steinkamp": [
+      53.6829001,
+      10.2288575
+    ],
+    "Heimstraße": [
+      53.8113292,
+      10.3600396
+    ],
+    "Oberjörn": [
+      54.091537,
+      10.0017718
+    ],
+    "Hagedornbusch": [
+      54.0944975,
+      9.9957995
+    ],
+    "Dahlienweg": [
+      54.09687,
+      9.995663
+    ],
+    "Helmut-Loose-Platz": [
+      54.0984679,
+      9.9957683
+    ],
+    "Jungmannstraße": [
+      54.0876336,
+      9.9997734
+    ],
+    "Langjähren": [
+      54.0895485,
+      10.0036223
+    ],
+    "Wookerkamp": [
+      54.0996185,
+      10.0041422
+    ],
+    "Erikaweg": [
+      54.0956136,
+      10.0059682
+    ],
+    "Katzensteig": [
+      54.1038919,
+      9.9908381
+    ],
+    "Fuhrkamp": [
+      54.1197737,
+      9.9918488
+    ],
+    "Berliner Straße": [
+      54.1204648,
+      9.9865391
+    ],
+    "Rüschdal": [
+      54.102289,
+      9.9958374
+    ],
+    "Vogelbeerallee": [
+      54.1044516,
+      9.9979064
+    ],
+    "Pestalozzischule": [
+      54.0994494,
+      9.9967205
+    ],
+    "Buddestraße": [
+      54.0869274,
+      9.9860273
+    ],
+    "Schulstraße": [
+      53.8358459,
+      9.9612173
+    ],
+    "Seth, Schule": [
+      53.8504262,
+      10.1758974
+    ],
+    "Fredesdorf, Christian-Rohlfs-Straße": [
+      53.8766577,
+      10.1980283
+    ],
+    "Ulzburg, Sportzentrum": [
+      53.7934157,
+      9.9908945
+    ],
+    "Nützen, Mühlenau": [
+      53.8625914,
+      9.9356579
+    ],
+    "Groß Schenkenberg, Bliestorfer Weg": [
+      53.7968662,
+      10.5784825
+    ],
+    "Rothenhausen, Dieksredder": [
+      53.7980611,
+      10.5908701
+    ],
+    "Bad Segeberg, Habichtshorst": [
+      53.955475,
+      10.2943563
+    ],
+    "Rhen, Wilstedter Straße": [
+      53.7544568,
+      9.996535
+    ],
+    "Harkshörn, Gewerbecentrum Mühlenweg": [
+      53.7269488,
+      10.0214576
+    ],
+    "Harkshörn, Mühlenweg (Ost)": [
+      53.7262641,
+      10.0228658
+    ],
+    "Kührenerbrücke": [
+      54.1967781,
+      10.2362461
+    ],
+    "Nehms, Am Freudenberg": [
+      54.0141276,
+      10.3431425
+    ],
+    "Klein Parin": [
+      53.9404213,
+      10.6568555
+    ],
+    "Geschendorf, BAB-Ausfahrt": [
+      53.9219486,
+      10.460301
+    ],
+    "Gieschenhagen": [
+      53.9324817,
+      10.3124544
+    ],
+    "Langniendorf, Reinsbeker Straße": [
+      53.913341,
+      10.5222162
+    ],
+    "Wasbek Rothenhörn": [
+      54.069696,
+      9.8948729
+    ],
+    "Wasbek, Ehndorfer Straße": [
+      54.0721095,
+      9.8956735
+    ],
+    "Strukdorf, Ost": [
+      53.9204455,
+      10.4922339
+    ],
+    "Kaltenkirchen, Erikaweg": [
+      53.8352943,
+      9.9771161
+    ],
+    "Mönkhagen, Abzweig Krumbeck": [
+      53.9053439,
+      10.5482422
+    ],
+    "Krumbeck, Alte Schule": [
+      53.9211219,
+      10.5575931
+    ],
+    "Krumbeck, Fichtenstraße": [
+      53.9160512,
+      10.5516332
+    ],
+    "Obernwohlde, Krumbecker Straße": [
+      53.9252346,
+      10.5686442
+    ],
+    "Bilsen, Dörpshuus": [
+      53.7715515,
+      9.8788705
+    ],
+    "Hoffnung, Kieler Straße": [
+      53.7861715,
+      9.8749432
+    ],
+    "Langeln, Hohenufer": [
+      53.7938913,
+      9.8466189
+    ],
+    "Mollhagen, Lipshorst": [
+      53.7060571,
+      10.3835216
+    ],
+    "Mollhagen, Schule": [
+      53.7051876,
+      10.3861898
+    ],
+    "Todendorf, Hauptstraße": [
+      53.6962832,
+      10.3503682
+    ],
+    "Barkhorst, Lindenallee": [
+      53.7464405,
+      10.3806799
+    ],
+    "Barkhorst, Rolfshagener Weg": [
+      53.7442179,
+      10.3739304
+    ],
+    "Hohenholz": [
+      53.7539479,
+      10.4301365
+    ],
+    "Krummbek, Am Park": [
+      53.7497573,
+      10.3947786
+    ],
+    "Lasbek-Dorf, Achterbrook": [
+      53.7329282,
+      10.3601892
+    ],
+    "Lasbek, Schulstraße": [
+      53.7337496,
+      10.3660084
+    ],
+    "Treuholz, Alter Bahnhof": [
+      53.7698784,
+      10.4345956
+    ],
+    "Treuholz, Fuhlenpott": [
+      53.7734862,
+      10.4404754
+    ],
+    "Treuholz, Gut": [
+      53.7690745,
+      10.430907
+    ],
+    "Treuholz, An der Barnitz": [
+      53.7629655,
+      10.4358472
+    ],
+    "Rethwischdorf, Am Sportplatz": [
+      53.7827713,
+      10.4416907
+    ],
+    "Rethwischdorf, Königstraße": [
+      53.784119,
+      10.4476229
+    ],
+    "Rethwischmühle, Steinkamp": [
+      53.7845179,
+      10.4231696
+    ],
+    "Schulenburg": [
+      53.758639,
+      10.4280577
+    ],
+    "Schulenburgfeld": [
+      53.7599863,
+      10.4165971
+    ],
+    "Steensrade": [
+      53.7922563,
+      10.4455748
+    ],
+    "Kleinkummerfeld, Alter Bahnhof": [
+      54.0209223,
+      10.0589829
+    ],
+    "Graskamp": [
+      54.1064219,
+      10.0120257
+    ],
+    "Havelstraße 10": [
+      54.0469347,
+      9.9775625
+    ],
+    "Havelstraße 26": [
+      54.0468336,
+      9.9820998
+    ],
+    "Braak, Siedlung": [
+      54.0167952,
+      10.0666123
+    ],
+    "Heidmoor, Heideweg": [
+      53.8236668,
+      9.8615275
+    ],
+    "Heidmoor, Waldchaussee": [
+      53.8712962,
+      9.8131106
+    ],
+    "Eichede, Kirche": [
+      53.7180496,
+      10.4076126
+    ],
+    "Lasbek-Gut, Am Mühlenteich": [
+      53.7452998,
+      10.3430436
+    ],
+    "Lasbek-Gut, Lasbeker Straße": [
+      53.7417368,
+      10.3458089
+    ],
+    "Rohlfshagen, An de Sylsbek": [
+      53.7641334,
+      10.354861
+    ],
+    "Rohlfshagen, Wurth": [
+      53.7679085,
+      10.3505329
+    ],
+    "Tralau, Schulstraße 50": [
+      53.8339626,
+      10.288205
+    ],
+    "Tralau, Mühlenberg": [
+      53.8381196,
+      10.2977961
+    ],
+    "Tönningstedt": [
+      53.8086988,
+      10.23199
+    ],
+    "Grabau, Alte Schäferei": [
+      53.805634,
+      10.2546562
+    ],
+    "Klinken": [
+      53.7767432,
+      10.3218214
+    ],
+    "Wrist Königsberger Straße": [
+      53.9296157,
+      9.7604734
+    ],
+    "Hüttblek, Abzweigung": [
+      53.8306812,
+      10.0860402
+    ],
+    "Mönkloh, Hermann-Brettin-Straße": [
+      53.8897003,
+      9.7870613
+    ],
+    "Weddelbrook, Schulstraße": [
+      53.902051,
+      9.8287912
+    ],
+    "Weddelbrook, Vogelzunge": [
+      53.902767,
+      9.8261606
+    ],
+    "Weddelbrook, Wrister Straße": [
+      53.9047689,
+      9.8320388
+    ],
+    "Kampen bei Nützen": [
+      53.8572598,
+      9.9369145
+    ],
+    "Hitzhusen, Hohlweg": [
+      53.9224574,
+      9.8542322
+    ],
+    "Bob'n de Lieth": [
+      53.9261261,
+      9.8769387
+    ],
+    "Tegelbarg": [
+      53.9280795,
+      9.8910315
+    ],
+    "Klinikum": [
+      53.9036175,
+      9.8939178
+    ],
+    "Psychosomatische Klinik": [
+      53.9045591,
+      9.8889152
+    ],
+    "Saebystraße": [
+      53.9082214,
+      9.8809994
+    ],
+    "Theater im Kurhaus": [
+      53.9043642,
+      9.8946144
+    ],
+    "Thomas-Mann-Straße": [
+      53.9158318,
+      9.8706223
+    ],
+    "Schmalfeld, Holstenstraße": [
+      53.8742785,
+      9.9859301
+    ],
+    "Schmalfeld, Kamper Straße": [
+      53.8611065,
+      9.974248
+    ],
+    "Fuhlenrüe": [
+      53.908819,
+      10.0211404
+    ],
+    "Hartenholm, Dorfstraße": [
+      53.8982173,
+      10.0663723
+    ],
+    "Hartenholm, Heuweg": [
+      53.8899343,
+      10.0650582
+    ],
+    "Hasenmoor, Dorfstraße": [
+      53.90022,
+      9.9845756
+    ],
+    "Hasenmoor, Kaltenkirchener Straße": [
+      53.8990986,
+      9.9790482
+    ],
+    "Hasenmoor, Schulweg": [
+      53.9014233,
+      9.9985237
+    ],
+    "Bark, Bockhorn (West)": [
+      53.9186929,
+      10.1277537
+    ],
+    "Kaltenkirchen, Am Schaafredder": [
+      53.8326039,
+      9.9452881
+    ],
+    "Kisdorf, Hüttbleker Weg": [
+      53.8157854,
+      10.0448639
+    ],
+    "Bark, B 206": [
+      53.9214276,
+      10.1967131
+    ],
+    "Bark, Schafhaus": [
+      53.9204014,
+      10.1692861
+    ],
+    "Kantstraße": [
+      53.9267858,
+      9.8811468
+    ],
+    "Bleeck": [
+      53.9171434,
+      9.8835335
+    ],
+    "A Bad Bramstedt": [
+      53.9213604,
+      9.8897152
+    ],
+    "Raamakerstieg": [
+      53.9218294,
+      9.8870873
+    ],
+    "Butendoor": [
+      53.9154025,
+      9.8862013
+    ],
+    "An der Hudau": [
+      53.9146101,
+      9.8861971
+    ],
+    "Kükels, Dorfstraße": [
+      53.895501,
+      10.2385472
+    ],
+    "Kükels, Erster Seeweg": [
+      53.9010806,
+      10.2327526
+    ],
+    "Mözen, Abzweigung Kükels": [
+      53.8970395,
+      10.2637263
+    ],
+    "Wittenborn, B 206": [
+      53.9252076,
+      10.2209445
+    ],
+    "Heiderfeld": [
+      53.8688218,
+      10.2230358
+    ],
+    "Todesfelde, Am Sportplatz": [
+      53.8982861,
+      10.182687
+    ],
+    "Todesfelde, Fredesdorfer Straße": [
+      53.891567,
+      10.1766227
+    ],
+    "Todesfelde, Meiereistraße": [
+      53.894363,
+      10.1759942
+    ],
+    "Bebensee": [
+      53.8771122,
+      10.2986098
+    ],
+    "Bimöhler Straße": [
+      53.9236254,
+      9.8974805
+    ],
+    "Maienbeeck (West)": [
+      53.9233083,
+      9.8754829
+    ],
+    "Hamburger Straße (Mitte)": [
+      53.9109726,
+      9.8815942
+    ],
+    "Kalübbeholz": [
+      54.1404323,
+      10.301532
+    ],
+    "Höfen": [
+      54.144921,
+      10.3073269
+    ],
+    "Tankenrader Berg": [
+      53.9562973,
+      10.5284454
+    ],
+    "Steenkoppel": [
+      54.0514601,
+      9.9571244
+    ],
+    "Ehndorf, Bürgerhaus": [
+      54.0534852,
+      9.8929874
+    ],
+    "Quarnstedt, Schmidsbarg": [
+      53.9485145,
+      9.7836773
+    ],
+    "Arpsdorf, Feuerwehrhaus": [
+      54.0402965,
+      9.8596312
+    ],
+    "Willenscharen, Arpsdorfer Str.": [
+      54.0097718,
+      9.8091888
+    ],
+    "Willenscharen, Aukrugstraße": [
+      54.014863,
+      9.8038474
+    ],
+    "Sarlhusen, Reuthenberg 16": [
+      54.018603,
+      9.7996525
+    ],
+    "Sarlhusen, Reuthenberg 6": [
+      54.0224176,
+      9.7939304
+    ],
+    "Bühnsdorf, Abzw. Bahrenhof": [
+      53.8861103,
+      10.3874316
+    ],
+    "Bahrenhof, Hohelucht": [
+      53.8789444,
+      10.3640472
+    ],
+    "Dreggers": [
+      53.8854642,
+      10.3468436
+    ],
+    "Wakendorf I, Abzweigung Lohsack": [
+      53.8741798,
+      10.3353399
+    ],
+    "Wakendorf I, Hauptstraße": [
+      53.864756,
+      10.357802
+    ],
+    "Wakendorf I, Lohsacker Weg (ST)": [
+      53.8657481,
+      10.3556818
+    ],
+    "Mönkloh, Glückstädter Straße": [
+      53.8937871,
+      9.7969448
+    ],
+    "Weddelbrook, Krücken": [
+      53.9115185,
+      9.7979673
+    ],
+    "Weddelbrook, Steenkamp": [
+      53.9080441,
+      9.8073202
+    ],
+    "Auweg": [
+      54.0063045,
+      10.0153903
+    ],
+    "Dorfring": [
+      54.0074625,
+      10.0281273
+    ],
+    "Friedrichswalder Straße": [
+      54.0056345,
+      10.0115494
+    ],
+    "Gemeinde": [
+      54.0067684,
+      10.0249389
+    ],
+    "Ruhrstraße": [
+      54.0523781,
+      9.9822422
+    ],
+    "Bf. Fahrenkrug": [
+      53.9449508,
+      10.2509365
+    ],
+    "Leopardstraße (Süd)": [
+      53.9336205,
+      10.2737272
+    ],
+    "Rotenhahn, Abzw. Högersdorf": [
+      53.9269517,
+      10.2493941
+    ],
+    "Schackendorf, Dorfplatz": [
+      53.9574759,
+      10.2708023
+    ],
+    "Wahlstedt, Alte Landstraße": [
+      53.9487238,
+      10.2297948
+    ],
+    "Wahlstedt, An der Eiche": [
+      53.9532213,
+      10.2120645
+    ],
+    "Wahlstedt, Kronsheider Straße": [
+      53.9504938,
+      10.2010326
+    ],
+    "Wahlstedt, Skandinavienstraße": [
+      53.9543773,
+      10.2015519
+    ],
+    "Fehrenbötel, Dorfstraße": [
+      53.984537,
+      10.1763221
+    ],
+    "Fehrenbötel, Kampstraße": [
+      53.9877286,
+      10.1754597
+    ],
+    "Rickling, An der Kirche": [
+      54.0042534,
+      10.165843
+    ],
+    "Rickling, Doppeleiche": [
+      54.0081084,
+      10.1630399
+    ],
+    "Heidmühlen, Abzweig Glashütte": [
+      53.9627643,
+      10.1220734
+    ],
+    "Heidmühlen, Am Klint": [
+      53.9546974,
+      10.0773228
+    ],
+    "Heidmühlen, Feuerwehr": [
+      53.9697739,
+      10.0831045
+    ],
+    "Heidmühlen, Hartenholmer Damm": [
+      53.9553833,
+      10.0855128
+    ],
+    "Heidmühlen, Mühlenholz": [
+      53.9765459,
+      10.0824871
+    ],
+    "Heidmühlen, Wahlstedter Str. 70": [
+      53.9647957,
+      10.1199251
+    ],
+    "Latendorf, Hinschenhorn": [
+      53.9787628,
+      10.0786434
+    ],
+    "Radesforde": [
+      53.9734064,
+      10.1344486
+    ],
+    "Radesforde, Fehrenböteler Straße": [
+      53.9653725,
+      10.1251206
+    ],
+    "Schönmoor, Hörnstraße": [
+      53.9832893,
+      10.1566721
+    ],
+    "Schönmoor, Karkweg": [
+      53.9789875,
+      10.138359
+    ],
+    "Bimöhlen, Dorfplatz": [
+      53.9361647,
+      9.9542576
+    ],
+    "Bimöhlen, Weide": [
+      53.9387996,
+      10.0059418
+    ],
+    "Großenaspe, Baß": [
+      53.9470153,
+      10.0129
+    ],
+    "Borstel (Bad Bramstedt), Am Teich": [
+      53.9684994,
+      9.7984093
+    ],
+    "Hagen (Bad Bramstedt), Dorfstraße": [
+      53.9469232,
+      9.8264583
+    ],
+    "Hagen (Bad Bramstedt), Ginsterweg": [
+      53.9395207,
+      9.8168216
+    ],
+    "Brokstedt, Kirche": [
+      53.9911154,
+      9.8152405
+    ],
+    "Sühlen": [
+      53.8607822,
+      10.3260949
+    ],
+    "Leezen, Neversdorfer Straße": [
+      53.8654801,
+      10.2521978
+    ],
+    "Mözen, B 432": [
+      53.9116922,
+      10.2631916
+    ],
+    "Neversdorf, Seekoppel": [
+      53.8654803,
+      10.2741672
+    ],
+    "Bf. Wakendorf": [
+      53.8662378,
+      10.3654063
+    ],
+    "Bühnsdorf, Abzw. Neuengörs": [
+      53.8877052,
+      10.3815342
+    ],
+    "Bühnsdorf, Neuengörser Straße": [
+      53.8882453,
+      10.3810538
+    ],
+    "Neuengörs": [
+      53.8989731,
+      10.381198
+    ],
+    "Neuengörs, Schule": [
+      53.8982472,
+      10.3847656
+    ],
+    "Altengörs, Dorfplatz": [
+      53.8977503,
+      10.3629964
+    ],
+    "Altengörs, Neuengörser Straße": [
+      53.8985065,
+      10.3642311
+    ],
+    "Bahrenhof, Dorfstraße": [
+      53.8786731,
+      10.3716024
+    ],
+    "Bahrenhof, Holmkenrade": [
+      53.8785316,
+      10.3798676
+    ],
+    "Traventhal, Tegelbek": [
+      53.8919229,
+      10.3386761
+    ],
+    "Wakendorf I, Bahrenhofer Straße": [
+      53.8691354,
+      10.3640253
+    ],
+    "Schwissel": [
+      53.8971717,
+      10.2929826
+    ],
+    "Traventhal, Brookredder": [
+      53.8980893,
+      10.3208744
+    ],
+    "Traventhal, Lindenallee": [
+      53.8974019,
+      10.3187837
+    ],
+    "Traventhal, Siedlung": [
+      53.9022318,
+      10.3178542
+    ],
+    "Högersdorf, Am Dorfplatz": [
+      53.9207771,
+      10.283524
+    ],
+    "Högersdorf, B 432": [
+      53.9211568,
+      10.2741064
+    ],
+    "Klein Gladebrügge, Hamann's Koppel": [
+      53.9214999,
+      10.3209558
+    ],
+    "Mielsdorf, Alte Ziegelei": [
+      53.9116259,
+      10.3506204
+    ],
+    "Mielsdorf, Dorfstraße": [
+      53.9131025,
+      10.3558313
+    ],
+    "Geschendorf, Lindenstraße": [
+      53.922085,
+      10.443665
+    ],
+    "Geschendorf, Wohldredder": [
+      53.9213672,
+      10.437553
+    ],
+    "Herrenbranden, Waldstraße": [
+      53.9067774,
+      10.4769103
+    ],
+    "Neuengörs, Stubben": [
+      53.8936505,
+      10.4167765
+    ],
+    "Pöhls": [
+      53.8924878,
+      10.4800357
+    ],
+    "Steinbeker Bahnhof": [
+      53.9219772,
+      10.417844
+    ],
+    "Steinbek, Steinbeker Dorfstraße": [
+      53.9213805,
+      10.4039233
+    ],
+    "Strukdorf, Dorfstraße": [
+      53.9200239,
+      10.4914337
+    ],
+    "Söhren, Neuengörser Straße": [
+      53.9106842,
+      10.426714
+    ],
+    "Goldenbek, Neukoppeler Straße": [
+      53.9388959,
+      10.4910844
+    ],
+    "Goldenbek, Pronstorfer Straße": [
+      53.9470871,
+      10.482675
+    ],
+    "Goldenbek, Schule": [
+      53.9392031,
+      10.4899342
+    ],
+    "Pronstorf": [
+      53.9572774,
+      10.4688752
+    ],
+    "Pronstorf, Holm": [
+      53.9474657,
+      10.4669371
+    ],
+    "Westerrade, Bahnhofstraße": [
+      53.9343376,
+      10.4562265
+    ],
+    "Westerrade, Dorfplatz": [
+      53.9355594,
+      10.4595452
+    ],
+    "Bißnitz": [
+      53.9419696,
+      10.4251902
+    ],
+    "Margaretenhof (Nord)": [
+      53.9554055,
+      10.4201199
+    ],
+    "Margaretenhof (Süd)": [
+      53.9496773,
+      10.4267332
+    ],
+    "Neuenteich": [
+      53.9433713,
+      10.4248148
+    ],
+    "Schieren, Ehrenmal": [
+      53.9449245,
+      10.3904215
+    ],
+    "Schieren, Westerrader Straße": [
+      53.9431484,
+      10.4116976
+    ],
+    "Perdoel, Gut": [
+      54.1187155,
+      10.236175
+    ],
+    "Quaal, Schulstraße": [
+      53.9620725,
+      10.3751474
+    ],
+    "Rohlstorf": [
+      53.9683731,
+      10.4023831
+    ],
+    "Rohlstorf, Internat": [
+      53.972282,
+      10.4071469
+    ],
+    "Warder, B 432": [
+      53.9730274,
+      10.3820727
+    ],
+    "Warderfelde": [
+      53.9656227,
+      10.3824425
+    ],
+    "Wardersee": [
+      53.9722072,
+      10.3872004
+    ],
+    "Stipsdorf, Dorfstraße": [
+      53.9420116,
+      10.334823
+    ],
+    "Höltenklinken (West)": [
+      53.7773894,
+      10.3284897
+    ],
+    "Rümpel, Wiesenstraße": [
+      53.7823316,
+      10.3453377
+    ],
+    "Dorothea-Schlözer-Straße": [
+      53.8035869,
+      10.3517416
+    ],
+    "Hedwig-Kettler-Straße": [
+      53.8061278,
+      10.3510513
+    ],
+    "Helene-Stöcker-Straße": [
+      53.806794,
+      10.3522062
+    ],
+    "Lise-Meitner-Ring": [
+      53.8048802,
+      10.3498279
+    ],
+    "Nütschau, Kloster": [
+      53.8233704,
+      10.3261989
+    ],
+    "Schlamersdorf, Dorfstraße": [
+      53.8352595,
+      10.3412234
+    ],
+    "Schlamersdorf, Nütschauer Weg": [
+      53.8325441,
+      10.34099
+    ],
+    "Wolkenwehe, Dorfstraße": [
+      53.8129575,
+      10.3394417
+    ],
+    "Wolkenwehe, Zur Grünen Brücke": [
+      53.8132356,
+      10.3400249
+    ],
+    "Neufresenburg, Abzweigung Seefeld": [
+      53.840442,
+      10.3841578
+    ],
+    "Neufresenburg": [
+      53.8360068,
+      10.3780567
+    ],
+    "Neufresenburg, Am Poggensee": [
+      53.826744,
+      10.3774251
+    ],
+    "Neufresenburg, Redderschmiede": [
+      53.8325669,
+      10.3757495
+    ],
+    "Poggensee, Bahnübergang": [
+      53.8245646,
+      10.3913922
+    ],
+    "Poggensee, Buskehre": [
+      53.8264465,
+      10.3954993
+    ],
+    "Poggensee, Gärtnerei": [
+      53.8242,
+      10.3782389
+    ],
+    "Steinfelderwohld": [
+      53.8489778,
+      10.4420378
+    ],
+    "Vosskaten, Teicher Weg": [
+      53.8563792,
+      10.4688432
+    ],
+    "Reinsbek, Butterstieg": [
+      53.9280504,
+      10.5312102
+    ],
+    "Wulfsfelde": [
+      53.9469541,
+      10.5283158
+    ],
+    "Wulfsfelde, Abzw. Goldenbek": [
+      53.940862,
+      10.5330563
+    ],
+    "Wulfsfelde, Waldweg": [
+      53.9509955,
+      10.5256015
+    ],
+    "Eilsdorf, A'n Diek": [
+      53.962611,
+      10.5023745
+    ],
+    "Eilsdorf, Abzweigung": [
+      53.9636886,
+      10.5058931
+    ],
+    "Hartenkamp": [
+      53.969528,
+      10.4864207
+    ],
+    "Strenglin, Alte Schule": [
+      53.9799403,
+      10.4716355
+    ],
+    "Strenglin, Dreiangel": [
+      53.9804339,
+      10.4717719
+    ],
+    "Krögsberg": [
+      53.9688964,
+      10.370108
+    ],
+    "Wensin, B 432": [
+      53.981433,
+      10.4066101
+    ],
+    "Klein Rönnau, Thunscher Weg": [
+      53.9544868,
+      10.3144535
+    ],
+    "Harkshörn, Am Stammgleis": [
+      53.7352033,
+      10.0226493
+    ],
+    "Harkshörn, Oststraße": [
+      53.7394725,
+      10.0219492
+    ],
+    "Harkshörn, Werkstraße": [
+      53.7306361,
+      10.0227828
+    ],
+    "Altfresenburg": [
+      53.8233818,
+      10.3612716
+    ],
+    "Bei der Mennokate": [
+      53.8171533,
+      10.3741134
+    ],
+    "Waldstraße": [
+      53.8162133,
+      10.3777111
+    ],
+    "Poggenbreeden": [
+      53.8169081,
+      10.3856292
+    ],
+    "Segeberger Straße 38": [
+      53.8157242,
+      10.3763041
+    ],
+    "Stettiner Straße": [
+      53.8173548,
+      10.380993
+    ],
+    "Reinfeld, Schillerstraße": [
+      53.8265247,
+      10.4916075
+    ],
+    "Reinfeld, Karlsberg": [
+      53.8282932,
+      10.4987716
+    ],
+    "Reinfeld, Schauberg": [
+      53.8270913,
+      10.4985678
+    ],
+    "Heidekamp": [
+      53.8538998,
+      10.5021207
+    ],
+    "Reinfeld, Binnenkamp": [
+      53.8483596,
+      10.5012399
+    ],
+    "Mönkhagen, An der Bundesstraße": [
+      53.8997685,
+      10.5570767
+    ],
+    "Mönkhagen, An der Au": [
+      53.9009169,
+      10.5598998
+    ],
+    "Schürensöhlen, Dorfstraße": [
+      53.7655483,
+      10.47618
+    ],
+    "Bf. Bad Segeberg (ZOB)": [
+      53.9343106,
+      10.3096712
+    ],
+    "Lentföhrden, Kaltenkirchener Straße": [
+      53.8667259,
+      9.8885
+    ],
+    "Lentföhrden, Karkweg": [
+      53.8690935,
+      9.8907739
+    ],
+    "Lehmbarg": [
+      53.9247634,
+      9.8979158
+    ],
+    "Ahrensfelde, Schmiedeweg": [
+      53.7642756,
+      10.4983707
+    ],
+    "Wulmenau, Dorf": [
+      53.7682121,
+      10.5142946
+    ],
+    "Grinau, Trenthorster Weg": [
+      53.7761128,
+      10.5485513
+    ],
+    "Husberg, Harderkamp": [
+      54.0710081,
+      10.0413601
+    ],
+    "Husberger Moor": [
+      54.061677,
+      10.1087466
+    ],
+    "Griesenbötel, B430": [
+      54.0639816,
+      10.1394794
+    ],
+    "Viehbrook, Abzw.": [
+      54.0858073,
+      10.141291
+    ],
+    "Hollenbek, Dorfplatz": [
+      54.076625,
+      10.12665
+    ],
+    "Schipphorst, Dorfplatz": [
+      54.0832649,
+      10.1510573
+    ],
+    "Schipphorst, Abzweig": [
+      54.0664953,
+      10.1518472
+    ],
+    "Rendswühren, Gastwirtschaft Hoffnung": [
+      54.0677889,
+      10.1568144
+    ],
+    "Rendswühren, Gastwirtschaft Mühle": [
+      54.0702836,
+      10.1681897
+    ],
+    "Rendswühren, B430": [
+      54.0719377,
+      10.1806499
+    ],
+    "Schönböken, Torhaus": [
+      54.0828116,
+      10.1952908
+    ],
+    "Bornhöved, Priesterredder": [
+      54.0743693,
+      10.2277812
+    ],
+    "Liegnitzer Straße": [
+      54.0676053,
+      9.9574278
+    ],
+    "Wasbeker Straße 241": [
+      54.0699754,
+      9.9527496
+    ],
+    "Cashagen, West": [
+      53.9484468,
+      10.5590434
+    ],
+    "Tankenrade": [
+      53.9629015,
+      10.5316132
+    ],
+    "Lebatz, Dorfchaussee": [
+      53.979283,
+      10.5517952
+    ],
+    "Tankenrade, Spritzenhaus": [
+      53.9661048,
+      10.533591
+    ],
+    "Krems II, Obersöhren": [
+      53.9968408,
+      10.3389127
+    ],
+    "Schlagberg (West)": [
+      53.9940938,
+      10.3441365
+    ],
+    "Schlagberg (Ost)": [
+      53.9937276,
+      10.3461288
+    ],
+    "Bad Segeberg, Kurt-Schumacher-Ring": [
+      53.9514622,
+      10.2913145
+    ],
+    "Bad Segeberg, Redderblecken": [
+      53.9527194,
+      10.3016274
+    ],
+    "Blunk, Lindenstraße": [
+      54.0096459,
+      10.3127487
+    ],
+    "Daldorf, Pettluiser Weg": [
+      53.9977197,
+      10.2707568
+    ],
+    "Bad Segeberg, Krankenhausstraße": [
+      53.9404974,
+      10.3068229
+    ],
+    "Reventlowstraße": [
+      54.0626556,
+      9.9840212
+    ],
+    "Südbahnhof": [
+      54.0598727,
+      9.9817869
+    ],
+    "Störwiesen": [
+      54.0566469,
+      9.9790232
+    ],
+    "Neumünster Stadtwald": [
+      54.0830933,
+      9.9618101
+    ],
+    "Bugenhagenkirche": [
+      54.0773427,
+      9.9625348
+    ],
+    "Seedorf, Seedorfer Allee": [
+      54.0404193,
+      10.4104435
+    ],
+    "Bad Segeberg, Propsteialtenheim": [
+      53.9313849,
+      10.2950605
+    ],
+    "Harksheide, Beim Brüderhof": [
+      53.7461684,
+      10.0176872
+    ],
+    "Wielen": [
+      54.1936787,
+      10.3318041
+    ],
+    "P&R Nettelau / Löptin": [
+      54.1639777,
+      10.2020057
+    ],
+    "Ulzburg-Süd, Birkenhof (Kehre)": [
+      53.7787216,
+      9.9788488
+    ],
+    "Kisdorf, Pommernstraße": [
+      53.8082225,
+      10.0037776
+    ],
+    "Albrecht-Dürer-Ring": [
+      53.8294138,
+      9.9356492
+    ],
+    "Struvenhütten, Bentfurt": [
+      53.8656249,
+      10.0267239
+    ],
+    "Kaltenkirchen, GS Alter Landweg": [
+      53.8313484,
+      9.9702561
+    ],
+    "Kaltenkirchen, Brookweg": [
+      53.8252451,
+      9.9443329
+    ],
+    "Alveslohe, Schäferei": [
+      53.8124171,
+      9.8826514
+    ],
+    "Föhrden-Barl, Stellauer Weg": [
+      53.9237814,
+      9.7884313
+    ],
+    "Föhrden-Barl, Schulstraße": [
+      53.9279086,
+      9.7850204
+    ],
+    "Quarnstedt, Dorfstraße": [
+      53.9542249,
+      9.7860091
+    ],
+    "Armstedt, Schulstraße": [
+      53.972125,
+      9.8481599
+    ],
+    "Grundschule am Bahnhof": [
+      53.9199407,
+      9.8892493
+    ],
+    "Unter der Lieth": [
+      53.9239548,
+      9.8799364
+    ],
+    "Schillerstraße": [
+      53.9433134,
+      10.3059684
+    ],
+    "Kaltenkirchen, Waldorfschule": [
+      53.8329914,
+      9.9723575
+    ],
+    "Vogelstange": [
+      53.9162906,
+      9.8867552
+    ],
+    "Gemeinschaftsschule": [
+      53.9261571,
+      9.8730768
+    ],
+    "Ellernbusch": [
+      53.924781,
+      9.8685916
+    ],
+    "Stedingweg": [
+      53.9128103,
+      9.8786859
+    ],
+    "Caspar-Fuchs-Weg": [
+      53.9132364,
+      9.8801512
+    ],
+    "Hitzhusen, Baßberg": [
+      53.9263775,
+      9.8495154
+    ],
+    "Pechsteinstraße": [
+      54.0642727,
+      10.01075
+    ],
+    "Wilhelm-Busch-Straße": [
+      54.0652947,
+      10.0149707
+    ],
+    "Tunnel": [
+      54.0680687,
+      9.9729056
+    ],
+    "Schleusberg": [
+      54.0698581,
+      9.9772593
+    ],
+    "Kleinflecken": [
+      54.0721204,
+      9.9799313
+    ],
+    "Am Teich": [
+      54.0734179,
+      9.9833278
+    ],
+    "Nordfriedhof": [
+      54.0747063,
+      9.9982546
+    ],
+    "Kaltenkirchen, Wagnerstraße": [
+      53.8329832,
+      9.9376747
+    ],
+    "Hasenmoor, Fuhlenrüer Straße": [
+      53.9093624,
+      10.0378112
+    ],
+    "Hartenholm, Hahneneck": [
+      53.9051267,
+      10.0514334
+    ],
+    "Ehlersberg, Altersheim": [
+      53.7469843,
+      10.131553
+    ],
+    "Klein Boden": [
+      53.7582915,
+      10.4499457
+    ],
+    "Groß Boden, Riekenhagen": [
+      53.7498557,
+      10.45253
+    ],
+    "Lasbek, Lehmskuhlenweg": [
+      53.7327415,
+      10.3627934
+    ],
+    "Lasbek, Wildgrund": [
+      53.7349943,
+      10.3502611
+    ],
+    "Sattenfelde, Forstweg": [
+      53.759386,
+      10.3384553
+    ],
+    "Rohlfshagen, Ziegeleiweg": [
+      53.7719886,
+      10.3479329
+    ],
+    "Rümpel, Hedwig-Riedel-Weg": [
+      53.7743338,
+      10.345708
+    ],
+    "Meddelskamp": [
+      53.8033013,
+      10.362156
+    ],
+    "Grundschule West": [
+      53.8075696,
+      10.3508585
+    ],
+    "Nütschau, Kreisfeuerwehrzentrale": [
+      53.8294444,
+      10.3100765
+    ],
+    "Nütschau, Schloßstraße": [
+      53.8223012,
+      10.3177155
+    ],
+    "Groß Niendorf, Feuerwehr": [
+      53.8451334,
+      10.241283
+    ],
+    "Wahlstedt, Rendsburger Straße": [
+      53.9557199,
+      10.2183784
+    ],
+    "Wahlstedt, Am Röthberg": [
+      53.9522701,
+      10.2227784
+    ],
+    "Bf. Rickling (Klinik)": [
+      53.9990873,
+      10.1686763
+    ],
+    "Eekholt, Bokelmann": [
+      53.94864,
+      10.0338182
+    ],
+    "Latendorf, Feuerwehr": [
+      53.9935705,
+      10.0661809
+    ],
+    "Ölmühle": [
+      53.7946758,
+      10.3839845
+    ],
+    "Anne-Frank-Straße": [
+      53.7988038,
+      10.3828529
+    ],
+    "Reinfeld, Famila": [
+      53.8223529,
+      10.5004659
+    ],
+    "Freesencenter": [
+      54.0699931,
+      9.9397633
+    ],
+    "Fasanenweg": [
+      54.0774086,
+      9.8984624
+    ],
+    "Bimöhlen, Pappelweg": [
+      53.9269192,
+      9.9665133
+    ],
+    "Bimöhlen, Steenkamp": [
+      53.9328844,
+      9.9619104
+    ],
+    "Bimöhlen, Hasenmoorer Straße": [
+      53.9287752,
+      9.9514848
+    ],
+    "Fredesdorf, Schulstraße": [
+      53.874666,
+      10.2029783
+    ],
+    "Todesfelde, Poggensahl": [
+      53.8917027,
+      10.167278
+    ],
+    "Todesfelde, Friedrichshöh": [
+      53.8920188,
+      10.1723474
+    ],
+    "Stipsdorf, Abzweigung": [
+      53.9364963,
+      10.3355842
+    ],
+    "Bad Segeberg, Riihimäkistraße": [
+      53.9410946,
+      10.2950277
+    ],
+    "Bad Segeberg, Lohmühlenweg": [
+      53.9431717,
+      10.2954761
+    ],
+    "Bad Segeberg, Mozartweg": [
+      53.9458645,
+      10.2950518
+    ],
+    "Bad Segeberg, Kiekut": [
+      53.9320525,
+      10.3300251
+    ],
+    "Bad Segeberg, Herzzentrum": [
+      53.9427543,
+      10.306151
+    ],
+    "Bad Segeberg, Heinrich-Rantzau-Schule": [
+      53.943506,
+      10.3027913
+    ],
+    "Groß Rönnau, Lindenweg": [
+      53.9709177,
+      10.3137596
+    ],
+    "Groß Rönnau, Schulstraße": [
+      53.972357,
+      10.3065093
+    ],
+    "Düsternbrook": [
+      53.9566182,
+      10.3783645
+    ],
+    "Quaal, Immenrader Weg": [
+      53.9588039,
+      10.3738737
+    ],
+    "Fahrenkrug, Schule": [
+      53.9418538,
+      10.2557654
+    ],
+    "Fahrenkrug, Boomgarden": [
+      53.9405332,
+      10.2607686
+    ],
+    "Wahlstedt, Marinesiedlung": [
+      53.9542611,
+      10.2059689
+    ],
+    "Reinfeld, Holländerkoppel": [
+      53.8294589,
+      10.4947127
+    ],
+    "Reinfeld, Klosterberg": [
+      53.8271182,
+      10.4774548
+    ],
+    "Reinfeld, Friedhof": [
+      53.8247603,
+      10.475889
+    ],
+    "Reinfeld, Kalkgraben": [
+      53.8220054,
+      10.4729614
+    ],
+    "Grebenhagener Gründen": [
+      53.9554156,
+      10.5634457
+    ],
+    "Cashagen, Mitte": [
+      53.9485705,
+      10.5656766
+    ],
+    "Dakendorf": [
+      53.9551867,
+      10.5924672
+    ],
+    "Krumbeck, Feuerwehr": [
+      53.9192358,
+      10.5512778
+    ],
+    "Grebenhagen, Süd": [
+      53.9684645,
+      10.5685465
+    ],
+    "Gnissau, Segeberger Straße": [
+      53.9974784,
+      10.4832275
+    ],
+    "Gnissau, Eiche": [
+      53.9992913,
+      10.4829062
+    ],
+    "Gnissau, Dr. Goder": [
+      53.9994742,
+      10.4920861
+    ],
+    "Gnissau, Heckkaten": [
+      53.9992185,
+      10.5022726
+    ],
+    "Gnissau, Hof Hohenhorst": [
+      53.998586,
+      10.5181767
+    ],
+    "Gnissau, Abzw. Strenglin": [
+      53.9951709,
+      10.4743306
+    ],
+    "Eilsdorf, Feuerwehr": [
+      53.960253,
+      10.4969373
+    ],
+    "Pronstorf, Steinrade (Süd)": [
+      53.9696349,
+      10.4652402
+    ],
+    "Pronstorf, Steinrade (Nord)": [
+      53.9735398,
+      10.4655694
+    ],
+    "Strengliner Mühle": [
+      53.9781092,
+      10.4668198
+    ],
+    "Bad Segeberg, Hamburger Straße(Möbel Kraft)": [
+      53.9370613,
+      10.3003056
+    ],
+    "Bad Segeberg Esmarchstraße": [
+      53.9485631,
+      10.304826
+    ],
+    "Blunk Imberg": [
+      54.0181307,
+      10.3219685
+    ],
+    "Bornhöved Moorblick": [
+      54.0622308,
+      10.2267955
+    ],
+    "Harkshörn (Nord)": [
+      53.7407813,
+      10.0183403
+    ],
+    "Harkshörn, Mühlenweg (Mitte)": [
+      53.7274204,
+      10.0169885
+    ],
+    "Berlin (Seedorf), Schulkamp": [
+      54.0337486,
+      10.4520133
+    ],
+    "Seedorf, Tensfelderau": [
+      54.0581166,
+      10.3321119
+    ],
+    "Gnissau, Otternbergskamp": [
+      54.0029002,
+      10.4837342
+    ],
+    "Steenkrütz": [
+      54.0135478,
+      10.4793375
+    ],
+    "Berlin (Seedorf), Potsdamer Straße": [
+      54.0329208,
+      10.4572624
+    ],
+    "Ahrensburg, Am Obsthain": [
+      53.6885943,
+      10.2376478
+    ],
+    "Gustav-Delle-Straße": [
+      53.6840787,
+      10.2248509
+    ],
+    "Wilhelmstraße": [
+      54.0715831,
+      9.9759186
+    ],
+    "Bad am Stadtwald": [
+      54.0800045,
+      9.9600346
+    ],
+    "Raade": [
+      53.8920715,
+      10.4838595
+    ],
+    "Fitzbek, Bäckerweg": [
+      54.0027206,
+      9.7682943
+    ],
+    "Sepel": [
+      54.122057,
+      10.3726856
+    ],
+    "Trappenkamp, Schulen": [
+      54.0368551,
+      10.2131728
+    ],
+    "Gönnebek, Neen Kamp": [
+      54.0439188,
+      10.1821144
+    ],
+    "Trappenkamp, Danziger Straße": [
+      54.0410225,
+      10.2073557
+    ],
+    "Trappenkamp, Gönnebeker Ring": [
+      54.0433847,
+      10.204875
+    ],
+    "Gönnebek, Gärtnersiedlung": [
+      54.0494319,
+      10.1999832
+    ],
+    "Pölitz, Herrenhof": [
+      53.7650559,
+      10.3843347
+    ],
+    "Bad Segeberg, Waldweg/Ihlsee": [
+      53.9546032,
+      10.3107915
+    ],
+    "Reinsbek, Neukoppel (Ost)": [
+      53.9283382,
+      10.5157131
+    ],
+    "Reinsbek, Neukoppel (West)": [
+      53.9310584,
+      10.5121458
+    ],
+    "Berlin (Seedorf), Unter den Linden": [
+      54.0364948,
+      10.4491707
+    ],
+    "Seedorf, Schulbusch": [
+      54.0410012,
+      10.4114161
+    ],
+    "Schlamersdorf, Schule": [
+      54.0425161,
+      10.3913067
+    ],
+    "Schlamersdorf, Reuterteich": [
+      54.0319273,
+      10.385565
+    ],
+    "Nehms, Grönwohld": [
+      54.0271123,
+      10.3755749
+    ],
+    "Nehms, Grönwohld Mühle": [
+      54.0250542,
+      10.3587105
+    ],
+    "Garbek, Sophienberg": [
+      54.0036498,
+      10.4305831
+    ],
+    "Garbek, Segeberger Straße": [
+      53.9987933,
+      10.4166296
+    ],
+    "Müssen (b.Göls), Gut": [
+      53.992912,
+      10.3753445
+    ],
+    "Müssen (b. Göls), Gölser Dorfstraße": [
+      53.9916444,
+      10.3743459
+    ],
+    "Göls": [
+      53.9921537,
+      10.3668022
+    ],
+    "Nehms, Kastanienweg": [
+      54.0202907,
+      10.3474644
+    ],
+    "Nehms, Nehmser Straße (Nord)": [
+      54.0219121,
+      10.3580764
+    ],
+    "Travenhorst, Dorfstraße (Ost)": [
+      54.0188658,
+      10.4596207
+    ],
+    "Travenhorst, Abzweigung": [
+      54.0131431,
+      10.4676834
+    ],
+    "Travenort": [
+      54.0109074,
+      10.4624052
+    ],
+    "Garbek, Abzw. Hüls": [
+      54.0038452,
+      10.4336509
+    ],
+    "Daldorf, Dorfstraße": [
+      54.0154149,
+      10.2483143
+    ],
+    "Ahrensburg, Vogteiweg": [
+      53.6854903,
+      10.2398749
+    ],
+    "Wulmenau, Alte Schule": [
+      53.7786546,
+      10.5223387
+    ],
+    "Wesenberg, Rosenhagen": [
+      53.8270056,
+      10.537677
+    ],
+    "Am Steinfelder Redder": [
+      53.8143656,
+      10.3927248
+    ],
+    "Travenhöhe": [
+      53.8123787,
+      10.3857499
+    ],
+    "Steinfeld, Hohenkamp": [
+      53.8259055,
+      10.430707
+    ],
+    "Am Stadion": [
+      53.8136412,
+      10.3764181
+    ],
+    "Heimatmuseum": [
+      53.8079809,
+      10.3736994
+    ],
+    "Gartenstraße": [
+      53.8142328,
+      10.38579
+    ],
+    "Am Steinfelder Redder (Mitte)": [
+      53.8184397,
+      10.3987481
+    ],
+    "Else-Wex-Ring": [
+      53.8161906,
+      10.3988948
+    ],
+    "Möhlenbecker Weg (Ost)": [
+      53.8034111,
+      10.355299
+    ],
+    "Hanelanden": [
+      53.8100516,
+      10.3505947
+    ],
+    "Stormarner Werkstätten": [
+      53.7977044,
+      10.3307467
+    ],
+    "Zulassungsstelle": [
+      53.7994914,
+      10.334314
+    ],
+    "Ahrensfelde, Waldweg": [
+      53.7616047,
+      10.4992135
+    ],
+    "Rohlfshagen, Alte Buddikate": [
+      53.7545812,
+      10.3707232
+    ],
+    "Rohlfshagen, In de Eck": [
+      53.757934,
+      10.3651595
+    ],
+    "Höltenklinken, Hof Kahlenberg": [
+      53.7788268,
+      10.334216
+    ],
+    "Bad Oldesloe, Birkenkamp": [
+      53.7982945,
+      10.3642022
+    ],
+    "Mollhagen, Fasanenweg": [
+      53.7095904,
+      10.379136
+    ],
+    "Mollhagen, Eichede-Horst": [
+      53.7244067,
+      10.3764766
+    ],
+    "Anscharstraße": [
+      54.0793407,
+      9.983861
+    ],
+    "Hans-Böckler-Allee": [
+      54.1252657,
+      9.9909338
+    ],
+    "Karl-Feldmann-Straße": [
+      54.1288657,
+      9.9904916
+    ],
+    "Ernst-Reuter-Platz": [
+      54.1235407,
+      9.9862943
+    ],
+    "Kreuzkamp": [
+      54.1187474,
+      9.9819518
+    ],
+    "Nobelstraße": [
+      54.1027204,
+      9.982518
+    ],
+    "Baeyerstraße": [
+      54.1002023,
+      9.9783138
+    ],
+    "Stover": [
+      54.0992602,
+      9.9759749
+    ],
+    "Luisenstraße": [
+      54.0783804,
+      9.9794441
+    ],
+    "Hansaring": [
+      54.0699805,
+      9.9736834
+    ],
+    "Tonderner Straße": [
+      54.0588429,
+      9.9371683
+    ],
+    "Westerländer Straße": [
+      54.0598717,
+      9.9420128
+    ],
+    "Wernershagen": [
+      54.0616139,
+      9.9418054
+    ],
+    "Amrumer Straße": [
+      54.0630148,
+      9.9444151
+    ],
+    "Urquell": [
+      54.0642608,
+      9.9487075
+    ],
+    "Weberstraße": [
+      54.0649907,
+      9.9525931
+    ],
+    "Wilhelm-Tanck-Schule": [
+      54.0768956,
+      9.975489
+    ],
+    "Färberstraße": [
+      54.0786479,
+      9.9726953
+    ],
+    "Zollamt": [
+      54.0756884,
+      9.9665365
+    ],
+    "Kantplatz": [
+      54.0768604,
+      9.9577119
+    ],
+    "Legienstraße": [
+      54.0754539,
+      9.9612885
+    ],
+    "Gerhart-Hauptmann-Platz": [
+      54.0766825,
+      9.9628527
+    ],
+    "Geerdtsstraße": [
+      54.0876855,
+      9.9559189
+    ],
+    "Holstenschule": [
+      54.066453,
+      9.9874231
+    ],
+    "Harweh": [
+      54.0453482,
+      10.0024983
+    ],
+    "Wakenitzstraße": [
+      54.0487403,
+      9.9797424
+    ],
+    "Wasbek Kampstraße": [
+      54.0792125,
+      9.9012933
+    ],
+    "Wasbek, Bahnhof": [
+      54.0752335,
+      9.8970369
+    ],
+    "Rügenstraße": [
+      54.0613722,
+      9.9747077
+    ],
+    "Holsatenring": [
+      54.0641007,
+      9.9801331
+    ],
+    "Paul-Ehrlich-Straße": [
+      54.0880288,
+      9.9653773
+    ],
+    "Virchowstraße": [
+      54.0894348,
+      9.9637308
+    ],
+    "Gartenstadtschule": [
+      54.0916983,
+      9.9671027
+    ],
+    "Birkenweg": [
+      54.0938841,
+      9.9694451
+    ],
+    "Barlachstraße": [
+      54.0967239,
+      9.9708463
+    ],
+    "Rheiner Straße": [
+      54.096942,
+      9.9676501
+    ],
+    "Röntgenstraße": [
+      54.0962378,
+      9.9606754
+    ],
+    "Ohmstraße": [
+      54.0958009,
+      9.9586424
+    ],
+    "Am Neuen Kamp": [
+      54.0927264,
+      9.9729758
+    ],
+    "Sarkwitz, Dorfplatz": [
+      53.9918474,
+      10.6642177
+    ],
+    "Wiesenstraße": [
+      54.0509803,
+      9.9736274
+    ],
+    "Brachenfelder Straße": [
+      54.0723663,
+      9.9922299
+    ],
+    "Pestolazziweg": [
+      54.0737304,
+      10.0075652
+    ],
+    "Wilhelmsruh": [
+      54.0777387,
+      10.0088856
+    ],
+    "Hartenholm, Hasselbusch": [
+      53.8996426,
+      10.0759049
+    ],
+    "Weddelbrook, Ob de Braack": [
+      53.9023546,
+      9.8435146
+    ],
+    "Theodor-Storm-Schule": [
+      53.8072202,
+      10.3647785
+    ],
+    "Buurdiek": [
+      53.8576815,
+      10.4391103
+    ],
+    "Havighorst bei Reinfeld": [
+      53.8609867,
+      10.4194542
+    ],
+    "Reinfelder Heckkaten": [
+      53.8352406,
+      10.4532032
+    ],
+    "Seefeld, Denkmal": [
+      53.8455586,
+      10.3701373
+    ],
+    "Neufresenburg, Bahnübergang": [
+      53.841961,
+      10.3904836
+    ],
+    "Schadehorn": [
+      53.8464527,
+      10.3963137
+    ],
+    "Klaus-Groth-Schule": [
+      53.8164647,
+      10.3799876
+    ],
+    "Glashütte bei Heidmühlen": [
+      53.9492171,
+      10.1418449
+    ],
+    "Waldesruh": [
+      53.9500636,
+      10.1719621
+    ],
+    "Wahlstedt, Dr. Lindrath-Straße": [
+      53.9489695,
+      10.1947927
+    ],
+    "Wahlstedt, Arko": [
+      53.9463897,
+      10.1903857
+    ],
+    "Wahlstedt, Grundfos": [
+      53.9452329,
+      10.1984125
+    ],
+    "Trappenkamp, ZOB": [
+      54.0378808,
+      10.2203592
+    ],
+    "Gönnebek, Kroogredder": [
+      54.0351126,
+      10.1881475
+    ],
+    "Wahlstedt, Scharnhorststraße": [
+      53.9549385,
+      10.2047636
+    ],
+    "Wahlstedt, P.-Due-Jensen-Schule": [
+      53.9557602,
+      10.2064635
+    ],
+    "Wahlstedt, Schwimmhalle": [
+      53.9579422,
+      10.2051493
+    ],
+    "Rickling, Steenrader Weg": [
+      54.0030649,
+      10.1839121
+    ],
+    "Kuhlen": [
+      54.0078551,
+      10.2101632
+    ],
+    "Daldorf, Ricklinger Straße": [
+      54.0167441,
+      10.2382829
+    ],
+    "Rickling, Schule": [
+      54.0049227,
+      10.1654201
+    ],
+    "Willingrade, Petersburger Straße": [
+      54.0243642,
+      10.103449
+    ],
+    "Bad Segeberg, Dorfstraße": [
+      53.9492106,
+      10.3000892
+    ],
+    "Bad Segeberg, Dorfstraße (Mitte)": [
+      53.9484682,
+      10.3030892
+    ],
+    "Bad Segeberg, Theodor-Heuss-Ring": [
+      53.954027,
+      10.2924633
+    ],
+    "Rehhorst, Hamannsöhlen": [
+      53.8679868,
+      10.4702577
+    ],
+    "Bad Segeberg, Thoms Koppel": [
+      53.9309264,
+      10.3009299
+    ],
+    "Bad Segeberg, Franz-Claudius-Schule": [
+      53.9306329,
+      10.2972828
+    ],
+    "Bad Segeberg, Gustav-Böhm-Siedlung": [
+      53.9331769,
+      10.2889258
+    ],
+    "Bad Segeberg, Weichseldamm": [
+      53.9316701,
+      10.2866564
+    ],
+    "Stolpe, Pfeifenkopf": [
+      54.1308338,
+      10.2180226
+    ],
+    "Stolpe, Schule": [
+      54.1276206,
+      10.2240501
+    ],
+    "Stolpe, Altenheim": [
+      54.1246411,
+      10.2148565
+    ],
+    "Wankendorf, Friedhof": [
+      54.1187067,
+      10.2094493
+    ],
+    "Wankendorf, Bahnhof": [
+      54.1095942,
+      10.1991199
+    ],
+    "Wankendorf, Bösterredder": [
+      54.1082742,
+      10.2078583
+    ],
+    "Wankendorf, Auf dem Bös": [
+      54.10561,
+      10.2113041
+    ],
+    "Bockhorn, Abzweigung": [
+      54.099712,
+      10.2157337
+    ],
+    "Bornhöved, Friedhof": [
+      54.075968,
+      10.2287342
+    ],
+    "Bornhöved, Sanden": [
+      54.0622983,
+      10.2204761
+    ],
+    "Gönnebek, Fiendsmoor": [
+      54.05459,
+      10.197771
+    ],
+    "Bornhöved, Am Ackerhorst": [
+      54.0541398,
+      10.2314179
+    ],
+    "Negernbötel, Heidkaten": [
+      53.9686667,
+      10.2444349
+    ],
+    "Schackendorf, Wierensiek": [
+      53.9641513,
+      10.2560958
+    ],
+    "Bad Segeberg, Schule am Burgfeld": [
+      53.927119,
+      10.2974171
+    ],
+    "Bahrenkrug": [
+      54.0432644,
+      10.4771405
+    ],
+    "Seedorf, Abzw. Blomnath": [
+      54.02782,
+      10.4722229
+    ],
+    "Dunkelsdorf, Ortsmitte": [
+      53.9774492,
+      10.6022599
+    ],
+    "Dunkelsdorf, Nord": [
+      53.9800002,
+      10.588962
+    ],
+    "Trenthorst, Abzweig Grinau": [
+      53.7886342,
+      10.5340826
+    ],
+    "Isarstraße 44": [
+      54.0364029,
+      10.008152
+    ],
+    "Isarstraße 20": [
+      54.0390908,
+      9.9975291
+    ],
+    "Donaubogen": [
+      54.0395964,
+      9.9809356
+    ],
+    "Flurstraße": [
+      53.8926777,
+      10.651083
+    ],
+    "An der Sporthalle": [
+      53.9000128,
+      10.6494612
+    ],
+    "Klaus-Groth-Straße": [
+      53.7565191,
+      9.9943641
+    ],
+    "Roggenkamp": [
+      53.9089339,
+      10.6626356
+    ],
+    "Stadtgraben/B430": [
+      54.1582045,
+      10.4130558
+    ],
+    "Kreisverwaltung": [
+      54.1554237,
+      10.4086494
+    ],
+    "Groß Niendorf, Dorfstraße": [
+      53.8478868,
+      10.2445955
+    ],
+    "Kisdorf, Rödieckskate": [
+      53.8194958,
+      10.0041595
+    ],
+    "Padenstedt, Zum Barnahe": [
+      54.0504247,
+      9.95176
+    ],
+    "Bönebüttel, Tasdorfer Weg": [
+      54.0770692,
+      10.0471982
+    ],
+    "Bokhorst": [
+      54.1000671,
+      10.1075587
+    ],
+    "Bokhorst, An der Bahn": [
+      54.0969568,
+      10.098238
+    ],
+    "Bokhorst, Abzw. Großharrie": [
+      54.0957897,
+      10.0887215
+    ],
+    "Altenrade": [
+      54.0832036,
+      10.1602077
+    ],
+    "Schönböken, Lindenallee": [
+      54.0730783,
+      10.1975414
+    ],
+    "Schönböken, Baschenberg": [
+      54.0884167,
+      10.2110289
+    ],
+    "Tensfeld, Bahnhofstraße": [
+      54.0424988,
+      10.317995
+    ],
+    "Tarbek": [
+      54.0562183,
+      10.2677328
+    ],
+    "Schmalensee, Damsdorfer Straße": [
+      54.0796145,
+      10.2704962
+    ],
+    "Seedorf, Aukamp": [
+      54.0613258,
+      10.3486785
+    ],
+    "Damsdorf, Dorfstraße": [
+      54.0644514,
+      10.317237
+    ],
+    "Damsdorf, Kreuzung": [
+      54.0564115,
+      10.3165188
+    ],
+    "Seedorf, Lappland": [
+      54.073149,
+      10.3718434
+    ],
+    "Seedorf, Hornsmühlen": [
+      54.0722417,
+      10.3641227
+    ],
+    "Pehmerhörn": [
+      54.0805287,
+      10.4097792
+    ],
+    "Bredenbek, Ort": [
+      54.0766891,
+      10.3842098
+    ],
+    "Bichel, Abzweig": [
+      54.0816823,
+      10.4457926
+    ],
+    "Bosau, Bicheler Berg": [
+      54.0873603,
+      10.4365155
+    ],
+    "Löja, Ort": [
+      54.0914781,
+      10.4463485
+    ],
+    "Bosau, Löjaer Berg": [
+      54.0975286,
+      10.4387337
+    ],
+    "Bosau, Feuerwehr": [
+      54.1050285,
+      10.4285688
+    ],
+    "Bosau, Hasenheide": [
+      54.1025292,
+      10.4301681
+    ],
+    "Bosau, Fährhaus": [
+      54.0918446,
+      10.4283361
+    ],
+    "Bosau, Stadtbeker Straße": [
+      54.0881831,
+      10.4272525
+    ],
+    "Hutzfeld, Wischhofweg": [
+      54.0866526,
+      10.4731104
+    ],
+    "Wöbs, Wöbser Straße": [
+      54.0768378,
+      10.4649496
+    ],
+    "Wöbs, Feuerwehr": [
+      54.0780507,
+      10.4527422
+    ],
+    "Klenzau, Süd": [
+      54.0855853,
+      10.5749014
+    ],
+    "Windberg": [
+      54.0832102,
+      10.5630052
+    ],
+    "Hassendorf, Ortsmitte": [
+      54.0775782,
+      10.5021706
+    ],
+    "Dierksbrann": [
+      53.816899,
+      10.0530294
+    ],
+    "Ellernbrook": [
+      53.8175308,
+      10.0635409
+    ],
+    "Elisenruh": [
+      53.8585083,
+      10.0131221
+    ],
+    "Ascheberg, Preetzer Redder": [
+      54.1516989,
+      10.3030769
+    ],
+    "Horsterfelde": [
+      54.1582227,
+      10.2600262
+    ],
+    "Bundhorst, Gut": [
+      54.1584968,
+      10.2660799
+    ],
+    "Bundhorst, Butscherweg": [
+      54.1553116,
+      10.2794722
+    ],
+    "Friedrichsgabe, Lawaetzstraße (Mitte)": [
+      53.7278027,
+      9.984513
+    ],
+    "Gut Horst": [
+      54.1497981,
+      10.2675095
+    ],
+    "Stolpe, Depenauer Weg": [
+      54.1312183,
+      10.2186906
+    ],
+    "Langeln, Butterberg": [
+      53.7980671,
+      9.875958
+    ],
+    "Friedrichsgabe, Lawaetzstraße (Süd)": [
+      53.7237198,
+      9.9848212
+    ],
+    "Wankendorf ZOB": [
+      54.1122444,
+      10.2031244
+    ],
+    "Hüttenwohld": [
+      54.1058678,
+      10.1322605
+    ],
+    "Ruhwinkel, Ort": [
+      54.094636,
+      10.2197367
+    ],
+    "Belau, Neuredder": [
+      54.1045485,
+      10.260343
+    ],
+    "Belau, Schlossgaststätte": [
+      54.0975986,
+      10.2597197
+    ],
+    "Belau, Hohe Tanne": [
+      54.0929076,
+      10.256033
+    ],
+    "Dörnick, Alte Fähre": [
+      54.1607591,
+      10.3707786
+    ],
+    "Karpe, Hof": [
+      54.1681357,
+      10.3379135
+    ],
+    "Thürk, Ort": [
+      54.1103942,
+      10.5003105
+    ],
+    "Kleinmeinsdorf, Schule": [
+      54.1292991,
+      10.5005389
+    ],
+    "Majenfelde, Abzweig Thürk": [
+      54.1112295,
+      10.5422006
+    ],
+    "Horsdorf": [
+      53.9585254,
+      10.6715508
+    ],
+    "Neuenrade": [
+      54.0521236,
+      10.3593106
+    ],
+    "Nehms, Am Vorholz": [
+      54.0356019,
+      10.3312039
+    ],
+    "Nehms, Muggesfelder Heide": [
+      54.0333162,
+      10.3307761
+    ],
+    "Nehms, Muggesfelde": [
+      54.0277621,
+      10.336394
+    ],
+    "Seedorf, Torhaus": [
+      54.0498134,
+      10.4090108
+    ],
+    "Gut Wensin": [
+      53.9810267,
+      10.4074471
+    ],
+    "Wensin, Abzw. Müssen": [
+      53.9852756,
+      10.4058887
+    ],
+    "Wensin, Feldscheide": [
+      53.9908685,
+      10.4106134
+    ],
+    "Sievershütten, Schule": [
+      53.8471913,
+      10.1184176
+    ],
+    "Warder, B432": [
+      53.9731482,
+      10.3815342
+    ],
+    "Hassendorf, Abzweig": [
+      54.0902959,
+      10.4921445
+    ],
+    "Brackrade, Ortsmitte": [
+      54.0966281,
+      10.4781876
+    ],
+    "Seedorf, Blomnath": [
+      54.0298055,
+      10.4748832
+    ],
+    "Seedorf, Liethkaten": [
+      54.0575357,
+      10.4631498
+    ],
+    "Wöbs, Abzw. Hörsten": [
+      54.0650192,
+      10.4632089
+    ],
+    "Sarau, Siedlung": [
+      54.0585362,
+      10.5322114
+    ],
+    "Kiekbusch, Hof": [
+      54.0658248,
+      10.5446742
+    ],
+    "Kiekbusch": [
+      54.070106,
+      10.5432004
+    ],
+    "Kieler Straße 269": [
+      54.0943736,
+      9.9881684
+    ],
+    "Friedrichsgabe, Hermann-Klingenberg-Ring": [
+      53.7332262,
+      9.9871304
+    ],
+    "Heidmoor, Birkenweg (West)": [
+      53.865185,
+      9.8038521
+    ],
+    "Friedrichsgabe, Tycho-Brahe-Kehre": [
+      53.7365011,
+      9.9817723
+    ],
+    "Stuvenborn, Segeberger Straße": [
+      53.8546023,
+      10.129196
+    ],
+    "Lindenhof, Kunsthaus": [
+      53.9987135,
+      10.1740885
+    ],
+    "Rickling, Bahnhof": [
+      53.9991015,
+      10.1686977
+    ],
+    "Lindenhof, Kuhstall": [
+      53.9975153,
+      10.1764536
+    ],
+    "Falkenhorst, Unter den Linden": [
+      54.0092225,
+      10.2088273
+    ],
+    "Falkenhorst, Burg": [
+      54.0104974,
+      10.2082581
+    ],
+    "Thethmarshof, Am Teich": [
+      54.0026553,
+      10.1534375
+    ],
+    "Thethmarshof, Scheune": [
+      54.0028413,
+      10.1513776
+    ],
+    "Bargteheide, Max-Planck-Straße": [
+      53.7167585,
+      10.2989101
+    ],
+    "Bargteheide, Theodor-Storm-Straße": [
+      53.7254185,
+      10.2669328
+    ],
+    "Bargteheide, Hammoorer Weg": [
+      53.7225929,
+      10.26759
+    ],
+    "Bargteheide, Carl-Benz-Weg": [
+      53.720417,
+      10.2810118
+    ],
+    "Bargteheide, Otto-Hahn-Straße": [
+      53.7179481,
+      10.290205
+    ],
+    "Breslauer Str.": [
+      54.0793951,
+      9.9570011
+    ],
+    "Rintelenstraße": [
+      54.0920225,
+      9.9685864
+    ],
+    "Kleingärten": [
+      54.1634924,
+      10.4040581
+    ],
+    "Schlamersdorf, Kirchstraße": [
+      54.0433,
+      10.384195
+    ],
+    "Liensfeld, Schulberg": [
+      54.0865792,
+      10.5487432
+    ],
+    "Ehndorf, Grünredder": [
+      54.0527005,
+      9.8770362
+    ],
+    "Ehndorf, Ehndorfer Moor": [
+      54.0486702,
+      9.8606627
+    ],
+    "Ahrensbök, Triftstraße": [
+      54.003555,
+      10.5766725
+    ],
+    "Ahrensbök, Lornsenplatz": [
+      54.0087066,
+      10.5737735
+    ],
+    "Schmalensee, Stockseer Straße": [
+      54.0861921,
+      10.2748983
+    ],
+    "Vierhusen": [
+      54.1077093,
+      10.2865171
+    ],
+    "Börnsdorf": [
+      54.1170802,
+      10.4713923
+    ],
+    "Ahrensbök, Noerre-Alslev-Ring": [
+      54.0182321,
+      10.5784667
+    ],
+    "Nehms, Hohlegruft (Süd)": [
+      54.0173941,
+      10.3911356
+    ],
+    "Nehms, Lehmberg": [
+      54.0124396,
+      10.3757919
+    ],
+    "Nehms, Dorfkoppel": [
+      54.0176291,
+      10.36458
+    ],
+    "Nehms, Am See": [
+      54.0188374,
+      10.3594295
+    ],
+    "Travenhorst, Kamp": [
+      54.0257513,
+      10.4206455
+    ],
+    "Langniendorf, Gemeinschafthaus": [
+      53.9128734,
+      10.5195299
+    ],
+    "Mönkhagen, Alte Schule": [
+      53.9077454,
+      10.5452327
+    ],
+    "Willendorf": [
+      53.8942862,
+      10.4496852
+    ],
+    "Reesdorf": [
+      54.1899332,
+      10.0615114
+    ],
+    "Brügge, Kirche": [
+      54.1747342,
+      10.0703681
+    ],
+    "Wattenbek Grundschule": [
+      54.1683446,
+      10.0546812
+    ],
+    "Wattenbek Pommernweg": [
+      54.1702959,
+      10.0548333
+    ],
+    "Wattenbek Saalskamp": [
+      54.1742541,
+      10.0550273
+    ],
+    "Bordesholm A.Schroedter-Straße": [
+      54.1740046,
+      10.0470104
+    ],
+    "Hoffeld Das Schloss": [
+      54.1752379,
+      9.9968795
+    ],
+    "Bordesholm Wildhofstraße": [
+      54.17705,
+      10.0098744
+    ],
+    "Bordesholm Lindenschule Süd": [
+      54.1741768,
+      10.0278877
+    ],
+    "Bordesholm Lindenschule Nord": [
+      54.1751686,
+      10.0282683
+    ],
+    "Bordesholm Gemeinschaftsschule": [
+      54.1711273,
+      10.0321845
+    ],
+    "Einfeld Bahnhof": [
+      54.1296489,
+      9.9967782
+    ],
+    "Negenharrie, Mühlenstraße": [
+      54.1400338,
+      10.0801951
+    ],
+    "Fiefhusen": [
+      54.2040637,
+      10.160389
+    ],
+    "Mühbrook, Gewerbegebiet": [
+      54.1584808,
+      10.0159385
+    ],
+    "Wattenbek Reesdorfer Weg": [
+      54.1746736,
+      10.0542877
+    ],
+    "Nettelau": [
+      54.1612016,
+      10.202917
+    ],
+    "Möwenstieg": [
+      54.2162435,
+      10.2677634
+    ],
+    "BrookHus": [
+      53.7141878,
+      10.1391511
+    ],
+    "Brügge Birkenweg": [
+      54.1722416,
+      10.0731634
+    ],
+    "Bosau, Strandbad": [
+      54.1017317,
+      10.4297639
+    ],
+    "Rathjensdorf, Abzw.": [
+      54.1866586,
+      10.4409524
+    ],
+    "Theresienhof, Am Ziegelbusch": [
+      54.1892712,
+      10.3969821
+    ],
+    "Kührsdorf": [
+      54.1727628,
+      10.2651639
+    ],
+    "Groß Buchwald, Kluven": [
+      54.1606366,
+      10.1119843
+    ],
+    "Großharrie, Schule": [
+      54.1195884,
+      10.0515736
+    ],
+    "Dersau, Brandswisch": [
+      54.1230365,
+      10.3303966
+    ],
+    "Langelner Heidkaten": [
+      53.8078179,
+      9.8791792
+    ],
+    "Bordesholm Wilhelm-Stabe-Straße": [
+      54.1736777,
+      10.0506797
+    ],
+    "Bordesholm Lüttenheisch": [
+      54.1730894,
+      10.0365405
+    ],
+    "Schwinkenrade II": [
+      53.9729139,
+      10.6188065
+    ],
+    "Trent, Ihlsahl": [
+      54.205465,
+      10.3662027
+    ],
+    "SV Tungendorf": [
+      54.0927024,
+      10.0107947
+    ],
+    "Kaltenkirchen, Marie-Curie-Straße": [
+      53.8237463,
+      9.9633389
+    ],
+    "Kaltenkirchen, Nikolaus-Otto-Straße": [
+      53.8206897,
+      9.9644145
+    ],
+    "Kaltenkirchen, Maybachstraße": [
+      53.8176068,
+      9.9681616
+    ],
+    "Kaltenkirchen, Borsigstraße": [
+      53.8228462,
+      9.9749288
+    ],
+    "Oersdorf, Brookkoppel": [
+      53.8372846,
+      9.9929077
+    ],
+    "Rudolf-Diesel-Straße (Ost)": [
+      53.8073891,
+      9.9550872
+    ],
+    "Hartenholm, Schmalfelder Moor": [
+      53.8993555,
+      10.0482805
+    ],
+    "Oersdorf, Mittelstraße": [
+      53.8388468,
+      9.9969256
+    ],
+    "Bornhöved, Hornsweg": [
+      54.0740485,
+      10.2563462
+    ],
+    "Kaltenkirchen, Wiesendamm": [
+      53.8375078,
+      9.9686404
+    ],
+    "Kaltenkirchen, Werner-von-Siemens-Straße": [
+      53.819305,
+      9.9754196
+    ],
+    "Kaltenkirchen, Rudolf-Diesel-Straße": [
+      53.8265754,
+      9.9781367
+    ],
+    "Kaltenkirchen, Ohland-Park": [
+      53.8291225,
+      9.9791841
+    ],
+    "Kaltenkirchen, Oersdorfer Weg": [
+      53.8323581,
+      9.9724075
+    ],
+    "Kaltenkirchen, Bahnhofstraße 6": [
+      53.8361102,
+      9.9656054
+    ],
+    "Kaltenkirchen, Carl-Benz-Straße": [
+      53.8273028,
+      9.9697977
+    ],
+    "Kaltenkirchen, An der Krückau": [
+      53.8272339,
+      9.9580497
+    ],
+    "Kaltenkirchen, Am Kretelmoor": [
+      53.830274,
+      9.9535767
+    ],
+    "Kaltenkirchen, Funkenberg": [
+      53.830962,
+      9.947754
+    ],
+    "Kaltenkirchen, Voßkamp": [
+      53.8279677,
+      9.9437964
+    ],
+    "Kaltenkirchen, Brookring": [
+      53.821893,
+      9.9401003
+    ],
+    "Leinestraße 19": [
+      54.0412071,
+      9.9971876
+    ],
+    "Leinestraße 25": [
+      54.0410899,
+      10.0007874
+    ],
+    "Leinestraße 39": [
+      54.0392696,
+      10.0081775
+    ],
+    "Isarstraße 25": [
+      54.0380776,
+      9.9913016
+    ],
+    "Isarstraße": [
+      54.0364761,
+      9.9871489
+    ],
+    "Schwentinestraße": [
+      54.055507,
+      9.9813473
+    ],
+    "Seniorenheim": [
+      54.0567461,
+      9.9852312
+    ],
+    "Haus 46/ Störwiesen": [
+      54.0566068,
+      9.9883559
+    ],
+    "Alemannenstraße": [
+      54.0626096,
+      9.9861149
+    ],
+    "Oersdorf, Wiesengrund": [
+      53.8371303,
+      9.9833053
+    ],
+    "Kaltenkirchen, An der Moorkoppel": [
+      53.8431403,
+      9.9521783
+    ],
+    "Haberstraße 18": [
+      54.1033084,
+      9.9709135
+    ],
+    "Haberstraße 36": [
+      54.1059095,
+      9.969555
+    ],
+    "Haberstraße 44": [
+      54.1079428,
+      9.9682313
+    ],
+    "Krimm/ Neuenbrook": [
+      54.1173828,
+      9.9529213
+    ],
+    "Schönbek Chaussee nach Bordesholm": [
+      54.1716983,
+      9.9873568
+    ],
+    "Kleinbuchwald": [
+      54.1561817,
+      10.1265621
+    ],
+    "Plön Meisenweg": [
+      54.1642846,
+      10.4296102
+    ],
+    "Plön Behler Weg": [
+      54.1696015,
+      10.4351154
+    ],
+    "Parnaß": [
+      54.1673029,
+      10.4271479
+    ],
+    "Sarlhusen, Kirschenallee": [
+      54.0224843,
+      9.7914938
+    ],
+    "Achtern Lohn": [
+      53.8836745,
+      9.8265825
+    ],
+    "Brokstedt, Schule": [
+      53.9926437,
+      9.8259583
+    ],
+    "Gewerbegebiet West": [
+      53.8005685,
+      10.3388254
+    ],
+    "Krogaspe, Dohrkamp": [
+      54.1325368,
+      9.9241814
+    ],
+    "Barmissen, Hof Mölin": [
+      54.2056721,
+      10.1821858
+    ],
+    "Warnau, Abzw.": [
+      54.1845332,
+      10.1711629
+    ],
+    "Nettelsee, Kaiserstraße": [
+      54.1795597,
+      10.1955801
+    ],
+    "Nettelsee, Ost": [
+      54.1825185,
+      10.1987001
+    ],
+    "Bothkamp, Steinhorst": [
+      54.1690166,
+      10.1544008
+    ],
+    "Wittmoldt, Abzweig Hof": [
+      54.1687222,
+      10.3728922
+    ],
+    "Wittmoldt, Lustholz": [
+      54.1701055,
+      10.3639027
+    ],
+    "Hartwigswalder Straße 29": [
+      54.0468076,
+      10.0211295
+    ],
+    "Hartwigswalder Straße 51": [
+      54.0451579,
+      10.0207717
+    ],
+    "Krummredder 10": [
+      54.0471145,
+      10.01288
+    ],
+    "Mühle": [
+      54.0557242,
+      10.0182089
+    ],
+    "Eduard-Müller-Straße": [
+      54.0585702,
+      10.0145261
+    ],
+    "Störpark": [
+      54.0598076,
+      10.0089013
+    ],
+    "Kaserne": [
+      54.0639437,
+      10.0001877
+    ],
+    "Busdorf, Abzw.": [
+      54.1040381,
+      10.0794277
+    ],
+    "A Meeschensee": [
+      53.7539841,
+      9.9789226
+    ],
+    "Quickborn-Heide, Behnkeweg": [
+      53.7551323,
+      9.9542449
+    ],
+    "Am Redder": [
+      53.8111101,
+      9.9641745
+    ],
+    "Hasenmoor, Tannenhof": [
+      53.8942103,
+      10.0188647
+    ],
+    "Rhen, Lessingstraße": [
+      53.7524177,
+      10.0000651
+    ],
+    "Rondeel": [
+      53.754582,
+      9.9902536
+    ],
+    "Quickborn-Heide, Hermann-Löns-Straße (West)": [
+      53.7494031,
+      9.9591279
+    ],
+    "Rostocker Straße": [
+      53.7888492,
+      9.9740557
+    ],
+    "Rotdornweg": [
+      53.7934449,
+      9.9743924
+    ],
+    "Ahornweg": [
+      53.7949255,
+      9.9752346
+    ],
+    "Rudolf-Diesel-Straße (West)": [
+      53.8039781,
+      9.9420369
+    ],
+    "Rudolf-Diesel-Straße 15": [
+      53.8055977,
+      9.9489181
+    ],
+    "Rudolf-Diesel-Straße (Mitte)": [
+      53.8052904,
+      9.9534255
+    ],
+    "Druventwiete": [
+      53.7896605,
+      9.9991398
+    ],
+    "Ostpreußenstraße": [
+      53.7898585,
+      9.9941736
+    ],
+    "Bargteheide, Hasselbusch": [
+      53.7310756,
+      10.2534542
+    ],
+    "Bargteheide, Amtsverwaltung": [
+      53.7258164,
+      10.2506099
+    ],
+    "Bargteheide, Hummelwiese": [
+      53.7223394,
+      10.25583
+    ],
+    "Bargteheide, Zu den Fischteichen": [
+      53.7205563,
+      10.2578978
+    ],
+    "Bargteheide, Jersbeker Straße (Süd)": [
+      53.7297904,
+      10.2555912
+    ],
+    "Bargteheide, Kutscherweg": [
+      53.7379625,
+      10.249709
+    ],
+    "Bargteheide, Pferdegasse": [
+      53.7372882,
+      10.2520298
+    ],
+    "Bargteheide, Auf der Weide": [
+      53.7353096,
+      10.2501622
+    ],
+    "Bargteheide, Schlehenbusch": [
+      53.7282679,
+      10.2513271
+    ],
+    "Bargteheide, Glindfelder Weg": [
+      53.7302587,
+      10.2470247
+    ],
+    "Bargteheide, Am Steinkreuz": [
+      53.7327944,
+      10.2689706
+    ],
+    "Bargteheide, Breslauer Straße": [
+      53.7356956,
+      10.2709504
+    ],
+    "Bargteheide, Selma-Lagerlöf-Weg": [
+      53.7372766,
+      10.2718382
+    ],
+    "Bargteheide, Michael-Ende-Weg": [
+      53.7371179,
+      10.2743507
+    ],
+    "Bargteheide, Erich-Kästner-Weg": [
+      53.7384634,
+      10.2714593
+    ],
+    "Bargteheide, Am Maisfeld (Ost)": [
+      53.7371327,
+      10.259107
+    ],
+    "Bargteheide, Am Maisfeld (West)": [
+      53.7376176,
+      10.2531647
+    ],
+    "Bargteheide, Kamp": [
+      53.7341629,
+      10.2555063
+    ],
+    "Bargteheide, Raiffeisenstraße": [
+      53.730294,
+      10.2688082
+    ],
+    "Bargteheide, Rapsstieg": [
+      53.7360666,
+      10.2619329
+    ],
+    "Bargteheide, Erlenweg": [
+      53.7332058,
+      10.2802695
+    ],
+    "Bargteheide, Am Hünengrab": [
+      53.7297898,
+      10.2748871
+    ],
+    "Bargteheide, Bachstraße": [
+      53.726781,
+      10.2723348
+    ],
+    "Bargteheide, Mozartstraße": [
+      53.7252426,
+      10.2755997
+    ],
+    "Bargteheide, Struhbarg": [
+      53.7260771,
+      10.2833903
+    ],
+    "Bargteheide, Buchenweg": [
+      53.7285893,
+      10.28212
+    ],
+    "Bargteheide, Ulmenweg": [
+      53.7317607,
+      10.2853329
+    ],
+    "Bargteheide, Tremsbütteler Weg": [
+      53.7343819,
+      10.2831329
+    ],
+    "Bargteheide, Birkenweg": [
+      53.7320823,
+      10.2757776
+    ],
+    "Ascheberg, Schule": [
+      54.145203,
+      10.3399097
+    ],
+    "Rodomstorschule": [
+      54.160946,
+      10.4184897
+    ],
+    "Kalübbe, Meierei": [
+      54.1219189,
+      10.2961609
+    ],
+    "Kalübbe Spannhorn": [
+      54.1259547,
+      10.3096041
+    ],
+    "Mühlenredder": [
+      53.7109312,
+      10.13023
+    ],
+    "Hohenrade": [
+      54.1413711,
+      10.4763088
+    ],
+    "Westerrade, Querstraße": [
+      53.931829,
+      10.4626697
+    ],
+    "Gnissau, Heuerstubben": [
+      54.0137136,
+      10.5013519
+    ],
+    "Ahrensbök, Abzw. Heuerstubben": [
+      54.0015956,
+      10.5397578
+    ],
+    "Ahrensbök, Birkenhof": [
+      53.9971583,
+      10.6061109
+    ],
+    "Ahrensbök, Kannenbusch": [
+      53.9949423,
+      10.5983104
+    ],
+    "A Kaltenkirchen Süd (Ersatzbus)": [
+      53.8232722,
+      9.9726662
+    ],
+    "Bosau, Thürker Redder": [
+      54.1141434,
+      10.5315515
+    ],
+    "Hansfelde, Autobahnbrücke": [
+      53.8422826,
+      10.6036359
+    ],
+    "Fitzbek, Schulstraße": [
+      54.0029423,
+      9.7666398
+    ],
+    "Heidmoor, Dorfstraße 37": [
+      53.8314725,
+      9.84962
+    ],
+    "Heidmoor, Am Felde": [
+      53.8635954,
+      9.819425
+    ],
+    "Bargteheide, Lise-Meitner-Straße": [
+      53.7184768,
+      10.2873436
+    ],
+    "Quickborn-Heide, Kiefernhain (Nord)": [
+      53.756163,
+      9.9706431
+    ],
+    "Bahnhof Moisling": [
+      53.8364388,
+      10.6288998
+    ],
+    "Neue Mitte Moisling": [
+      53.8387854,
+      10.6316482
+    ],
+    "Wiemersdorf, Schule": [
+      53.9606317,
+      9.9028518
+    ],
+    "Bargfeld-Stegen, Waldweg": [
+      53.7602756,
+      10.1879505
+    ],
+    "Großenaspe, Diekstücken": [
+      53.978419,
+      9.9734293
+    ],
+    "A Ellerau": [
+      53.7510125,
+      9.9214116
+    ],
+    "A Ellerau (Bahnstraße)": [
+      53.7499695,
+      9.9230262
+    ],
+    "Fegetasche": [
+      54.1529987,
+      10.4499815
+    ],
+    "Lütjenburger Straße": [
+      54.1610274,
+      10.4261815
+    ],
+    "Kindergarten": [
+      54.1594674,
+      10.44385
+    ],
+    "Ulmenstraße": [
+      54.1589491,
+      10.4476695
+    ],
+    "Danziger Straße": [
+      54.1570581,
+      10.4466328
+    ],
+    "Springhirsch": [
+      53.8337874,
+      9.8844458
+    ],
+    "Löptin Fischkroog": [
+      54.1947089,
+      10.2305581
+    ],
+    "Rhen, Tannenweg": [
+      53.7508013,
+      10.0054338
+    ],
+    "Wilstedt, Harksheider Straße (West)": [
+      53.7273733,
+      10.0283857
+    ],
+    "Barmissen, Abzw.": [
+      54.2046767,
+      10.1558921
+    ],
+    "Neutramm, Siedlung": [
+      54.1810697,
+      10.3886957
+    ],
+    "Geschendorf, Schottenkrog": [
+      53.9219509,
+      10.4614287
+    ],
+    "Kaltenkirchener Heidkaten": [
+      53.8213745,
+      9.8818266
+    ],
+    "Onkel Toms Hütte": [
+      53.8468273,
+      9.8867941
+    ],
+    "Grashofstraße (Nord)": [
+      53.8268342,
+      9.962883
+    ],
+    "Niebüller Straße": [
+      54.0633989,
+      9.9456495
+    ],
+    "Quarnstedt, Börn": [
+      53.9551211,
+      9.7839271
+    ],
+    "Erlenweg": [
+      53.7333333,
+      10.2807292
+    ],
+    "Altenhof, Hofholz": [
+      54.1681357,
+      10.3379135
+    ],
+    "Holtsee, Neuholtsee": [
+      54.0188374,
+      10.3594295
+    ],
+    "Holzdorf, Dorfstraße": [
+      54.0789184,
+      10.0576736
+    ],
+    "Loose": [
+      54.0984679,
+      9.9957683
+    ],
+    "Ellenberg, Jugendherberge": [
+      53.8064423,
+      10.3681888
+    ]
+  },
   "notizen": {
     "Holtsee, Habyer Straße": [
       {
@@ -5122,7 +13123,7 @@
       ]
     }
   ],
-  "activeKurs": "kurs211",
+  "activeKurs": "kurs212",
   "version": "v21",
-  "saved": "2026-04-24T14:07:21.209Z"
+  "saved": "2026-04-25T04:35:27.440Z"
 }
