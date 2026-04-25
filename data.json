@@ -8681,7 +8681,7 @@
           "id": "m3",
           "linienNr": "700",
           "fahrtNr": "3700006",
-          "start": "Rendsburg, Bahnhofstraße/ZOB",
+          "start": "Rendsburg, Bahnhofstraße/ZOB B",
           "end": "Eckernförde, Bahnhof/ZOB",
           "startTime": "06:47",
           "endTime": "07:28",
@@ -13125,5 +13125,5 @@
   ],
   "activeKurs": "kurs212",
   "version": "v21",
-  "saved": "2026-04-25T04:37:11.821Z"
+  "saved": "2026-04-25T04:38:29.472Z"
 }
