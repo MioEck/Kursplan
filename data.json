@@ -8161,7 +8161,8 @@
               "time": "05:58",
               "name": "Kropp, Schule/ZOB"
             }
-          ]
+          ],
+          "abfahrt": "D"
         },
         {
           "id": "l2",
@@ -8990,7 +8991,8 @@
               "time": "10:00",
               "name": "Eckernförde, Bahnhof/ZOB"
             }
-          ]
+          ],
+          "abfahrt": "J"
         },
         {
           "id": "n4",
@@ -9179,7 +9181,8 @@
               "time": "13:40",
               "name": "Bohnert, Ortsmitte"
             }
-          ]
+          ],
+          "abfahrt": "F"
         },
         {
           "id": "n7",
@@ -9613,7 +9616,8 @@
               "time": "08:28",
               "name": "Surendorf, Schule"
             }
-          ]
+          ],
+          "abfahrt": "D"
         },
         {
           "id": "p3",
@@ -9787,7 +9791,8 @@
               "time": "12:56",
               "name": "Klein Wittensee"
             }
-          ]
+          ],
+          "abfahrt": "E"
         },
         {
           "id": "p5",
@@ -9925,7 +9930,8 @@
               "time": "15:21",
               "name": "Rieseby, Bahnhof"
             }
-          ]
+          ],
+          "abfahrt": "D"
         }
       ]
     },
@@ -10388,7 +10394,8 @@
               "time": "11:56",
               "name": "Damp, Ostseehotel"
             }
-          ]
+          ],
+          "abfahrt": "A"
         },
         {
           "id": "q5",
@@ -10851,7 +10858,8 @@
               "time": "16:56",
               "name": "Damp, Ostseehotel"
             }
-          ]
+          ],
+          "abfahrt": "A"
         },
         {
           "id": "q10",
@@ -11191,7 +11199,8 @@
               "time": "14:40",
               "name": "Eckernförde, Schulzentrum Süd"
             }
-          ]
+          ],
+          "abfahrt": "C"
         },
         {
           "id": "r3",
@@ -11576,7 +11585,8 @@
               "time": "18:39",
               "name": "Neudorf, B76"
             }
-          ]
+          ],
+          "abfahrt": "F"
         },
         {
           "id": "r6",
@@ -11754,7 +11764,8 @@
               "time": "19:58",
               "name": "Kropp, Schule/ZOB"
             }
-          ]
+          ],
+          "abfahrt": "G"
         },
         {
           "id": "r8",
@@ -12020,7 +12031,8 @@
               "time": "21:44",
               "name": "Rendsburg, Stadttheater/ZOB"
             }
-          ]
+          ],
+          "abfahrt": "D"
         },
         {
           "id": "r10",
@@ -12143,7 +12155,8 @@
               "time": "22:53",
               "name": "Eckernförde, Bahnhof/ZOB"
             }
-          ]
+          ],
+          "abfahrt": "B"
         }
       ]
     },
@@ -12419,7 +12432,8 @@
               "time": "16:43",
               "name": "Eckernförde, Bahnhof/ZOB"
             }
-          ]
+          ],
+          "abfahrt": "A"
         },
         {
           "id": "s4",
@@ -12697,7 +12711,8 @@
               "time": "19:00",
               "name": "Eckernförde, Bahnhof/ZOB"
             }
-          ]
+          ],
+          "abfahrt": "A"
         },
         {
           "id": "s6",
@@ -12840,7 +12855,8 @@
               "time": "21:00",
               "name": "Kappeln, ZOB"
             }
-          ]
+          ],
+          "abfahrt": "A"
         },
         {
           "id": "s7",
@@ -13118,12 +13134,13 @@
               "time": "23:00",
               "name": "Kappeln, ZOB"
             }
-          ]
+          ],
+          "abfahrt": "A"
         }
       ]
     }
   ],
-  "activeKurs": "kurs211",
-  "version": "v21",
-  "saved": "2026-04-25T05:09:49.081Z"
+  "activeKurs": "kurs215",
+  "version": "v22",
+  "saved": "2026-04-25T05:10:14.709Z"
 }
