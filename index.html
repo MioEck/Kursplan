@@ -16,6 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0f1117;--s1:#1a1d27;--s2:#22263a;--acc:#f5a623;--txt:#eef0f8;--mut:#6b7199;--brd:#2e3350;--red:#ef4444;--grn:#2ecc71;}
+:root.light{--bg:#f0f4f8;--s1:#ffffff;--s2:#e8edf3;--acc:#f5a623;--txt:#1a202c;--mut:#718096;--brd:#cbd5e0;--red:#ef4444;--grn:#38a169;}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-height:100vh;}
 header{display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px solid var(--brd);position:sticky;top:0;z-index:100;background:var(--bg);}
@@ -172,6 +173,7 @@ main{padding:12px 16px 100px;}
   <div class="logo">🚌</div>
   <div class="htxt"><h1>KURSPLAN <span style="font-size:13px;font-weight:400;color:var(--mut);letter-spacing:1px;vertical-align:middle">v21</span></h1><p id="hd"></p></div>
   <button class="lock-btn" id="lockBtn" onclick="toggleLock()" title="Admin">🔒</button>
+  <button class="lock-btn" id="themeBtn" onclick="toggleTheme()" title="Hell/Dunkel">🌙</button>
   <button id="gpsBtn" onclick="toggleGps()">
     <span style="font-size:20px;line-height:1">📍</span>
     <span id="gpsLbl">GPS AUS</span>
@@ -2523,6 +2525,26 @@ window.addEventListener('load', function() {
 });
 
 
+// ── THEME UMSCHALTER ──────────────────────────────────
+var isDark = localStorage.getItem('kp_theme') !== 'light';
+
+function applyTheme() {
+  if (isDark) {
+    document.documentElement.classList.remove('light');
+    document.getElementById('themeBtn').textContent = '🌙';
+  } else {
+    document.documentElement.classList.add('light');
+    document.getElementById('themeBtn').textContent = '☀️';
+  }
+}
+
+function toggleTheme() {
+  isDark = !isDark;
+  localStorage.setItem('kp_theme', isDark ? 'dark' : 'light');
+  applyTheme();
+}
+
+
 // ── PASSWORTSCHUTZ ────────────────────────────────────
 var ADMIN_PW = '1345';
 var isAdmin = false;
@@ -2566,6 +2588,7 @@ function setAdminMode(on) {
 }
 
 
+applyTheme();
 renderTabs();
 renderLines();
 setAdminMode(isAdmin);
