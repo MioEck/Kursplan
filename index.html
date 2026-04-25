@@ -1760,7 +1760,7 @@ function renderLines() {
     var hdr = document.createElement('div');
     hdr.className = 'lch';
     hdr.innerHTML =
-      '<div class="lb"><span class="bl">Linie</span><span class="bn">' + esc(l.linienNr) + '</span>' + (l.abfahrt ? '<span style="font-family:Bebas Neue,sans-serif;font-size:24px;color:var(--acc);letter-spacing:1px;line-height:1">' + esc(l.abfahrt) + '</span>' : '') + '<span class="bfl">Fahrt-Nr.</span><span class="bf">' + esc(l.fahrtNr || '—') + '</span></div>' +
+      '<div class="lb"><span class="bl">Linie</span><span class="bn">' + esc(l.linienNr) + '</span>' + (getAbfahrt(l.fahrtNr) ? '<span style="font-family:Bebas Neue,sans-serif;font-size:24px;color:var(--acc);letter-spacing:1px;line-height:1">' + getAbfahrt(l.fahrtNr) + '</span>' : '') + '<span class="bfl">Fahrt-Nr.</span><span class="bf">' + esc(l.fahrtNr || '—') + '</span></div>' +
       '<div class="li">' +
         '<div class="lr"><span>' + esc(l.start) + '</span><span class="ar">→</span><span>' + esc(l.end) + '</span></div>' +
         '<div class="lt"><span>🕐 ' + esc(l.startTime) + '</span><span>🕓 ' + esc(l.endTime) + '</span></div>' +
@@ -2610,6 +2610,19 @@ function setAdminMode(on) {
 
 
 applyTheme();
+// Abfahrt-Buchstaben direkt aus SEED lesen - nie aus Cache
+var ABFAHRT_MAP = {};
+SEED.kurse.forEach(function(k) {
+  (k.lines || []).forEach(function(l) {
+    if (l.fahrtNr && l.abfahrt) ABFAHRT_MAP[l.fahrtNr] = l.abfahrt;
+  });
+});
+
+function getAbfahrt(fahrtNr) {
+  return ABFAHRT_MAP[fahrtNr] || '';
+}
+
+
 renderTabs();
 renderLines();
 setAdminMode(isAdmin);
