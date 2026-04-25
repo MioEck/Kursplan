@@ -247,7 +247,7 @@ const SEED = {
     {
       id: 'kurs211', name: 'Kurs 211', datum: '2026-04-13',
       lines: [
-        { id:'l1', linienNr:'725', fahrtNr:'3725002', start:'Eckernförde, Bahnhof/ZOB', end:'Kropp, Schule/ZOB', startTime:'05:02', endTime:'05:58',
+        { id:'l1', linienNr:'725', fahrtNr:'3725002',abfahrt:'D', start:'Eckernförde, Bahnhof/ZOB', end:'Kropp, Schule/ZOB', startTime:'05:02', endTime:'05:58',
           stops:[
             {time:'05:02',name:'Eckernförde, Bahnhof/ZOB'},{time:'05:04',name:'Eckernförde, Windebyer Weg'},
             {time:'05:05',name:'Eckernförde, Bornbrook'},{time:'05:06',name:'Eckernförde, Karl-Samwer-Ring'},
@@ -422,7 +422,7 @@ const SEED = {
             {time:'07:45',name:'Karby, Karlsburg'},{time:'07:46',name:'Karby, Krähenberg'},
             {time:'07:47',name:'Karby, Südhang'},{time:'07:52',name:'Karby, Am Ring'}
           ]},
-        { id:'n3', linienNr:'721', fahrtNr:'3721009', start:'Missunde, Alter Schulweg', end:'Eckernförde, Bahnhof/ZOB', startTime:'09:29', endTime:'10:00',
+        { id:'n3', linienNr:'721', fahrtNr:'3721009',abfahrt:'J', start:'Missunde, Alter Schulweg', end:'Eckernförde, Bahnhof/ZOB', startTime:'09:29', endTime:'10:00',
           stops:[
             {time:'09:29',name:'Missunde, Alter Schulweg'},{time:'09:31',name:'Missunde, Ornumer Weg'},
             {time:'09:34',name:'Kosel, Alte Landstraße'},{time:'09:35',name:'Kosel, Haarmoor'},
@@ -455,7 +455,7 @@ const SEED = {
             {time:'11:49',name:'Eckernförde, Gaehtjestraße'},{time:'11:53',name:'Eckernförde, Rathaus'},
             {time:'12:00',name:'Eckernförde, Bahnhof/ZOB'}
           ]},
-        { id:'n6', linienNr:'715', fahrtNr:'3715016', start:'Eckernförde, Schulzentrum Süd', end:'Bohnert, Ortsmitte', startTime:'13:14', endTime:'13:40',
+        { id:'n6', linienNr:'715', fahrtNr:'3715016',abfahrt:'F', start:'Eckernförde, Schulzentrum Süd', end:'Bohnert, Ortsmitte', startTime:'13:14', endTime:'13:40',
           stops:[
             {time:'13:14',name:'Eckernförde, Schulzentrum Süd'},{time:'13:29',name:'Kosel, Koselfeld'},
             {time:'13:30',name:'Kosel, Koselfeld'},{time:'13:32',name:'Kosel, Feuerwehr'},
@@ -518,7 +518,7 @@ const SEED = {
             {time:'07:28',name:'Eckernförde, Bahnhof/ZOB'},{time:'07:35',name:'Eckernförde, Sprottenschule'},
             {time:'07:40',name:'Eckernförde, Schulzentrum Süd'}
           ]},
-        {id:'p2',linienNr:'746',fahrtNr:'3746004',start:'Eckernförde, Bahnhof/ZOB',end:'Surendorf, Schule',startTime:'08:02',endTime:'08:28',
+        {id:'p2',linienNr:'746',fahrtNr:'3746004',abfahrt:'D',start:'Eckernförde, Bahnhof/ZOB',end:'Surendorf, Schule',startTime:'08:02',endTime:'08:28',
           stops:[
             {time:'08:02',name:'Eckernförde, Bahnhof/ZOB'},{time:'08:04',name:'Eckernförde, Berliner Straße'},
             {time:'08:05',name:'Eckernförde, Sandkrug'},{time:'08:07',name:'Altenhof, Alter Bahnhof'},
@@ -543,7 +543,7 @@ const SEED = {
             {time:'11:50',name:'Eckernförde, Sandkrug'},{time:'11:52',name:'Eckernförde, Berliner Straße'},
             {time:'11:58',name:'Eckernförde, Bahnhof/ZOB'}
           ]},
-        {id:'p4',linienNr:'700',fahrtNr:'3700117',start:'Eckernförde, Bahnhof/ZOB',end:'Klein Wittensee',startTime:'12:25',endTime:'12:56',
+        {id:'p4',linienNr:'700',fahrtNr:'3700117',abfahrt:'E',start:'Eckernförde, Bahnhof/ZOB',end:'Klein Wittensee',startTime:'12:25',endTime:'12:56',
           stops:[
             {time:'12:25',name:'Eckernförde, Bahnhof/ZOB'},{time:'12:27',name:'Eckernförde, Admiral-Scheer-Straße'},
             {time:'12:29',name:'Eckernförde, Sprottenschule'},{time:'12:31',name:'Eckernförde, Rendsburger Straße'},
@@ -562,7 +562,7 @@ const SEED = {
             {time:'13:32',name:'Holtsee, Neuholtsee'},{time:'13:34',name:'Holtsee, Habyer Straße'},
             {time:'13:38',name:'Sehestedt, Hauptstraße'}
           ]},
-        {id:'p6',linienNr:'714',fahrtNr:'3714005',start:'Eckernförde, Schulzentrum Süd',end:'Rieseby, Bahnhof',startTime:'14:25',endTime:'15:21',
+        {id:'p6',linienNr:'714',fahrtNr:'3714005',abfahrt:'D',start:'Eckernförde, Schulzentrum Süd',end:'Rieseby, Bahnhof',startTime:'14:25',endTime:'15:21',
           stops:[
             {time:'14:25',name:'Eckernförde, Schulzentrum Süd'},{time:'14:37',name:'Eckernförde, Bahnhof/ZOB'},
             {time:'14:38',name:'Eckernförde, Rathaus'},{time:'14:42',name:'Eckernförde, Gaehtjestraße'},
@@ -633,7 +633,7 @@ const SEED = {
             {time:'10:50',name:'Eckernförde, Gaehtjestraße'},{time:'10:54',name:'Eckernförde, Rathaus'},
             {time:'11:00',name:'Eckernförde, Bahnhof/ZOB'}
           ]},
-        {id:'q4',linienNr:'711',fahrtNr:'3711013',start:'Eckernförde, Bahnhof/ZOB',end:'Damp, Ostseehotel',startTime:'11:19',endTime:'11:56',
+        {id:'q4',linienNr:'711',fahrtNr:'3711013',abfahrt:'A',start:'Eckernförde, Bahnhof/ZOB',end:'Damp, Ostseehotel',startTime:'11:19',endTime:'11:56',
           stops:[
             {time:'11:19',name:'Eckernförde, Bahnhof/ZOB'},{time:'11:20',name:'Eckernförde, Rathaus'},
             {time:'11:24',name:'Eckernförde, Gaehtjestraße'},{time:'11:25',name:'Eckernförde, Mühlenberg'},
@@ -701,7 +701,7 @@ const SEED = {
             {time:'15:41',name:'Götheby-Holm, Kreisstraße'},{time:'15:47',name:'Fleckeby, Schmiederedder'},
             {time:'15:49',name:'Güby, Ahrensberg'},{time:'15:50',name:'Güby, Bundesstraße'}
           ]},
-        {id:'q9',linienNr:'711',fahrtNr:'3711023',start:'Eckernförde, Bahnhof/ZOB',end:'Damp, Ostseehotel',startTime:'16:19',endTime:'16:56',
+        {id:'q9',linienNr:'711',fahrtNr:'3711023',abfahrt:'A',start:'Eckernförde, Bahnhof/ZOB',end:'Damp, Ostseehotel',startTime:'16:19',endTime:'16:56',
           stops:[
             {time:'16:19',name:'Eckernförde, Bahnhof/ZOB'},{time:'16:20',name:'Eckernförde, Rathaus'},
             {time:'16:24',name:'Eckernförde, Gaehtjestraße'},{time:'16:25',name:'Eckernförde, Mühlenberg'},
@@ -751,7 +751,7 @@ const SEED = {
             {time:'13:01',name:'Bornstein, Ort'},{time:'13:03',name:'Neudorf, Sprenger Weg'},
             {time:'13:04',name:'Neudorf, Unterführung'}
           ]},
-        {id:'r2',linienNr:'737',fahrtNr:'3737016',start:'Gettorf, Schulzentrum',end:'Eckernförde, Schulzentrum Süd',startTime:'13:53',endTime:'14:40',
+        {id:'r2',linienNr:'737',fahrtNr:'3737016',abfahrt:'C',start:'Gettorf, Schulzentrum',end:'Eckernförde, Schulzentrum Süd',startTime:'13:53',endTime:'14:40',
           stops:[
             {time:'13:53',name:'Gettorf, Schulzentrum'},{time:'13:54',name:'Gettorf, Lindentor'},
             {time:'13:56',name:'Gettorf, Tierpark'},{time:'13:58',name:'Gettorf, Meierhof'},
@@ -806,7 +806,7 @@ const SEED = {
             {time:'16:47',name:'Eckernförde, Feldweg'},{time:'16:50',name:'Eckernförde, Gaehtjestraße'},
             {time:'16:54',name:'Eckernförde, Rathaus'},{time:'17:00',name:'Eckernförde, Bahnhof/ZOB'}
           ]},
-        {id:'r5',linienNr:'737',fahrtNr:'3737023',start:'Eckernförde, Bahnhof/ZOB',end:'Neudorf, B76',startTime:'18:02',endTime:'18:39',
+        {id:'r5',linienNr:'737',fahrtNr:'3737023',abfahrt:'F',start:'Eckernförde, Bahnhof/ZOB',end:'Neudorf, B76',startTime:'18:02',endTime:'18:39',
           stops:[
             {time:'18:02',name:'Eckernförde, Bahnhof/ZOB'},{time:'18:04',name:'Eckernförde, Admiral-Scheer-Straße'},
             {time:'18:06',name:'Eckernförde, Bismarckstraße'},{time:'18:07',name:'Eckernförde, Auf der Höhe'},
@@ -829,7 +829,7 @@ const SEED = {
             {time:'18:45',name:'Altenhof, Alter Bahnhof'},{time:'18:47',name:'Eckernförde, Sandkrug'},
             {time:'18:49',name:'Eckernförde, Berliner Straße'},{time:'18:55',name:'Eckernförde, Bahnhof/ZOB'}
           ]},
-        {id:'r7',linienNr:'725',fahrtNr:'3725024',start:'Eckernförde, Bahnhof/ZOB',end:'Kropp, Schule/ZOB',startTime:'19:02',endTime:'19:58',
+        {id:'r7',linienNr:'725',fahrtNr:'3725024',abfahrt:'G',start:'Eckernförde, Bahnhof/ZOB',end:'Kropp, Schule/ZOB',startTime:'19:02',endTime:'19:58',
           stops:[
             {time:'19:02',name:'Eckernförde, Bahnhof/ZOB'},{time:'19:04',name:'Eckernförde, Windebyer Weg'},
             {time:'19:05',name:'Eckernförde, Bornbrook'},{time:'19:06',name:'Eckernförde, Karl-Samwer-Ring'},
@@ -867,7 +867,7 @@ const SEED = {
             {time:'20:50',name:'Eckernförde, Bornbrook'},{time:'20:51',name:'Eckernförde, Windebyer Weg'},
             {time:'20:56',name:'Eckernförde, Bahnhof/ZOB'}
           ]},
-        {id:'r9',linienNr:'700',fahrtNr:'3700043',start:'Eckernförde, Bahnhof/ZOB',end:'Rendsburg, Stadttheater/ZOB',startTime:'21:02',endTime:'21:44',
+        {id:'r9',linienNr:'700',fahrtNr:'3700043',abfahrt:'D',start:'Eckernförde, Bahnhof/ZOB',end:'Rendsburg, Stadttheater/ZOB',startTime:'21:02',endTime:'21:44',
           stops:[
             {time:'21:02',name:'Eckernförde, Bahnhof/ZOB'},{time:'21:04',name:'Eckernförde, Admiral-Scheer-Straße'},
             {time:'21:05',name:'Eckernförde, Rendsburger Straße'},{time:'21:07',name:'Eckernförde, Domsland B 203'},
@@ -885,7 +885,7 @@ const SEED = {
             {time:'21:34',name:'Büdelsdorf, Rondo'},{time:'21:36',name:'Rendsburg, Thormannplatz'},
             {time:'21:38',name:'Rendsburg, Schiffbrückenplatz'},{time:'21:44',name:'Rendsburg, Stadttheater/ZOB'}
           ]},
-        {id:'r10',linienNr:'700',fahrtNr:'3700046',start:'Rendsburg, Bahnhofstraße/ZOB',end:'Eckernförde, Bahnhof/ZOB',startTime:'22:12',endTime:'22:53',
+        {id:'r10',linienNr:'700',fahrtNr:'3700046',abfahrt:'B',start:'Rendsburg, Bahnhofstraße/ZOB',end:'Eckernförde, Bahnhof/ZOB',startTime:'22:12',endTime:'22:53',
           stops:[
             {time:'22:12',name:'Rendsburg, Bahnhofstraße/ZOB'},{time:'22:15',name:'Rendsburg, Schlossplatz'},
             {time:'22:16',name:'Büdelsdorf, Rondo'},{time:'22:17',name:'Büdelsdorf, Carlshütte'},
@@ -931,7 +931,7 @@ const SEED = {
             {time:'15:50',name:'Vogelsang-Grünholz, ZOB'},{time:'15:52',name:'Damp, Hegenholz'},
             {time:'15:54',name:'Damp, Werkhof'},{time:'15:56',name:'Damp, Ostseehotel'}
           ]},
-        {id:'s3',linienNr:'711',fahrtNr:'3711024',start:'Damp, Ostseehotel',end:'Eckernförde, Bahnhof/ZOB',startTime:'15:57',endTime:'16:43',
+        {id:'s3',linienNr:'711',fahrtNr:'3711024',abfahrt:'A',start:'Damp, Ostseehotel',end:'Eckernförde, Bahnhof/ZOB',startTime:'15:57',endTime:'16:43',
           stops:[
             {time:'15:57',name:'Damp, Ostseehotel'},{time:'16:00',name:'Damp, Ostseeklinik'},
             {time:'16:02',name:'Damp, Werkhof'},{time:'16:04',name:'Damp, Hegenholz'},
@@ -966,7 +966,7 @@ const SEED = {
             {time:'17:52',name:'Ellenberg, Jugendherberge'},{time:'17:53',name:'Kappeln, Hafen'},
             {time:'18:00',name:'Kappeln, ZOB'}
           ]},
-        {id:'s5',linienNr:'710',fahrtNr:'3710042',start:'Kappeln, ZOB',end:'Eckernförde, Bahnhof/ZOB',startTime:'18:00',endTime:'19:00',
+        {id:'s5',linienNr:'710',fahrtNr:'3710042',abfahrt:'A',start:'Kappeln, ZOB',end:'Eckernförde, Bahnhof/ZOB',startTime:'18:00',endTime:'19:00',
           stops:[
             {time:'18:00',name:'Kappeln, ZOB'},{time:'18:02',name:'Kappeln, Hafen'},
             {time:'18:03',name:'Ellenberg, Jugendherberge'},{time:'18:04',name:'Loitmark, Lüttfeld'},
@@ -985,7 +985,7 @@ const SEED = {
             {time:'18:50',name:'Eckernförde, Gaehtjestraße'},{time:'18:54',name:'Eckernförde, Rathaus'},
             {time:'19:00',name:'Eckernförde, Bahnhof/ZOB'}
           ]},
-        {id:'s6',linienNr:'710',fahrtNr:'3710045',start:'Eckernförde, Bahnhof/ZOB',end:'Kappeln, ZOB',startTime:'20:00',endTime:'21:00',
+        {id:'s6',linienNr:'710',fahrtNr:'3710045',abfahrt:'A',start:'Eckernförde, Bahnhof/ZOB',end:'Kappeln, ZOB',startTime:'20:00',endTime:'21:00',
           stops:[
             {time:'20:00',name:'Eckernförde, Bahnhof/ZOB'},{time:'20:01',name:'Eckernförde, Rathaus'},
             {time:'20:05',name:'Eckernförde, Gaehtjestraße'},{time:'20:07',name:'Eckernförde, Vogelsang'},
@@ -1024,7 +1024,7 @@ const SEED = {
             {time:'21:50',name:'Eckernförde, Gaehtjestraße'},{time:'21:54',name:'Eckernförde, Rathaus'},
             {time:'22:00',name:'Eckernförde, Bahnhof/ZOB'}
           ]},
-        {id:'s8',linienNr:'710',fahrtNr:'3710049',start:'Eckernförde, Bahnhof/ZOB',end:'Kappeln, ZOB',startTime:'22:00',endTime:'23:00',
+        {id:'s8',linienNr:'710',fahrtNr:'3710049',abfahrt:'A',start:'Eckernförde, Bahnhof/ZOB',end:'Kappeln, ZOB',startTime:'22:00',endTime:'23:00',
           stops:[
             {time:'22:00',name:'Eckernförde, Bahnhof/ZOB'},{time:'22:01',name:'Eckernförde, Rathaus'},
             {time:'22:05',name:'Eckernförde, Gaehtjestraße'},{time:'22:07',name:'Eckernförde, Vogelsang'},
@@ -1236,7 +1236,7 @@ const STOP_COORDS = {
 }; // Koordinaten werden per 📍 selbst eingemessen
 
 // STATE
-const VER = 'v21';
+const VER = 'v22';
 // Harten Reset erzwingen - löscht alten Cache komplett
 localStorage.removeItem('kp_data');
 localStorage.removeItem('kp_ver');
@@ -1262,6 +1262,26 @@ localStorage.removeItem('kp_coords');
     if (needReset) {
       localStorage.setItem('kp_data', JSON.stringify(SEED));
       localStorage.setItem('kp_ver', VER);
+    } else {
+      // Abfahrt-Buchstaben immer aus SEED aktualisieren
+      try {
+        var stored = JSON.parse(localStorage.getItem('kp_data'));
+        var seedMap = {};
+        SEED.kurse.forEach(function(sk){
+          (sk.lines||[]).forEach(function(sl){
+            if (sl.fahrtNr && sl.abfahrt) seedMap[sl.fahrtNr] = sl.abfahrt;
+          });
+        });
+        var changed = false;
+        stored.kurse.forEach(function(k){
+          (k.lines||[]).forEach(function(l){
+            if (l.fahrtNr && seedMap[l.fahrtNr] && l.abfahrt !== seedMap[l.fahrtNr]) {
+              l.abfahrt = seedMap[l.fahrtNr]; changed = true;
+            }
+          });
+        });
+        if (changed) localStorage.setItem('kp_data', JSON.stringify(stored));
+      } catch(e) {}
     }
   } catch(e) {
     localStorage.setItem('kp_data', JSON.stringify(SEED));
@@ -1740,7 +1760,7 @@ function renderLines() {
     var hdr = document.createElement('div');
     hdr.className = 'lch';
     hdr.innerHTML =
-      '<div class="lb"><span class="bl">Linie</span><span class="bn">' + esc(l.linienNr) + '</span><span class="bfl">Fahrt-Nr.</span><span class="bf">' + esc(l.fahrtNr || '—') + '</span></div>' +
+      '<div class="lb"><span class="bl">Linie</span><span class="bn">' + esc(l.linienNr) + '</span>' + (l.abfahrt ? '<span style="font-family:Bebas Neue,sans-serif;font-size:24px;color:var(--acc);letter-spacing:1px;line-height:1">' + esc(l.abfahrt) + '</span>' : '') + '<span class="bfl">Fahrt-Nr.</span><span class="bf">' + esc(l.fahrtNr || '—') + '</span></div>' +
       '<div class="li">' +
         '<div class="lr"><span>' + esc(l.start) + '</span><span class="ar">→</span><span>' + esc(l.end) + '</span></div>' +
         '<div class="lt"><span>🕐 ' + esc(l.startTime) + '</span><span>🕓 ' + esc(l.endTime) + '</span></div>' +
@@ -2423,21 +2443,22 @@ function setDataBundle(bundle) {
     notizen = bundle.notizen;
   }
   if (bundle.kurse && bundle.kurse.length > 0) {
-    // Nur überschreiben wenn data.json neuere Daten hat
-    var bundleTotal = 0;
+    // Abfahrt-Buchstaben aus SEED in geladene Daten übernehmen
+    // (werden nicht in data.json gespeichert da sie fest im Code stehen)
+    var seedMap = {};
+    SEED.kurse.forEach(function(sk){
+      (sk.lines||[]).forEach(function(sl){
+        if (sl.fahrtNr && sl.abfahrt) seedMap[sl.fahrtNr] = sl.abfahrt;
+      });
+    });
     bundle.kurse.forEach(function(k){
-      (k.lines||[]).forEach(function(l){ bundleTotal += (l.stops||[]).length; });
+      (k.lines||[]).forEach(function(l){
+        if (l.fahrtNr && seedMap[l.fahrtNr]) l.abfahrt = seedMap[l.fahrtNr];
+      });
     });
-    var localTotal = 0;
-    D.kurse.forEach(function(k){
-      (k.lines||[]).forEach(function(l){ localTotal += (l.stops||[]).length; });
-    });
-    // Nimm die Version mit mehr Daten
-    if (bundleTotal >= localTotal) {
-      D.kurse = bundle.kurse;
-      if (bundle.activeKurs) D.activeKurs = bundle.activeKurs;
-      localStorage.setItem('kp_data', JSON.stringify(D));
-    }
+    D.kurse = bundle.kurse;
+    if (bundle.activeKurs) D.activeKurs = bundle.activeKurs;
+    localStorage.setItem('kp_data', JSON.stringify(D));
   }
 }
 
