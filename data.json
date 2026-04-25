@@ -9142,7 +9142,7 @@
           "id": "n6",
           "linienNr": "715",
           "fahrtNr": "3715016",
-          "start": "Eckernförde, Schulzentrum Süd",
+          "start": "Eckernförde, Schulzentrum Süd F",
           "end": "Bohnert, Ortsmitte",
           "startTime": "13:14",
           "endTime": "13:40",
@@ -13125,5 +13125,5 @@
   ],
   "activeKurs": "kurs214",
   "version": "v21",
-  "saved": "2026-04-25T04:41:52.650Z"
+  "saved": "2026-04-25T04:42:26.165Z"
 }
