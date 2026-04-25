@@ -242,6 +242,9 @@ main{padding:12px 16px 100px;}
 </div>
 
 <script>
+var AB={'3725002':'D', '3725001':'G', '3736002':'D', '3737004':'B', '3711002':'', '3700003':'', '3700006':'', '3714001':'', '3712006':'', '3721009':'J', '3721012':'F', '3721013':'', '3715016':'F', '3715009':'', '3714007':'D', '3714008':'', '3710008':'', '3746004':'D', '3746013':'', '3700117':'E', '3737034':'', '3714005':'D', '3711038':'', '3710013':'', '3710024':'', '3711013':'A', '3711016':'', '3711017':'A', '3711020':'', '3715022':'', '3711023':'A', '3711026':'', '3737009':'C', '3737016':'C', '3710031':'', '3710038':'A', '3737023':'F', '3736011':'', '3725024':'G', '3725027':'', '3700043':'D', '3700046':'B', '3715018':'', '3711021':'B', '3711024':'A', '3710039':'', '3710042':'G', '3710045':'A', '3710048':'', '3710049':'A'};
+
+
 const SEED = {
   kurse: [
     {
@@ -1051,6 +1054,7 @@ const SEED = {
 };
 
 
+
 const STOP_COORDS = {
   "Altenhof, Alter Bahnhof":[54.447396,9.8645834],
   "Altenhof, Aschau":[54.4509187,9.9300018],
@@ -1760,7 +1764,7 @@ function renderLines() {
     var hdr = document.createElement('div');
     hdr.className = 'lch';
     hdr.innerHTML =
-      '<div class="lb"><span class="bl">Linie</span><span class="bn">' + esc(l.linienNr) + '</span>' + (getAbfahrt(l.fahrtNr) ? '<span style="font-family:Bebas Neue,sans-serif;font-size:24px;color:var(--acc);letter-spacing:1px;line-height:1">' + getAbfahrt(l.fahrtNr) + '</span>' : '') + '<span class="bfl">Fahrt-Nr.</span><span class="bf">' + esc(l.fahrtNr || '—') + '</span></div>' +
+      '<div class="lb"><span class="bl">Linie</span><span class="bn">' + esc(l.linienNr) + '</span>' + (AB[l.fahrtNr] ? '<span style="font-family:Bebas Neue,sans-serif;font-size:24px;color:var(--acc);letter-spacing:1px;line-height:1">' + AB[l.fahrtNr] + '</span>' : '') + '<span class="bfl">Fahrt-Nr.</span><span class="bf">' + esc(l.fahrtNr || '—') + '</span></div>' +
       '<div class="li">' +
         '<div class="lr"><span>' + esc(l.start) + '</span><span class="ar">→</span><span>' + esc(l.end) + '</span></div>' +
         '<div class="lt"><span>🕐 ' + esc(l.startTime) + '</span><span>🕓 ' + esc(l.endTime) + '</span></div>' +
@@ -2610,18 +2614,6 @@ function setAdminMode(on) {
 
 
 applyTheme();
-// Abfahrt-Buchstaben direkt aus SEED lesen - nie aus Cache
-var ABFAHRT_MAP = {};
-SEED.kurse.forEach(function(k) {
-  (k.lines || []).forEach(function(l) {
-    if (l.fahrtNr && l.abfahrt) ABFAHRT_MAP[l.fahrtNr] = l.abfahrt;
-  });
-});
-
-function getAbfahrt(fahrtNr) {
-  return ABFAHRT_MAP[fahrtNr] || '';
-}
-
 
 renderTabs();
 renderLines();
