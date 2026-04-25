@@ -9706,7 +9706,7 @@
           "id": "p4",
           "linienNr": "700",
           "fahrtNr": "3700117",
-          "start": "Eckernförde, Bahnhof/ZOB",
+          "start": "Eckernförde, Bahnhof/ZOB E",
           "end": "Klein Wittensee",
           "startTime": "12:25",
           "endTime": "12:56",
@@ -13125,5 +13125,5 @@
   ],
   "activeKurs": "kurs213",
   "version": "v21",
-  "saved": "2026-04-25T04:39:35.458Z"
+  "saved": "2026-04-25T04:40:09.245Z"
 }
