@@ -9824,7 +9824,7 @@
           "id": "p6",
           "linienNr": "714",
           "fahrtNr": "3714005",
-          "start": "Eckernförde, Schulzentrum Süd",
+          "start": "Eckernförde, Schulzentrum Süd D",
           "end": "Rieseby, Bahnhof",
           "startTime": "14:25",
           "endTime": "15:21",
@@ -13125,5 +13125,5 @@
   ],
   "activeKurs": "kurs213",
   "version": "v21",
-  "saved": "2026-04-25T04:40:09.245Z"
+  "saved": "2026-04-25T04:41:00.463Z"
 }
