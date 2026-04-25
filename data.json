@@ -7999,6 +7999,14 @@
     "Ellenberg, Jugendherberge": [
       53.8064423,
       10.3681888
+    ],
+    "Ahrensburg, Freizeitbad": [
+      53.6815345,
+      10.2340753
+    ],
+    "Bilsen, Lehmkuhlenweg": [
+      53.7700673,
+      9.8753157
     ]
   },
   "notizen": {
@@ -13140,7 +13148,7 @@
       ]
     }
   ],
-  "activeKurs": "kurs214",
+  "activeKurs": "kurs217",
   "version": "v22",
-  "saved": "2026-04-25T05:46:26.041Z"
+  "saved": "2026-04-25T06:12:12.537Z"
 }
