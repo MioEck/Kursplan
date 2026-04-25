@@ -9248,7 +9248,7 @@
           "id": "n8",
           "linienNr": "714",
           "fahrtNr": "3714007",
-          "start": "Eckernförde, Schulzentrum Süd F",
+          "start": "Eckernförde, Schulzentrum Süd",
           "end": "Rieseby, Bahnhof",
           "startTime": "15:05",
           "endTime": "16:01",
@@ -13125,5 +13125,5 @@
   ],
   "activeKurs": "kurs214",
   "version": "v21",
-  "saved": "2026-04-25T04:42:52.549Z"
+  "saved": "2026-04-25T04:44:08.025Z"
 }
