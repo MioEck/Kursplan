@@ -8996,7 +8996,7 @@
           "id": "n4",
           "linienNr": "721",
           "fahrtNr": "3721012",
-          "start": "Eckernförde, Bahnhof/ZOB",
+          "start": "Eckernförde, Bahnhof/ZOB F",
           "end": "Missunde, Alter Schulweg",
           "startTime": "11:00",
           "endTime": "11:29",
@@ -13125,5 +13125,5 @@
   ],
   "activeKurs": "kurs214",
   "version": "v21",
-  "saved": "2026-04-25T04:41:10.129Z"
+  "saved": "2026-04-25T04:41:52.650Z"
 }
