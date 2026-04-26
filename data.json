@@ -4081,8 +4081,8 @@
       10.2613083
     ],
     "Ahrensburg, Stormarner Werkstätten": [
-      53.6841115,
-      10.2616257
+      53.6826819,
+      10.2621558
     ],
     "Pölitzfeld": [
       53.7563346,
@@ -8001,12 +8001,80 @@
       10.3681888
     ],
     "Ahrensburg, Freizeitbad": [
-      53.6815345,
-      10.2340753
+      53.6813653,
+      10.2341657
     ],
     "Bilsen, Lehmkuhlenweg": [
-      53.7700673,
-      9.8753157
+      53.7704002,
+      9.8742936
+    ],
+    "Ahrensburg, Kornkamp (Süd)": [
+      53.6819793,
+      10.2575461
+    ],
+    "Clara-Schumann-Straße": [
+      53.8723074,
+      10.654624
+    ],
+    "Moislinger Baum": [
+      53.8512682,
+      10.6419332
+    ],
+    "Eutiner Straße": [
+      53.8881339,
+      10.6614958
+    ],
+    "Vorwerker Friedhof Eingang 2": [
+      53.8922522,
+      10.6636069
+    ],
+    "Vorwerker Friedhof Eingang 1": [
+      53.8908351,
+      10.662795
+    ],
+    "Fiersbarg": [
+      53.6893335,
+      10.0968852
+    ],
+    "Siebenbäumen, Am Hasenkrug": [
+      53.7530598,
+      10.5288412
+    ],
+    "Ahrensburg, Schloss": [
+      53.6802997,
+      10.2426225
+    ],
+    "Ahrensburg, Ellenbogen": [
+      53.6817385,
+      10.2480975
+    ],
+    "Glashütte, Glasmoorstraße": [
+      53.7042555,
+      10.0276309
+    ],
+    "Harksheide, Waldschneise": [
+      53.7077726,
+      10.0128738
+    ],
+    "Ahrensburg, Kurt-Fischer-Straße (Süd)": [
+      53.6818567,
+      10.2639968
+    ],
+    "Friedrichsgabe, Syltkuhlen": [
+      53.7174375,
+      9.9848678
+    ],
+    "Gorch-Fock-Straße": [
+      53.9100833,
+      10.6692629
+    ],
+    "Schleswig, Mansteinstraße": [
+      54.0610222,
+      9.9543066
+    ],
+    "Schleswig, Bahnhofstraße": [
+      54.0610222,
+      9.9543066
     ]
   },
   "notizen": {
@@ -16994,7 +17062,7 @@
       ]
     }
   ],
-  "activeKurs": "kurs811",
+  "activeKurs": "kurs211",
   "version": "v25",
-  "saved": "2026-04-26T12:48:20.633Z"
+  "saved": "2026-04-26T15:37:16.323Z"
 }
