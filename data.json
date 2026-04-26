@@ -9944,7 +9944,8 @@
           ],
           "abfahrt": "D"
         }
-      ]
+      ],
+      "typ": "schule"
     },
     {
       "id": "kurs215",
@@ -10975,7 +10976,8 @@
             }
           ]
         }
-      ]
+      ],
+      "typ": "schule"
     },
     {
       "id": "kurs216",
@@ -12169,7 +12171,8 @@
           ],
           "abfahrt": "B"
         }
-      ]
+      ],
+      "typ": "schule"
     },
     {
       "id": "kurs217",
@@ -13148,7 +13151,8 @@
           ],
           "abfahrt": "A"
         }
-      ]
+      ],
+      "typ": "schule"
     },
     {
       "id": "kurs611",
@@ -16983,7 +16987,7 @@
       ]
     }
   ],
-  "activeKurs": "kurs211",
+  "activeKurs": "kurs811",
   "version": "v25",
-  "saved": "2026-04-26T04:12:16.424Z"
+  "saved": "2026-04-26T04:44:58.422Z"
 }
