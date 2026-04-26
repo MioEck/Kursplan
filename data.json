@@ -8028,6 +8028,13 @@
         "time": "05:47",
         "linie": "725"
       }
+    ],
+    "Eckernförde, Bahnhof/ZOB": [
+      {
+        "text": "Das ist ein Test",
+        "time": "08:19",
+        "linie": "711"
+      }
     ]
   },
   "kurse": [
@@ -16989,5 +16996,5 @@
   ],
   "activeKurs": "kurs811",
   "version": "v25",
-  "saved": "2026-04-26T05:08:05.100Z"
+  "saved": "2026-04-26T12:48:20.633Z"
 }
