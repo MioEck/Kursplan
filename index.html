@@ -119,6 +119,16 @@ main{padding:12px 16px 100px;}
 .admin-btn-inline.visible{display:inline-flex;}
 .sync-btn{background:var(--acc);color:#0f1117;border:none;border-radius:10px;padding:9px 16px;font-family:'DM Sans',sans-serif;font-weight:700;font-size:14px;cursor:pointer;display:flex;align-items:center;gap:6px;}
 .sync-btn:disabled{opacity:.5;cursor:not-allowed;}
+.keypad-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:999;align-items:center;justify-content:center;}
+.keypad-overlay.open{display:flex;}
+.keypad-box{background:var(--s1);border-radius:22px;padding:24px 20px;width:260px;border:1px solid var(--brd);}
+.keypad-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;text-align:center;margin-bottom:16px;}
+.keypad-display{background:var(--bg);border:1.5px solid var(--brd);border-radius:12px;padding:12px;text-align:center;font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:8px;margin-bottom:16px;min-height:58px;color:var(--acc);}
+.keypad-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
+.kp-btn{background:var(--s2);border:1.5px solid var(--brd);border-radius:12px;padding:14px;font-family:'Bebas Neue',sans-serif;font-size:24px;cursor:pointer;text-align:center;color:var(--txt);transition:all .15s;}
+.kp-btn:active{background:var(--acc);color:#0f1117;border-color:var(--acc);}
+.kp-del{background:var(--s2);color:var(--red);}
+.kp-cancel{background:var(--s2);color:var(--mut);}
 .sync-status{font-size:12px;color:var(--mut);flex:1;}
 .sync-status.ok{color:var(--grn);}
 .sync-status.err{color:var(--red);}
@@ -172,7 +182,7 @@ main{padding:12px 16px 100px;}
 <header>
   <div class="logo">🚌</div>
   <div class="htxt"><h1>KURSPLAN <span style="font-size:13px;font-weight:400;color:var(--mut);letter-spacing:1px;vertical-align:middle">v22</span></h1><p id="hd"></p></div>
-  <button class="lock-btn" id="lockBtn" onclick="toggleLock()" title="Admin">🔒</button>
+  <button class="lock-btn" id="lockBtn" onclick="openKeypad()" title="Admin">🔒</button>
   <button class="lock-btn" id="themeBtn" onclick="toggleTheme()" title="Hell/Dunkel">🌙</button>
   <button id="gpsBtn" onclick="toggleGps()">
     <span style="font-size:20px;line-height:1">📍</span>
@@ -2574,23 +2584,63 @@ function toggleTheme() {
 var ADMIN_PW = '1345';
 var isAdmin = false;
 
-function toggleLock() {
+var kpInput = '';
+
+function openKeypad() {
   if (isAdmin) {
-    // Ausloggen
+    // Direkt ausloggen
     isAdmin = false;
     setAdminMode(false);
     document.getElementById('lockBtn').textContent = '🔒';
-  } else {
-    var pw = prompt('Passwort eingeben:');
-    if (pw === ADMIN_PW) {
-      isAdmin = true;
-      setAdminMode(true);
-      document.getElementById('lockBtn').textContent = '🔓';
-    } else if (pw !== null) {
-      alert('Falsches Passwort');
-    }
+    return;
+  }
+  kpInput = '';
+  updateKeypadDisplay();
+  document.getElementById('keypadTitle').textContent = '🔒 ADMIN';
+  document.getElementById('keypadOverlay').classList.add('open');
+}
+
+function closeKeypad() {
+  document.getElementById('keypadOverlay').classList.remove('open');
+  kpInput = '';
+}
+
+function updateKeypadDisplay() {
+  var dots = kpInput.replace(/./g, '●').padEnd(4, '_');
+  document.getElementById('keypadDisplay').textContent = dots;
+}
+
+function kpPress(digit) {
+  if (kpInput.length >= 4) return;
+  kpInput += digit;
+  updateKeypadDisplay();
+  // Auto-check when 4 digits entered
+  if (kpInput.length === 4) {
+    setTimeout(function() {
+      if (kpInput === ADMIN_PW) {
+        isAdmin = true;
+        setAdminMode(true);
+        document.getElementById('lockBtn').textContent = '🔓';
+        closeKeypad();
+      } else {
+        document.getElementById('keypadDisplay').textContent = '✕✕✕✕';
+        document.getElementById('keypadTitle').textContent = '❌ FALSCH';
+        setTimeout(function() {
+          kpInput = '';
+          updateKeypadDisplay();
+          document.getElementById('keypadTitle').textContent = '🔒 ADMIN';
+        }, 800);
+      }
+    }, 150);
   }
 }
+
+function kpDel() {
+  kpInput = kpInput.slice(0, -1);
+  updateKeypadDisplay();
+}
+
+function toggleLock() { openKeypad(); }
 
 function setAdminMode(on) {
   // Sync + Export Bar
@@ -2677,6 +2727,27 @@ if ('serviceWorker' in navigator) {
       <button class="bs" onclick="closeNotizEdit()">Abbrechen</button>
       <button class="bp" onclick="saveNotiz()" style="flex:1">Speichern</button>
       <button class="bs" onclick="deleteNotiz()" style="color:var(--red)">🗑</button>
+    </div>
+  </div>
+</div>
+
+<div class="keypad-overlay" id="keypadOverlay" onclick="if(event.target===this)closeKeypad()">
+  <div class="keypad-box">
+    <div class="keypad-title" id="keypadTitle">🔒 ADMIN</div>
+    <div class="keypad-display" id="keypadDisplay">____</div>
+    <div class="keypad-grid">
+      <button class="kp-btn" onclick="kpPress('1')">1</button>
+      <button class="kp-btn" onclick="kpPress('2')">2</button>
+      <button class="kp-btn" onclick="kpPress('3')">3</button>
+      <button class="kp-btn" onclick="kpPress('4')">4</button>
+      <button class="kp-btn" onclick="kpPress('5')">5</button>
+      <button class="kp-btn" onclick="kpPress('6')">6</button>
+      <button class="kp-btn" onclick="kpPress('7')">7</button>
+      <button class="kp-btn" onclick="kpPress('8')">8</button>
+      <button class="kp-btn" onclick="kpPress('9')">9</button>
+      <button class="kp-btn kp-cancel" onclick="closeKeypad()">✕</button>
+      <button class="kp-btn" onclick="kpPress('0')">0</button>
+      <button class="kp-btn kp-del" onclick="kpDel()">⌫</button>
     </div>
   </div>
 </div>
