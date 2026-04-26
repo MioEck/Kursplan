@@ -8461,7 +8461,8 @@
             }
           ]
         }
-      ]
+      ],
+      "typ": "schule"
     },
     {
       "id": "kurs212",
@@ -8809,7 +8810,8 @@
             }
           ]
         }
-      ]
+      ],
+      "typ": "schule"
     },
     {
       "id": "kurs214",
@@ -9417,7 +9419,8 @@
             }
           ]
         }
-      ]
+      ],
+      "typ": "schule"
     },
     {
       "id": "kurs213",
@@ -13146,9 +13149,3841 @@
           "abfahrt": "A"
         }
       ]
+    },
+    {
+      "id": "kurs611",
+      "name": "Kurs 611",
+      "typ": "sa",
+      "datum": "2026-04-13",
+      "lines": [
+        {
+          "id": "w611a",
+          "linienNr": "710",
+          "fahrtNr": "3710601",
+          "abfahrt": "A",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Kappeln, ZOB",
+          "startTime": "06:00",
+          "endTime": "07:00",
+          "stops": [
+            {
+              "time": "06:00",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            },
+            {
+              "time": "06:01",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "06:05",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "06:07",
+              "name": "Eckernförde, Vogelsang"
+            },
+            {
+              "time": "06:08",
+              "name": "Eckernförde, Feldweg"
+            },
+            {
+              "time": "06:08",
+              "name": "Eckernförde, Liliencronweg"
+            },
+            {
+              "time": "06:09",
+              "name": "Eckernförde, Cäcilienstraße"
+            },
+            {
+              "time": "06:10",
+              "name": "Eckernförde, Prinzenstraße"
+            },
+            {
+              "time": "06:11",
+              "name": "Hemmelmark, Böhnrüher Weg"
+            },
+            {
+              "time": "06:12",
+              "name": "Hemmelmark, Gutsweg"
+            },
+            {
+              "time": "06:14",
+              "name": "Hohenstein, Gut"
+            },
+            {
+              "time": "06:15",
+              "name": "Waabs, Gast"
+            },
+            {
+              "time": "06:16",
+              "name": "Waabs, Abzweig nach Karlsminde"
+            },
+            {
+              "time": "06:17",
+              "name": "Waabs, Gut Ludwigsburg"
+            },
+            {
+              "time": "06:19",
+              "name": "Waabs, Kummerteich"
+            },
+            {
+              "time": "06:20",
+              "name": "Waabs, Abzweig nach Langholz"
+            },
+            {
+              "time": "06:22",
+              "name": "Waabs, Mühlenstraße"
+            },
+            {
+              "time": "06:25",
+              "name": "Waabs, Hökholz"
+            },
+            {
+              "time": "06:26",
+              "name": "Waabs, Großwaabs"
+            },
+            {
+              "time": "06:28",
+              "name": "Schwastrum"
+            },
+            {
+              "time": "06:29",
+              "name": "Vogelsang-Grünholz, Sankt-Johannes-Stift"
+            },
+            {
+              "time": "06:33",
+              "name": "Vogelsang-Grünholz, ZOB"
+            },
+            {
+              "time": "06:35",
+              "name": "Vogelsang-Grünholz, Kummersholz"
+            },
+            {
+              "time": "06:37",
+              "name": "Dörphof, Grüntal"
+            },
+            {
+              "time": "06:38",
+              "name": "Dörphof, Schuby"
+            },
+            {
+              "time": "06:40",
+              "name": "Dörphof, Karlberger Straße"
+            },
+            {
+              "time": "06:44",
+              "name": "Karby, Am Ring"
+            },
+            {
+              "time": "06:45",
+              "name": "Karby, Südhang"
+            },
+            {
+              "time": "06:47",
+              "name": "Kopperby, Heidesiedlung"
+            },
+            {
+              "time": "06:48",
+              "name": "Kopperby, Uferweg"
+            },
+            {
+              "time": "06:49",
+              "name": "Kopperby, Boysenkoppel"
+            },
+            {
+              "time": "06:50",
+              "name": "Loitmark, Lüttfeld"
+            },
+            {
+              "time": "06:52",
+              "name": "Ellenberg, Jugendherberge"
+            },
+            {
+              "time": "06:53",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "07:00",
+              "name": "Kappeln, ZOB"
+            }
+          ]
+        },
+        {
+          "id": "w611b",
+          "linienNr": "710",
+          "fahrtNr": "3710602",
+          "abfahrt": "",
+          "start": "Kappeln, ZOB",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "07:00",
+          "endTime": "08:00",
+          "stops": [
+            {
+              "time": "07:00",
+              "name": "Kappeln, ZOB"
+            },
+            {
+              "time": "07:02",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "07:03",
+              "name": "Ellenberg, Jugendherberge"
+            },
+            {
+              "time": "07:04",
+              "name": "Loitmark, Lüttfeld"
+            },
+            {
+              "time": "07:05",
+              "name": "Kopperby, Boysenkoppel"
+            },
+            {
+              "time": "07:07",
+              "name": "Kopperby, Uferweg"
+            },
+            {
+              "time": "07:08",
+              "name": "Kopperby, Heidesiedlung"
+            },
+            {
+              "time": "07:10",
+              "name": "Karby, Südhang"
+            },
+            {
+              "time": "07:13",
+              "name": "Karby, Am Ring"
+            },
+            {
+              "time": "07:14",
+              "name": "Dörphof, Karlberger Straße"
+            },
+            {
+              "time": "07:16",
+              "name": "Dörphof, Schuby"
+            },
+            {
+              "time": "07:18",
+              "name": "Dörphof, Grüntal"
+            },
+            {
+              "time": "07:20",
+              "name": "Vogelsang-Grünholz, Kummersholz"
+            },
+            {
+              "time": "07:24",
+              "name": "Vogelsang-Grünholz, ZOB"
+            },
+            {
+              "time": "07:26",
+              "name": "Vogelsang-Grünholz, Sankt-Johannes-Stift"
+            },
+            {
+              "time": "07:27",
+              "name": "Schwastrum"
+            },
+            {
+              "time": "07:29",
+              "name": "Waabs, Großwaabs"
+            },
+            {
+              "time": "07:30",
+              "name": "Waabs, Hökholz"
+            },
+            {
+              "time": "07:32",
+              "name": "Waabs, Mühlenstraße"
+            },
+            {
+              "time": "07:34",
+              "name": "Waabs, Abzweig nach Langholz"
+            },
+            {
+              "time": "07:35",
+              "name": "Waabs, Kummerteich"
+            },
+            {
+              "time": "07:37",
+              "name": "Waabs, Gut Ludwigsburg"
+            },
+            {
+              "time": "07:38",
+              "name": "Waabs, Abzweig nach Karlsminde"
+            },
+            {
+              "time": "07:39",
+              "name": "Waabs, Gast"
+            },
+            {
+              "time": "07:40",
+              "name": "Hohenstein, Gut"
+            },
+            {
+              "time": "07:42",
+              "name": "Hemmelmark, Gutsweg"
+            },
+            {
+              "time": "07:43",
+              "name": "Hemmelmark, Böhnrüher Weg"
+            },
+            {
+              "time": "07:45",
+              "name": "Eckernförde, Prinzenstraße"
+            },
+            {
+              "time": "07:46",
+              "name": "Eckernförde, Liliencronweg"
+            },
+            {
+              "time": "07:47",
+              "name": "Eckernförde, Feldweg"
+            },
+            {
+              "time": "07:50",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "07:54",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "08:00",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            }
+          ]
+        },
+        {
+          "id": "w611c",
+          "linienNr": "710",
+          "fahrtNr": "3710603",
+          "abfahrt": "A",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Kappeln, ZOB",
+          "startTime": "08:00",
+          "endTime": "09:00",
+          "stops": [
+            {
+              "time": "08:00",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            },
+            {
+              "time": "08:01",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "08:05",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "08:07",
+              "name": "Eckernförde, Vogelsang"
+            },
+            {
+              "time": "08:08",
+              "name": "Eckernförde, Feldweg"
+            },
+            {
+              "time": "08:08",
+              "name": "Eckernförde, Liliencronweg"
+            },
+            {
+              "time": "08:09",
+              "name": "Eckernförde, Cäcilienstraße"
+            },
+            {
+              "time": "08:10",
+              "name": "Eckernförde, Prinzenstraße"
+            },
+            {
+              "time": "08:11",
+              "name": "Hemmelmark, Böhnrüher Weg"
+            },
+            {
+              "time": "08:12",
+              "name": "Hemmelmark, Gutsweg"
+            },
+            {
+              "time": "08:14",
+              "name": "Hohenstein, Gut"
+            },
+            {
+              "time": "08:15",
+              "name": "Waabs, Gast"
+            },
+            {
+              "time": "08:16",
+              "name": "Waabs, Abzweig nach Karlsminde"
+            },
+            {
+              "time": "08:17",
+              "name": "Waabs, Gut Ludwigsburg"
+            },
+            {
+              "time": "08:19",
+              "name": "Waabs, Kummerteich"
+            },
+            {
+              "time": "08:20",
+              "name": "Waabs, Abzweig nach Langholz"
+            },
+            {
+              "time": "08:22",
+              "name": "Waabs, Mühlenstraße"
+            },
+            {
+              "time": "08:25",
+              "name": "Waabs, Hökholz"
+            },
+            {
+              "time": "08:26",
+              "name": "Waabs, Großwaabs"
+            },
+            {
+              "time": "08:28",
+              "name": "Schwastrum"
+            },
+            {
+              "time": "08:29",
+              "name": "Vogelsang-Grünholz, Sankt-Johannes-Stift"
+            },
+            {
+              "time": "08:33",
+              "name": "Vogelsang-Grünholz, ZOB"
+            },
+            {
+              "time": "08:35",
+              "name": "Vogelsang-Grünholz, Kummersholz"
+            },
+            {
+              "time": "08:37",
+              "name": "Dörphof, Grüntal"
+            },
+            {
+              "time": "08:38",
+              "name": "Dörphof, Schuby"
+            },
+            {
+              "time": "08:40",
+              "name": "Dörphof, Karlberger Straße"
+            },
+            {
+              "time": "08:44",
+              "name": "Karby, Am Ring"
+            },
+            {
+              "time": "08:45",
+              "name": "Karby, Südhang"
+            },
+            {
+              "time": "08:47",
+              "name": "Kopperby, Heidesiedlung"
+            },
+            {
+              "time": "08:48",
+              "name": "Kopperby, Uferweg"
+            },
+            {
+              "time": "08:49",
+              "name": "Kopperby, Boysenkoppel"
+            },
+            {
+              "time": "08:50",
+              "name": "Loitmark, Lüttfeld"
+            },
+            {
+              "time": "08:52",
+              "name": "Ellenberg, Jugendherberge"
+            },
+            {
+              "time": "08:53",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "09:00",
+              "name": "Kappeln, ZOB"
+            }
+          ]
+        },
+        {
+          "id": "w611d",
+          "linienNr": "710",
+          "fahrtNr": "3710604",
+          "abfahrt": "",
+          "start": "Kappeln, ZOB",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "09:00",
+          "endTime": "10:00",
+          "stops": [
+            {
+              "time": "09:00",
+              "name": "Kappeln, ZOB"
+            },
+            {
+              "time": "09:02",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "09:03",
+              "name": "Ellenberg, Jugendherberge"
+            },
+            {
+              "time": "09:04",
+              "name": "Loitmark, Lüttfeld"
+            },
+            {
+              "time": "09:05",
+              "name": "Kopperby, Boysenkoppel"
+            },
+            {
+              "time": "09:07",
+              "name": "Kopperby, Uferweg"
+            },
+            {
+              "time": "09:08",
+              "name": "Kopperby, Heidesiedlung"
+            },
+            {
+              "time": "09:10",
+              "name": "Karby, Südhang"
+            },
+            {
+              "time": "09:13",
+              "name": "Karby, Am Ring"
+            },
+            {
+              "time": "09:14",
+              "name": "Dörphof, Karlberger Straße"
+            },
+            {
+              "time": "09:16",
+              "name": "Dörphof, Schuby"
+            },
+            {
+              "time": "09:18",
+              "name": "Dörphof, Grüntal"
+            },
+            {
+              "time": "09:20",
+              "name": "Vogelsang-Grünholz, Kummersholz"
+            },
+            {
+              "time": "09:24",
+              "name": "Vogelsang-Grünholz, ZOB"
+            },
+            {
+              "time": "09:26",
+              "name": "Vogelsang-Grünholz, Sankt-Johannes-Stift"
+            },
+            {
+              "time": "09:27",
+              "name": "Schwastrum"
+            },
+            {
+              "time": "09:29",
+              "name": "Waabs, Großwaabs"
+            },
+            {
+              "time": "09:30",
+              "name": "Waabs, Hökholz"
+            },
+            {
+              "time": "09:32",
+              "name": "Waabs, Mühlenstraße"
+            },
+            {
+              "time": "09:34",
+              "name": "Waabs, Abzweig nach Langholz"
+            },
+            {
+              "time": "09:35",
+              "name": "Waabs, Kummerteich"
+            },
+            {
+              "time": "09:37",
+              "name": "Waabs, Gut Ludwigsburg"
+            },
+            {
+              "time": "09:38",
+              "name": "Waabs, Abzweig nach Karlsminde"
+            },
+            {
+              "time": "09:39",
+              "name": "Waabs, Gast"
+            },
+            {
+              "time": "09:40",
+              "name": "Hohenstein, Gut"
+            },
+            {
+              "time": "09:42",
+              "name": "Hemmelmark, Gutsweg"
+            },
+            {
+              "time": "09:43",
+              "name": "Hemmelmark, Böhnrüher Weg"
+            },
+            {
+              "time": "09:45",
+              "name": "Eckernförde, Prinzenstraße"
+            },
+            {
+              "time": "09:46",
+              "name": "Eckernförde, Liliencronweg"
+            },
+            {
+              "time": "09:47",
+              "name": "Eckernförde, Feldweg"
+            },
+            {
+              "time": "09:50",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "09:54",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "10:00",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            }
+          ]
+        },
+        {
+          "id": "w611e",
+          "linienNr": "710",
+          "fahrtNr": "3710607",
+          "abfahrt": "A",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Kappeln, ZOB",
+          "startTime": "12:00",
+          "endTime": "13:00",
+          "stops": [
+            {
+              "time": "12:00",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            },
+            {
+              "time": "12:01",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "12:05",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "12:07",
+              "name": "Eckernförde, Vogelsang"
+            },
+            {
+              "time": "12:08",
+              "name": "Eckernförde, Feldweg"
+            },
+            {
+              "time": "12:08",
+              "name": "Eckernförde, Liliencronweg"
+            },
+            {
+              "time": "12:09",
+              "name": "Eckernförde, Cäcilienstraße"
+            },
+            {
+              "time": "12:10",
+              "name": "Eckernförde, Prinzenstraße"
+            },
+            {
+              "time": "12:11",
+              "name": "Hemmelmark, Böhnrüher Weg"
+            },
+            {
+              "time": "12:12",
+              "name": "Hemmelmark, Gutsweg"
+            },
+            {
+              "time": "12:14",
+              "name": "Hohenstein, Gut"
+            },
+            {
+              "time": "12:15",
+              "name": "Waabs, Gast"
+            },
+            {
+              "time": "12:16",
+              "name": "Waabs, Abzweig nach Karlsminde"
+            },
+            {
+              "time": "12:17",
+              "name": "Waabs, Gut Ludwigsburg"
+            },
+            {
+              "time": "12:19",
+              "name": "Waabs, Kummerteich"
+            },
+            {
+              "time": "12:20",
+              "name": "Waabs, Abzweig nach Langholz"
+            },
+            {
+              "time": "12:22",
+              "name": "Waabs, Mühlenstraße"
+            },
+            {
+              "time": "12:25",
+              "name": "Waabs, Hökholz"
+            },
+            {
+              "time": "12:26",
+              "name": "Waabs, Großwaabs"
+            },
+            {
+              "time": "12:28",
+              "name": "Schwastrum"
+            },
+            {
+              "time": "12:29",
+              "name": "Vogelsang-Grünholz, Sankt-Johannes-Stift"
+            },
+            {
+              "time": "12:33",
+              "name": "Vogelsang-Grünholz, ZOB"
+            },
+            {
+              "time": "12:35",
+              "name": "Vogelsang-Grünholz, Kummersholz"
+            },
+            {
+              "time": "12:37",
+              "name": "Dörphof, Grüntal"
+            },
+            {
+              "time": "12:38",
+              "name": "Dörphof, Schuby"
+            },
+            {
+              "time": "12:40",
+              "name": "Dörphof, Karlberger Straße"
+            },
+            {
+              "time": "12:44",
+              "name": "Karby, Am Ring"
+            },
+            {
+              "time": "12:45",
+              "name": "Karby, Südhang"
+            },
+            {
+              "time": "12:47",
+              "name": "Kopperby, Heidesiedlung"
+            },
+            {
+              "time": "12:48",
+              "name": "Kopperby, Uferweg"
+            },
+            {
+              "time": "12:49",
+              "name": "Kopperby, Boysenkoppel"
+            },
+            {
+              "time": "12:50",
+              "name": "Loitmark, Lüttfeld"
+            },
+            {
+              "time": "12:52",
+              "name": "Ellenberg, Jugendherberge"
+            },
+            {
+              "time": "12:53",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "13:00",
+              "name": "Kappeln, ZOB"
+            }
+          ]
+        },
+        {
+          "id": "w611f",
+          "linienNr": "710",
+          "fahrtNr": "3710608",
+          "abfahrt": "",
+          "start": "Kappeln, ZOB",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "13:00",
+          "endTime": "14:00",
+          "stops": [
+            {
+              "time": "13:00",
+              "name": "Kappeln, ZOB"
+            },
+            {
+              "time": "13:02",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "13:03",
+              "name": "Ellenberg, Jugendherberge"
+            },
+            {
+              "time": "13:04",
+              "name": "Loitmark, Lüttfeld"
+            },
+            {
+              "time": "13:05",
+              "name": "Kopperby, Boysenkoppel"
+            },
+            {
+              "time": "13:07",
+              "name": "Kopperby, Uferweg"
+            },
+            {
+              "time": "13:08",
+              "name": "Kopperby, Heidesiedlung"
+            },
+            {
+              "time": "13:10",
+              "name": "Karby, Südhang"
+            },
+            {
+              "time": "13:13",
+              "name": "Karby, Am Ring"
+            },
+            {
+              "time": "13:14",
+              "name": "Dörphof, Karlberger Straße"
+            },
+            {
+              "time": "13:16",
+              "name": "Dörphof, Schuby"
+            },
+            {
+              "time": "13:18",
+              "name": "Dörphof, Grüntal"
+            },
+            {
+              "time": "13:20",
+              "name": "Vogelsang-Grünholz, Kummersholz"
+            },
+            {
+              "time": "13:24",
+              "name": "Vogelsang-Grünholz, ZOB"
+            },
+            {
+              "time": "13:26",
+              "name": "Vogelsang-Grünholz, Sankt-Johannes-Stift"
+            },
+            {
+              "time": "13:27",
+              "name": "Schwastrum"
+            },
+            {
+              "time": "13:29",
+              "name": "Waabs, Großwaabs"
+            },
+            {
+              "time": "13:30",
+              "name": "Waabs, Hökholz"
+            },
+            {
+              "time": "13:32",
+              "name": "Waabs, Mühlenstraße"
+            },
+            {
+              "time": "13:34",
+              "name": "Waabs, Abzweig nach Langholz"
+            },
+            {
+              "time": "13:35",
+              "name": "Waabs, Kummerteich"
+            },
+            {
+              "time": "13:37",
+              "name": "Waabs, Gut Ludwigsburg"
+            },
+            {
+              "time": "13:38",
+              "name": "Waabs, Abzweig nach Karlsminde"
+            },
+            {
+              "time": "13:39",
+              "name": "Waabs, Gast"
+            },
+            {
+              "time": "13:40",
+              "name": "Hohenstein, Gut"
+            },
+            {
+              "time": "13:42",
+              "name": "Hemmelmark, Gutsweg"
+            },
+            {
+              "time": "13:43",
+              "name": "Hemmelmark, Böhnrüher Weg"
+            },
+            {
+              "time": "13:45",
+              "name": "Eckernförde, Prinzenstraße"
+            },
+            {
+              "time": "13:46",
+              "name": "Eckernförde, Liliencronweg"
+            },
+            {
+              "time": "13:47",
+              "name": "Eckernförde, Feldweg"
+            },
+            {
+              "time": "13:50",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "13:54",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "14:00",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kurs612",
+      "name": "Kurs 612",
+      "typ": "sa",
+      "datum": "2026-04-13",
+      "lines": [
+        {
+          "id": "w612a",
+          "linienNr": "720",
+          "fahrtNr": "3720604",
+          "abfahrt": "C",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Schleswig, Stadtfeld/ZOB",
+          "startTime": "07:15",
+          "endTime": "07:59",
+          "stops": [
+            {
+              "time": "07:15",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            },
+            {
+              "time": "07:16",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "07:20",
+              "name": "Eckernförde, Carlshöhe"
+            },
+            {
+              "time": "07:20",
+              "name": "Eckernförde, Grasholz"
+            },
+            {
+              "time": "07:22",
+              "name": "Gammelby, Birkensee"
+            },
+            {
+              "time": "07:24",
+              "name": "Kosel, Koselfeld"
+            },
+            {
+              "time": "07:26",
+              "name": "Götheby-Holm, Kreisstraße"
+            },
+            {
+              "time": "07:30",
+              "name": "Fleckeby, Schmiederedder"
+            },
+            {
+              "time": "07:32",
+              "name": "Güby, Ahrensberg"
+            },
+            {
+              "time": "07:33",
+              "name": "Güby, Bundesstraße"
+            },
+            {
+              "time": "07:34",
+              "name": "Borgwedel, Abzw."
+            },
+            {
+              "time": "07:35",
+              "name": "Stexwig, Abzw."
+            },
+            {
+              "time": "07:37",
+              "name": "Fahrdorf, Mühlenberg"
+            },
+            {
+              "time": "07:38",
+              "name": "Fahrdorf, Abzw. Loopstedt"
+            },
+            {
+              "time": "07:39",
+              "name": "Haithabu, Wikinger Museum"
+            },
+            {
+              "time": "07:43",
+              "name": "Schleswig, Bugenhagenschule"
+            },
+            {
+              "time": "07:44",
+              "name": "Schleswig, Mansteinstraße"
+            },
+            {
+              "time": "07:47",
+              "name": "Schleswig, Bahnhof"
+            },
+            {
+              "time": "07:48",
+              "name": "Schleswig, Bahnhofstraße"
+            },
+            {
+              "time": "07:49",
+              "name": "Schleswig, Landesarchiv"
+            },
+            {
+              "time": "07:49",
+              "name": "Schleswig, Oberlandesgericht"
+            },
+            {
+              "time": "07:51",
+              "name": "Schleswig, Schleihallenbrücke"
+            },
+            {
+              "time": "07:53",
+              "name": "Schleswig, Domschule"
+            },
+            {
+              "time": "07:55",
+              "name": "Schleswig, Alter ZOB"
+            },
+            {
+              "time": "07:59",
+              "name": "Schleswig, Stadtfeld/ZOB"
+            }
+          ]
+        },
+        {
+          "id": "w612b",
+          "linienNr": "720",
+          "fahrtNr": "3720603",
+          "abfahrt": "C1",
+          "start": "Schleswig, Stadtfeld/ZOB",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "08:00",
+          "endTime": "08:45",
+          "stops": [
+            {
+              "time": "08:00",
+              "name": "Schleswig, Stadtfeld/ZOB"
+            },
+            {
+              "time": "08:01",
+              "name": "Schleswig, Capitolplatz"
+            },
+            {
+              "time": "08:03",
+              "name": "Schleswig, Strandweg"
+            },
+            {
+              "time": "08:04",
+              "name": "Schleswig, Domziegelhof"
+            },
+            {
+              "time": "08:05",
+              "name": "Schleswig, Schleihallenbrücke"
+            },
+            {
+              "time": "08:07",
+              "name": "Schleswig, Oberlandesgericht"
+            },
+            {
+              "time": "08:08",
+              "name": "Schleswig, Bahnhofstraße"
+            },
+            {
+              "time": "08:12",
+              "name": "Schleswig, Bahnhof"
+            },
+            {
+              "time": "08:12",
+              "name": "Schleswig, Mansteinstraße"
+            },
+            {
+              "time": "08:13",
+              "name": "Schleswig, Bugenhagenschule"
+            },
+            {
+              "time": "08:15",
+              "name": "Haithabu, Wikinger Museum"
+            },
+            {
+              "time": "08:16",
+              "name": "Fahrdorf, Abzw. Loopstedt"
+            },
+            {
+              "time": "08:18",
+              "name": "Fahrdorf, Mühlenberg"
+            },
+            {
+              "time": "08:20",
+              "name": "Stexwig, Abzw."
+            },
+            {
+              "time": "08:21",
+              "name": "Borgwedel, Abzw."
+            },
+            {
+              "time": "08:22",
+              "name": "Güby, Bundesstraße"
+            },
+            {
+              "time": "08:23",
+              "name": "Güby, Ahrensberg"
+            },
+            {
+              "time": "08:26",
+              "name": "Fleckeby, Schmiederedder"
+            },
+            {
+              "time": "08:28",
+              "name": "Götheby-Holm, Mühlenweg"
+            },
+            {
+              "time": "08:30",
+              "name": "Kosel, Koselfeld"
+            },
+            {
+              "time": "08:32",
+              "name": "Gammelby, Birkensee"
+            },
+            {
+              "time": "08:34",
+              "name": "Eckernförde, Carlshöhe"
+            },
+            {
+              "time": "08:40",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "08:45",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            }
+          ]
+        },
+        {
+          "id": "w612c",
+          "linienNr": "725",
+          "fahrtNr": "3725604",
+          "abfahrt": "G",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Kropp, Schule/ZOB",
+          "startTime": "11:02",
+          "endTime": "11:58",
+          "stops": [
+            {
+              "time": "11:02",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            },
+            {
+              "time": "11:04",
+              "name": "Eckernförde, Windebyer Weg"
+            },
+            {
+              "time": "11:05",
+              "name": "Eckernförde, Bornbrook"
+            },
+            {
+              "time": "11:06",
+              "name": "Eckernförde, Karl-Samwer-Ring"
+            },
+            {
+              "time": "11:08",
+              "name": "Windeby, Siedlung"
+            },
+            {
+              "time": "11:09",
+              "name": "Windeby, Kapelle Westerthal"
+            },
+            {
+              "time": "11:10",
+              "name": "Windeby, Friedland"
+            },
+            {
+              "time": "11:12",
+              "name": "Osterby (Eckernförde), Deweik"
+            },
+            {
+              "time": "11:14",
+              "name": "Osterby (Eckernförde), Schulstraße"
+            },
+            {
+              "time": "11:15",
+              "name": "Osterby (Eckernförde), Bäckerkoppel"
+            },
+            {
+              "time": "11:17",
+              "name": "Oberhütten, Ost"
+            },
+            {
+              "time": "11:18",
+              "name": "Damendorf, Alter Bahnhof"
+            },
+            {
+              "time": "11:19",
+              "name": "Damendorf, Ortsmitte"
+            },
+            {
+              "time": "11:20",
+              "name": "Damendorf, Alter Bahnhof"
+            },
+            {
+              "time": "11:22",
+              "name": "Ascheffel, Dorfstraße"
+            },
+            {
+              "time": "11:23",
+              "name": "Ascheffel, An der Forta"
+            },
+            {
+              "time": "11:25",
+              "name": "Ascheffel, Oberschoothorst"
+            },
+            {
+              "time": "11:26",
+              "name": "Brekendorf, Tirol"
+            },
+            {
+              "time": "11:27",
+              "name": "Brekendorf, Forsthaus"
+            },
+            {
+              "time": "11:29",
+              "name": "Brekendorf, Krögersgang"
+            },
+            {
+              "time": "11:32",
+              "name": "Brekendorf, Am Hang"
+            },
+            {
+              "time": "11:33",
+              "name": "Brekendorf, Op de Barg"
+            },
+            {
+              "time": "11:34",
+              "name": "Owschlag, Westermoor"
+            },
+            {
+              "time": "11:35",
+              "name": "Ramsdorf, West"
+            },
+            {
+              "time": "11:37",
+              "name": "Owschlag, Orchideenstraße"
+            },
+            {
+              "time": "11:41",
+              "name": "Owschlag, ZOB/Bahnhof"
+            },
+            {
+              "time": "11:47",
+              "name": "Owschlag, ZOB/Bahnhof"
+            },
+            {
+              "time": "11:48",
+              "name": "Owschlag, Orchideenstraße"
+            },
+            {
+              "time": "11:51",
+              "name": "Owschlag, Obsthof Klein Salow"
+            },
+            {
+              "time": "11:55",
+              "name": "Kropp, Industriestraße"
+            },
+            {
+              "time": "11:58",
+              "name": "Kropp, Schule/ZOB"
+            }
+          ]
+        },
+        {
+          "id": "w612d",
+          "linienNr": "725",
+          "fahrtNr": "3725603",
+          "abfahrt": "D",
+          "start": "Kropp, Schule/ZOB",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "12:02",
+          "endTime": "12:56",
+          "stops": [
+            {
+              "time": "12:02",
+              "name": "Kropp, Schule/ZOB"
+            },
+            {
+              "time": "12:04",
+              "name": "Kropp, Industriestraße"
+            },
+            {
+              "time": "12:08",
+              "name": "Owschlag, Obsthof Klein Salow"
+            },
+            {
+              "time": "12:11",
+              "name": "Owschlag, Bahnhof West"
+            },
+            {
+              "time": "12:14",
+              "name": "Owschlag, ZOB/Bahnhof"
+            },
+            {
+              "time": "12:15",
+              "name": "Owschlag, ZOB/Bahnhof"
+            },
+            {
+              "time": "12:16",
+              "name": "Owschlag, Orchideenstraße"
+            },
+            {
+              "time": "12:18",
+              "name": "Ramsdorf, West"
+            },
+            {
+              "time": "12:19",
+              "name": "Owschlag, Westermoor"
+            },
+            {
+              "time": "12:20",
+              "name": "Brekendorf, Op de Barg"
+            },
+            {
+              "time": "12:21",
+              "name": "Brekendorf, Am Hang"
+            },
+            {
+              "time": "12:23",
+              "name": "Brekendorf, Krögersgang"
+            },
+            {
+              "time": "12:24",
+              "name": "Brekendorf, Forsthaus"
+            },
+            {
+              "time": "12:26",
+              "name": "Brekendorf, Tirol"
+            },
+            {
+              "time": "12:28",
+              "name": "Ascheffel, Oberschoothorst"
+            },
+            {
+              "time": "12:30",
+              "name": "Ascheffel, An der Forta"
+            },
+            {
+              "time": "12:32",
+              "name": "Ascheffel, Dorfstraße"
+            },
+            {
+              "time": "12:34",
+              "name": "Damendorf, Alter Bahnhof"
+            },
+            {
+              "time": "12:35",
+              "name": "Damendorf, Ortsmitte"
+            },
+            {
+              "time": "12:37",
+              "name": "Damendorf, Alter Bahnhof"
+            },
+            {
+              "time": "12:38",
+              "name": "Oberhütten, Ost"
+            },
+            {
+              "time": "12:40",
+              "name": "Osterby (Eckernförde), Bäckerkoppel"
+            },
+            {
+              "time": "12:41",
+              "name": "Osterby (Eckernförde), Schulstraße"
+            },
+            {
+              "time": "12:43",
+              "name": "Osterby (Eckernförde), Deweik"
+            },
+            {
+              "time": "12:45",
+              "name": "Windeby, Friedland"
+            },
+            {
+              "time": "12:46",
+              "name": "Windeby, Kapelle Westerthal"
+            },
+            {
+              "time": "12:47",
+              "name": "Windeby, Siedlung"
+            },
+            {
+              "time": "12:49",
+              "name": "Eckernförde, Karl-Samwer-Ring"
+            },
+            {
+              "time": "12:50",
+              "name": "Eckernförde, Bornbrook"
+            },
+            {
+              "time": "12:51",
+              "name": "Eckernförde, Windebyer Weg"
+            },
+            {
+              "time": "12:56",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            }
+          ]
+        },
+        {
+          "id": "w612e",
+          "linienNr": "720",
+          "fahrtNr": "3720616",
+          "abfahrt": "C",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Schleswig, Stadtfeld/ZOB",
+          "startTime": "13:15",
+          "endTime": "13:59",
+          "stops": [
+            {
+              "time": "13:15",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            },
+            {
+              "time": "13:16",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "13:20",
+              "name": "Eckernförde, Carlshöhe"
+            },
+            {
+              "time": "13:20",
+              "name": "Eckernförde, Grasholz"
+            },
+            {
+              "time": "13:22",
+              "name": "Gammelby, Birkensee"
+            },
+            {
+              "time": "13:24",
+              "name": "Kosel, Koselfeld"
+            },
+            {
+              "time": "13:26",
+              "name": "Götheby-Holm, Kreisstraße"
+            },
+            {
+              "time": "13:30",
+              "name": "Fleckeby, Schmiederedder"
+            },
+            {
+              "time": "13:32",
+              "name": "Güby, Ahrensberg"
+            },
+            {
+              "time": "13:33",
+              "name": "Güby, Bundesstraße"
+            },
+            {
+              "time": "13:34",
+              "name": "Borgwedel, Abzw."
+            },
+            {
+              "time": "13:35",
+              "name": "Stexwig, Abzw."
+            },
+            {
+              "time": "13:37",
+              "name": "Fahrdorf, Mühlenberg"
+            },
+            {
+              "time": "13:38",
+              "name": "Fahrdorf, Abzw. Loopstedt"
+            },
+            {
+              "time": "13:39",
+              "name": "Haithabu, Wikinger Museum"
+            },
+            {
+              "time": "13:43",
+              "name": "Schleswig, Bugenhagenschule"
+            },
+            {
+              "time": "13:44",
+              "name": "Schleswig, Mansteinstraße"
+            },
+            {
+              "time": "13:47",
+              "name": "Schleswig, Bahnhof"
+            },
+            {
+              "time": "13:48",
+              "name": "Schleswig, Bahnhofstraße"
+            },
+            {
+              "time": "13:49",
+              "name": "Schleswig, Landesarchiv"
+            },
+            {
+              "time": "13:49",
+              "name": "Schleswig, Oberlandesgericht"
+            },
+            {
+              "time": "13:51",
+              "name": "Schleswig, Schleihallenbrücke"
+            },
+            {
+              "time": "13:53",
+              "name": "Schleswig, Domschule"
+            },
+            {
+              "time": "13:55",
+              "name": "Schleswig, Alter ZOB"
+            },
+            {
+              "time": "13:59",
+              "name": "Schleswig, Stadtfeld/ZOB"
+            }
+          ]
+        },
+        {
+          "id": "w612f",
+          "linienNr": "720",
+          "fahrtNr": "3720615",
+          "abfahrt": "C1",
+          "start": "Schleswig, Stadtfeld/ZOB",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "14:00",
+          "endTime": "14:45",
+          "stops": [
+            {
+              "time": "14:00",
+              "name": "Schleswig, Stadtfeld/ZOB"
+            },
+            {
+              "time": "14:01",
+              "name": "Schleswig, Capitolplatz"
+            },
+            {
+              "time": "14:03",
+              "name": "Schleswig, Strandweg"
+            },
+            {
+              "time": "14:04",
+              "name": "Schleswig, Domziegelhof"
+            },
+            {
+              "time": "14:05",
+              "name": "Schleswig, Schleihallenbrücke"
+            },
+            {
+              "time": "14:07",
+              "name": "Schleswig, Oberlandesgericht"
+            },
+            {
+              "time": "14:08",
+              "name": "Schleswig, Bahnhofstraße"
+            },
+            {
+              "time": "14:12",
+              "name": "Schleswig, Bahnhof"
+            },
+            {
+              "time": "14:12",
+              "name": "Schleswig, Mansteinstraße"
+            },
+            {
+              "time": "14:13",
+              "name": "Schleswig, Bugenhagenschule"
+            },
+            {
+              "time": "14:15",
+              "name": "Haithabu, Wikinger Museum"
+            },
+            {
+              "time": "14:16",
+              "name": "Fahrdorf, Abzw. Loopstedt"
+            },
+            {
+              "time": "14:18",
+              "name": "Fahrdorf, Mühlenberg"
+            },
+            {
+              "time": "14:20",
+              "name": "Stexwig, Abzw."
+            },
+            {
+              "time": "14:21",
+              "name": "Borgwedel, Abzw."
+            },
+            {
+              "time": "14:22",
+              "name": "Güby, Bundesstraße"
+            },
+            {
+              "time": "14:23",
+              "name": "Güby, Ahrensberg"
+            },
+            {
+              "time": "14:26",
+              "name": "Fleckeby, Schmiederedder"
+            },
+            {
+              "time": "14:28",
+              "name": "Götheby-Holm, Mühlenweg"
+            },
+            {
+              "time": "14:30",
+              "name": "Kosel, Koselfeld"
+            },
+            {
+              "time": "14:32",
+              "name": "Gammelby, Birkensee"
+            },
+            {
+              "time": "14:34",
+              "name": "Eckernförde, Carlshöhe"
+            },
+            {
+              "time": "14:40",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "14:45",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            }
+          ]
+        },
+        {
+          "id": "w612g",
+          "linienNr": "710",
+          "fahrtNr": "3710611",
+          "abfahrt": "A",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Kappeln, ZOB",
+          "startTime": "16:00",
+          "endTime": "17:00",
+          "stops": [
+            {
+              "time": "16:00",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            },
+            {
+              "time": "16:01",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "16:05",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "16:07",
+              "name": "Eckernförde, Vogelsang"
+            },
+            {
+              "time": "16:08",
+              "name": "Eckernförde, Feldweg"
+            },
+            {
+              "time": "16:08",
+              "name": "Eckernförde, Liliencronweg"
+            },
+            {
+              "time": "16:09",
+              "name": "Eckernförde, Cäcilienstraße"
+            },
+            {
+              "time": "16:10",
+              "name": "Eckernförde, Prinzenstraße"
+            },
+            {
+              "time": "16:11",
+              "name": "Hemmelmark, Böhnrüher Weg"
+            },
+            {
+              "time": "16:12",
+              "name": "Hemmelmark, Gutsweg"
+            },
+            {
+              "time": "16:14",
+              "name": "Hohenstein, Gut"
+            },
+            {
+              "time": "16:15",
+              "name": "Waabs, Gast"
+            },
+            {
+              "time": "16:16",
+              "name": "Waabs, Abzweig nach Karlsminde"
+            },
+            {
+              "time": "16:17",
+              "name": "Waabs, Gut Ludwigsburg"
+            },
+            {
+              "time": "16:19",
+              "name": "Waabs, Kummerteich"
+            },
+            {
+              "time": "16:20",
+              "name": "Waabs, Abzweig nach Langholz"
+            },
+            {
+              "time": "16:22",
+              "name": "Waabs, Mühlenstraße"
+            },
+            {
+              "time": "16:25",
+              "name": "Waabs, Hökholz"
+            },
+            {
+              "time": "16:26",
+              "name": "Waabs, Großwaabs"
+            },
+            {
+              "time": "16:28",
+              "name": "Schwastrum"
+            },
+            {
+              "time": "16:29",
+              "name": "Vogelsang-Grünholz, Sankt-Johannes-Stift"
+            },
+            {
+              "time": "16:33",
+              "name": "Vogelsang-Grünholz, ZOB"
+            },
+            {
+              "time": "16:35",
+              "name": "Vogelsang-Grünholz, Kummersholz"
+            },
+            {
+              "time": "16:37",
+              "name": "Dörphof, Grüntal"
+            },
+            {
+              "time": "16:38",
+              "name": "Dörphof, Schuby"
+            },
+            {
+              "time": "16:40",
+              "name": "Dörphof, Karlberger Straße"
+            },
+            {
+              "time": "16:44",
+              "name": "Karby, Am Ring"
+            },
+            {
+              "time": "16:45",
+              "name": "Karby, Südhang"
+            },
+            {
+              "time": "16:47",
+              "name": "Kopperby, Heidesiedlung"
+            },
+            {
+              "time": "16:48",
+              "name": "Kopperby, Uferweg"
+            },
+            {
+              "time": "16:49",
+              "name": "Kopperby, Boysenkoppel"
+            },
+            {
+              "time": "16:50",
+              "name": "Loitmark, Lüttfeld"
+            },
+            {
+              "time": "16:52",
+              "name": "Ellenberg, Jugendherberge"
+            },
+            {
+              "time": "16:53",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "17:00",
+              "name": "Kappeln, ZOB"
+            }
+          ]
+        },
+        {
+          "id": "w612h",
+          "linienNr": "710",
+          "fahrtNr": "3710612",
+          "abfahrt": "",
+          "start": "Kappeln, ZOB",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "17:00",
+          "endTime": "18:00",
+          "stops": [
+            {
+              "time": "17:00",
+              "name": "Kappeln, ZOB"
+            },
+            {
+              "time": "17:02",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "17:03",
+              "name": "Ellenberg, Jugendherberge"
+            },
+            {
+              "time": "17:04",
+              "name": "Loitmark, Lüttfeld"
+            },
+            {
+              "time": "17:05",
+              "name": "Kopperby, Boysenkoppel"
+            },
+            {
+              "time": "17:07",
+              "name": "Kopperby, Uferweg"
+            },
+            {
+              "time": "17:08",
+              "name": "Kopperby, Heidesiedlung"
+            },
+            {
+              "time": "17:10",
+              "name": "Karby, Südhang"
+            },
+            {
+              "time": "17:13",
+              "name": "Karby, Am Ring"
+            },
+            {
+              "time": "17:14",
+              "name": "Dörphof, Karlberger Straße"
+            },
+            {
+              "time": "17:16",
+              "name": "Dörphof, Schuby"
+            },
+            {
+              "time": "17:18",
+              "name": "Dörphof, Grüntal"
+            },
+            {
+              "time": "17:20",
+              "name": "Vogelsang-Grünholz, Kummersholz"
+            },
+            {
+              "time": "17:24",
+              "name": "Vogelsang-Grünholz, ZOB"
+            },
+            {
+              "time": "17:26",
+              "name": "Vogelsang-Grünholz, Sankt-Johannes-Stift"
+            },
+            {
+              "time": "17:27",
+              "name": "Schwastrum"
+            },
+            {
+              "time": "17:29",
+              "name": "Waabs, Großwaabs"
+            },
+            {
+              "time": "17:30",
+              "name": "Waabs, Hökholz"
+            },
+            {
+              "time": "17:32",
+              "name": "Waabs, Mühlenstraße"
+            },
+            {
+              "time": "17:34",
+              "name": "Waabs, Abzweig nach Langholz"
+            },
+            {
+              "time": "17:35",
+              "name": "Waabs, Kummerteich"
+            },
+            {
+              "time": "17:37",
+              "name": "Waabs, Gut Ludwigsburg"
+            },
+            {
+              "time": "17:38",
+              "name": "Waabs, Abzweig nach Karlsminde"
+            },
+            {
+              "time": "17:39",
+              "name": "Waabs, Gast"
+            },
+            {
+              "time": "17:40",
+              "name": "Hohenstein, Gut"
+            },
+            {
+              "time": "17:42",
+              "name": "Hemmelmark, Gutsweg"
+            },
+            {
+              "time": "17:43",
+              "name": "Hemmelmark, Böhnrüher Weg"
+            },
+            {
+              "time": "17:45",
+              "name": "Eckernförde, Prinzenstraße"
+            },
+            {
+              "time": "17:46",
+              "name": "Eckernförde, Liliencronweg"
+            },
+            {
+              "time": "17:47",
+              "name": "Eckernförde, Feldweg"
+            },
+            {
+              "time": "17:50",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "17:54",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "18:00",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kurs613",
+      "name": "Kurs 613",
+      "typ": "sa",
+      "datum": "2026-04-13",
+      "lines": [
+        {
+          "id": "w613a",
+          "linienNr": "720",
+          "fahrtNr": "3720620",
+          "abfahrt": "C",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Schleswig, Stadtfeld/ZOB",
+          "startTime": "15:15",
+          "endTime": "15:59",
+          "stops": [
+            {
+              "time": "15:15",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            },
+            {
+              "time": "15:16",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "15:20",
+              "name": "Eckernförde, Carlshöhe"
+            },
+            {
+              "time": "15:20",
+              "name": "Eckernförde, Grasholz"
+            },
+            {
+              "time": "15:22",
+              "name": "Gammelby, Birkensee"
+            },
+            {
+              "time": "15:24",
+              "name": "Kosel, Koselfeld"
+            },
+            {
+              "time": "15:26",
+              "name": "Götheby-Holm, Kreisstraße"
+            },
+            {
+              "time": "15:30",
+              "name": "Fleckeby, Schmiederedder"
+            },
+            {
+              "time": "15:32",
+              "name": "Güby, Ahrensberg"
+            },
+            {
+              "time": "15:33",
+              "name": "Güby, Bundesstraße"
+            },
+            {
+              "time": "15:34",
+              "name": "Borgwedel, Abzw."
+            },
+            {
+              "time": "15:35",
+              "name": "Stexwig, Abzw."
+            },
+            {
+              "time": "15:37",
+              "name": "Fahrdorf, Mühlenberg"
+            },
+            {
+              "time": "15:38",
+              "name": "Fahrdorf, Abzw. Loopstedt"
+            },
+            {
+              "time": "15:39",
+              "name": "Haithabu, Wikinger Museum"
+            },
+            {
+              "time": "15:43",
+              "name": "Schleswig, Bugenhagenschule"
+            },
+            {
+              "time": "15:44",
+              "name": "Schleswig, Mansteinstraße"
+            },
+            {
+              "time": "15:47",
+              "name": "Schleswig, Bahnhof"
+            },
+            {
+              "time": "15:48",
+              "name": "Schleswig, Bahnhofstraße"
+            },
+            {
+              "time": "15:49",
+              "name": "Schleswig, Landesarchiv"
+            },
+            {
+              "time": "15:49",
+              "name": "Schleswig, Oberlandesgericht"
+            },
+            {
+              "time": "15:51",
+              "name": "Schleswig, Schleihallenbrücke"
+            },
+            {
+              "time": "15:53",
+              "name": "Schleswig, Domschule"
+            },
+            {
+              "time": "15:55",
+              "name": "Schleswig, Alter ZOB"
+            },
+            {
+              "time": "15:59",
+              "name": "Schleswig, Stadtfeld/ZOB"
+            }
+          ]
+        },
+        {
+          "id": "w613b",
+          "linienNr": "720",
+          "fahrtNr": "3720619",
+          "abfahrt": "C1",
+          "start": "Schleswig, Stadtfeld/ZOB",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "16:00",
+          "endTime": "16:45",
+          "stops": [
+            {
+              "time": "16:00",
+              "name": "Schleswig, Stadtfeld/ZOB"
+            },
+            {
+              "time": "16:01",
+              "name": "Schleswig, Capitolplatz"
+            },
+            {
+              "time": "16:03",
+              "name": "Schleswig, Strandweg"
+            },
+            {
+              "time": "16:04",
+              "name": "Schleswig, Domziegelhof"
+            },
+            {
+              "time": "16:05",
+              "name": "Schleswig, Schleihallenbrücke"
+            },
+            {
+              "time": "16:07",
+              "name": "Schleswig, Oberlandesgericht"
+            },
+            {
+              "time": "16:08",
+              "name": "Schleswig, Bahnhofstraße"
+            },
+            {
+              "time": "16:12",
+              "name": "Schleswig, Bahnhof"
+            },
+            {
+              "time": "16:12",
+              "name": "Schleswig, Mansteinstraße"
+            },
+            {
+              "time": "16:13",
+              "name": "Schleswig, Bugenhagenschule"
+            },
+            {
+              "time": "16:15",
+              "name": "Haithabu, Wikinger Museum"
+            },
+            {
+              "time": "16:16",
+              "name": "Fahrdorf, Abzw. Loopstedt"
+            },
+            {
+              "time": "16:18",
+              "name": "Fahrdorf, Mühlenberg"
+            },
+            {
+              "time": "16:20",
+              "name": "Stexwig, Abzw."
+            },
+            {
+              "time": "16:21",
+              "name": "Borgwedel, Abzw."
+            },
+            {
+              "time": "16:22",
+              "name": "Güby, Bundesstraße"
+            },
+            {
+              "time": "16:23",
+              "name": "Güby, Ahrensberg"
+            },
+            {
+              "time": "16:26",
+              "name": "Fleckeby, Schmiederedder"
+            },
+            {
+              "time": "16:28",
+              "name": "Götheby-Holm, Mühlenweg"
+            },
+            {
+              "time": "16:30",
+              "name": "Kosel, Koselfeld"
+            },
+            {
+              "time": "16:32",
+              "name": "Gammelby, Birkensee"
+            },
+            {
+              "time": "16:34",
+              "name": "Eckernförde, Carlshöhe"
+            },
+            {
+              "time": "16:40",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "16:45",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            }
+          ]
+        },
+        {
+          "id": "w613c",
+          "linienNr": "720",
+          "fahrtNr": "3720624",
+          "abfahrt": "C",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Schleswig, Stadtfeld/ZOB",
+          "startTime": "17:15",
+          "endTime": "17:59",
+          "stops": [
+            {
+              "time": "17:15",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            },
+            {
+              "time": "17:16",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "17:20",
+              "name": "Eckernförde, Carlshöhe"
+            },
+            {
+              "time": "17:20",
+              "name": "Eckernförde, Grasholz"
+            },
+            {
+              "time": "17:22",
+              "name": "Gammelby, Birkensee"
+            },
+            {
+              "time": "17:24",
+              "name": "Kosel, Koselfeld"
+            },
+            {
+              "time": "17:26",
+              "name": "Götheby-Holm, Kreisstraße"
+            },
+            {
+              "time": "17:30",
+              "name": "Fleckeby, Schmiederedder"
+            },
+            {
+              "time": "17:32",
+              "name": "Güby, Ahrensberg"
+            },
+            {
+              "time": "17:33",
+              "name": "Güby, Bundesstraße"
+            },
+            {
+              "time": "17:34",
+              "name": "Borgwedel, Abzw."
+            },
+            {
+              "time": "17:35",
+              "name": "Stexwig, Abzw."
+            },
+            {
+              "time": "17:37",
+              "name": "Fahrdorf, Mühlenberg"
+            },
+            {
+              "time": "17:38",
+              "name": "Fahrdorf, Abzw. Loopstedt"
+            },
+            {
+              "time": "17:39",
+              "name": "Haithabu, Wikinger Museum"
+            },
+            {
+              "time": "17:43",
+              "name": "Schleswig, Bugenhagenschule"
+            },
+            {
+              "time": "17:44",
+              "name": "Schleswig, Mansteinstraße"
+            },
+            {
+              "time": "17:47",
+              "name": "Schleswig, Bahnhof"
+            },
+            {
+              "time": "17:48",
+              "name": "Schleswig, Bahnhofstraße"
+            },
+            {
+              "time": "17:49",
+              "name": "Schleswig, Landesarchiv"
+            },
+            {
+              "time": "17:49",
+              "name": "Schleswig, Oberlandesgericht"
+            },
+            {
+              "time": "17:51",
+              "name": "Schleswig, Schleihallenbrücke"
+            },
+            {
+              "time": "17:53",
+              "name": "Schleswig, Domschule"
+            },
+            {
+              "time": "17:55",
+              "name": "Schleswig, Alter ZOB"
+            },
+            {
+              "time": "17:59",
+              "name": "Schleswig, Stadtfeld/ZOB"
+            }
+          ]
+        },
+        {
+          "id": "w613d",
+          "linienNr": "720",
+          "fahrtNr": "3720623",
+          "abfahrt": "C1",
+          "start": "Schleswig, Stadtfeld/ZOB",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "18:00",
+          "endTime": "18:45",
+          "stops": [
+            {
+              "time": "18:00",
+              "name": "Schleswig, Stadtfeld/ZOB"
+            },
+            {
+              "time": "18:01",
+              "name": "Schleswig, Capitolplatz"
+            },
+            {
+              "time": "18:03",
+              "name": "Schleswig, Strandweg"
+            },
+            {
+              "time": "18:04",
+              "name": "Schleswig, Domziegelhof"
+            },
+            {
+              "time": "18:05",
+              "name": "Schleswig, Schleihallenbrücke"
+            },
+            {
+              "time": "18:07",
+              "name": "Schleswig, Oberlandesgericht"
+            },
+            {
+              "time": "18:08",
+              "name": "Schleswig, Bahnhofstraße"
+            },
+            {
+              "time": "18:12",
+              "name": "Schleswig, Bahnhof"
+            },
+            {
+              "time": "18:12",
+              "name": "Schleswig, Mansteinstraße"
+            },
+            {
+              "time": "18:13",
+              "name": "Schleswig, Bugenhagenschule"
+            },
+            {
+              "time": "18:15",
+              "name": "Haithabu, Wikinger Museum"
+            },
+            {
+              "time": "18:16",
+              "name": "Fahrdorf, Abzw. Loopstedt"
+            },
+            {
+              "time": "18:18",
+              "name": "Fahrdorf, Mühlenberg"
+            },
+            {
+              "time": "18:20",
+              "name": "Stexwig, Abzw."
+            },
+            {
+              "time": "18:21",
+              "name": "Borgwedel, Abzw."
+            },
+            {
+              "time": "18:22",
+              "name": "Güby, Bundesstraße"
+            },
+            {
+              "time": "18:23",
+              "name": "Güby, Ahrensberg"
+            },
+            {
+              "time": "18:26",
+              "name": "Fleckeby, Schmiederedder"
+            },
+            {
+              "time": "18:28",
+              "name": "Götheby-Holm, Mühlenweg"
+            },
+            {
+              "time": "18:30",
+              "name": "Kosel, Koselfeld"
+            },
+            {
+              "time": "18:32",
+              "name": "Gammelby, Birkensee"
+            },
+            {
+              "time": "18:34",
+              "name": "Eckernförde, Carlshöhe"
+            },
+            {
+              "time": "18:40",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "18:45",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            }
+          ]
+        },
+        {
+          "id": "w613e",
+          "linienNr": "710",
+          "fahrtNr": "3710615",
+          "abfahrt": "A",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Kappeln, ZOB",
+          "startTime": "20:00",
+          "endTime": "21:00",
+          "stops": [
+            {
+              "time": "20:00",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            },
+            {
+              "time": "20:01",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "20:05",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "20:07",
+              "name": "Eckernförde, Vogelsang"
+            },
+            {
+              "time": "20:08",
+              "name": "Eckernförde, Feldweg"
+            },
+            {
+              "time": "20:08",
+              "name": "Eckernförde, Liliencronweg"
+            },
+            {
+              "time": "20:09",
+              "name": "Eckernförde, Cäcilienstraße"
+            },
+            {
+              "time": "20:10",
+              "name": "Eckernförde, Prinzenstraße"
+            },
+            {
+              "time": "20:11",
+              "name": "Hemmelmark, Böhnrüher Weg"
+            },
+            {
+              "time": "20:12",
+              "name": "Hemmelmark, Gutsweg"
+            },
+            {
+              "time": "20:14",
+              "name": "Hohenstein, Gut"
+            },
+            {
+              "time": "20:15",
+              "name": "Waabs, Gast"
+            },
+            {
+              "time": "20:16",
+              "name": "Waabs, Abzweig nach Karlsminde"
+            },
+            {
+              "time": "20:17",
+              "name": "Waabs, Gut Ludwigsburg"
+            },
+            {
+              "time": "20:19",
+              "name": "Waabs, Kummerteich"
+            },
+            {
+              "time": "20:20",
+              "name": "Waabs, Abzweig nach Langholz"
+            },
+            {
+              "time": "20:22",
+              "name": "Waabs, Mühlenstraße"
+            },
+            {
+              "time": "20:25",
+              "name": "Waabs, Hökholz"
+            },
+            {
+              "time": "20:26",
+              "name": "Waabs, Großwaabs"
+            },
+            {
+              "time": "20:28",
+              "name": "Schwastrum"
+            },
+            {
+              "time": "20:29",
+              "name": "Vogelsang-Grünholz, Sankt-Johannes-Stift"
+            },
+            {
+              "time": "20:33",
+              "name": "Vogelsang-Grünholz, ZOB"
+            },
+            {
+              "time": "20:35",
+              "name": "Vogelsang-Grünholz, Kummersholz"
+            },
+            {
+              "time": "20:37",
+              "name": "Dörphof, Grüntal"
+            },
+            {
+              "time": "20:38",
+              "name": "Dörphof, Schuby"
+            },
+            {
+              "time": "20:40",
+              "name": "Dörphof, Karlberger Straße"
+            },
+            {
+              "time": "20:44",
+              "name": "Karby, Am Ring"
+            },
+            {
+              "time": "20:45",
+              "name": "Karby, Südhang"
+            },
+            {
+              "time": "20:47",
+              "name": "Kopperby, Heidesiedlung"
+            },
+            {
+              "time": "20:48",
+              "name": "Kopperby, Uferweg"
+            },
+            {
+              "time": "20:49",
+              "name": "Kopperby, Boysenkoppel"
+            },
+            {
+              "time": "20:50",
+              "name": "Loitmark, Lüttfeld"
+            },
+            {
+              "time": "20:52",
+              "name": "Ellenberg, Jugendherberge"
+            },
+            {
+              "time": "20:53",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "21:00",
+              "name": "Kappeln, ZOB"
+            }
+          ]
+        },
+        {
+          "id": "w613f",
+          "linienNr": "710",
+          "fahrtNr": "3710616",
+          "abfahrt": "",
+          "start": "Kappeln, ZOB",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "21:00",
+          "endTime": "22:00",
+          "stops": [
+            {
+              "time": "21:00",
+              "name": "Kappeln, ZOB"
+            },
+            {
+              "time": "21:02",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "21:03",
+              "name": "Ellenberg, Jugendherberge"
+            },
+            {
+              "time": "21:04",
+              "name": "Loitmark, Lüttfeld"
+            },
+            {
+              "time": "21:05",
+              "name": "Kopperby, Boysenkoppel"
+            },
+            {
+              "time": "21:07",
+              "name": "Kopperby, Uferweg"
+            },
+            {
+              "time": "21:08",
+              "name": "Kopperby, Heidesiedlung"
+            },
+            {
+              "time": "21:10",
+              "name": "Karby, Südhang"
+            },
+            {
+              "time": "21:13",
+              "name": "Karby, Am Ring"
+            },
+            {
+              "time": "21:14",
+              "name": "Dörphof, Karlberger Straße"
+            },
+            {
+              "time": "21:16",
+              "name": "Dörphof, Schuby"
+            },
+            {
+              "time": "21:18",
+              "name": "Dörphof, Grüntal"
+            },
+            {
+              "time": "21:20",
+              "name": "Vogelsang-Grünholz, Kummersholz"
+            },
+            {
+              "time": "21:24",
+              "name": "Vogelsang-Grünholz, ZOB"
+            },
+            {
+              "time": "21:26",
+              "name": "Vogelsang-Grünholz, Sankt-Johannes-Stift"
+            },
+            {
+              "time": "21:27",
+              "name": "Schwastrum"
+            },
+            {
+              "time": "21:29",
+              "name": "Waabs, Großwaabs"
+            },
+            {
+              "time": "21:30",
+              "name": "Waabs, Hökholz"
+            },
+            {
+              "time": "21:32",
+              "name": "Waabs, Mühlenstraße"
+            },
+            {
+              "time": "21:34",
+              "name": "Waabs, Abzweig nach Langholz"
+            },
+            {
+              "time": "21:35",
+              "name": "Waabs, Kummerteich"
+            },
+            {
+              "time": "21:37",
+              "name": "Waabs, Gut Ludwigsburg"
+            },
+            {
+              "time": "21:38",
+              "name": "Waabs, Abzweig nach Karlsminde"
+            },
+            {
+              "time": "21:39",
+              "name": "Waabs, Gast"
+            },
+            {
+              "time": "21:40",
+              "name": "Hohenstein, Gut"
+            },
+            {
+              "time": "21:42",
+              "name": "Hemmelmark, Gutsweg"
+            },
+            {
+              "time": "21:43",
+              "name": "Hemmelmark, Böhnrüher Weg"
+            },
+            {
+              "time": "21:45",
+              "name": "Eckernförde, Prinzenstraße"
+            },
+            {
+              "time": "21:46",
+              "name": "Eckernförde, Liliencronweg"
+            },
+            {
+              "time": "21:47",
+              "name": "Eckernförde, Feldweg"
+            },
+            {
+              "time": "21:50",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "21:54",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "22:00",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kurs811",
+      "name": "Kurs 811",
+      "typ": "so",
+      "datum": "2026-04-13",
+      "lines": [
+        {
+          "id": "w811a",
+          "linienNr": "711",
+          "fahrtNr": "3711803",
+          "abfahrt": "A",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Damp, Ostseehotel",
+          "startTime": "08:19",
+          "endTime": "08:56",
+          "stops": [
+            {
+              "time": "08:19",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            },
+            {
+              "time": "08:20",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "08:24",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "08:25",
+              "name": "Eckernförde, Mühlenberg"
+            },
+            {
+              "time": "08:25",
+              "name": "Eckernförde, J.-H.-Fehrs-Weg"
+            },
+            {
+              "time": "08:26",
+              "name": "Eckernförde, Gorch-Fock-Straße"
+            },
+            {
+              "time": "08:26",
+              "name": "Eckernförde, Friedhof Schleswiger Straße"
+            },
+            {
+              "time": "08:27",
+              "name": "Eckernförde, Kreiskrankenhaus"
+            },
+            {
+              "time": "08:31",
+              "name": "Barkelsby, Westerschauer Weg"
+            },
+            {
+              "time": "08:32",
+              "name": "Barkelsby, Grundschule"
+            },
+            {
+              "time": "08:33",
+              "name": "Barkelsby, Rommelsworth"
+            },
+            {
+              "time": "08:36",
+              "name": "Loose"
+            },
+            {
+              "time": "08:38",
+              "name": "Holzdorf, Moorbrücke"
+            },
+            {
+              "time": "08:39",
+              "name": "Holzdorf, Dorfstraße"
+            },
+            {
+              "time": "08:40",
+              "name": "Söby, Neu-Seeholz"
+            },
+            {
+              "time": "08:41",
+              "name": "Söby, Brücke"
+            },
+            {
+              "time": "08:42",
+              "name": "Kratt"
+            },
+            {
+              "time": "08:50",
+              "name": "Vogelsang-Grünholz, ZOB"
+            },
+            {
+              "time": "08:52",
+              "name": "Damp, Hegenholz"
+            },
+            {
+              "time": "08:54",
+              "name": "Damp, Werkhof"
+            },
+            {
+              "time": "08:56",
+              "name": "Damp, Ostseehotel"
+            }
+          ]
+        },
+        {
+          "id": "w811b",
+          "linienNr": "711",
+          "fahrtNr": "3711804",
+          "abfahrt": "",
+          "start": "Damp, Ostseehotel",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "08:57",
+          "endTime": "09:43",
+          "stops": [
+            {
+              "time": "08:57",
+              "name": "Damp, Ostseehotel"
+            },
+            {
+              "time": "09:00",
+              "name": "Damp, Ostseeklinik"
+            },
+            {
+              "time": "09:02",
+              "name": "Damp, Werkhof"
+            },
+            {
+              "time": "09:04",
+              "name": "Damp, Hegenholz"
+            },
+            {
+              "time": "09:10",
+              "name": "Vogelsang-Grünholz, ZOB"
+            },
+            {
+              "time": "09:13",
+              "name": "Kratt"
+            },
+            {
+              "time": "09:14",
+              "name": "Söby, Brücke"
+            },
+            {
+              "time": "09:15",
+              "name": "Söby, Neu-Seeholz"
+            },
+            {
+              "time": "09:16",
+              "name": "Holzdorf, Dorfstraße"
+            },
+            {
+              "time": "09:17",
+              "name": "Holzdorf, Moorbrücke"
+            },
+            {
+              "time": "09:19",
+              "name": "Loose"
+            },
+            {
+              "time": "09:22",
+              "name": "Barkelsby, Schwansenstraße"
+            },
+            {
+              "time": "09:23",
+              "name": "Barkelsby, Rommelsworth"
+            },
+            {
+              "time": "09:24",
+              "name": "Barkelsby, Grundschule"
+            },
+            {
+              "time": "09:25",
+              "name": "Barkelsby, Westerschauer Weg"
+            },
+            {
+              "time": "09:29",
+              "name": "Eckernförde, Kreiskrankenhaus"
+            },
+            {
+              "time": "09:30",
+              "name": "Eckernförde, Friedhof Schleswiger Straße"
+            },
+            {
+              "time": "09:31",
+              "name": "Eckernförde, Gorch-Fock-Straße"
+            },
+            {
+              "time": "09:31",
+              "name": "Eckernförde, J.-H.-Fehrs-Weg"
+            },
+            {
+              "time": "09:32",
+              "name": "Eckernförde, Mühlenberg"
+            },
+            {
+              "time": "09:33",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "09:37",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "09:43",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            }
+          ]
+        },
+        {
+          "id": "w811c",
+          "linienNr": "710",
+          "fahrtNr": "3710803",
+          "abfahrt": "A",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Kappeln, ZOB",
+          "startTime": "10:00",
+          "endTime": "11:00",
+          "stops": [
+            {
+              "time": "10:00",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            },
+            {
+              "time": "10:01",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "10:05",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "10:07",
+              "name": "Eckernförde, Vogelsang"
+            },
+            {
+              "time": "10:08",
+              "name": "Eckernförde, Feldweg"
+            },
+            {
+              "time": "10:08",
+              "name": "Eckernförde, Liliencronweg"
+            },
+            {
+              "time": "10:09",
+              "name": "Eckernförde, Cäcilienstraße"
+            },
+            {
+              "time": "10:10",
+              "name": "Eckernförde, Prinzenstraße"
+            },
+            {
+              "time": "10:11",
+              "name": "Hemmelmark, Böhnrüher Weg"
+            },
+            {
+              "time": "10:12",
+              "name": "Hemmelmark, Gutsweg"
+            },
+            {
+              "time": "10:14",
+              "name": "Hohenstein, Gut"
+            },
+            {
+              "time": "10:15",
+              "name": "Waabs, Gast"
+            },
+            {
+              "time": "10:16",
+              "name": "Waabs, Abzweig nach Karlsminde"
+            },
+            {
+              "time": "10:17",
+              "name": "Waabs, Gut Ludwigsburg"
+            },
+            {
+              "time": "10:19",
+              "name": "Waabs, Kummerteich"
+            },
+            {
+              "time": "10:20",
+              "name": "Waabs, Abzweig nach Langholz"
+            },
+            {
+              "time": "10:22",
+              "name": "Waabs, Mühlenstraße"
+            },
+            {
+              "time": "10:25",
+              "name": "Waabs, Hökholz"
+            },
+            {
+              "time": "10:26",
+              "name": "Waabs, Großwaabs"
+            },
+            {
+              "time": "10:28",
+              "name": "Schwastrum"
+            },
+            {
+              "time": "10:29",
+              "name": "Vogelsang-Grünholz, Sankt-Johannes-Stift"
+            },
+            {
+              "time": "10:33",
+              "name": "Vogelsang-Grünholz, ZOB"
+            },
+            {
+              "time": "10:35",
+              "name": "Vogelsang-Grünholz, Kummersholz"
+            },
+            {
+              "time": "10:37",
+              "name": "Dörphof, Grüntal"
+            },
+            {
+              "time": "10:38",
+              "name": "Dörphof, Schuby"
+            },
+            {
+              "time": "10:40",
+              "name": "Dörphof, Karlberger Straße"
+            },
+            {
+              "time": "10:44",
+              "name": "Karby, Am Ring"
+            },
+            {
+              "time": "10:45",
+              "name": "Karby, Südhang"
+            },
+            {
+              "time": "10:47",
+              "name": "Kopperby, Heidesiedlung"
+            },
+            {
+              "time": "10:48",
+              "name": "Kopperby, Uferweg"
+            },
+            {
+              "time": "10:49",
+              "name": "Kopperby, Boysenkoppel"
+            },
+            {
+              "time": "10:50",
+              "name": "Loitmark, Lüttfeld"
+            },
+            {
+              "time": "10:52",
+              "name": "Ellenberg, Jugendherberge"
+            },
+            {
+              "time": "10:53",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "11:00",
+              "name": "Kappeln, ZOB"
+            }
+          ]
+        },
+        {
+          "id": "w811d",
+          "linienNr": "710",
+          "fahrtNr": "3710804",
+          "abfahrt": "",
+          "start": "Kappeln, ZOB",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "11:00",
+          "endTime": "12:00",
+          "stops": [
+            {
+              "time": "11:00",
+              "name": "Kappeln, ZOB"
+            },
+            {
+              "time": "11:02",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "11:03",
+              "name": "Ellenberg, Jugendherberge"
+            },
+            {
+              "time": "11:04",
+              "name": "Loitmark, Lüttfeld"
+            },
+            {
+              "time": "11:05",
+              "name": "Kopperby, Boysenkoppel"
+            },
+            {
+              "time": "11:07",
+              "name": "Kopperby, Uferweg"
+            },
+            {
+              "time": "11:08",
+              "name": "Kopperby, Heidesiedlung"
+            },
+            {
+              "time": "11:10",
+              "name": "Karby, Südhang"
+            },
+            {
+              "time": "11:13",
+              "name": "Karby, Am Ring"
+            },
+            {
+              "time": "11:14",
+              "name": "Dörphof, Karlberger Straße"
+            },
+            {
+              "time": "11:16",
+              "name": "Dörphof, Schuby"
+            },
+            {
+              "time": "11:18",
+              "name": "Dörphof, Grüntal"
+            },
+            {
+              "time": "11:20",
+              "name": "Vogelsang-Grünholz, Kummersholz"
+            },
+            {
+              "time": "11:24",
+              "name": "Vogelsang-Grünholz, ZOB"
+            },
+            {
+              "time": "11:26",
+              "name": "Vogelsang-Grünholz, Sankt-Johannes-Stift"
+            },
+            {
+              "time": "11:27",
+              "name": "Schwastrum"
+            },
+            {
+              "time": "11:29",
+              "name": "Waabs, Großwaabs"
+            },
+            {
+              "time": "11:30",
+              "name": "Waabs, Hökholz"
+            },
+            {
+              "time": "11:32",
+              "name": "Waabs, Mühlenstraße"
+            },
+            {
+              "time": "11:34",
+              "name": "Waabs, Abzweig nach Langholz"
+            },
+            {
+              "time": "11:35",
+              "name": "Waabs, Kummerteich"
+            },
+            {
+              "time": "11:37",
+              "name": "Waabs, Gut Ludwigsburg"
+            },
+            {
+              "time": "11:38",
+              "name": "Waabs, Abzweig nach Karlsminde"
+            },
+            {
+              "time": "11:39",
+              "name": "Waabs, Gast"
+            },
+            {
+              "time": "11:40",
+              "name": "Hohenstein, Gut"
+            },
+            {
+              "time": "11:42",
+              "name": "Hemmelmark, Gutsweg"
+            },
+            {
+              "time": "11:43",
+              "name": "Hemmelmark, Böhnrüher Weg"
+            },
+            {
+              "time": "11:45",
+              "name": "Eckernförde, Prinzenstraße"
+            },
+            {
+              "time": "11:46",
+              "name": "Eckernförde, Liliencronweg"
+            },
+            {
+              "time": "11:47",
+              "name": "Eckernförde, Feldweg"
+            },
+            {
+              "time": "11:50",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "11:54",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "12:00",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            }
+          ]
+        },
+        {
+          "id": "w811e",
+          "linienNr": "710",
+          "fahrtNr": "3710807",
+          "abfahrt": "A",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Kappeln, ZOB",
+          "startTime": "14:00",
+          "endTime": "15:00",
+          "stops": [
+            {
+              "time": "14:00",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            },
+            {
+              "time": "14:01",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "14:05",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "14:07",
+              "name": "Eckernförde, Vogelsang"
+            },
+            {
+              "time": "14:08",
+              "name": "Eckernförde, Feldweg"
+            },
+            {
+              "time": "14:08",
+              "name": "Eckernförde, Liliencronweg"
+            },
+            {
+              "time": "14:09",
+              "name": "Eckernförde, Cäcilienstraße"
+            },
+            {
+              "time": "14:10",
+              "name": "Eckernförde, Prinzenstraße"
+            },
+            {
+              "time": "14:11",
+              "name": "Hemmelmark, Böhnrüher Weg"
+            },
+            {
+              "time": "14:12",
+              "name": "Hemmelmark, Gutsweg"
+            },
+            {
+              "time": "14:14",
+              "name": "Hohenstein, Gut"
+            },
+            {
+              "time": "14:15",
+              "name": "Waabs, Gast"
+            },
+            {
+              "time": "14:16",
+              "name": "Waabs, Abzweig nach Karlsminde"
+            },
+            {
+              "time": "14:17",
+              "name": "Waabs, Gut Ludwigsburg"
+            },
+            {
+              "time": "14:19",
+              "name": "Waabs, Kummerteich"
+            },
+            {
+              "time": "14:20",
+              "name": "Waabs, Abzweig nach Langholz"
+            },
+            {
+              "time": "14:22",
+              "name": "Waabs, Mühlenstraße"
+            },
+            {
+              "time": "14:25",
+              "name": "Waabs, Hökholz"
+            },
+            {
+              "time": "14:26",
+              "name": "Waabs, Großwaabs"
+            },
+            {
+              "time": "14:28",
+              "name": "Schwastrum"
+            },
+            {
+              "time": "14:29",
+              "name": "Vogelsang-Grünholz, Sankt-Johannes-Stift"
+            },
+            {
+              "time": "14:33",
+              "name": "Vogelsang-Grünholz, ZOB"
+            },
+            {
+              "time": "14:35",
+              "name": "Vogelsang-Grünholz, Kummersholz"
+            },
+            {
+              "time": "14:37",
+              "name": "Dörphof, Grüntal"
+            },
+            {
+              "time": "14:38",
+              "name": "Dörphof, Schuby"
+            },
+            {
+              "time": "14:40",
+              "name": "Dörphof, Karlberger Straße"
+            },
+            {
+              "time": "14:44",
+              "name": "Karby, Am Ring"
+            },
+            {
+              "time": "14:45",
+              "name": "Karby, Südhang"
+            },
+            {
+              "time": "14:47",
+              "name": "Kopperby, Heidesiedlung"
+            },
+            {
+              "time": "14:48",
+              "name": "Kopperby, Uferweg"
+            },
+            {
+              "time": "14:49",
+              "name": "Kopperby, Boysenkoppel"
+            },
+            {
+              "time": "14:50",
+              "name": "Loitmark, Lüttfeld"
+            },
+            {
+              "time": "14:52",
+              "name": "Ellenberg, Jugendherberge"
+            },
+            {
+              "time": "14:53",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "15:00",
+              "name": "Kappeln, ZOB"
+            }
+          ]
+        },
+        {
+          "id": "w811f",
+          "linienNr": "710",
+          "fahrtNr": "3710808",
+          "abfahrt": "",
+          "start": "Kappeln, ZOB",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "15:00",
+          "endTime": "16:00",
+          "stops": [
+            {
+              "time": "15:00",
+              "name": "Kappeln, ZOB"
+            },
+            {
+              "time": "15:02",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "15:03",
+              "name": "Ellenberg, Jugendherberge"
+            },
+            {
+              "time": "15:04",
+              "name": "Loitmark, Lüttfeld"
+            },
+            {
+              "time": "15:05",
+              "name": "Kopperby, Boysenkoppel"
+            },
+            {
+              "time": "15:07",
+              "name": "Kopperby, Uferweg"
+            },
+            {
+              "time": "15:08",
+              "name": "Kopperby, Heidesiedlung"
+            },
+            {
+              "time": "15:10",
+              "name": "Karby, Südhang"
+            },
+            {
+              "time": "15:13",
+              "name": "Karby, Am Ring"
+            },
+            {
+              "time": "15:14",
+              "name": "Dörphof, Karlberger Straße"
+            },
+            {
+              "time": "15:16",
+              "name": "Dörphof, Schuby"
+            },
+            {
+              "time": "15:18",
+              "name": "Dörphof, Grüntal"
+            },
+            {
+              "time": "15:20",
+              "name": "Vogelsang-Grünholz, Kummersholz"
+            },
+            {
+              "time": "15:24",
+              "name": "Vogelsang-Grünholz, ZOB"
+            },
+            {
+              "time": "15:26",
+              "name": "Vogelsang-Grünholz, Sankt-Johannes-Stift"
+            },
+            {
+              "time": "15:27",
+              "name": "Schwastrum"
+            },
+            {
+              "time": "15:29",
+              "name": "Waabs, Großwaabs"
+            },
+            {
+              "time": "15:30",
+              "name": "Waabs, Hökholz"
+            },
+            {
+              "time": "15:32",
+              "name": "Waabs, Mühlenstraße"
+            },
+            {
+              "time": "15:34",
+              "name": "Waabs, Abzweig nach Langholz"
+            },
+            {
+              "time": "15:35",
+              "name": "Waabs, Kummerteich"
+            },
+            {
+              "time": "15:37",
+              "name": "Waabs, Gut Ludwigsburg"
+            },
+            {
+              "time": "15:38",
+              "name": "Waabs, Abzweig nach Karlsminde"
+            },
+            {
+              "time": "15:39",
+              "name": "Waabs, Gast"
+            },
+            {
+              "time": "15:40",
+              "name": "Hohenstein, Gut"
+            },
+            {
+              "time": "15:42",
+              "name": "Hemmelmark, Gutsweg"
+            },
+            {
+              "time": "15:43",
+              "name": "Hemmelmark, Böhnrüher Weg"
+            },
+            {
+              "time": "15:45",
+              "name": "Eckernförde, Prinzenstraße"
+            },
+            {
+              "time": "15:46",
+              "name": "Eckernförde, Liliencronweg"
+            },
+            {
+              "time": "15:47",
+              "name": "Eckernförde, Feldweg"
+            },
+            {
+              "time": "15:50",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "15:54",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "16:00",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            }
+          ]
+        },
+        {
+          "id": "w811g",
+          "linienNr": "746",
+          "fahrtNr": "3746806",
+          "abfahrt": "D",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Surendorf, Ortsmitte",
+          "startTime": "17:02",
+          "endTime": "17:27",
+          "stops": [
+            {
+              "time": "17:02",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            },
+            {
+              "time": "17:04",
+              "name": "Eckernförde, Berliner Straße"
+            },
+            {
+              "time": "17:05",
+              "name": "Eckernförde, Sandkrug"
+            },
+            {
+              "time": "17:07",
+              "name": "Altenhof, Alter Bahnhof"
+            },
+            {
+              "time": "17:09",
+              "name": "Altenhof, Jordanschule"
+            },
+            {
+              "time": "17:10",
+              "name": "Altenhof, Grüner Jäger"
+            },
+            {
+              "time": "17:12",
+              "name": "Altenhof, Aschau"
+            },
+            {
+              "time": "17:13",
+              "name": "Lindhöft, Int Holt"
+            },
+            {
+              "time": "17:14",
+              "name": "Lindhöft, Strandweg"
+            },
+            {
+              "time": "17:16",
+              "name": "Lindhöft, Alte Schule"
+            },
+            {
+              "time": "17:17",
+              "name": "Lindhöft, Mühlenweg"
+            },
+            {
+              "time": "17:18",
+              "name": "Noer, Siedlung"
+            },
+            {
+              "time": "17:20",
+              "name": "Noer, Schloss"
+            },
+            {
+              "time": "17:22",
+              "name": "Grönwohld, Gut"
+            },
+            {
+              "time": "17:23",
+              "name": "Krusendorf, Wischkamp"
+            },
+            {
+              "time": "17:24",
+              "name": "Krusendorf, Kirche"
+            },
+            {
+              "time": "17:27",
+              "name": "Surendorf, Ortsmitte"
+            }
+          ]
+        },
+        {
+          "id": "w811h",
+          "linienNr": "710",
+          "fahrtNr": "3710811",
+          "abfahrt": "A",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Kappeln, ZOB",
+          "startTime": "18:00",
+          "endTime": "19:00",
+          "stops": [
+            {
+              "time": "18:00",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            },
+            {
+              "time": "18:01",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "18:05",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "18:07",
+              "name": "Eckernförde, Vogelsang"
+            },
+            {
+              "time": "18:08",
+              "name": "Eckernförde, Feldweg"
+            },
+            {
+              "time": "18:08",
+              "name": "Eckernförde, Liliencronweg"
+            },
+            {
+              "time": "18:09",
+              "name": "Eckernförde, Cäcilienstraße"
+            },
+            {
+              "time": "18:10",
+              "name": "Eckernförde, Prinzenstraße"
+            },
+            {
+              "time": "18:11",
+              "name": "Hemmelmark, Böhnrüher Weg"
+            },
+            {
+              "time": "18:12",
+              "name": "Hemmelmark, Gutsweg"
+            },
+            {
+              "time": "18:14",
+              "name": "Hohenstein, Gut"
+            },
+            {
+              "time": "18:15",
+              "name": "Waabs, Gast"
+            },
+            {
+              "time": "18:16",
+              "name": "Waabs, Abzweig nach Karlsminde"
+            },
+            {
+              "time": "18:17",
+              "name": "Waabs, Gut Ludwigsburg"
+            },
+            {
+              "time": "18:19",
+              "name": "Waabs, Kummerteich"
+            },
+            {
+              "time": "18:20",
+              "name": "Waabs, Abzweig nach Langholz"
+            },
+            {
+              "time": "18:22",
+              "name": "Waabs, Mühlenstraße"
+            },
+            {
+              "time": "18:25",
+              "name": "Waabs, Hökholz"
+            },
+            {
+              "time": "18:26",
+              "name": "Waabs, Großwaabs"
+            },
+            {
+              "time": "18:28",
+              "name": "Schwastrum"
+            },
+            {
+              "time": "18:29",
+              "name": "Vogelsang-Grünholz, Sankt-Johannes-Stift"
+            },
+            {
+              "time": "18:33",
+              "name": "Vogelsang-Grünholz, ZOB"
+            },
+            {
+              "time": "18:35",
+              "name": "Vogelsang-Grünholz, Kummersholz"
+            },
+            {
+              "time": "18:37",
+              "name": "Dörphof, Grüntal"
+            },
+            {
+              "time": "18:38",
+              "name": "Dörphof, Schuby"
+            },
+            {
+              "time": "18:40",
+              "name": "Dörphof, Karlberger Straße"
+            },
+            {
+              "time": "18:44",
+              "name": "Karby, Am Ring"
+            },
+            {
+              "time": "18:45",
+              "name": "Karby, Südhang"
+            },
+            {
+              "time": "18:47",
+              "name": "Kopperby, Heidesiedlung"
+            },
+            {
+              "time": "18:48",
+              "name": "Kopperby, Uferweg"
+            },
+            {
+              "time": "18:49",
+              "name": "Kopperby, Boysenkoppel"
+            },
+            {
+              "time": "18:50",
+              "name": "Loitmark, Lüttfeld"
+            },
+            {
+              "time": "18:52",
+              "name": "Ellenberg, Jugendherberge"
+            },
+            {
+              "time": "18:53",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "19:00",
+              "name": "Kappeln, ZOB"
+            }
+          ]
+        },
+        {
+          "id": "w811i",
+          "linienNr": "710",
+          "fahrtNr": "3710812",
+          "abfahrt": "",
+          "start": "Kappeln, ZOB",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "19:00",
+          "endTime": "20:00",
+          "stops": [
+            {
+              "time": "19:00",
+              "name": "Kappeln, ZOB"
+            },
+            {
+              "time": "19:02",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "19:03",
+              "name": "Ellenberg, Jugendherberge"
+            },
+            {
+              "time": "19:04",
+              "name": "Loitmark, Lüttfeld"
+            },
+            {
+              "time": "19:05",
+              "name": "Kopperby, Boysenkoppel"
+            },
+            {
+              "time": "19:07",
+              "name": "Kopperby, Uferweg"
+            },
+            {
+              "time": "19:08",
+              "name": "Kopperby, Heidesiedlung"
+            },
+            {
+              "time": "19:10",
+              "name": "Karby, Südhang"
+            },
+            {
+              "time": "19:13",
+              "name": "Karby, Am Ring"
+            },
+            {
+              "time": "19:14",
+              "name": "Dörphof, Karlberger Straße"
+            },
+            {
+              "time": "19:16",
+              "name": "Dörphof, Schuby"
+            },
+            {
+              "time": "19:18",
+              "name": "Dörphof, Grüntal"
+            },
+            {
+              "time": "19:20",
+              "name": "Vogelsang-Grünholz, Kummersholz"
+            },
+            {
+              "time": "19:24",
+              "name": "Vogelsang-Grünholz, ZOB"
+            },
+            {
+              "time": "19:26",
+              "name": "Vogelsang-Grünholz, Sankt-Johannes-Stift"
+            },
+            {
+              "time": "19:27",
+              "name": "Schwastrum"
+            },
+            {
+              "time": "19:29",
+              "name": "Waabs, Großwaabs"
+            },
+            {
+              "time": "19:30",
+              "name": "Waabs, Hökholz"
+            },
+            {
+              "time": "19:32",
+              "name": "Waabs, Mühlenstraße"
+            },
+            {
+              "time": "19:34",
+              "name": "Waabs, Abzweig nach Langholz"
+            },
+            {
+              "time": "19:35",
+              "name": "Waabs, Kummerteich"
+            },
+            {
+              "time": "19:37",
+              "name": "Waabs, Gut Ludwigsburg"
+            },
+            {
+              "time": "19:38",
+              "name": "Waabs, Abzweig nach Karlsminde"
+            },
+            {
+              "time": "19:39",
+              "name": "Waabs, Gast"
+            },
+            {
+              "time": "19:40",
+              "name": "Hohenstein, Gut"
+            },
+            {
+              "time": "19:42",
+              "name": "Hemmelmark, Gutsweg"
+            },
+            {
+              "time": "19:43",
+              "name": "Hemmelmark, Böhnrüher Weg"
+            },
+            {
+              "time": "19:45",
+              "name": "Eckernförde, Prinzenstraße"
+            },
+            {
+              "time": "19:46",
+              "name": "Eckernförde, Liliencronweg"
+            },
+            {
+              "time": "19:47",
+              "name": "Eckernförde, Feldweg"
+            },
+            {
+              "time": "19:50",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "19:54",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "20:00",
+              "name": "Eckernförde, Bahnhof/ZOB"
+            }
+          ]
+        }
+      ]
     }
   ],
-  "activeKurs": "kurs214",
-  "version": "v22",
-  "saved": "2026-04-26T04:09:36.328Z"
+  "activeKurs": "kurs211",
+  "version": "v25",
+  "saved": "2026-04-26T04:11:42.096Z"
 }
