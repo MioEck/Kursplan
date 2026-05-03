@@ -188,7 +188,7 @@ main{padding:12px 16px 100px;}
 <body>
 <header>
   <div class="logo">🚌</div>
-  <div class="htxt"><h1>KURSPLAN <span style="font-size:13px;font-weight:400;color:var(--mut);letter-spacing:1px;vertical-align:middle">v25</span></h1><p id="hd"></p></div>
+  <div class="htxt"><h1>KURSPLAN <span style="font-size:13px;font-weight:400;color:var(--mut);letter-spacing:1px;vertical-align:middle">v26</span></h1><p id="hd"></p></div>
   <button class="lock-btn" id="lockBtn" onclick="openKeypad()" title="Admin">🔒</button>
   <button class="lock-btn" id="themeBtn" onclick="toggleTheme()" title="Hell/Dunkel">🌙</button>
   <button id="gpsBtn" onclick="toggleGps()">
@@ -1341,7 +1341,7 @@ const STOP_COORDS = {
 }; // Koordinaten werden per 📍 selbst eingemessen
 
 // STATE
-const VER = 'v25';
+const VER = 'v26';
 // Harten Reset erzwingen - löscht alten Cache komplett
 localStorage.removeItem('kp_data');
 localStorage.removeItem('kp_ver');
@@ -1559,7 +1559,10 @@ function toggleGps() {
     status.textContent = 'Suche Standort...';
     gwId = navigator.geolocation.watchPosition(
       function(p) {
-        gPos = {lat: p.coords.latitude, lon: p.coords.longitude};
+        var newLat = p.coords.latitude, newLon = p.coords.longitude;
+        var moved = gPos ? haversine(gPos.lat, gPos.lon, newLat, newLon) : 999;
+        gPos = {lat: newLat, lon: newLon};
+        if (moved < 20) return; // Weniger als 20m - nicht neu berechnen
         btn.classList.remove('searching');
         btn.classList.add('on');
         lbl.textContent = 'GPS AN';
@@ -1653,14 +1656,35 @@ function luStops() {
   for (var i = 0; i < line.stops.length; i++) {
     var el = document.getElementById('sx' + line.id + i);
     if (!el) continue;
-    el.className = el.className.replace(/\b(past|cur)\b/g, '').trim();
-    var st = stopState(line.stops[i].name, line.stops[i].time, line.stops, i);
-    if (st) el.className += ' ' + st;
+    var newSt = stopState(line.stops[i].name, line.stops[i].time, line.stops, i);
+    var wantPast = newSt === 'past', wantCur = newSt === 'cur';
+    var hasPast = el.classList.contains('past'), hasCur = el.classList.contains('cur');
+    if (hasPast !== wantPast || hasCur !== wantCur) {
+      el.classList.remove('past','cur');
+      if (newSt) el.classList.add(newSt);
+    }
   }
 }
 
 // HELPERS
 function uid() { return Math.random().toString(36).slice(2,9); }
+
+function updateGpsStatus() {
+  if (!gPos) return;
+  var status = document.getElementById('gpsStatus');
+  if (!status) return;
+  var C = getCoords();
+  var nearName = '', nearD = Infinity;
+  for (var key in C) {
+    var d = haversine(gPos.lat, gPos.lon, C[key][0], C[key][1]);
+    if (d < nearD) { nearD = d; nearName = key; }
+  }
+  if (nearName) {
+    status.textContent = '📍 ' + Math.round(nearD) + 'm → ' + nearName;
+  } else {
+    status.textContent = '📍 ' + gPos.lat.toFixed(5) + ', ' + gPos.lon.toFixed(5);
+  }
+}
 
 function exportNotizen() {
   var n = {};
@@ -2020,8 +2044,10 @@ function saveKursF() {
 // INIT
 document.getElementById('hd').textContent = new Date().toLocaleDateString('de-DE',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
 setInterval(function(){
-  luStops();
-  checkNotizForCurrentStop();
+  if (!gPos) { // Nur ohne GPS automatisch updaten - mit GPS macht watchPosition das
+    luStops();
+    checkNotizForCurrentStop();
+  }
 }, 30000);
 setInterval(function() {
   var t = getCurrentTime();
