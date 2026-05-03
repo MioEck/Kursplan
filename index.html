@@ -46,9 +46,9 @@ header{display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px s
 .tab-filter{flex-shrink:0;cursor:pointer;padding:9px 13px;background:var(--s1);border:1.5px solid var(--brd);border-radius:12px;display:flex;flex-direction:column;align-items:center;gap:2px;transition:all .2s;user-select:none;}
 .tab-filter .tn{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:1px;color:var(--txt);line-height:1;}
 .tab-filter .tl{font-size:10px;color:var(--mut);}
-.tab-filter.active-schule{background:#3b82f6;border-color:#3b82f6;}
+.tab-filter.active-schule{background:#27ae60;border-color:#27ae60;}
 .tab-filter.active-schule .tn,.tab-filter.active-schule .tl{color:#fff;}
-.tab-filter.active-we{background:#8b5cf6;border-color:#8b5cf6;}
+.tab-filter.active-we{background:#1abc9c;border-color:#1abc9c;}
 .tab-filter.active-we .tn,.tab-filter.active-we .tl{color:#fff;}
 main{padding:12px 16px 100px;}
 .kh{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px;}
@@ -188,7 +188,7 @@ main{padding:12px 16px 100px;}
 <body>
 <header>
   <div class="logo">🚌</div>
-  <div class="htxt"><h1>KURSPLAN <span style="font-size:13px;font-weight:400;color:var(--mut);letter-spacing:1px;vertical-align:middle">v29</span></h1><p id="hd"></p></div>
+  <div class="htxt"><h1>KURSPLAN <span style="font-size:13px;font-weight:400;color:var(--mut);letter-spacing:1px;vertical-align:middle">v30</span></h1><p id="hd"></p></div>
   <button class="lock-btn" id="lockBtn" onclick="openKeypad()" title="Admin">🔒</button>
   <button class="lock-btn" id="themeBtn" onclick="toggleTheme()" title="Hell/Dunkel">🌙</button>
   <button id="gpsBtn" onclick="toggleGps()">
@@ -1341,7 +1341,7 @@ const STOP_COORDS = {
 }; // Koordinaten werden per 📍 selbst eingemessen
 
 // STATE
-const VER = 'v29';
+const VER = 'v30';
 // Harten Reset erzwingen - löscht alten Cache komplett
 localStorage.removeItem('kp_data');
 localStorage.removeItem('kp_ver');
@@ -2876,7 +2876,7 @@ function getFilteredKurse() {
 }
 
 
-setFilter('we');
+setFilter('schule');
 
 setAdminMode(isAdmin);
 
