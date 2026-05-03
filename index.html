@@ -188,7 +188,7 @@ main{padding:12px 16px 100px;}
 <body>
 <header>
   <div class="logo">🚌</div>
-  <div class="htxt"><h1>KURSPLAN <span style="font-size:13px;font-weight:400;color:var(--mut);letter-spacing:1px;vertical-align:middle">v27</span></h1><p id="hd"></p></div>
+  <div class="htxt"><h1>KURSPLAN <span style="font-size:13px;font-weight:400;color:var(--mut);letter-spacing:1px;vertical-align:middle">v28</span></h1><p id="hd"></p></div>
   <button class="lock-btn" id="lockBtn" onclick="openKeypad()" title="Admin">🔒</button>
   <button class="lock-btn" id="themeBtn" onclick="toggleTheme()" title="Hell/Dunkel">🌙</button>
   <button id="gpsBtn" onclick="toggleGps()">
@@ -1341,7 +1341,7 @@ const STOP_COORDS = {
 }; // Koordinaten werden per 📍 selbst eingemessen
 
 // STATE
-const VER = 'v27';
+const VER = 'v28';
 // Harten Reset erzwingen - löscht alten Cache komplett
 localStorage.removeItem('kp_data');
 localStorage.removeItem('kp_ver');
@@ -1536,6 +1536,30 @@ function loadStopCoordsFromOSM(lat, lon, callback) {
     });
 }
 
+var gpsTimer = null;
+
+function gpsUpdate() {
+  // Läuft alle 5 Sekunden - hält UI flüssig
+  if (!gPos) return;
+  var btn = document.getElementById('gpsBtn');
+  var lbl = document.getElementById('gpsLbl');
+  var dot = document.getElementById('gpsDot');
+  var status = document.getElementById('gpsStatus');
+  btn.classList.remove('searching');
+  btn.classList.add('on');
+  lbl.textContent = 'GPS AN';
+  dot.className = 'gps-dot found';
+  // Nächste Haltestelle finden
+  var C = getCoords();
+  var nearName = '', nearD = Infinity;
+  for (var key in C) {
+    var d = haversine(gPos.lat, gPos.lon, C[key][0], C[key][1]);
+    if (d < nearD) { nearD = d; nearName = key; }
+  }
+  if (nearName) status.textContent = '📍 ' + Math.round(nearD) + 'm → ' + nearName;
+  luStops();
+}
+
 function toggleGps() {
   var btn = document.getElementById('gpsBtn');
   var lbl = document.getElementById('gpsLbl');
@@ -1544,44 +1568,30 @@ function toggleGps() {
   var status = document.getElementById('gpsStatus');
   if (gwId !== null) {
     navigator.geolocation.clearWatch(gwId);
-    gwId = null; gPos = null; 
+    clearInterval(gpsTimer);
+    gwId = null; gPos = null; gpsTimer = null;
     btn.classList.remove('on','searching');
     lbl.textContent = 'GPS AUS';
     bar.classList.remove('visible');
     luStops();
   } else {
     if (!navigator.geolocation) { alert('GPS nicht verfügbar'); return; }
-    // Show searching state
     btn.classList.add('searching');
     lbl.textContent = 'SUCHE...';
     bar.classList.add('visible');
     dot.className = 'gps-dot searching';
     status.textContent = 'Suche Standort...';
+    // watchPosition speichert NUR die Position - kein schwerer Code hier!
     gwId = navigator.geolocation.watchPosition(
       function(p) {
-        var newLat = p.coords.latitude, newLon = p.coords.longitude;
-        var moved = gPos ? haversine(gPos.lat, gPos.lon, newLat, newLon) : 999;
-        gPos = {lat: newLat, lon: newLon};
-        if (moved < 20) return; // Weniger als 20m - nicht neu berechnen
-        btn.classList.remove('searching');
-        btn.classList.add('on');
-        lbl.textContent = 'GPS AN';
-        dot.className = 'gps-dot found';
-        status.textContent = '📍 ' + gPos.lat.toFixed(5) + ', ' + gPos.lon.toFixed(5);
-        // Lade Haltestellen-Koordinaten aus OSM Overpass API
-        loadStopCoordsFromOSM(gPos.lat, gPos.lon, function() {
-          var C = getCoords();
-          var nearName = '', nearD = Infinity;
-          for (var key in C) {
-            var d = haversine(gPos.lat, gPos.lon, C[key][0], C[key][1]);
-            if (d < nearD) { nearD = d; nearName = key; }
-          }
-          if (nearName) {
-            status.textContent = '📍 ' + Math.round(nearD) + 'm → ' + nearName;
-          }
-          luStops();
-        checkNotizForCurrentStop();
-        });
+        gPos = {lat: p.coords.latitude, lon: p.coords.longitude};
+        // Erster Fix: OSM laden und Timer starten
+        if (!gpsTimer) {
+          loadStopCoordsFromOSM(gPos.lat, gPos.lon, function() {
+            gpsUpdate(); // Sofort einmal updaten
+            gpsTimer = setInterval(gpsUpdate, 5000); // Dann alle 5 Sekunden
+          });
+        }
       },
       function(err) {
         dot.className = 'gps-dot';
@@ -1589,7 +1599,7 @@ function toggleGps() {
         btn.classList.remove('searching','on');
         lbl.textContent = 'GPS ERR';
       },
-      {enableHighAccuracy: true, maximumAge: 5000, timeout: 15000}
+      {enableHighAccuracy: false, maximumAge: 15000, timeout: 30000}
     );
   }
 }
