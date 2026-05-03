@@ -15,12 +15,12 @@
 <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0f1117;--s1:#1a1d27;--s2:#22263a;--acc:#f5a623;--txt:#eef0f8;--mut:#6b7199;--brd:#2e3350;--red:#ef4444;--grn:#2ecc71;}
-:root.light{--bg:#f0f4f8;--s1:#ffffff;--s2:#e8edf3;--acc:#f5a623;--txt:#1a202c;--mut:#718096;--brd:#cbd5e0;--red:#ef4444;--grn:#38a169;}
+:root{--bg:#071a07;--s1:#0e2b0e;--s2:#163d16;--acc:#4caf50;--txt:#d8f0d8;--mut:#7ac17b;--brd:#2d6b2b;--red:#ef4444;--grn:#3a8e38;}
+:root.light{--bg:#e8f5e8;--s1:#ffffff;--s2:#d0ebd0;--acc:#2e7d32;--txt:#0a1f0a;--mut:#3a8e38;--brd:#7ac17b;--red:#ef4444;--grn:#2e7d32;}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-height:100vh;}
 header{display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px solid var(--brd);position:sticky;top:0;z-index:100;background:var(--bg);}
-.logo{width:40px;height:40px;background:var(--acc);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
+.logo{width:40px;height:40px;background:#2d6b2b;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;}
 .htxt{flex:1;}
 .htxt h1{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:2px;}
 .htxt p{font-size:12px;color:var(--mut);}
@@ -46,9 +46,9 @@ header{display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px s
 .tab-filter{flex-shrink:0;cursor:pointer;padding:9px 13px;background:var(--s1);border:1.5px solid var(--brd);border-radius:12px;display:flex;flex-direction:column;align-items:center;gap:2px;transition:all .2s;user-select:none;}
 .tab-filter .tn{font-family:'Bebas Neue',sans-serif;font-size:16px;letter-spacing:1px;color:var(--txt);line-height:1;}
 .tab-filter .tl{font-size:10px;color:var(--mut);}
-.tab-filter.active-schule{background:#27ae60;border-color:#27ae60;}
+.tab-filter.active-schule{background:#1b5e20;border-color:#4caf50;}
 .tab-filter.active-schule .tn,.tab-filter.active-schule .tl{color:#fff;}
-.tab-filter.active-we{background:#1abc9c;border-color:#1abc9c;}
+.tab-filter.active-we{background:#2e7d32;border-color:#7ac17b;}
 .tab-filter.active-we .tn,.tab-filter.active-we .tl{color:#fff;}
 main{padding:12px 16px 100px;}
 .kh{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px;}
@@ -128,7 +128,7 @@ main{padding:12px 16px 100px;}
 .sync-btn:disabled{opacity:.5;cursor:not-allowed;}
 .keypad-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.85);z-index:999;align-items:center;justify-content:center;}
 .keypad-overlay.open{display:flex;}
-.keypad-box{background:var(--s1);border-radius:22px;padding:24px 20px;width:260px;border:1px solid var(--brd);}
+.keypad-box{background:#0e2b0e;border-radius:22px;padding:24px 20px;width:260px;border:1px solid #4caf50;}
 .keypad-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;text-align:center;margin-bottom:16px;}
 .keypad-display{background:var(--bg);border:1.5px solid var(--brd);border-radius:12px;padding:12px;text-align:center;font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:8px;margin-bottom:16px;min-height:58px;color:var(--acc);}
 .keypad-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;}
@@ -188,7 +188,7 @@ main{padding:12px 16px 100px;}
 <body>
 <header>
   <div class="logo">🚌</div>
-  <div class="htxt"><h1>KURSPLAN <span style="font-size:13px;font-weight:400;color:var(--mut);letter-spacing:1px;vertical-align:middle">v30</span></h1><p id="hd"></p></div>
+  <div class="htxt"><h1>KURSPLAN <span style="font-size:13px;font-weight:400;color:var(--mut);letter-spacing:1px;vertical-align:middle">v31</span></h1><p id="hd"></p></div>
   <button class="lock-btn" id="lockBtn" onclick="openKeypad()" title="Admin">🔒</button>
   <button class="lock-btn" id="themeBtn" onclick="toggleTheme()" title="Hell/Dunkel">🌙</button>
   <button id="gpsBtn" onclick="toggleGps()">
@@ -1341,7 +1341,7 @@ const STOP_COORDS = {
 }; // Koordinaten werden per 📍 selbst eingemessen
 
 // STATE
-const VER = 'v30';
+const VER = 'v31';
 // Harten Reset erzwingen - löscht alten Cache komplett
 localStorage.removeItem('kp_data');
 localStorage.removeItem('kp_ver');
