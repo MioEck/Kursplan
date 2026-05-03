@@ -188,7 +188,7 @@ main{padding:12px 16px 100px;}
 <body>
 <header>
   <div class="logo">🚌</div>
-  <div class="htxt"><h1>KURSPLAN <span style="font-size:13px;font-weight:400;color:var(--mut);letter-spacing:1px;vertical-align:middle">v28</span></h1><p id="hd"></p></div>
+  <div class="htxt"><h1>KURSPLAN <span style="font-size:13px;font-weight:400;color:var(--mut);letter-spacing:1px;vertical-align:middle">v29</span></h1><p id="hd"></p></div>
   <button class="lock-btn" id="lockBtn" onclick="openKeypad()" title="Admin">🔒</button>
   <button class="lock-btn" id="themeBtn" onclick="toggleTheme()" title="Hell/Dunkel">🌙</button>
   <button id="gpsBtn" onclick="toggleGps()">
@@ -1341,7 +1341,7 @@ const STOP_COORDS = {
 }; // Koordinaten werden per 📍 selbst eingemessen
 
 // STATE
-const VER = 'v28';
+const VER = 'v29';
 // Harten Reset erzwingen - löscht alten Cache komplett
 localStorage.removeItem('kp_data');
 localStorage.removeItem('kp_ver');
@@ -1408,16 +1408,18 @@ function persist() {
 }
 
 // GPS
+var _coordsCache = null;
 function getCoords() {
-  // STOP_COORDS (fest eingebaut) + localStorage (manuell gemessen)
+  if (_coordsCache) return _coordsCache; // Cache - localStorage nur einmal lesen!
   var saved = {};
   try { saved = JSON.parse(localStorage.getItem('kp_coords') || '{}'); } catch(e) {}
-  var merged = {};
+  _coordsCache = {};
   var k;
-  for (k in STOP_COORDS) merged[k] = STOP_COORDS[k];
-  for (k in saved) merged[k] = saved[k]; // localStorage überschreibt wenn genauer
-  return merged;
+  for (k in STOP_COORDS) _coordsCache[k] = STOP_COORDS[k];
+  for (k in saved) _coordsCache[k] = saved[k];
+  return _coordsCache;
 }
+function invalidateCoordsCache() { _coordsCache = null; } // Aufrufen nach GPS-Einmessen
 function saveCoord(name, lat, lon) {
   var saved = {};
   try { saved = JSON.parse(localStorage.getItem('kp_coords') || '{}'); } catch(e) {}
@@ -1527,6 +1529,10 @@ function loadStopCoordsFromOSM(lat, lon, callback) {
       }
       localStorage.setItem('kp_coords', JSON.stringify(saved));
       osmCoordsLoaded = true;
+      // normName Cache aufbauen - einmalig
+      window._normCache = {};
+      var _C = getCoords();
+      for (var _k in _C) window._normCache[normName(_k)] = _C[_k];
       if(status) status.textContent = '✅ ' + count + ' Haltestellen geladen';
       if(callback) callback();
     })
@@ -1539,24 +1545,16 @@ function loadStopCoordsFromOSM(lat, lon, callback) {
 var gpsTimer = null;
 
 function gpsUpdate() {
-  // Läuft alle 5 Sekunden - hält UI flüssig
   if (!gPos) return;
+  // UI Buttons nur einmal setzen
   var btn = document.getElementById('gpsBtn');
-  var lbl = document.getElementById('gpsLbl');
-  var dot = document.getElementById('gpsDot');
-  var status = document.getElementById('gpsStatus');
-  btn.classList.remove('searching');
-  btn.classList.add('on');
-  lbl.textContent = 'GPS AN';
-  dot.className = 'gps-dot found';
-  // Nächste Haltestelle finden
-  var C = getCoords();
-  var nearName = '', nearD = Infinity;
-  for (var key in C) {
-    var d = haversine(gPos.lat, gPos.lon, C[key][0], C[key][1]);
-    if (d < nearD) { nearD = d; nearName = key; }
+  if (!btn.classList.contains('on')) {
+    btn.classList.remove('searching');
+    btn.classList.add('on');
+    document.getElementById('gpsLbl').textContent = 'GPS AN';
+    document.getElementById('gpsDot').className = 'gps-dot found';
   }
-  if (nearName) status.textContent = '📍 ' + Math.round(nearD) + 'm → ' + nearName;
+  // luStops macht die eigentliche Arbeit (bereits optimiert)
   luStops();
 }
 
@@ -1671,13 +1669,26 @@ function luStops() {
     for (var j = 0; j < line.stops.length; j++) {
       var sn = line.stops[j].name;
       var c = C[sn];
-      if (!c) { var nm = normName(sn); for (var ck in C) { if (normName(ck)===nm){c=C[ck];break;} } }
+      if (!c && window._normCache) { var nm = normName(sn); c = window._normCache[nm]; }
       if (!c) continue;
       var d = haversine(gPos.lat, gPos.lon, c[0], c[1]);
       if (d < nearD) { nearD = d; nearI = j; }
     }
   }
 
+  // Status-Bar updaten
+  if (nearI >= 0) {
+    var nearStop = line.stops[nearI];
+    var status = document.getElementById('gpsStatus');
+    if (status && nearStop) {
+      var C2 = getCoords();
+      var c2 = C2[nearStop.name] || (window._normCache && window._normCache[normName(nearStop.name)]);
+      if (c2) {
+        var dist = Math.round(haversine(gPos.lat, gPos.lon, c2[0], c2[1]));
+        status.textContent = '📍 ' + dist + 'm → ' + nearStop.name;
+      }
+    }
+  }
   for (var i = 0; i < line.stops.length; i++) {
     var el = document.getElementById('sx' + line.id + i);
     if (!el) continue;
