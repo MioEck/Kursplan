@@ -573,8 +573,8 @@
       10.0004916
     ],
     "Rathaus": [
-      54.0702458,
-      9.9878418
+      54.4703993,
+      9.8348864
     ],
     "Falderapark": [
       54.0702454,
@@ -701,8 +701,8 @@
       10.6635068
     ],
     "Kolberger Straße": [
-      53.901597,
-      10.6609462
+      54.3250738,
+      9.647723
     ],
     "Bergstraße": [
       53.8991116,
@@ -1301,8 +1301,8 @@
       10.2259176
     ],
     "Rosenweg": [
-      53.6838236,
-      10.2224851
+      54.3189426,
+      9.6876746
     ],
     "Henstedt, Kirche": [
       53.7908126,
@@ -1513,16 +1513,16 @@
       9.9588802
     ],
     "Krankenhaus": [
-      53.8115021,
-      10.3643101
+      54.2968103,
+      9.6603446
     ],
     "Am Glindhorst": [
       53.8076987,
       10.3890732
     ],
     "Hebbelstraße": [
-      53.8027102,
-      10.3816349
+      54.3218355,
+      9.6852278
     ],
     "Masurenwegschule": [
       53.8050039,
@@ -1541,8 +1541,8 @@
       10.3766469
     ],
     "Feuerwache": [
-      53.8115439,
-      10.3813712
+      54.3201222,
+      9.6919274
     ],
     "Kurparkallee": [
       53.8070806,
@@ -1909,8 +1909,8 @@
       9.9779946
     ],
     "Sportplatz": [
-      54.1262194,
-      9.9867918
+      54.3095167,
+      9.5840579
     ],
     "Fliegenfelde": [
       53.8512507,
@@ -2237,16 +2237,16 @@
       10.0060223
     ],
     "Rendsburger Straße": [
-      54.085719,
-      9.9779047
+      54.4556114,
+      9.8358248
     ],
     "Lahnstraße": [
       54.0481283,
       10.0014499
     ],
     "Kampstraße": [
-      54.0499553,
-      10.0034079
+      54.3157874,
+      9.6782445
     ],
     "Asperkamp": [
       54.0491472,
@@ -2965,8 +2965,8 @@
       9.9855628
     ],
     "Waldorfschule": [
-      54.1124288,
-      9.9839235
+      54.3040225,
+      9.687377
     ],
     "Parchimer Straße": [
       54.1143988,
@@ -3401,8 +3401,8 @@
       9.9882137
     ],
     "Bismarckstraße": [
-      54.0815289,
-      9.9922173
+      54.4552682,
+      9.8382421
     ],
     "Busbetriebshof": [
       54.0836748,
@@ -3845,8 +3845,8 @@
       9.9488609
     ],
     "Husumer Straße": [
-      54.057024,
-      9.9383735
+      54.3091183,
+      9.6367711
     ],
     "Meldorfer Straße": [
       54.0577954,
@@ -4017,8 +4017,8 @@
       10.3424398
     ],
     "Schule": [
-      54.0093025,
-      10.0169965
+      54.3078887,
+      9.7199272
     ],
     "Twiete": [
       54.0102818,
@@ -4469,8 +4469,8 @@
       9.9918488
     ],
     "Berliner Straße": [
-      54.1204648,
-      9.9865391
+      54.3187933,
+      9.7298594
     ],
     "Rüschdal": [
       54.102289,
@@ -6309,16 +6309,16 @@
       10.430707
     ],
     "Am Stadion": [
-      53.8136412,
-      10.3764181
+      54.3506244,
+      10.1252272
     ],
     "Heimatmuseum": [
       53.8079809,
       10.3736994
     ],
     "Gartenstraße": [
-      53.8142328,
-      10.38579
+      54.2926962,
+      9.6525963
     ],
     "Am Steinfelder Redder (Mitte)": [
       53.8184397,
@@ -6433,8 +6433,8 @@
       9.9487075
     ],
     "Weberstraße": [
-      54.0649907,
-      9.9525931
+      54.2959183,
+      9.6487577
     ],
     "Wilhelm-Tanck-Schule": [
       54.0768956,
@@ -6485,8 +6485,8 @@
       9.8970369
     ],
     "Rügenstraße": [
-      54.0613722,
-      9.9747077
+      54.3181992,
+      9.6970816
     ],
     "Holsatenring": [
       54.0641007,
@@ -7921,12 +7921,12 @@
       10.44385
     ],
     "Ulmenstraße": [
-      54.1589491,
-      10.4476695
+      54.3203032,
+      9.6811361
     ],
     "Danziger Straße": [
-      54.1570581,
-      10.4466328
+      54.3202303,
+      9.7345754
     ],
     "Springhirsch": [
       53.8337874,
@@ -12109,8 +12109,8 @@
       9.9925388
     ],
     "Fritz-Reuter-Straße": [
-      54.2799459,
-      9.6578912
+      54.3101179,
+      9.7231643
     ],
     "Am Urnenfriedhof": [
       54.3131598,
@@ -16587,6 +16587,706 @@
     "Fahrdorf, Abzw. Loopstedt": [
       54.5011023,
       9.587591
+    ],
+    "Schwensby Kappelner Straße": [
+      54.7477478,
+      9.6620612
+    ],
+    "Steinbergkirche, Westerholm": [
+      54.7423859,
+      9.7444014
+    ],
+    "Steinberghaff": [
+      54.7682934,
+      9.8070218
+    ],
+    "Hürup, Kielsgaard": [
+      54.7370507,
+      9.5334171
+    ],
+    "Koppelheck, Abzw. Niesgrau": [
+      54.7511365,
+      9.8203021
+    ],
+    "Koppelheck, Gelting Mole": [
+      54.7475621,
+      9.862589
+    ],
+    "Lehbek, Nordstraße": [
+      54.7439098,
+      9.8767359
+    ],
+    "Gelting, Nordstraße": [
+      54.7460659,
+      9.899135
+    ],
+    "Nübelfeld, Nordstraße": [
+      54.7695822,
+      9.725776
+    ],
+    "Koppelheck, Nordstraße": [
+      54.7499381,
+      9.831473
+    ],
+    "Steinberg, Nordstraße": [
+      54.7545449,
+      9.785089
+    ],
+    "Steinbergkirche, Nordstraße": [
+      54.7544333,
+      9.7585815
+    ],
+    "Hattlund, Dänische Schule": [
+      54.7675126,
+      9.7337593
+    ],
+    "Steinberghaff, Nordstraße": [
+      54.7563622,
+      9.8010619
+    ],
+    "Bistoft, Mühle": [
+      54.7073431,
+      9.5274134
+    ],
+    "Bistoft, Mühlenbrück": [
+      54.7085856,
+      9.5221907
+    ],
+    "Großsolt, Bondenau-Brücke": [
+      54.6992401,
+      9.5106016
+    ],
+    "Silberstedt, Amtsverwaltung": [
+      54.5185128,
+      9.3694429
+    ],
+    "Silberstedt, Ost": [
+      54.5175957,
+      9.3819365
+    ],
+    "Frörupsand-/Holz": [
+      54.6908717,
+      9.4388449
+    ],
+    "Voldevraa": [
+      54.7844769,
+      9.6114803
+    ],
+    "Falshöft": [
+      54.7682064,
+      9.9557706
+    ],
+    "Husbymühle": [
+      54.774032,
+      9.5951975
+    ],
+    "Stobdrup, Abzw.": [
+      54.7342385,
+      9.8014417
+    ],
+    "Sörup, Löstrup": [
+      54.726436,
+      9.6850811
+    ],
+    "Sieverstedt, Abzw. Jalm": [
+      54.6380455,
+      9.4354575
+    ],
+    "Esperstoft, Kamper Weg": [
+      54.5558821,
+      9.3647246
+    ],
+    "Jübek, Altes Dorf": [
+      54.5561103,
+      9.3862427
+    ],
+    "Jübek, Schulstraße": [
+      54.5566795,
+      9.3933872
+    ],
+    "Steinbergkirche, Neukirchen": [
+      54.7975305,
+      9.7441626
+    ],
+    "Dollerup, Nordstraße": [
+      54.7762675,
+      9.6809064
+    ],
+    "Niesgrau, Hauptstraße": [
+      54.7421841,
+      9.8122832
+    ],
+    "Husby West": [
+      54.7651465,
+      9.5747912
+    ],
+    "Quern, Scheersberg": [
+      54.7621643,
+      9.7230184
+    ],
+    "Satrup, Ausackerbrück": [
+      54.7065691,
+      9.5997924
+    ],
+    "Friedrichstal": [
+      54.7914701,
+      9.7233754
+    ],
+    "Kalleby,Nord": [
+      54.7826607,
+      9.7263258
+    ],
+    "Gräfsholz, Nordstraße": [
+      54.7695821,
+      9.7055199
+    ],
+    "Kalleby": [
+      54.7770878,
+      9.7271388
+    ],
+    "Kalleby, Nord": [
+      54.7827231,
+      9.7264429
+    ],
+    "Dingholz, Abzw. Quern": [
+      54.7371694,
+      9.7087792
+    ],
+    "Steinbergkirche, Gintof Nord": [
+      54.7694483,
+      9.7670312
+    ],
+    "Unewatt, Nordstraße": [
+      54.7948834,
+      9.6482724
+    ],
+    "Norgaardholz": [
+      54.7805534,
+      9.8007204
+    ],
+    "Neukirchen (Ostsee)": [
+      54.7982172,
+      9.7564491
+    ],
+    "Sieverstedt Stenderupau/Kreuzung": [
+      54.6404047,
+      9.4584741
+    ],
+    "Sieverstedt Stenderupau-West": [
+      54.6290503,
+      9.4691226
+    ],
+    "Sieverstedt Süderholz": [
+      54.6525256,
+      9.4505777
+    ],
+    "Sieverstedt, Flensburger Str.": [
+      54.6604045,
+      9.4508269
+    ],
+    "Oeversee, Grazer Platz": [
+      54.7019777,
+      9.4366624
+    ],
+    "Sieverstedt Süderschmedebyholz": [
+      54.6734472,
+      9.4398488
+    ],
+    "Frörup, An der Treene": [
+      54.6923955,
+      9.4314318
+    ],
+    "Gelting, Goldhöft Süd": [
+      54.7612094,
+      9.9045013
+    ],
+    "Frörup Bäckerberg": [
+      54.6924314,
+      9.426437
+    ],
+    "Dingholz I": [
+      54.7366355,
+      9.7083033
+    ],
+    "Kronsgaard, Feuerwehr": [
+      54.7322374,
+      9.969511
+    ],
+    "Satrup, West": [
+      54.6942864,
+      9.5922558
+    ],
+    "Satrup, Dänische Schule": [
+      54.6946431,
+      9.5901572
+    ],
+    "Großsolt, Kollerup Abzweig II": [
+      54.7125902,
+      9.5431346
+    ],
+    "Schwensbyfeld": [
+      54.738871,
+      9.6456035
+    ],
+    "Grundhof, Bönstrup Alte Dorfstraße": [
+      54.7819138,
+      9.6296198
+    ],
+    "Streichmühle, Abzw. Grünberg": [
+      54.7967836,
+      9.6722303
+    ],
+    "Grundhof, Bönstrup Gastwirtschaft": [
+      54.7849908,
+      9.6207095
+    ],
+    "Grundhof, Abzw. Bönstrup": [
+      54.7794595,
+      9.6461829
+    ],
+    "Sterup, Zweimühlenweg": [
+      54.7282586,
+      9.735499
+    ],
+    "Sterup, Kappelner Straße": [
+      54.7279675,
+      9.7376522
+    ],
+    "Sterup, Sterupbek": [
+      54.7275971,
+      9.7275246
+    ],
+    "Kronsgaard, Regenholz": [
+      54.7368617,
+      9.9666786
+    ],
+    "Gelting Stenderup Süd": [
+      54.7342384,
+      9.9338928
+    ],
+    "Lehbek, Abzw.": [
+      54.7429317,
+      9.8749679
+    ],
+    "Bobeck, Nordstraße": [
+      54.731524,
+      9.9428387
+    ],
+    "Stenderup, Nordstraße": [
+      54.7383184,
+      9.9254577
+    ],
+    "Bobeck, Mühlenstraße": [
+      54.7353345,
+      9.9400415
+    ],
+    "Börsby": [
+      54.7380604,
+      9.9444091
+    ],
+    "Bistoft, Loitstraße": [
+      54.698452,
+      9.5461306
+    ],
+    "Bistoft, Wiesenweg": [
+      54.7015927,
+      9.5398751
+    ],
+    "Großsolt, Kirchberg": [
+      54.6995747,
+      9.515065
+    ],
+    "Friesheck, Kreuzung": [
+      54.7094592,
+      9.5063471
+    ],
+    "Satrup, Obdruphof": [
+      54.695578,
+      9.5769642
+    ],
+    "Satrup, Obdrup": [
+      54.69658,
+      9.5685117
+    ],
+    "Hostrup, Hostrupholz": [
+      54.6750416,
+      9.518705
+    ],
+    "Sterup, Kirchplatz": [
+      54.7292121,
+      9.7382209
+    ],
+    "Sterup, Grundschule": [
+      54.7293084,
+      9.7414312
+    ],
+    "Kleinsolt, Alte Dorfstraße": [
+      54.7261774,
+      9.5137927
+    ],
+    "Tarp, Theodor-Storm-Straße": [
+      54.6675541,
+      9.4081289
+    ],
+    "Satrup, Glücksburger Straße": [
+      54.6989748,
+      9.6059272
+    ],
+    "Ausacker, Dammende": [
+      54.7259965,
+      9.5706542
+    ],
+    "Sörup Ostring": [
+      54.7196678,
+      9.6777374
+    ],
+    "Sterup Möllmarkheck": [
+      54.7253431,
+      9.7026545
+    ],
+    "Sterup Bremholm": [
+      54.7277815,
+      9.7195309
+    ],
+    "Steinbergkirche, Meiereistraße": [
+      54.7555158,
+      9.7600953
+    ],
+    "Hardesby Kreuzung": [
+      54.7501914,
+      9.643338
+    ],
+    "Winderatt Kreuzung": [
+      54.7364442,
+      9.6322406
+    ],
+    "Sörup, Dänische Schule": [
+      54.7186407,
+      9.6715077
+    ],
+    "Gelting, Norderholm": [
+      54.7468677,
+      9.8972854
+    ],
+    "Sieverstedt Stenderupau/Raiffeisenbank": [
+      54.6399258,
+      9.4640639
+    ],
+    "Gelting, Schule": [
+      54.7507026,
+      9.8995255
+    ],
+    "Kleinwolstrup, An der Eiche": [
+      54.7357953,
+      9.4902652
+    ],
+    "Freienwill, Kirche": [
+      54.7279422,
+      9.4931344
+    ],
+    "Eggebek, Westerlangstedt": [
+      54.6052699,
+      9.3988037
+    ],
+    "Hürup, Einkaufsmarkt": [
+      54.7537951,
+      9.5289432
+    ],
+    "Eggebek ZOB": [
+      54.6191111,
+      9.3697796
+    ],
+    "Langstedt, Osterlangstedt/ Mühlenweg": [
+      54.622714,
+      9.401247
+    ],
+    "Unewatt, Dorf": [
+      54.7965334,
+      9.656572
+    ],
+    "Tarp, Mühlenhof": [
+      54.6618215,
+      9.3985181
+    ],
+    "Nübelfeld, Dorf": [
+      54.7696937,
+      9.7266258
+    ],
+    "Koppelheck, Schmiede": [
+      54.7513261,
+      9.8483949
+    ],
+    "Sterup, Gemeinschaftsschule": [
+      54.7297207,
+      9.745093
+    ],
+    "Hollingstedt, Matzenkamp": [
+      54.4651628,
+      9.3673035
+    ],
+    "Sörup ZOB/Bahnhof": [
+      54.7168582,
+      9.6698557
+    ],
+    "Steinbergkirche, Westerholm Abzw. Quern": [
+      54.7417934,
+      9.7405359
+    ],
+    "Quern, Mitte": [
+      54.7537819,
+      9.7192526
+    ],
+    "Quern, Süd": [
+      54.7497549,
+      9.7182736
+    ],
+    "Dingholz Momberger": [
+      54.7405645,
+      9.6969249
+    ],
+    "Barg": [
+      54.7427204,
+      9.690097
+    ],
+    "Schwensby Eiche": [
+      54.745866,
+      9.6767047
+    ],
+    "Hardesby Tannenlück": [
+      54.7511767,
+      9.6520552
+    ],
+    "Husby Seegarder Weg": [
+      54.7533655,
+      9.6174507
+    ],
+    "Husbyholz": [
+      54.7561013,
+      9.6119669
+    ],
+    "Husbyries": [
+      54.7657654,
+      9.598348
+    ],
+    "Wattschaukrug": [
+      54.7672992,
+      9.5622629
+    ],
+    "Husby Ortsmitte": [
+      54.7646829,
+      9.5789181
+    ],
+    "Großsolt, Steindamm": [
+      54.7063488,
+      9.5072795
+    ],
+    "Freienwill, Kindergarten": [
+      54.7272898,
+      9.5002625
+    ],
+    "Kleinsolt, Schulstraße": [
+      54.7274905,
+      9.5132188
+    ],
+    "Hürup, Meiereistraß": [
+      54.7447834,
+      9.5284243
+    ],
+    "Hürup, Am Ehrenmal": [
+      54.748467,
+      9.5294304
+    ],
+    "Hürup, Kastanienweg": [
+      54.7509928,
+      9.5293708
+    ],
+    "Kleinwolstrup, Abzw.": [
+      54.7338513,
+      9.4829307
+    ],
+    "Eggebek, Klinkenberg": [
+      54.6201157,
+      9.379005
+    ],
+    "Langstedt, Bollingstedter Straße": [
+      54.6163499,
+      9.3862416
+    ],
+    "Bollingstedt, Dorfstraße": [
+      54.5928834,
+      9.4125869
+    ],
+    "Bollingstedt, Schulring": [
+      54.5931943,
+      9.4207287
+    ],
+    "Tarp, Ortsmitte": [
+      54.664062,
+      9.4025467
+    ],
+    "Tarp, Kätnerfeld BHF": [
+      54.6660273,
+      9.3983307
+    ],
+    "Tarp, Hashauweg": [
+      54.6594241,
+      9.3962234
+    ],
+    "Tarp, Schulzentrum": [
+      54.6673832,
+      9.4042781
+    ],
+    "Stangheck, Tranbüll": [
+      54.7340633,
+      9.8662504
+    ],
+    "Gelting, Süderholm": [
+      54.7453977,
+      9.8969704
+    ],
+    "Gelting, Mühlenfeld": [
+      54.737169,
+      9.897016
+    ],
+    "Gelting, Bosiek": [
+      54.7337629,
+      9.8966888
+    ],
+    "Kronsgaard, Dorfstraße": [
+      54.7319545,
+      9.9633205
+    ],
+    "Grundhof, LutzhöfterStraße": [
+      54.7725433,
+      9.652648
+    ],
+    "Süderschmedeby, Großsolter Str.": [
+      54.6642955,
+      9.4539593
+    ],
+    "Süderschmedeby, Feuerwehr": [
+      54.660336,
+      9.4540753
+    ],
+    "Ausacker, Holnisser Landstraße": [
+      54.7367764,
+      9.5742282
+    ],
+    "Roikier, Süd": [
+      54.7788374,
+      9.7468599
+    ],
+    "Roikier": [
+      54.7833173,
+      9.746702
+    ],
+    "Tarp, Kastanienallee": [
+      54.6558592,
+      9.4085695
+    ],
+    "Steinbergkirche, Gintoft Süd": [
+      54.7639054,
+      9.764501
+    ],
+    "Nübelfeld, Süd": [
+      54.768271,
+      9.7261936
+    ],
+    "Nordballig, West": [
+      54.7845001,
+      9.6869362
+    ],
+    "Dollerupholz, Seeklüft": [
+      54.7990089,
+      9.7141846
+    ],
+    "Husby Grötacker": [
+      54.7627354,
+      9.6125691
+    ],
+    "Sieverstedt Wendeplatz": [
+      54.6455887,
+      9.4814989
+    ],
+    "Sieverstedt, Gastwirtschaft": [
+      54.6430332,
+      9.4758166
+    ],
+    "Schwensby, Buschkoppel": [
+      54.7565951,
+      9.6689089
+    ],
+    "Schwensby, Hollehitt": [
+      54.7577543,
+      9.6617809
+    ],
+    "Grundhof, Lutzhöft": [
+      54.7625102,
+      9.6359834
+    ],
+    "Grundhof, Mariengaard": [
+      54.7734368,
+      9.6345001
+    ],
+    "Langstedt, Bäcker": [
+      54.6167157,
+      9.3852009
+    ],
+    "Langstedt Süd": [
+      54.6156937,
+      9.380495
+    ],
+    "Hostrup, Landstraße": [
+      54.6605891,
+      9.516325
+    ],
+    "Hürupfeld II": [
+      54.7486543,
+      9.5617209
+    ],
+    "Dollerup, Süderende": [
+      54.7723567,
+      9.6740598
+    ],
+    "Dollerup, Am Dorfplatz": [
+      54.7741426,
+      9.6804453
+    ],
+    "Dollerup, Bachstraße": [
+      54.7777972,
+      9.6802268
+    ],
+    "Streichmühle II": [
+      54.7850335,
+      9.6712632
+    ],
+    "Streichmühle, Terkelstoft": [
+      54.7904224,
+      9.6584018
+    ],
+    "Nordballig": [
+      54.7867566,
+      9.6962788
+    ],
+    "Markerup Kreuzung": [
+      54.7515699,
+      9.5769064
+    ],
+    "Markerup, Hauptstraße": [
+      54.7513745,
+      9.5899963
+    ],
+    "Husby, Seegaard": [
+      54.7499236,
+      9.618372
+    ],
+    "Eggebek, ZOB": [
+      54.6193618,
+      9.3701618
+    ],
+    "Eggebek Norderstraße": [
+      54.6236237,
+      9.3785706
     ]
   },
   "notizen": {
@@ -25575,6 +26275,6 @@
     }
   ],
   "activeKurs": "kurs211",
-  "version": "v30",
-  "saved": "2026-05-03T10:58:00.979Z"
+  "version": "v31",
+  "saved": "2026-05-04T10:08:13.131Z"
 }
