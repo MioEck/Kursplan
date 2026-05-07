@@ -1328,7 +1328,7 @@ const STOP_COORDS = {
   "Kosel, Haarmoor":[54.504642,9.759294],
   "Kosel, Koselfeld":[54.491796,9.748043],
   "Kosel, Ornumholz":[54.5226421,9.7658197],
-  "Kratt":[54.517533,9.364494],
+  "Kratt":[54.560704,9.935551],
   "Kropp, Industriestraße":[54.4118997,9.5221779],
   "Kropp, Schule/ZOB":[54.4133492,9.5120954],
   "Krusendorf, Kirche":[54.46745,10.051167],
@@ -1845,15 +1845,27 @@ function toggleMapFollow() {
 function updateMapGpsMarker() {
   if (!leafletMap || !gPos) return;
 
-  // Update or create GPS markers
   if (mapGpsCircle) {
+    // Move existing markers
     mapGpsCircle.setLatLng([gPos.lat, gPos.lon]);
-    mapGpsRing.setLatLng([gPos.lat, gPos.lon]);
+    if (mapGpsRing) mapGpsRing.setLatLng([gPos.lat, gPos.lon]);
+  } else {
+    // Create markers if map is open but markers don't exist yet
+    mapGpsRing = L.circleMarker([gPos.lat, gPos.lon], {
+      radius: 18, fillColor: '#2196F3', color: '#2196F3',
+      weight: 1, fillOpacity: 0.2
+    }).addTo(leafletMap);
+    mapGpsCircle = L.circleMarker([gPos.lat, gPos.lon], {
+      radius: 10, fillColor: '#2196F3', color: '#fff',
+      weight: 3, fillOpacity: 0.9
+    }).addTo(leafletMap);
+    mapGpsCircle.bindTooltip('📍 Du bist hier', {permanent: false, direction: 'top'});
+    mapGpsCircle.on('click', function() { toggleMapFollow(); });
   }
 
   // Follow mode: keep map centered on GPS
   if (mapFollowMode) {
-    leafletMap.setView([gPos.lat, gPos.lon], leafletMap.getZoom(), {animate: true});
+    leafletMap.setView([gPos.lat, gPos.lon], leafletMap.getZoom(), {animate: true, duration: 0.5});
   }
 }
 
@@ -1894,6 +1906,7 @@ function gpsUpdate() {
   }
   // luStops macht die eigentliche Arbeit (bereits optimiert)
   luStops();
+  updateMapGpsMarker();
 }
 
 function toggleGps() {
