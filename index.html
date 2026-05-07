@@ -1912,7 +1912,7 @@ function toggleGps() {
         if (!gpsTimer) {
           loadStopCoordsFromOSM(gPos.lat, gPos.lon, function() {
             gpsUpdate(); // Sofort einmal updaten
-            gpsTimer = setInterval(gpsUpdate, 5000); // Dann alle 5 Sekunden
+            gpsTimer = setInterval(gpsUpdate, 3000); // Dann alle 5 Sekunden
           });
         }
       },
@@ -1922,7 +1922,7 @@ function toggleGps() {
         btn.classList.remove('searching','on');
         lbl.textContent = 'GPS ERR';
       },
-      {enableHighAccuracy: false, maximumAge: 15000, timeout: 30000}
+      {enableHighAccuracy: true, maximumAge: 0, timeout: 10000}
     );
   }
 }
@@ -1930,7 +1930,8 @@ function savGps(name) {
   if (!navigator.geolocation) { alert('GPS nicht verfügbar'); return; }
   navigator.geolocation.getCurrentPosition(
     function(p) { saveCoord(name, p.coords.latitude, p.coords.longitude); alert('Gespeichert: ' + name); renderLines(); },
-    function() { alert('GPS Fehler'); }
+    function() { alert('GPS Fehler'); },
+    {enableHighAccuracy: true, maximumAge: 0, timeout: 10000}
   );
 }
 
