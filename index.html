@@ -2122,17 +2122,29 @@ function luStops() {
       }
     }
   }
+  // Zeitbasierter Index einmalig berechnen (verhindert Rückwärtssprung bei gleichen GPS-Koordinaten)
+  var timeI = -1;
+  var nowLu = new Date().getHours()*60 + new Date().getMinutes();
+  for (var j = 0; j < line.stops.length; j++) {
+    var tp = line.stops[j].time.split(':');
+    if (parseInt(tp[0])*60 + parseInt(tp[1]) <= nowLu) timeI = j;
+  }
+  // GPS + Zeit kombinieren: nie hinter zeitbasiertem Index zurückspringen
+  // Löst: gleiche Koordinaten bei Stehzeit (z.B. Bahnhof 5:41/5:47) und Rückweg (gleiche Haltestelle)
+  var curI = (gPos && nearI >= 0) ? Math.max(nearI, timeI >= 0 ? timeI : nearI) : timeI;
+
   for (var i = 0; i < line.stops.length; i++) {
     var el = document.getElementById('sx' + line.id + i);
     if (!el) continue;
     var newSt;
-    if (gPos) {
-      if (nearI < 0) newSt = timeState(line.stops, i);
-      else if (i < nearI) newSt = 'past';
-      else if (i === nearI) newSt = 'cur';
-      else newSt = '';
+    if (curI < 0) {
+      newSt = '';
+    } else if (i < curI) {
+      newSt = 'past';
+    } else if (i === curI) {
+      newSt = 'cur';
     } else {
-      newSt = timeState(line.stops, i);
+      newSt = '';
     }
     var hasPast = el.classList.contains('past'), hasCur = el.classList.contains('cur');
     var wantPast = newSt==='past', wantCur = newSt==='cur';
