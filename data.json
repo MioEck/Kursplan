@@ -4997,12 +4997,20 @@
               "name": "Waabs, Gast"
             },
             {
+              "time": "17:16",
+              "name": "Waabs, Abzweig nach Karlsminde"
+            },
+            {
               "time": "17:17",
               "name": "Waabs, Gut Ludwigsburg"
             },
             {
               "time": "17:19",
               "name": "Waabs, Kummerteich"
+            },
+            {
+              "time": "17:20",
+              "name": "Waabs, Abzweig nach Langholz"
             },
             {
               "time": "17:22",
@@ -5189,12 +5197,20 @@
               "name": "Waabs, Mühlenstraße"
             },
             {
+              "time": "18:34",
+              "name": "Waabs, Abzweig nach Langholz"
+            },
+            {
               "time": "18:35",
               "name": "Waabs, Kummerteich"
             },
             {
               "time": "18:37",
               "name": "Waabs, Gut Ludwigsburg"
+            },
+            {
+              "time": "18:38",
+              "name": "Waabs, Abzweig nach Karlsminde"
             },
             {
               "time": "18:39",
@@ -5306,12 +5322,20 @@
               "name": "Waabs, Gast"
             },
             {
+              "time": "20:16",
+              "name": "Waabs, Abzweig nach Karlsminde"
+            },
+            {
               "time": "20:17",
               "name": "Waabs, Gut Ludwigsburg"
             },
             {
               "time": "20:19",
               "name": "Waabs, Kummerteich"
+            },
+            {
+              "time": "20:20",
+              "name": "Waabs, Abzweig nach Langholz"
             },
             {
               "time": "20:22",
@@ -5491,12 +5515,20 @@
               "name": "Waabs, Mühlenstraße"
             },
             {
+              "time": "21:34",
+              "name": "Waabs, Abzweig nach Langholz"
+            },
+            {
               "time": "21:35",
               "name": "Waabs, Kummerteich"
             },
             {
               "time": "21:37",
               "name": "Waabs, Gut Ludwigsburg"
+            },
+            {
+              "time": "21:38",
+              "name": "Waabs, Abzweig nach Karlsminde"
             },
             {
               "time": "21:39",
@@ -5599,12 +5631,20 @@
               "name": "Waabs, Gast"
             },
             {
+              "time": "22:16",
+              "name": "Waabs, Abzweig nach Karlsminde"
+            },
+            {
               "time": "22:17",
               "name": "Waabs, Gut Ludwigsburg"
             },
             {
               "time": "22:19",
               "name": "Waabs, Kummerteich"
+            },
+            {
+              "time": "22:20",
+              "name": "Waabs, Abzweig nach Langholz"
             },
             {
               "time": "22:22",
@@ -9695,6 +9735,6 @@
     }
   ],
   "activeKurs": "kurs217",
-  "version": "v55",
-  "saved": "2026-05-28T17:23:07.939Z"
+  "version": "v56",
+  "saved": "2026-05-28T17:51:08.805Z"
 }
