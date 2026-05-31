@@ -56,7 +56,8 @@
           "stops": [
             {
               "time": "05:02",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "G"
             },
             {
               "time": "05:04",
@@ -357,7 +358,8 @@
                   "dest": "Kappeln, ZOB",
                   "fp": 5
                 }
-              ]
+              ],
+              "letter": "J"
             }
           ]
         },
@@ -511,7 +513,8 @@
             },
             {
               "time": "07:45",
-              "name": "Eckernförde, Schulzentrum Süd"
+              "name": "Eckernförde, Schulzentrum Süd",
+              "letter": "B"
             },
             {
               "time": "07:46",
@@ -555,7 +558,8 @@
                   "dest": "Surendorf, Schule",
                   "fp": 5
                 }
-              ]
+              ],
+              "letter": "J"
             }
           ]
         }
@@ -661,7 +665,8 @@
             },
             {
               "time": "05:43",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         },
@@ -961,7 +966,8 @@
             },
             {
               "time": "07:28",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         }
@@ -1178,7 +1184,8 @@
                   "dest": "Rendsburg, Stadttheater/ZOB",
                   "fp": 5
                 }
-              ]
+              ],
+              "letter": "J"
             }
           ]
         },
@@ -1193,7 +1200,8 @@
           "stops": [
             {
               "time": "11:00",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "F"
             },
             {
               "time": "11:01",
@@ -1350,7 +1358,8 @@
                   "dest": "Kropp, Schule/ZOB",
                   "fp": 5
                 }
-              ]
+              ],
+              "letter": "J"
             }
           ]
         },
@@ -1373,7 +1382,8 @@
                   "dest": "Eckernförde, Bahnhof/ZOB",
                   "fp": 5
                 }
-              ]
+              ],
+              "letter": "F"
             },
             {
               "time": "13:29",
@@ -1481,7 +1491,8 @@
             },
             {
               "time": "14:09",
-              "name": "Eckernförde, Schulzentrum Süd"
+              "name": "Eckernförde, Schulzentrum Süd",
+              "letter": "A"
             }
           ]
         },
@@ -1496,7 +1507,8 @@
           "stops": [
             {
               "time": "15:05",
-              "name": "Eckernförde, Schulzentrum Süd"
+              "name": "Eckernförde, Schulzentrum Süd",
+              "letter": "D"
             },
             {
               "time": "15:17",
@@ -1689,7 +1701,8 @@
             },
             {
               "time": "06:52",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A"
             },
             {
               "time": "06:54",
@@ -1765,7 +1778,8 @@
             },
             {
               "time": "07:28",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "H"
             },
             {
               "time": "07:35",
@@ -1773,7 +1787,8 @@
             },
             {
               "time": "07:40",
-              "name": "Eckernförde, Schulzentrum Süd"
+              "name": "Eckernförde, Schulzentrum Süd",
+              "letter": "A"
             }
           ]
         },
@@ -1789,7 +1804,7 @@
             {
               "time": "08:02",
               "name": "Eckernförde, Bahnhof/ZOB",
-              "letter": "H",
+              "letter": "D",
               "hints": [
                 {
                   "typ": "Z",
@@ -1982,7 +1997,8 @@
             },
             {
               "time": "11:58",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         },
@@ -2018,7 +2034,8 @@
             },
             {
               "time": "12:35",
-              "name": "Eckernförde, Schulzentrum Süd"
+              "name": "Eckernförde, Schulzentrum Süd",
+              "letter": "C"
             },
             {
               "time": "12:36",
@@ -2343,7 +2360,8 @@
                   "dest": "Neudorf, B76",
                   "fp": 5
                 }
-              ]
+              ],
+              "letter": "A"
             },
             {
               "time": "08:01",
@@ -2427,7 +2445,8 @@
             },
             {
               "time": "08:33",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "B"
             },
             {
               "time": "08:35",
@@ -2554,7 +2573,8 @@
             },
             {
               "time": "10:24",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A"
             },
             {
               "time": "10:26",
@@ -2650,7 +2670,8 @@
                   "dest": "Neudorf, B76",
                   "fp": 5
                 }
-              ]
+              ],
+              "letter": "J"
             }
           ]
         },
@@ -2735,7 +2756,7 @@
             {
               "time": "11:50",
               "name": "Vogelsang-Grünholz, ZOB",
-              "letter": "A",
+              "letter": "B",
               "hints": [
                 {
                   "typ": "Z",
@@ -2787,7 +2808,7 @@
             {
               "time": "12:10",
               "name": "Vogelsang-Grünholz, ZOB",
-              "letter": "B"
+              "letter": "A"
             },
             {
               "time": "12:13",
@@ -2859,7 +2880,8 @@
             },
             {
               "time": "12:43",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         },
@@ -2874,7 +2896,8 @@
           "stops": [
             {
               "time": "13:19",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "A"
             },
             {
               "time": "13:20",
@@ -2968,7 +2991,8 @@
                   "dest": "Schönhagen, Torhaus",
                   "fp": 5
                 }
-              ]
+              ],
+              "letter": "B"
             },
             {
               "time": "13:52",
@@ -3011,7 +3035,8 @@
             },
             {
               "time": "14:10",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A"
             },
             {
               "time": "14:13",
@@ -3083,7 +3108,8 @@
             },
             {
               "time": "14:43",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         },
@@ -3106,7 +3132,8 @@
             },
             {
               "time": "15:10",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "G"
             },
             {
               "time": "15:20",
@@ -3167,7 +3194,8 @@
           "stops": [
             {
               "time": "16:19",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "A"
             },
             {
               "time": "16:20",
@@ -3243,7 +3271,8 @@
                   "dest": "Kappeln, ZOB",
                   "fp": 5
                 }
-              ]
+              ],
+              "letter": "B"
             },
             {
               "time": "16:52",
@@ -3359,7 +3388,8 @@
             },
             {
               "time": "17:43",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         }
@@ -3384,7 +3414,8 @@
           "stops": [
             {
               "time": "12:26",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "F"
             },
             {
               "time": "12:28",
@@ -3420,7 +3451,8 @@
                   "dest": "Rendsburg, Bahnhofstraße/ZOB",
                   "fp": 5
                 }
-              ]
+              ],
+              "letter": "B"
             },
             {
               "time": "12:37",
@@ -3641,7 +3673,8 @@
           "stops": [
             {
               "time": "15:00",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "A"
             },
             {
               "time": "15:01",
@@ -3717,7 +3750,8 @@
             },
             {
               "time": "15:33",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "B"
             },
             {
               "time": "15:35",
@@ -3850,7 +3884,8 @@
             },
             {
               "time": "16:24",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A"
             },
             {
               "time": "16:26",
@@ -3934,7 +3969,8 @@
                   "dest": "Neudorf, B76",
                   "fp": 5
                 }
-              ]
+              ],
+              "letter": "J"
             }
           ]
         },
@@ -4089,7 +4125,8 @@
             },
             {
               "time": "18:55",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         },
@@ -4104,7 +4141,8 @@
           "stops": [
             {
               "time": "19:02",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "G"
             },
             {
               "time": "19:04",
@@ -4392,7 +4430,8 @@
             },
             {
               "time": "20:56",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         },
@@ -4407,7 +4446,8 @@
           "stops": [
             {
               "time": "21:02",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "E"
             },
             {
               "time": "21:04",
@@ -4646,7 +4686,8 @@
             },
             {
               "time": "22:53",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         }
@@ -4679,11 +4720,13 @@
             },
             {
               "time": "13:20",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "G"
             },
             {
               "time": "13:30",
-              "name": "Eckernförde, Schulzentrum Süd"
+              "name": "Eckernförde, Schulzentrum Süd",
+              "letter": "F"
             },
             {
               "time": "13:35",
@@ -4739,7 +4782,8 @@
           "stops": [
             {
               "time": "15:08",
-              "name": "Eckernförde, Schulzentrum Süd"
+              "name": "Eckernförde, Schulzentrum Süd",
+              "letter": "A"
             },
             {
               "time": "15:19",
@@ -4812,7 +4856,8 @@
             },
             {
               "time": "15:50",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "B"
             },
             {
               "time": "15:52",
@@ -4863,7 +4908,8 @@
             },
             {
               "time": "16:10",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A"
             },
             {
               "time": "16:13",
@@ -4935,7 +4981,8 @@
             },
             {
               "time": "16:43",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         },
@@ -4950,7 +4997,8 @@
           "stops": [
             {
               "time": "17:00",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "A"
             },
             {
               "time": "17:01",
@@ -5034,7 +5082,8 @@
             },
             {
               "time": "17:33",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "B"
             },
             {
               "time": "17:35",
@@ -5251,7 +5300,7 @@
             {
               "time": "19:00",
               "name": "Eckernförde, Bahnhof/ZOB",
-              "letter": "A"
+              "letter": "J"
             }
           ]
         },
@@ -5359,7 +5408,8 @@
             },
             {
               "time": "20:33",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "B"
             },
             {
               "time": "20:35",
@@ -5492,7 +5542,8 @@
             },
             {
               "time": "21:24",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A"
             },
             {
               "time": "21:26",
@@ -5568,7 +5619,8 @@
             },
             {
               "time": "22:00",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         },
@@ -5668,7 +5720,8 @@
             },
             {
               "time": "22:33",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "B"
             },
             {
               "time": "22:35",
@@ -5968,7 +6021,8 @@
             },
             {
               "time": "07:24",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A"
             },
             {
               "time": "07:26",
@@ -6052,7 +6106,8 @@
                   "dest": "Neudorf, B76",
                   "fp": 5
                 }
-              ]
+              ],
+              "letter": "J"
             }
           ]
         },
@@ -6290,7 +6345,8 @@
             },
             {
               "time": "09:24",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A"
             },
             {
               "time": "09:26",
@@ -6366,7 +6422,8 @@
             },
             {
               "time": "10:00",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         },
@@ -6390,7 +6447,8 @@
                   "dest": "Neudorf, B76",
                   "fp": 5
                 }
-              ]
+              ],
+              "letter": "A"
             },
             {
               "time": "12:01",
@@ -6474,7 +6532,8 @@
             },
             {
               "time": "12:33",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "B"
             },
             {
               "time": "12:35",
@@ -6602,7 +6661,8 @@
             },
             {
               "time": "13:24",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A"
             },
             {
               "time": "13:26",
@@ -6678,7 +6738,8 @@
             },
             {
               "time": "14:00",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         }
@@ -6704,7 +6765,8 @@
           "stops": [
             {
               "time": "07:15",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "C"
             },
             {
               "time": "07:16",
@@ -6916,7 +6978,8 @@
             },
             {
               "time": "08:45",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         },
@@ -6932,7 +6995,8 @@
           "stops": [
             {
               "time": "11:02",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "G"
             },
             {
               "time": "11:04",
@@ -7199,7 +7263,8 @@
             },
             {
               "time": "12:56",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         },
@@ -7215,7 +7280,8 @@
           "stops": [
             {
               "time": "13:15",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "C"
             },
             {
               "time": "13:16",
@@ -7427,7 +7493,8 @@
             },
             {
               "time": "14:45",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         },
@@ -7536,7 +7603,8 @@
             },
             {
               "time": "16:33",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "B"
             },
             {
               "time": "16:35",
@@ -7664,7 +7732,8 @@
             },
             {
               "time": "17:24",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A"
             },
             {
               "time": "17:26",
@@ -7740,7 +7809,8 @@
             },
             {
               "time": "18:00",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         }
@@ -7766,7 +7836,8 @@
           "stops": [
             {
               "time": "15:15",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "C"
             },
             {
               "time": "15:16",
@@ -7978,7 +8049,8 @@
             },
             {
               "time": "16:45",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         },
@@ -7994,7 +8066,8 @@
           "stops": [
             {
               "time": "17:15",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "C"
             },
             {
               "time": "17:16",
@@ -8206,7 +8279,8 @@
             },
             {
               "time": "18:45",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         },
@@ -8222,7 +8296,8 @@
           "stops": [
             {
               "time": "20:00",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "A"
             },
             {
               "time": "20:01",
@@ -8306,7 +8381,8 @@
             },
             {
               "time": "20:33",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "B"
             },
             {
               "time": "20:35",
@@ -8511,7 +8587,8 @@
             },
             {
               "time": "22:00",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         }
@@ -8537,7 +8614,8 @@
           "stops": [
             {
               "time": "08:19",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "A"
             },
             {
               "time": "08:20",
@@ -8605,7 +8683,8 @@
             },
             {
               "time": "08:50",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "B"
             },
             {
               "time": "08:52",
@@ -8649,7 +8728,8 @@
             },
             {
               "time": "09:10",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A"
             },
             {
               "time": "09:13",
@@ -8721,7 +8801,8 @@
             },
             {
               "time": "09:43",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         },
@@ -8737,7 +8818,8 @@
           "stops": [
             {
               "time": "10:00",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "A"
             },
             {
               "time": "10:01",
@@ -8821,7 +8903,8 @@
             },
             {
               "time": "10:33",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "B"
             },
             {
               "time": "10:35",
@@ -8949,7 +9032,8 @@
             },
             {
               "time": "11:24",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A"
             },
             {
               "time": "11:26",
@@ -9025,7 +9109,8 @@
             },
             {
               "time": "12:00",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         },
@@ -9127,7 +9212,7 @@
             {
               "time": "14:33",
               "name": "Vogelsang-Grünholz, ZOB",
-              "letter": "A"
+              "letter": "B"
             },
             {
               "time": "14:35",
@@ -9255,7 +9340,8 @@
             },
             {
               "time": "15:24",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A"
             },
             {
               "time": "15:26",
@@ -9331,7 +9417,8 @@
             },
             {
               "time": "16:00",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         },
@@ -9651,7 +9738,8 @@
             },
             {
               "time": "19:24",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A"
             },
             {
               "time": "19:26",
@@ -9727,7 +9815,8 @@
             },
             {
               "time": "20:00",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         }
