@@ -3224,9 +3224,32 @@ async function sha256(str) {
 // ── LOGIN STATE ──────────────────────────────────────
 var currentUser = window._kpSession || null;
 
+// ── SESSION-TOKEN ─────────────────────────────────────
+function _genToken() {
+  return Array.from(crypto.getRandomValues(new Uint8Array(16))).map(function(b){ return b.toString(16).padStart(2,'0'); }).join('');
+}
+
+var _sessionInterval = null;
+function _startSessionMonitor(userId, token) {
+  if (_sessionInterval) clearInterval(_sessionInterval);
+  _sessionInterval = setInterval(async function() {
+    var r = await sb.from('users').select('session_token').eq('id', userId).single();
+    if (r.data && r.data.session_token !== token) {
+      clearInterval(_sessionInterval);
+      sessionStorage.removeItem('kp_user');
+      alert('Du wurdest auf einem anderen Gerät eingeloggt und hier automatisch abgemeldet.');
+      location.reload();
+    }
+  }, 60000);
+}
+
+// Session-Monitor bei bestehender Session sofort starten
+if (currentUser) {
+  var _savedToken = sessionStorage.getItem('kp_token');
+  if (_savedToken) _startSessionMonitor(currentUser.id, _savedToken);
+}
+
 // ── LOGIN UI ─────────────────────────────────────────
-var _loginUsers = [];
-var _loginSelectedUser = null;
 var _loginPin = '';
 
 function _loginRenderStep(html) {
@@ -3234,88 +3257,157 @@ function _loginRenderStep(html) {
 }
 
 async function initLogin() {
-  var ov = document.getElementById('loginOv');
-  ov.style.display = 'flex';
+  document.getElementById('loginOv').style.display = 'flex';
   _loginRenderStep('<div class="login-sub">Verbindung wird hergestellt…</div>');
-  var res = await sb.from('users').select('id,name,is_admin').order('name');
+  var res = await sb.from('users').select('id').limit(1);
   if (res.error) {
-    _loginRenderStep('<div class="login-err">Verbindungsfehler: ' + res.error.message + '</div>');
+    _loginRenderStep('<div class="login-err">Verbindungsfehler: ' + res.error.message + '<br><button onclick="initLogin()" style="margin-top:10px;padding:8px 16px;background:var(--acc);border:none;border-radius:8px;cursor:pointer;font-family:inherit;font-weight:700;">Erneut versuchen</button></div>');
     return;
   }
-  _loginUsers = res.data || [];
-  if (_loginUsers.length === 0) {
+  if (!res.data || res.data.length === 0) {
     _showSetup();
   } else {
-    _showUserSelect();
+    _showNamePin();
   }
 }
 
-function _showUserSelect() {
-  _loginSelectedUser = null;
-  _loginPin = '';
-  var btns = _loginUsers.map(function(u) {
-    return '<button class="u-btn" onclick="_selectUser(\'' + u.id + '\',\'' + u.name.replace(/'/g,"\\'") + '\')">' + u.name + (u.is_admin ? ' 🔑' : '') + '</button>';
-  }).join('');
-  _loginRenderStep(
-    '<div class="login-sub">Fahrer auswählen</div>' +
-    '<div class="user-grid">' + btns + '</div>'
-  );
-}
-
-function _selectUser(id, name) {
-  _loginSelectedUser = { id: id, name: name };
+function _showNamePin() {
   _loginPin = '';
   _loginRenderStep(
-    '<div class="login-sub">' + name + ' – PIN eingeben</div>' +
+    '<div class="login-sub">Name und PIN eingeben</div>' +
+    '<div style="width:240px;"><input id="loginName" class="setup-inp" type="text" placeholder="Dein Name" autocomplete="off" autocapitalize="words" style="text-align:center;font-size:16px;margin-bottom:10px;"></div>' +
     '<div class="lpin-disp" id="lpinDisp">____</div>' +
     '<div class="lpin-grid">' +
     ['1','2','3','4','5','6','7','8','9'].map(function(k){ return '<button class="lpin-btn" onclick="_lpPress(\'' + k + '\')">' + k + '</button>'; }).join('') +
-    '<button class="lpin-btn" style="color:var(--mut)" onclick="_showUserSelect()">✕</button>' +
+    '<button class="lpin-btn" style="color:var(--mut)" onclick="_lpClear()">✕</button>' +
     '<button class="lpin-btn" onclick="_lpPress(\'0\')">0</button>' +
     '<button class="lpin-btn" onclick="_lpDel()">⌫</button>' +
     '</div>' +
     '<div class="login-err" id="loginErr"></div>'
   );
+  setTimeout(function(){ var el = document.getElementById('loginName'); if(el) el.focus(); }, 150);
 }
 
-function _lpDisp() {
-  var el = document.getElementById('lpinDisp');
-  if (el) el.textContent = _loginPin.replace(/./g,'●').padEnd(4,'_');
-}
-
+function _lpDisp() { var el = document.getElementById('lpinDisp'); if(el) el.textContent = _loginPin.replace(/./g,'●').padEnd(4,'_'); }
 function _lpDel() { _loginPin = _loginPin.slice(0,-1); _lpDisp(); }
+function _lpClear() { _loginPin = ''; _lpDisp(); }
 
 async function _lpPress(d) {
   if (_loginPin.length >= 4) return;
-  _loginPin += d;
-  _lpDisp();
+  _loginPin += d; _lpDisp();
   if (_loginPin.length === 4) {
-    var hash = await sha256(_loginPin);
-    var res = await sb.from('users').select('id,name,is_admin').eq('id', _loginSelectedUser.id).eq('pin_hash', hash).single();
-    if (res.error || !res.data) {
-      _loginPin = '';
-      _lpDisp();
-      var err = document.getElementById('loginErr');
-      if (err) { err.textContent = '❌ Falscher PIN'; setTimeout(function(){ if(err) err.textContent=''; }, 1500); }
+    var name = ((document.getElementById('loginName')||{}).value||'').trim();
+    var err = document.getElementById('loginErr');
+    if (!name) {
+      _loginPin = ''; _lpDisp();
+      if(err){ err.textContent = '❌ Name eingeben'; setTimeout(function(){ if(err) err.textContent=''; }, 1500); }
       return;
     }
-    currentUser = res.data;
-    sessionStorage.setItem('kp_user', JSON.stringify(currentUser));
-    document.getElementById('loginOv').style.display = 'none';
-    isAdmin = !!currentUser.is_admin;
-    setAdminMode(isAdmin);
-    document.getElementById('lockBtn').textContent = isAdmin ? '🔓' : '👤';
-    await loadFromSupabase(true);
-    await _loadUserSettings();
+    var hash = await sha256(_loginPin);
+    var res = await sb.from('users').select('id,name,is_admin,must_change_pin').ilike('name', name).eq('pin_hash', hash).single();
+    if (res.error || !res.data) {
+      _loginPin = ''; _lpDisp();
+      if(err){ err.textContent = '❌ Name oder PIN falsch'; setTimeout(function(){ if(err) err.textContent=''; }, 1500); }
+      return;
+    }
+    await _finalizeLogin(res.data);
   }
 }
 
+async function _finalizeLogin(user) {
+  var token = _genToken();
+  await sb.from('users').update({ session_token: token }).eq('id', user.id);
+  await sb.from('login_log').insert({ user_id: user.id, user_name: user.name, user_agent: (navigator.userAgent||'').substring(0,200) });
+  currentUser = user;
+  currentUser.session_token = token;
+  sessionStorage.setItem('kp_user', JSON.stringify(currentUser));
+  sessionStorage.setItem('kp_token', token);
+  _startSessionMonitor(user.id, token);
+  if (user.must_change_pin) { _showForcePinChange(); return; }
+  _openApp();
+}
+
+function _openApp() {
+  document.getElementById('loginOv').style.display = 'none';
+  isAdmin = !!currentUser.is_admin;
+  setAdminMode(isAdmin);
+  document.getElementById('lockBtn').textContent = isAdmin ? '🔓' : '👤';
+  loadFromSupabase(true);
+  _loadUserSettings();
+}
+
+// ── PIN ÄNDERN (erzwungen beim ersten Login) ──────────
+function _showForcePinChange() {
+  _loginRenderStep(
+    '<div class="login-sub" style="color:var(--acc);font-weight:700;text-align:center;">Bitte PIN jetzt ändern</div>' +
+    '<div class="login-sub">Beim ersten Login muss ein eigener PIN gesetzt werden.</div>' +
+    '<div class="setup-box">' +
+    '<div class="fg"><label style="font-size:12px;color:var(--mut)">Neuer PIN (4 Ziffern)</label><input id="fpPin1" class="setup-inp" type="password" maxlength="4" placeholder="____" style="letter-spacing:6px;font-size:20px;text-align:center;"></div>' +
+    '<div class="fg"><label style="font-size:12px;color:var(--mut)">PIN wiederholen</label><input id="fpPin2" class="setup-inp" type="password" maxlength="4" placeholder="____" style="letter-spacing:6px;font-size:20px;text-align:center;"></div>' +
+    '<button onclick="_saveForcedPin()" style="background:var(--acc);color:#0f1117;border:none;border-radius:12px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit">PIN speichern &amp; App starten</button>' +
+    '<div class="login-err" id="loginErr"></div>' +
+    '</div>'
+  );
+}
+
+async function _saveForcedPin() {
+  var p1 = (document.getElementById('fpPin1').value||'').trim();
+  var p2 = (document.getElementById('fpPin2').value||'').trim();
+  var err = document.getElementById('loginErr');
+  if (!/^\d{4}$/.test(p1)) { err.textContent = 'PIN muss 4 Ziffern sein'; return; }
+  if (p1 !== p2) { err.textContent = 'PINs stimmen nicht überein'; return; }
+  err.textContent = '⏳';
+  var hash = await sha256(p1);
+  await sb.from('users').update({ pin_hash: hash, must_change_pin: false }).eq('id', currentUser.id);
+  currentUser.must_change_pin = false;
+  sessionStorage.setItem('kp_user', JSON.stringify(currentUser));
+  _openApp();
+}
+
+// ── PIN SELBER ÄNDERN (nach Login) ────────────────────
+function openPinChange() {
+  var ov = document.createElement('div');
+  ov.id = 'pinChangeOv';
+  ov.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:8000;display:flex;align-items:center;justify-content:center;padding:20px;';
+  ov.innerHTML =
+    '<div class="setup-box" style="width:300px;">' +
+    '<h3 style="font-family:\'Bebas Neue\',sans-serif;font-size:20px;letter-spacing:2px;">🔑 PIN ÄNDERN</h3>' +
+    '<div class="fg"><label style="font-size:12px;color:var(--mut)">Aktueller PIN</label><input id="pcOld" class="setup-inp" type="password" maxlength="4" placeholder="____" style="letter-spacing:6px;font-size:20px;text-align:center;"></div>' +
+    '<div class="fg"><label style="font-size:12px;color:var(--mut)">Neuer PIN (4 Ziffern)</label><input id="pcNew1" class="setup-inp" type="password" maxlength="4" placeholder="____" style="letter-spacing:6px;font-size:20px;text-align:center;"></div>' +
+    '<div class="fg"><label style="font-size:12px;color:var(--mut)">Neuer PIN wiederholen</label><input id="pcNew2" class="setup-inp" type="password" maxlength="4" placeholder="____" style="letter-spacing:6px;font-size:20px;text-align:center;"></div>' +
+    '<button onclick="_saveNewPin()" style="background:var(--acc);color:#0f1117;border:none;border-radius:12px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;width:100%;">PIN ändern</button>' +
+    '<button onclick="document.getElementById(\'pinChangeOv\').remove()" style="width:100%;background:var(--s2);border:1.5px solid var(--brd);border-radius:12px;padding:10px;cursor:pointer;font-family:inherit;color:var(--txt);">Abbrechen</button>' +
+    '<div class="login-err" id="pcErr"></div>' +
+    '</div>';
+  ov.addEventListener('click', function(e){ if(e.target===ov) ov.remove(); });
+  document.body.appendChild(ov);
+}
+
+async function _saveNewPin() {
+  var old = (document.getElementById('pcOld').value||'').trim();
+  var p1 = (document.getElementById('pcNew1').value||'').trim();
+  var p2 = (document.getElementById('pcNew2').value||'').trim();
+  var err = document.getElementById('pcErr');
+  if (!/^\d{4}$/.test(old)) { err.textContent = 'Aktuellen PIN eingeben'; return; }
+  if (!/^\d{4}$/.test(p1)) { err.textContent = 'Neuer PIN: 4 Ziffern'; return; }
+  if (p1 !== p2) { err.textContent = 'PINs stimmen nicht überein'; return; }
+  err.textContent = '⏳';
+  var oldHash = await sha256(old);
+  var check = await sb.from('users').select('id').eq('id', currentUser.id).eq('pin_hash', oldHash).single();
+  if (check.error || !check.data) { err.textContent = '❌ Aktueller PIN falsch'; return; }
+  var newHash = await sha256(p1);
+  await sb.from('users').update({ pin_hash: newHash }).eq('id', currentUser.id);
+  document.getElementById('pinChangeOv').remove();
+  setSyncStatus('✅ PIN geändert', 'ok');
+}
+
+// ── ERSTEINRICHTUNG ──────────────────────────────────
 function _showSetup() {
   _loginRenderStep(
     '<div class="login-sub">Ersteinrichtung – Admin-Konto anlegen</div>' +
     '<div class="setup-box">' +
     '<div class="fg"><label style="font-size:12px;color:var(--mut)">Dein Name</label><input id="setupName" class="setup-inp" type="text" placeholder="z.B. Max" autocomplete="off"></div>' +
-    '<div class="fg"><label style="font-size:12px;color:var(--mut)">PIN (4 Ziffern)</label><input id="setupPin" class="setup-inp" type="password" maxlength="4" placeholder="____" style="letter-spacing:6px;font-size:20px;"></div>' +
+    '<div class="fg"><label style="font-size:12px;color:var(--mut)">PIN (4 Ziffern)</label><input id="setupPin" class="setup-inp" type="password" maxlength="4" placeholder="____" style="letter-spacing:6px;font-size:20px;text-align:center;"></div>' +
     '<button onclick="_createAdmin()" style="background:var(--acc);color:#0f1117;border:none;border-radius:12px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit">Admin-Konto erstellen</button>' +
     '<div class="login-err" id="loginErr"></div>' +
     '</div>'
@@ -3330,21 +3422,13 @@ async function _createAdmin() {
   if (!/^\d{4}$/.test(pin)) { err.textContent = 'PIN muss genau 4 Ziffern sein'; return; }
   err.textContent = '⏳ Wird angelegt…';
   var hash = await sha256(pin);
-  var res = await sb.from('users').insert({ name: name, pin_hash: hash, is_admin: true }).select().single();
+  var res = await sb.from('users').insert({ name: name, pin_hash: hash, is_admin: true, must_change_pin: false }).select().single();
   if (res.error) { err.textContent = '❌ ' + res.error.message; return; }
-  // Fahrplandaten initial hochladen
-  var coords = {};
-  var ntz = {};
+  var coords = {}, ntz = {};
   try { coords = JSON.parse(localStorage.getItem('kp_coords')||'{}'); } catch(e) {}
   try { ntz = JSON.parse(localStorage.getItem('kp_notizen')||'{}'); } catch(e) {}
   await sb.from('schedule').upsert({ id: 1, version: VER, kurse: SEED.kurse, notizen: ntz, coords: coords });
-  currentUser = res.data;
-  sessionStorage.setItem('kp_user', JSON.stringify(currentUser));
-  document.getElementById('loginOv').style.display = 'none';
-  isAdmin = true;
-  setAdminMode(true);
-  document.getElementById('lockBtn').textContent = '🔓';
-  setSyncStatus('✅ Admin-Konto angelegt!', 'ok');
+  await _finalizeLogin(res.data);
 }
 
 // ── USER SETTINGS ─────────────────────────────────────
@@ -3365,25 +3449,54 @@ async function saveUserSettings() {
 
 // ── FAHRERVERWALTUNG (Admin) ──────────────────────────
 async function openUserManager() {
-  var res = await sb.from('users').select('id,name,is_admin').order('name');
-  var users = res.data || [];
+  var usersRes = await sb.from('users').select('id,name,is_admin,must_change_pin').order('name');
+  var logRes = await sb.from('login_log').select('user_name,logged_in_at,user_agent').order('logged_in_at', { ascending: false }).limit(50);
+  var users = usersRes.data || [];
+  var logs = logRes.data || [];
+
   var rows = users.map(function(u) {
-    return '<div class="um-row"><span class="um-name">' + u.name + (u.is_admin ? ' <span class="um-badge">ADMIN</span>' : '') + '</span>' +
-    (users.length > 1 ? '<button class="bs" onclick="_deleteUser(\'' + u.id + '\',\'' + u.name.replace(/'/g,"\\'") + '\')" style="color:var(--red);font-size:13px">Löschen</button>' : '') +
+    return '<div class="um-row">' +
+      '<div style="flex:1">' +
+        '<span class="um-name">' + u.name + (u.is_admin ? ' <span class="um-badge">ADMIN</span>' : '') + '</span>' +
+        (u.must_change_pin ? '<span style="font-size:10px;color:var(--mut);display:block;">⚠️ Muss PIN ändern</span>' : '') +
+      '</div>' +
+      (users.length > 1 ? '<button class="bs" onclick="_deleteUser(\'' + u.id + '\',\'' + u.name.replace(/'/g,"\\'") + '\')" style="color:var(--red);font-size:12px;padding:4px 8px;">Löschen</button>' : '') +
     '</div>';
   }).join('');
-  var html = '<div style="background:var(--s1);border:1.5px solid var(--brd);border-radius:18px;padding:20px;width:320px;max-height:70vh;overflow-y:auto;">' +
-    '<h3 style="font-family:\'Bebas Neue\',sans-serif;font-size:20px;letter-spacing:2px;margin-bottom:14px;">👥 FAHRERVERWALTUNG</h3>' +
+
+  var logRows = logs.map(function(l) {
+    var d = new Date(l.logged_in_at);
+    var dateStr = d.toLocaleDateString('de-DE') + ' ' + d.toLocaleTimeString('de-DE', {hour:'2-digit',minute:'2-digit'});
+    var ua = (l.user_agent||'');
+    var device = ua.indexOf('iPhone') >= 0 ? '📱 iPhone' : ua.indexOf('Android') >= 0 ? '📱 Android' : ua.indexOf('iPad') >= 0 ? '📱 iPad' : '💻 PC';
+    return '<div style="display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid var(--brd);font-size:13px;">' +
+      '<span style="font-weight:600;flex:1">' + (l.user_name||'?') + '</span>' +
+      '<span style="color:var(--mut);margin-right:8px;">' + device + '</span>' +
+      '<span style="color:var(--mut);font-size:12px;">' + dateStr + '</span>' +
+    '</div>';
+  }).join('');
+
+  var html =
+    '<div style="background:var(--s1);border:1.5px solid var(--brd);border-radius:18px;padding:20px;width:340px;max-height:80vh;overflow-y:auto;display:flex;flex-direction:column;gap:0;">' +
+    '<h3 style="font-family:\'Bebas Neue\',sans-serif;font-size:20px;letter-spacing:2px;margin-bottom:12px;">👥 FAHRERVERWALTUNG</h3>' +
     rows +
     '<div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--brd);display:flex;flex-direction:column;gap:8px;">' +
-    '<div class="fg"><label style="font-size:12px;color:var(--mut)">Neuer Fahrer – Name</label><input id="umName" class="setup-inp" type="text" placeholder="Name"></div>' +
-    '<div class="fg"><label style="font-size:12px;color:var(--mut)">PIN (4 Ziffern)</label><input id="umPin" class="setup-inp" type="password" maxlength="4" placeholder="____" style="letter-spacing:4px;"></div>' +
+    '<b style="font-size:13px;color:var(--mut)">NEUER FAHRER</b>' +
+    '<input id="umName" class="setup-inp" type="text" placeholder="Name">' +
+    '<input id="umPin" class="setup-inp" type="text" maxlength="4" placeholder="Temp-PIN (4 Ziffern)" style="letter-spacing:4px;">' +
     '<label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;"><input type="checkbox" id="umAdmin"> Admin-Rechte</label>' +
+    '<label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;"><input type="checkbox" id="umMustChange" checked> PIN-Änderung beim ersten Login erzwingen</label>' +
     '<button onclick="_addUser()" style="background:var(--acc);color:#0f1117;border:none;border-radius:10px;padding:10px;font-weight:700;cursor:pointer;font-family:inherit">Fahrer hinzufügen</button>' +
     '<div class="login-err" id="umErr"></div>' +
     '</div>' +
-    '<button onclick="_closeUmModal()" style="width:100%;margin-top:10px;background:var(--s2);border:1.5px solid var(--brd);border-radius:10px;padding:10px;cursor:pointer;font-family:inherit;color:var(--txt)">Schließen</button>' +
+    (logs.length > 0 ?
+      '<div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--brd);">' +
+      '<b style="font-size:13px;color:var(--mut)">LETZTE LOGINS</b>' +
+      '<div style="margin-top:8px;">' + logRows + '</div>' +
+      '</div>' : '') +
+    '<button onclick="_closeUmModal()" style="width:100%;margin-top:14px;background:var(--s2);border:1.5px solid var(--brd);border-radius:10px;padding:10px;cursor:pointer;font-family:inherit;color:var(--txt)">Schließen</button>' +
     '</div>';
+
   var ov = document.createElement('div');
   ov.id = 'umOverlay';
   ov.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:8000;display:flex;align-items:center;justify-content:center;padding:20px;';
@@ -3401,12 +3514,13 @@ async function _addUser() {
   var name = (document.getElementById('umName').value||'').trim();
   var pin = (document.getElementById('umPin').value||'').trim();
   var admin = document.getElementById('umAdmin').checked;
+  var mustChange = document.getElementById('umMustChange').checked;
   var err = document.getElementById('umErr');
   if (!name) { err.textContent = 'Name eingeben'; return; }
-  if (!/^\d{4}$/.test(pin)) { err.textContent = 'PIN: 4 Ziffern'; return; }
+  if (!/^\d{4}$/.test(pin)) { err.textContent = 'PIN: genau 4 Ziffern'; return; }
   err.textContent = '⏳';
   var hash = await sha256(pin);
-  var res = await sb.from('users').insert({ name: name, pin_hash: hash, is_admin: admin }).select();
+  var res = await sb.from('users').insert({ name: name, pin_hash: hash, is_admin: admin, must_change_pin: mustChange }).select();
   if (res.error) { err.textContent = '❌ ' + res.error.message; return; }
   _closeUmModal();
   openUserManager();
@@ -3414,6 +3528,7 @@ async function _addUser() {
 
 async function _deleteUser(id, name) {
   if (!confirm(name + ' wirklich löschen?')) return;
+  await sb.from('login_log').delete().eq('user_id', id);
   await sb.from('user_settings').delete().eq('user_id', id);
   await sb.from('users').delete().eq('id', id);
   _closeUmModal();
@@ -3535,10 +3650,15 @@ function openKeypad() {
     return;
   }
   if (currentUser && !currentUser.is_admin) {
-    // Normaler Fahrer: Abmelden
-    if (confirm('Abmelden?')) {
-      sessionStorage.removeItem('kp_user');
-      location.reload();
+    // Normaler Fahrer: PIN ändern oder Abmelden
+    var choice = confirm((currentUser.name||'') + '\n\nOK = PIN ändern\nAbbrechen = Abmelden');
+    if (choice) { openPinChange(); }
+    else {
+      if (confirm('Wirklich abmelden?')) {
+        sessionStorage.removeItem('kp_user');
+        sessionStorage.removeItem('kp_token');
+        location.reload();
+      }
     }
     return;
   }
