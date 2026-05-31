@@ -234,9 +234,47 @@ main{padding:12px 16px 100px;}
 .svc-info{display:flex;flex-direction:column;gap:2px;}
 .svc-label{font-size:14px;font-weight:600;color:var(--txt);}
 .svc-time{font-size:12px;color:var(--mut);}
+/* ── LOGIN OVERLAY ── */
+.login-ov{position:fixed;inset:0;background:var(--bg);z-index:9999;display:none;flex-direction:column;align-items:center;justify-content:center;gap:16px;padding:20px;}
+.login-logo{width:72px;height:72px;background:var(--acc);border-radius:18px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:32px;letter-spacing:2px;color:#0f1117;}
+.login-title{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:3px;}
+.login-sub{font-size:13px;color:var(--mut);text-align:center;margin-top:-8px;}
+.user-grid{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:320px;}
+.u-btn{background:var(--s1);border:1.5px solid var(--brd);border-radius:14px;padding:14px 20px;cursor:pointer;font-size:16px;font-weight:600;color:var(--txt);min-width:120px;text-align:center;font-family:'DM Sans',sans-serif;transition:all .2s;}
+.u-btn:hover{background:var(--acc);border-color:var(--acc);color:#0f1117;}
+.lpin-disp{font-family:'Bebas Neue',sans-serif;font-size:44px;letter-spacing:12px;min-width:180px;text-align:center;color:var(--txt);}
+.lpin-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:240px;}
+.lpin-btn{background:var(--s1);border:1.5px solid var(--brd);border-radius:12px;height:60px;font-size:22px;font-weight:600;cursor:pointer;color:var(--txt);font-family:'DM Sans',sans-serif;transition:background .15s;}
+.lpin-btn:hover{background:var(--s2);}
+.login-err{color:var(--red);font-size:13px;min-height:18px;text-align:center;}
+.setup-box{background:var(--s1);border:1.5px solid var(--brd);border-radius:18px;padding:22px;width:300px;display:flex;flex-direction:column;gap:12px;}
+.setup-inp{width:100%;padding:10px 12px;background:var(--s2);border:1.5px solid var(--brd);border-radius:10px;color:var(--txt);font-size:15px;font-family:'DM Sans',sans-serif;}
+/* ── USER MANAGEMENT ── */
+.um-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--brd);}
+.um-name{flex:1;font-weight:600;}
+.um-badge{font-size:10px;background:var(--acc);color:#0f1117;border-radius:6px;padding:2px 6px;font-weight:700;}
 </style>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 </head>
 <body>
+<!-- ── LOGIN OVERLAY ── -->
+<div id="loginOv" class="login-ov">
+  <div class="login-logo">MR</div>
+  <div class="login-title">KURSPLAN</div>
+  <div id="loginStep" style="display:flex;flex-direction:column;align-items:center;gap:14px;width:100%;max-width:340px;">
+    <div class="login-sub">Wird geladen…</div>
+  </div>
+</div>
+<script>
+// Sofortige Session-Prüfung – vermeidet Login-Flash bei bestehender Session
+(function(){
+  try {
+    var u = JSON.parse(sessionStorage.getItem('kp_user') || 'null');
+    if (u && u.id) { window._kpSession = u; }
+    else { document.getElementById('loginOv').style.display = 'flex'; }
+  } catch(e) { document.getElementById('loginOv').style.display = 'flex'; }
+})();
+</script>
 <header>
   <div class="logo" style="font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;color:#fff;background:var(--acc);border-radius:10px;width:42px;height:42px;display:flex;align-items:center;justify-content:center;">MR</div>
   <div class="htxt"><h1>KURSPLAN <span style="font-size:13px;font-weight:400;color:var(--mut);letter-spacing:1px;vertical-align:middle">v52r</span></h1><p id="hd"></p></div>
@@ -268,9 +306,9 @@ main{padding:12px 16px 100px;}
   
 </div>
 <div class="sync-bar admin-only" id="syncBar">
-  <button class="sync-btn" id="syncBtn" onclick="syncToGitHub()">☁️ Speichern</button>
-  <button class="sync-btn" style="background:var(--s2);color:var(--txt);border:1.5px solid var(--brd)" onclick="loadFromGitHub()">🔄 Laden</button>
-  <button class="sync-btn" style="background:var(--s2);color:var(--mut);border:1.5px solid var(--brd);font-size:12px" onclick="setGithubToken()">🔑 Token</button>
+  <button class="sync-btn" id="syncBtn" onclick="syncToSupabase()">☁️ Speichern</button>
+  <button class="sync-btn" style="background:var(--s2);color:var(--txt);border:1.5px solid var(--brd)" onclick="loadFromSupabase(false)">🔄 Laden</button>
+  <button class="sync-btn" style="background:var(--s2);color:var(--txt);border:1.5px solid var(--brd)" onclick="openUserManager()">👥 Fahrer</button>
   <span class="sync-status" id="syncStatus">Nicht synchronisiert</span>
 </div>
 <main>
@@ -1540,11 +1578,14 @@ var gwId = null, gPos = null;
 
 function persist() {
   localStorage.setItem('kp_data', JSON.stringify(D));
-  // Auto-sync zu GitHub nach 10 Sekunden (debounced, nicht 3s)
-  if (window._autoSyncTimer) clearTimeout(window._autoSyncTimer);
-  window._autoSyncTimer = setTimeout(function() {
-    if (GITHUB_TOKEN) syncToGitHub(true);
-  }, 10000);
+  // Auto-save active kurs per user
+  if (window._userSettingsTimer) clearTimeout(window._userSettingsTimer);
+  window._userSettingsTimer = setTimeout(saveUserSettings, 3000);
+  // Admin: Auto-sync to Supabase after 10 seconds
+  if (isAdmin) {
+    if (window._autoSyncTimer) clearTimeout(window._autoSyncTimer);
+    window._autoSyncTimer = setTimeout(function() { syncToSupabase(true); }, 10000);
+  }
 }
 
 // GPS
@@ -3170,157 +3211,273 @@ function checkNotizForCurrentStop() {
   }
 }
 
-// ── GITHUB SYNC ───────────────────────────────────────
-var GITHUB_TOKEN = localStorage.getItem('kp_gh_token') || ['ghp_PUNLtxJK9Tht','XKPNpux5sZbqmJau','3w4fPE9h'].join('');
-var GITHUB_REPO = 'MioEck/Kursplan';
-var GITHUB_FILE = 'data.json';
-var GITHUB_API = 'https://api.github.com/repos/' + GITHUB_REPO + '/contents/' + GITHUB_FILE;
+// ── SUPABASE SYNC ─────────────────────────────────────
+var SUPABASE_URL = 'https://ohzmclzscphjlzeotlme.supabase.co';
+var SUPABASE_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9oem1jbHpzY3Boamx6ZW90bG1lIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODAxNzkyNTgsImV4cCI6MjA5NTc1NTI1OH0.fZWcUykRodW9C3x8r9TlPpizsfxBAS4NK03OyouggMU';
+var sb = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
-function setGithubToken() {
-  var t = prompt('GitHub Token eingeben:');
-  if (t && t.trim()) {
-    GITHUB_TOKEN = t.trim();
-    localStorage.setItem('kp_gh_token', GITHUB_TOKEN);
-    setSyncStatus('✅ Token gespeichert', 'ok');
+async function sha256(str) {
+  var buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(function(b){ return b.toString(16).padStart(2,'0'); }).join('');
+}
+
+// ── LOGIN STATE ──────────────────────────────────────
+var currentUser = window._kpSession || null;
+
+// ── LOGIN UI ─────────────────────────────────────────
+var _loginUsers = [];
+var _loginSelectedUser = null;
+var _loginPin = '';
+
+function _loginRenderStep(html) {
+  document.getElementById('loginStep').innerHTML = html;
+}
+
+async function initLogin() {
+  var ov = document.getElementById('loginOv');
+  ov.style.display = 'flex';
+  _loginRenderStep('<div class="login-sub">Verbindung wird hergestellt…</div>');
+  var res = await sb.from('users').select('id,name,is_admin').order('name');
+  if (res.error) {
+    _loginRenderStep('<div class="login-err">Verbindungsfehler: ' + res.error.message + '</div>');
+    return;
+  }
+  _loginUsers = res.data || [];
+  if (_loginUsers.length === 0) {
+    _showSetup();
+  } else {
+    _showUserSelect();
   }
 }
 
-function getDataBundle() {
+function _showUserSelect() {
+  _loginSelectedUser = null;
+  _loginPin = '';
+  var btns = _loginUsers.map(function(u) {
+    return '<button class="u-btn" onclick="_selectUser(\'' + u.id + '\',\'' + u.name.replace(/'/g,"\\'") + '\')">' + u.name + (u.is_admin ? ' 🔑' : '') + '</button>';
+  }).join('');
+  _loginRenderStep(
+    '<div class="login-sub">Fahrer auswählen</div>' +
+    '<div class="user-grid">' + btns + '</div>'
+  );
+}
+
+function _selectUser(id, name) {
+  _loginSelectedUser = { id: id, name: name };
+  _loginPin = '';
+  _loginRenderStep(
+    '<div class="login-sub">' + name + ' – PIN eingeben</div>' +
+    '<div class="lpin-disp" id="lpinDisp">____</div>' +
+    '<div class="lpin-grid">' +
+    ['1','2','3','4','5','6','7','8','9'].map(function(k){ return '<button class="lpin-btn" onclick="_lpPress(\'' + k + '\')">' + k + '</button>'; }).join('') +
+    '<button class="lpin-btn" style="color:var(--mut)" onclick="_showUserSelect()">✕</button>' +
+    '<button class="lpin-btn" onclick="_lpPress(\'0\')">0</button>' +
+    '<button class="lpin-btn" onclick="_lpDel()">⌫</button>' +
+    '</div>' +
+    '<div class="login-err" id="loginErr"></div>'
+  );
+}
+
+function _lpDisp() {
+  var el = document.getElementById('lpinDisp');
+  if (el) el.textContent = _loginPin.replace(/./g,'●').padEnd(4,'_');
+}
+
+function _lpDel() { _loginPin = _loginPin.slice(0,-1); _lpDisp(); }
+
+async function _lpPress(d) {
+  if (_loginPin.length >= 4) return;
+  _loginPin += d;
+  _lpDisp();
+  if (_loginPin.length === 4) {
+    var hash = await sha256(_loginPin);
+    var res = await sb.from('users').select('id,name,is_admin').eq('id', _loginSelectedUser.id).eq('pin_hash', hash).single();
+    if (res.error || !res.data) {
+      _loginPin = '';
+      _lpDisp();
+      var err = document.getElementById('loginErr');
+      if (err) { err.textContent = '❌ Falscher PIN'; setTimeout(function(){ if(err) err.textContent=''; }, 1500); }
+      return;
+    }
+    currentUser = res.data;
+    sessionStorage.setItem('kp_user', JSON.stringify(currentUser));
+    document.getElementById('loginOv').style.display = 'none';
+    isAdmin = !!currentUser.is_admin;
+    setAdminMode(isAdmin);
+    document.getElementById('lockBtn').textContent = isAdmin ? '🔓' : '👤';
+    await loadFromSupabase(true);
+    await _loadUserSettings();
+  }
+}
+
+function _showSetup() {
+  _loginRenderStep(
+    '<div class="login-sub">Ersteinrichtung – Admin-Konto anlegen</div>' +
+    '<div class="setup-box">' +
+    '<div class="fg"><label style="font-size:12px;color:var(--mut)">Dein Name</label><input id="setupName" class="setup-inp" type="text" placeholder="z.B. Max" autocomplete="off"></div>' +
+    '<div class="fg"><label style="font-size:12px;color:var(--mut)">PIN (4 Ziffern)</label><input id="setupPin" class="setup-inp" type="password" maxlength="4" placeholder="____" style="letter-spacing:6px;font-size:20px;"></div>' +
+    '<button onclick="_createAdmin()" style="background:var(--acc);color:#0f1117;border:none;border-radius:12px;padding:13px;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit">Admin-Konto erstellen</button>' +
+    '<div class="login-err" id="loginErr"></div>' +
+    '</div>'
+  );
+}
+
+async function _createAdmin() {
+  var name = (document.getElementById('setupName').value||'').trim();
+  var pin = (document.getElementById('setupPin').value||'').trim();
+  var err = document.getElementById('loginErr');
+  if (!name || name.length < 2) { err.textContent = 'Name eingeben (mind. 2 Zeichen)'; return; }
+  if (!/^\d{4}$/.test(pin)) { err.textContent = 'PIN muss genau 4 Ziffern sein'; return; }
+  err.textContent = '⏳ Wird angelegt…';
+  var hash = await sha256(pin);
+  var res = await sb.from('users').insert({ name: name, pin_hash: hash, is_admin: true }).select().single();
+  if (res.error) { err.textContent = '❌ ' + res.error.message; return; }
+  // Fahrplandaten initial hochladen
   var coords = {};
-  var notizen = {};
-  try { coords = JSON.parse(localStorage.getItem('kp_coords') || '{}'); } catch(e) {}
-  try { notizen = JSON.parse(localStorage.getItem('kp_notizen') || '{}'); } catch(e) {}
-  return {
-    coords: coords,
-    notizen: notizen,
-    kurse: D.kurse,
-    activeKurs: D.activeKurs,
-    version: VER,
-    saved: new Date().toISOString()
-  };
+  var ntz = {};
+  try { coords = JSON.parse(localStorage.getItem('kp_coords')||'{}'); } catch(e) {}
+  try { ntz = JSON.parse(localStorage.getItem('kp_notizen')||'{}'); } catch(e) {}
+  await sb.from('schedule').upsert({ id: 1, version: VER, kurse: SEED.kurse, notizen: ntz, coords: coords });
+  currentUser = res.data;
+  sessionStorage.setItem('kp_user', JSON.stringify(currentUser));
+  document.getElementById('loginOv').style.display = 'none';
+  isAdmin = true;
+  setAdminMode(true);
+  document.getElementById('lockBtn').textContent = '🔓';
+  setSyncStatus('✅ Admin-Konto angelegt!', 'ok');
 }
 
-function setDataBundle(bundle) {
-  if (bundle.coords) localStorage.setItem('kp_coords', JSON.stringify(bundle.coords));
-  if (bundle.notizen) {
-    localStorage.setItem('kp_notizen', JSON.stringify(bundle.notizen));
-    notizen = bundle.notizen;
-  }
-  if (bundle.kurse && bundle.kurse.length > 0) {
-    // Abfahrt + typ aus SEED immer übernehmen
-    var seedKursMap = {};
-    SEED.kurse.forEach(function(sk){
-      seedKursMap[sk.id] = sk;
-    });
-    var seedLineMap = {};
-    SEED.kurse.forEach(function(sk){
-      (sk.lines||[]).forEach(function(sl){
-        if (sl.fahrtNr && sl.abfahrt) seedLineMap[sl.fahrtNr] = sl.abfahrt;
-      });
-    });
-    // Nur Werktagskurse aus bundle laden - WE-Kurse immer aus SEED
-    var merged = [];
-    SEED.kurse.forEach(function(sk){
-      // Suche in bundle ob dieser Kurs dort ist
-      var found = null;
-      bundle.kurse.forEach(function(bk){ if(bk.id===sk.id) found=bk; });
-      if (found) {
-        // Haltestellendaten kommen immer aus SEED (nie aus bundle überschreiben)
-        found.typ = sk.typ;
-        found.lines = sk.lines;
-        merged.push(found);
-      } else {
-        // Kurs nicht in bundle -> aus SEED nehmen (z.B. neue WE-Kurse)
-        merged.push(sk);
-      }
-    });
-    D.kurse = merged;
-    if (bundle.activeKurs) D.activeKurs = bundle.activeKurs;
-    localStorage.setItem('kp_data', JSON.stringify(D));
+// ── USER SETTINGS ─────────────────────────────────────
+async function _loadUserSettings() {
+  if (!currentUser) return;
+  var res = await sb.from('user_settings').select('active_kurs').eq('user_id', currentUser.id).single();
+  if (res.data && res.data.active_kurs) {
+    D.activeKurs = res.data.active_kurs;
+    renderTabs();
+    renderLines();
   }
 }
 
+async function saveUserSettings() {
+  if (!currentUser) return;
+  await sb.from('user_settings').upsert({ user_id: currentUser.id, active_kurs: D.activeKurs, updated_at: new Date().toISOString() });
+}
+
+// ── FAHRERVERWALTUNG (Admin) ──────────────────────────
+async function openUserManager() {
+  var res = await sb.from('users').select('id,name,is_admin').order('name');
+  var users = res.data || [];
+  var rows = users.map(function(u) {
+    return '<div class="um-row"><span class="um-name">' + u.name + (u.is_admin ? ' <span class="um-badge">ADMIN</span>' : '') + '</span>' +
+    (users.length > 1 ? '<button class="bs" onclick="_deleteUser(\'' + u.id + '\',\'' + u.name.replace(/'/g,"\\'") + '\')" style="color:var(--red);font-size:13px">Löschen</button>' : '') +
+    '</div>';
+  }).join('');
+  var html = '<div style="background:var(--s1);border:1.5px solid var(--brd);border-radius:18px;padding:20px;width:320px;max-height:70vh;overflow-y:auto;">' +
+    '<h3 style="font-family:\'Bebas Neue\',sans-serif;font-size:20px;letter-spacing:2px;margin-bottom:14px;">👥 FAHRERVERWALTUNG</h3>' +
+    rows +
+    '<div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--brd);display:flex;flex-direction:column;gap:8px;">' +
+    '<div class="fg"><label style="font-size:12px;color:var(--mut)">Neuer Fahrer – Name</label><input id="umName" class="setup-inp" type="text" placeholder="Name"></div>' +
+    '<div class="fg"><label style="font-size:12px;color:var(--mut)">PIN (4 Ziffern)</label><input id="umPin" class="setup-inp" type="password" maxlength="4" placeholder="____" style="letter-spacing:4px;"></div>' +
+    '<label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;"><input type="checkbox" id="umAdmin"> Admin-Rechte</label>' +
+    '<button onclick="_addUser()" style="background:var(--acc);color:#0f1117;border:none;border-radius:10px;padding:10px;font-weight:700;cursor:pointer;font-family:inherit">Fahrer hinzufügen</button>' +
+    '<div class="login-err" id="umErr"></div>' +
+    '</div>' +
+    '<button onclick="_closeUmModal()" style="width:100%;margin-top:10px;background:var(--s2);border:1.5px solid var(--brd);border-radius:10px;padding:10px;cursor:pointer;font-family:inherit;color:var(--txt)">Schließen</button>' +
+    '</div>';
+  var ov = document.createElement('div');
+  ov.id = 'umOverlay';
+  ov.style.cssText = 'position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:8000;display:flex;align-items:center;justify-content:center;padding:20px;';
+  ov.innerHTML = html;
+  ov.addEventListener('click', function(e){ if(e.target===ov) _closeUmModal(); });
+  document.body.appendChild(ov);
+}
+
+function _closeUmModal() {
+  var el = document.getElementById('umOverlay');
+  if (el) el.remove();
+}
+
+async function _addUser() {
+  var name = (document.getElementById('umName').value||'').trim();
+  var pin = (document.getElementById('umPin').value||'').trim();
+  var admin = document.getElementById('umAdmin').checked;
+  var err = document.getElementById('umErr');
+  if (!name) { err.textContent = 'Name eingeben'; return; }
+  if (!/^\d{4}$/.test(pin)) { err.textContent = 'PIN: 4 Ziffern'; return; }
+  err.textContent = '⏳';
+  var hash = await sha256(pin);
+  var res = await sb.from('users').insert({ name: name, pin_hash: hash, is_admin: admin }).select();
+  if (res.error) { err.textContent = '❌ ' + res.error.message; return; }
+  _closeUmModal();
+  openUserManager();
+}
+
+async function _deleteUser(id, name) {
+  if (!confirm(name + ' wirklich löschen?')) return;
+  await sb.from('user_settings').delete().eq('user_id', id);
+  await sb.from('users').delete().eq('id', id);
+  _closeUmModal();
+  openUserManager();
+}
+
+// ── SYNC FUNKTIONEN ───────────────────────────────────
 function setSyncStatus(msg, type) {
   var el = document.getElementById('syncStatus');
+  if (!el) return;
   el.textContent = msg;
   el.className = 'sync-status' + (type ? ' ' + type : '');
 }
 
-function syncToGitHub(silent) {
+async function syncToSupabase(silent) {
+  if (!currentUser || !currentUser.is_admin) return;
   var btn = document.getElementById('syncBtn');
-  if (!silent) btn.disabled = true;
-  if (!silent) setSyncStatus('⏳ Wird gespeichert...');
-  
-  var data = getDataBundle();
-  var content = btoa(unescape(encodeURIComponent(JSON.stringify(data, null, 2))));
-  
-  // First get current SHA (needed for update)
-  fetch(GITHUB_API, {
-    headers: {
-      'Authorization': 'token ' + GITHUB_TOKEN,
-      'Accept': 'application/vnd.github.v3+json'
-    }
-  })
-  .then(function(r) { return r.json(); })
-  .then(function(existing) {
-    var body = {
-      message: 'Kursplan Sync ' + new Date().toLocaleString('de-DE'),
-      content: content
-    };
-    if (existing.sha) body.sha = existing.sha;
-    
-    return fetch(GITHUB_API, {
-      method: 'PUT',
-      headers: {
-        'Authorization': 'token ' + GITHUB_TOKEN,
-        'Accept': 'application/vnd.github.v3+json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(body)
-    });
-  })
-  .then(function(r) {
-    if (r.ok) {
-      if (!silent) setSyncStatus('✅ Gespeichert: ' + new Date().toLocaleTimeString('de-DE'), 'ok');
-      else setSyncStatus('✅ Auto-gespeichert: ' + new Date().toLocaleTimeString('de-DE'), 'ok');
-    } else {
-      return r.json().then(function(e) { throw new Error(e.message); });
-    }
-  })
-  .catch(function(err) {
-    setSyncStatus('❌ Fehler: ' + err.message, 'err');
-  })
-  .finally(function() {
-    if (!silent) btn.disabled = false;
-  });
+  if (!silent && btn) btn.disabled = true;
+  if (!silent) setSyncStatus('⏳ Wird gespeichert…');
+  var coords = {};
+  var ntz = {};
+  try { coords = JSON.parse(localStorage.getItem('kp_coords')||'{}'); } catch(e) {}
+  try { ntz = JSON.parse(localStorage.getItem('kp_notizen')||'{}'); } catch(e) {}
+  var res = await sb.from('schedule').upsert({ id: 1, version: VER, kurse: D.kurse, notizen: ntz, coords: coords, updated_at: new Date().toISOString() });
+  if (!silent && btn) btn.disabled = false;
+  if (res.error) {
+    setSyncStatus('❌ ' + res.error.message, 'err');
+  } else {
+    setSyncStatus((silent ? '✅ Auto-gespeichert: ' : '✅ Gespeichert: ') + new Date().toLocaleTimeString('de-DE'), 'ok');
+  }
 }
 
-function loadFromGitHub() {
-  setSyncStatus('⏳ Wird geladen...');
-  fetch(GITHUB_API, {
-    headers: {
-      'Authorization': 'token ' + GITHUB_TOKEN,
-      'Accept': 'application/vnd.github.v3+json'
-    }
-  })
-  .then(function(r) {
-    if (!r.ok) throw new Error('Datei nicht gefunden');
-    return r.json();
-  })
-  .then(function(data) {
-    var content = JSON.parse(decodeURIComponent(escape(atob(data.content))));
-    setDataBundle(content);
-    setSyncStatus('✅ Geladen: ' + new Date().toLocaleTimeString('de-DE'), 'ok');
-    renderLines();
-  })
-  .catch(function(err) {
-    setSyncStatus('❌ ' + err.message, 'err');
-  });
+async function loadFromSupabase(silent) {
+  if (!silent) setSyncStatus('⏳ Wird geladen…');
+  var res = await sb.from('schedule').select('*').eq('id', 1).single();
+  if (res.error || !res.data) {
+    if (!silent) setSyncStatus('❌ Nicht gefunden', 'err');
+    return;
+  }
+  var data = res.data;
+  if (data.kurse && data.kurse.length > 0) {
+    D.kurse = data.kurse;
+    localStorage.setItem('kp_data', JSON.stringify(D));
+  }
+  if (data.notizen) { localStorage.setItem('kp_notizen', JSON.stringify(data.notizen)); notizen = data.notizen; }
+  if (data.coords) { localStorage.setItem('kp_coords', JSON.stringify(data.coords)); _coordsCache = null; }
+  if (!silent) setSyncStatus('✅ Geladen: ' + new Date().toLocaleTimeString('de-DE'), 'ok');
+  renderTabs();
+  renderLines();
 }
 
-// Beim Start laden wenn Token vorhanden
+// ── BEIM START ────────────────────────────────────────
 window.addEventListener('load', function() {
-  setTimeout(loadFromGitHub, 2000);
+  if (currentUser) {
+    // Bereits eingeloggt via Session
+    isAdmin = !!currentUser.is_admin;
+    setAdminMode(isAdmin);
+    document.getElementById('lockBtn').textContent = isAdmin ? '🔓' : '👤';
+    setTimeout(function(){ loadFromSupabase(true); }, 1000);
+    setTimeout(function(){ _loadUserSettings(); }, 1800);
+  } else {
+    // Login anzeigen
+    initLogin();
+  }
 });
 
 
@@ -3350,8 +3507,7 @@ function toggleTheme() {
 
 
 // ── PASSWORTSCHUTZ ────────────────────────────────────
-var ADMIN_PW = '1345';
-var isAdmin = false;
+var isAdmin = currentUser ? !!currentUser.is_admin : false;
 
 var kpInput = '';
 
@@ -3371,17 +3527,23 @@ function closeChangelog() {
 }
 
 function openKeypad() {
-  if (isAdmin) {
-    // Direkt ausloggen
-    isAdmin = false;
-    setAdminMode(false);
-    document.getElementById('lockBtn').textContent = '🔒';
+  if (currentUser && currentUser.is_admin) {
+    // Admin: Admin-Modus ein/ausschalten
+    isAdmin = !isAdmin;
+    setAdminMode(isAdmin);
+    document.getElementById('lockBtn').textContent = isAdmin ? '🔓' : '👤';
     return;
   }
-  kpInput = '';
-  updateKeypadDisplay();
-  document.getElementById('keypadTitle').textContent = '🔒 ADMIN';
-  document.getElementById('keypadOverlay').classList.add('open');
+  if (currentUser && !currentUser.is_admin) {
+    // Normaler Fahrer: Abmelden
+    if (confirm('Abmelden?')) {
+      sessionStorage.removeItem('kp_user');
+      location.reload();
+    }
+    return;
+  }
+  // Kein Login: Login-Overlay zeigen
+  initLogin();
 }
 
 function closeKeypad() {
@@ -3394,14 +3556,18 @@ function updateKeypadDisplay() {
   document.getElementById('keypadDisplay').textContent = dots;
 }
 
-function kpPress(digit) {
+async function kpPress(digit) {
   if (kpInput.length >= 4) return;
   kpInput += digit;
   updateKeypadDisplay();
-  // Auto-check when 4 digits entered
   if (kpInput.length === 4) {
-    setTimeout(function() {
-      if (kpInput === ADMIN_PW) {
+    setTimeout(async function() {
+      // Check against any admin user's PIN in Supabase
+      var hash = await sha256(kpInput);
+      var res = await sb.from('users').select('id,name,is_admin').eq('pin_hash', hash).eq('is_admin', true).single();
+      if (!res.error && res.data) {
+        currentUser = res.data;
+        sessionStorage.setItem('kp_user', JSON.stringify(currentUser));
         isAdmin = true;
         setAdminMode(true);
         document.getElementById('lockBtn').textContent = '🔓';
