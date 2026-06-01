@@ -269,7 +269,7 @@ main{padding:12px 16px 100px;}
 // Sofortige Session-Prüfung – vermeidet Login-Flash bei bestehender Session
 (function(){
   try {
-    var u = JSON.parse(sessionStorage.getItem('kp_user') || 'null');
+    var u = JSON.parse(localStorage.getItem('kp_user') || 'null');
     if (u && u.id) { window._kpSession = u; }
     else { document.getElementById('loginOv').style.display = 'flex'; }
   } catch(e) { document.getElementById('loginOv').style.display = 'flex'; }
@@ -527,6 +527,86 @@ const SEED = {
       ]
     },
     {
+      id:'kurs213', name:'Kurs 213', typ:'schule', datum:'2026-04-13', schichtdauer:'09:04', gesamtkm:'167,05',lines:[
+        {id:'p1',linienNr:'710',fahrtNr:'3710008',start:'Karby, Am Ring',end:'Eckernförde, Schulzentrum Süd',startTime:'06:41',endTime:'07:40',
+          stops:[
+            {time:'06:41',name:'Karby, Am Ring'},{time:'06:42',name:'Dörphof, Karlberger Straße'},
+            {time:'06:44',name:'Dörphof, Schuby'},{time:'06:46',name:'Dörphof, Grüntal'},
+            {time:'06:48',name:'Vogelsang-Grünholz, Kummersholz'},{time:'06:52',name:'Vogelsang-Grünholz, ZOB',letter:'A'},
+            {time:'06:54',name:'Vogelsang-Grünholz, Sankt-Johannes-Stift'},{time:'06:55',name:'Schwastrum'},
+            {time:'06:57',name:'Waabs, Großwaabs'},{time:'06:58',name:'Waabs, Hökholz'},
+            {time:'07:00',name:'Waabs, Mühlenstraße'},{time:'07:02',name:'Waabs, Abzweig nach Langholz'},
+            {time:'07:03',name:'Waabs, Kummerteich'},{time:'07:05',name:'Waabs, Gut Ludwigsburg'},
+            {time:'07:06',name:'Waabs, Abzweig nach Karlsminde'},{time:'07:07',name:'Waabs, Gast'},
+            {time:'07:08',name:'Hohenstein, Gut'},{time:'07:10',name:'Hemmelmark, Gutsweg'},
+            {time:'07:11',name:'Hemmelmark, Böhnrüher Weg'},{time:'07:13',name:'Eckernförde, Prinzenstraße'},
+            {time:'07:14',name:'Eckernförde, Liliencronweg'},{time:'07:15',name:'Eckernförde, Feldweg'},
+            {time:'07:18',name:'Eckernförde, Gaehtjestraße'},{time:'07:22',name:'Eckernförde, Rathaus'},
+            {time:'07:28',name:'Eckernförde, Bahnhof/ZOB',letter:'H'},{time:'07:35',name:'Eckernförde, Sprottenschule'},
+            {time:'07:40',name:'Eckernförde, Schulzentrum Süd',letter:'A'}
+          ]},
+        {id:'p2',linienNr:'746',fahrtNr:'3746004',start:'Eckernförde, Bahnhof/ZOB',end:'Surendorf, Schule',startTime:'08:02',endTime:'08:28',
+          stops:[
+            {time:'08:02',name:'Eckernförde, Bahnhof/ZOB',letter:'D',hints:[{typ:'Z',linie:'737',dest:'Neudorf, B76',fp:5},{typ:'Z',linie:'X710',dest:'Kappeln, ZOB',fp:5},{typ:'Z',linie:'711',dest:'Eckernförde, Schulzentrum Süd',fp:5}]},{time:'08:04',name:'Eckernförde, Berliner Straße'},
+            {time:'08:05',name:'Eckernförde, Sandkrug'},{time:'08:07',name:'Altenhof, Alter Bahnhof'},
+            {time:'08:09',name:'Altenhof, Jordanschule'},{time:'08:10',name:'Altenhof, Grüner Jäger'},
+            {time:'08:12',name:'Altenhof, Aschau'},{time:'08:13',name:'Lindhöft, Int Holt'},
+            {time:'08:14',name:'Lindhöft, Strandweg'},{time:'08:16',name:'Lindhöft, Alte Schule'},
+            {time:'08:17',name:'Lindhöft, Mühlenweg'},{time:'08:18',name:'Noer, Siedlung'},
+            {time:'08:20',name:'Noer, Schloss',letter:'C'},{time:'08:22',name:'Grönwohld, Gut'},
+            {time:'08:23',name:'Krusendorf, Wischkamp'},{time:'08:24',name:'Krusendorf, Kirche'},
+            {time:'08:27',name:'Surendorf, Ortsmitte',letter:'D'},{time:'08:28',name:'Surendorf, Schule',hints:[{typ:'A',linie:'740',dest:'Kiel, ZOB',fp:5}]}
+          ]},
+        {id:'p3',linienNr:'746',fahrtNr:'3746013',start:'Surendorf, Schule',end:'Eckernförde, Bahnhof/ZOB',startTime:'11:26',endTime:'11:58',
+          stops:[
+            {time:'11:26',name:'Surendorf, Schule',hints:[{typ:'Z',linie:'740',dest:'Kiel, ZOB',fp:5}]},{time:'11:31',name:'Surendorf, Ortsmitte'},
+            {time:'11:33',name:'Krusendorf, Kirche'},{time:'11:34',name:'Krusendorf, Wischkamp'},
+            {time:'11:35',name:'Grönwohld, Gut'},{time:'11:36',name:'Noer, Schloss'},
+            {time:'11:37',name:'Noer, Siedlung'},{time:'11:38',name:'Lindhöft, Mühlenweg'},
+            {time:'11:40',name:'Lindhöft, Alte Schule'},{time:'11:41',name:'Lindhöft, Strandweg'},
+            {time:'11:42',name:'Lindhöft, Int Holt'},{time:'11:43',name:'Altenhof, Aschau'},
+            {time:'11:45',name:'Altenhof, Grüner Jäger'},{time:'11:46',name:'Altenhof, Jordanschule'},
+            {time:'11:47',name:'Altenhof, Kiekut'},{time:'11:48',name:'Altenhof, Alter Bahnhof'},
+            {time:'11:50',name:'Eckernförde, Sandkrug'},{time:'11:52',name:'Eckernförde, Berliner Straße'},
+            {time:'11:58',name:'Eckernförde, Bahnhof/ZOB',letter:'J'}
+          ]},
+        {id:'p4',linienNr:'700',fahrtNr:'3700117',start:'Eckernförde, Bahnhof/ZOB',end:'Klein Wittensee',startTime:'12:25',endTime:'12:56',
+          stops:[
+            {time:'12:25',name:'Eckernförde, Bahnhof/ZOB',letter:'E'},{time:'12:27',name:'Eckernförde, Admiral-Scheer-Straße'},
+            {time:'12:29',name:'Eckernförde, Sprottenschule'},{time:'12:31',name:'Eckernförde, Rendsburger Straße'},
+            {time:'12:33',name:'Eckernförde, Sauerstraße'},{time:'12:35',name:'Eckernförde, Schulzentrum Süd',letter:'C'},
+            {time:'12:36',name:'Eckernförde, Sauerstraße'},{time:'12:38',name:'Eckernförde, Domsland B 203'},
+            {time:'12:39',name:'Friedensthal, An der Bundesstraße'},{time:'12:40',name:'Goosefeld, Waldsiedlung'},
+            {time:'12:42',name:'Goosefeld, Gemeindefreizeitstätte'},{time:'12:44',name:'Goosefeld, Landkrug'},
+            {time:'12:45',name:'Groß Wittensee, Wohldmaas'},{time:'12:46',name:'Groß Wittensee, Timmermeß'},
+            {time:'12:47',name:'Groß Wittensee, Söhr'},{time:'12:49',name:'Groß Wittensee, Damendorfer Straße'},
+            {time:'12:52',name:'Groß Wittensee, Kirchenweg'},{time:'12:53',name:'Groß Wittensee, Kirchhorster Weg'},
+            {time:'12:56',name:'Klein Wittensee'}
+          ]},
+        {id:'p5',linienNr:'737',fahrtNr:'3737034',start:'Holtsee, Schule',end:'Sehestedt, Hauptstraße',startTime:'13:30',endTime:'13:38',
+          stops:[
+            {time:'13:30',name:'Holtsee, Schule',hints:[{typ:'G',linie:'737',dest:'Gettorf, Grundschule',fp:0}]},{time:'13:31',name:'Holtsee, Gettorfer Straße',hints:[{typ:'A',linie:'730',dest:'Gettorf, Bahnhof',fp:5}]},
+            {time:'13:32',name:'Holtsee, Neuholtsee',hints:[{typ:'G',linie:'737',dest:'Eckernförde, Kreiskrankenhaus',fp:0}]},{time:'13:34',name:'Holtsee, Habyer Straße',letter:'D'},
+            {time:'13:38',name:'Sehestedt, Hauptstraße'}
+          ]},
+        {id:'p6',linienNr:'714',fahrtNr:'3714005',start:'Eckernförde, Schulzentrum Süd',end:'Rieseby, Bahnhof',startTime:'14:25',endTime:'15:21',
+          stops:[
+            {time:'14:25',name:'Eckernförde, Schulzentrum Süd',letter:'D'},{time:'14:37',name:'Eckernförde, Bahnhof/ZOB',letter:'A'},
+            {time:'14:38',name:'Eckernförde, Rathaus'},{time:'14:42',name:'Eckernförde, Gaehtjestraße'},
+            {time:'14:43',name:'Eckernförde, Mühlenberg'},{time:'14:43',name:'Eckernförde, J.-H.-Fehrs-Weg'},
+            {time:'14:44',name:'Eckernförde, Gorch-Fock-Straße'},{time:'14:44',name:'Eckernförde, Friedhof Schleswiger Straße'},
+            {time:'14:45',name:'Eckernförde, Kreiskrankenhaus'},{time:'14:49',name:'Barkelsby, Westerschauer Weg'},
+            {time:'14:52',name:'Rieseby, Hummelweeth'},{time:'14:53',name:'Rieseby, Moorholz'},
+            {time:'14:55',name:'Rieseby, Basdorf'},{time:'15:01',name:'Rieseby, Bahnhof'},
+            {time:'15:04',name:'Rieseby, Buchholz'},{time:'15:05',name:'Rieseby, Gut Büchenau'},
+            {time:'15:06',name:'Rieseby, Zimmert'},{time:'15:08',name:'Rieseby, Boholm'},
+            {time:'15:11',name:'Rieseby, Bösby'},{time:'15:13',name:'Rieseby, Kriesebyau'},
+            {time:'15:14',name:'Rieseby, Krieseby'},{time:'15:15',name:'Rieseby, Steckswiese'},
+            {time:'15:16',name:'Rieseby, Patermeß'},{time:'15:21',name:'Rieseby, Bahnhof'}
+          ]}
+      ]
+    },
+    {
       id: 'kurs214', name: 'Kurs 214', typ: 'schule', datum: '2026-04-13',
       schichtdauer:'10:27', gesamtkm:'174,26',
       service_blocks:[{after:'3712006',icon:'🧹',label:'Innenreinigung',time:'08:13–09:03'},{after:'3714007',icon:'🚿🛢️',label:'Waschen · Tanken',time:'16:03–16:23'}],
@@ -622,86 +702,6 @@ const SEED = {
             {time:'16:38',name:'Rieseby, Boholm'},{time:'16:40',name:'Rieseby, Zimmert'},
             {time:'16:42',name:'Rieseby, Gut Büchenau'},{time:'16:43',name:'Rieseby, Buchholz'},
             {time:'16:49',name:'Rieseby, Bahnhof'}
-          ]}
-      ]
-    },
-    {
-      id:'kurs213', name:'Kurs 213', typ:'schule', datum:'2026-04-13', schichtdauer:'09:04', gesamtkm:'167,05',lines:[
-        {id:'p1',linienNr:'710',fahrtNr:'3710008',start:'Karby, Am Ring',end:'Eckernförde, Schulzentrum Süd',startTime:'06:41',endTime:'07:40',
-          stops:[
-            {time:'06:41',name:'Karby, Am Ring'},{time:'06:42',name:'Dörphof, Karlberger Straße'},
-            {time:'06:44',name:'Dörphof, Schuby'},{time:'06:46',name:'Dörphof, Grüntal'},
-            {time:'06:48',name:'Vogelsang-Grünholz, Kummersholz'},{time:'06:52',name:'Vogelsang-Grünholz, ZOB',letter:'A'},
-            {time:'06:54',name:'Vogelsang-Grünholz, Sankt-Johannes-Stift'},{time:'06:55',name:'Schwastrum'},
-            {time:'06:57',name:'Waabs, Großwaabs'},{time:'06:58',name:'Waabs, Hökholz'},
-            {time:'07:00',name:'Waabs, Mühlenstraße'},{time:'07:02',name:'Waabs, Abzweig nach Langholz'},
-            {time:'07:03',name:'Waabs, Kummerteich'},{time:'07:05',name:'Waabs, Gut Ludwigsburg'},
-            {time:'07:06',name:'Waabs, Abzweig nach Karlsminde'},{time:'07:07',name:'Waabs, Gast'},
-            {time:'07:08',name:'Hohenstein, Gut'},{time:'07:10',name:'Hemmelmark, Gutsweg'},
-            {time:'07:11',name:'Hemmelmark, Böhnrüher Weg'},{time:'07:13',name:'Eckernförde, Prinzenstraße'},
-            {time:'07:14',name:'Eckernförde, Liliencronweg'},{time:'07:15',name:'Eckernförde, Feldweg'},
-            {time:'07:18',name:'Eckernförde, Gaehtjestraße'},{time:'07:22',name:'Eckernförde, Rathaus'},
-            {time:'07:28',name:'Eckernförde, Bahnhof/ZOB',letter:'H'},{time:'07:35',name:'Eckernförde, Sprottenschule'},
-            {time:'07:40',name:'Eckernförde, Schulzentrum Süd',letter:'A'}
-          ]},
-        {id:'p2',linienNr:'746',fahrtNr:'3746004',start:'Eckernförde, Bahnhof/ZOB',end:'Surendorf, Schule',startTime:'08:02',endTime:'08:28',
-          stops:[
-            {time:'08:02',name:'Eckernförde, Bahnhof/ZOB',letter:'D',hints:[{typ:'Z',linie:'737',dest:'Neudorf, B76',fp:5},{typ:'Z',linie:'X710',dest:'Kappeln, ZOB',fp:5},{typ:'Z',linie:'711',dest:'Eckernförde, Schulzentrum Süd',fp:5}]},{time:'08:04',name:'Eckernförde, Berliner Straße'},
-            {time:'08:05',name:'Eckernförde, Sandkrug'},{time:'08:07',name:'Altenhof, Alter Bahnhof'},
-            {time:'08:09',name:'Altenhof, Jordanschule'},{time:'08:10',name:'Altenhof, Grüner Jäger'},
-            {time:'08:12',name:'Altenhof, Aschau'},{time:'08:13',name:'Lindhöft, Int Holt'},
-            {time:'08:14',name:'Lindhöft, Strandweg'},{time:'08:16',name:'Lindhöft, Alte Schule'},
-            {time:'08:17',name:'Lindhöft, Mühlenweg'},{time:'08:18',name:'Noer, Siedlung'},
-            {time:'08:20',name:'Noer, Schloss',letter:'C'},{time:'08:22',name:'Grönwohld, Gut'},
-            {time:'08:23',name:'Krusendorf, Wischkamp'},{time:'08:24',name:'Krusendorf, Kirche'},
-            {time:'08:27',name:'Surendorf, Ortsmitte',letter:'D'},{time:'08:28',name:'Surendorf, Schule',hints:[{typ:'A',linie:'740',dest:'Kiel, ZOB',fp:5}]}
-          ]},
-        {id:'p3',linienNr:'746',fahrtNr:'3746013',start:'Surendorf, Schule',end:'Eckernförde, Bahnhof/ZOB',startTime:'11:26',endTime:'11:58',
-          stops:[
-            {time:'11:26',name:'Surendorf, Schule',hints:[{typ:'Z',linie:'740',dest:'Kiel, ZOB',fp:5}]},{time:'11:31',name:'Surendorf, Ortsmitte'},
-            {time:'11:33',name:'Krusendorf, Kirche'},{time:'11:34',name:'Krusendorf, Wischkamp'},
-            {time:'11:35',name:'Grönwohld, Gut'},{time:'11:36',name:'Noer, Schloss'},
-            {time:'11:37',name:'Noer, Siedlung'},{time:'11:38',name:'Lindhöft, Mühlenweg'},
-            {time:'11:40',name:'Lindhöft, Alte Schule'},{time:'11:41',name:'Lindhöft, Strandweg'},
-            {time:'11:42',name:'Lindhöft, Int Holt'},{time:'11:43',name:'Altenhof, Aschau'},
-            {time:'11:45',name:'Altenhof, Grüner Jäger'},{time:'11:46',name:'Altenhof, Jordanschule'},
-            {time:'11:47',name:'Altenhof, Kiekut'},{time:'11:48',name:'Altenhof, Alter Bahnhof'},
-            {time:'11:50',name:'Eckernförde, Sandkrug'},{time:'11:52',name:'Eckernförde, Berliner Straße'},
-            {time:'11:58',name:'Eckernförde, Bahnhof/ZOB',letter:'J'}
-          ]},
-        {id:'p4',linienNr:'700',fahrtNr:'3700117',start:'Eckernförde, Bahnhof/ZOB',end:'Klein Wittensee',startTime:'12:25',endTime:'12:56',
-          stops:[
-            {time:'12:25',name:'Eckernförde, Bahnhof/ZOB',letter:'E'},{time:'12:27',name:'Eckernförde, Admiral-Scheer-Straße'},
-            {time:'12:29',name:'Eckernförde, Sprottenschule'},{time:'12:31',name:'Eckernförde, Rendsburger Straße'},
-            {time:'12:33',name:'Eckernförde, Sauerstraße'},{time:'12:35',name:'Eckernförde, Schulzentrum Süd',letter:'C'},
-            {time:'12:36',name:'Eckernförde, Sauerstraße'},{time:'12:38',name:'Eckernförde, Domsland B 203'},
-            {time:'12:39',name:'Friedensthal, An der Bundesstraße'},{time:'12:40',name:'Goosefeld, Waldsiedlung'},
-            {time:'12:42',name:'Goosefeld, Gemeindefreizeitstätte'},{time:'12:44',name:'Goosefeld, Landkrug'},
-            {time:'12:45',name:'Groß Wittensee, Wohldmaas'},{time:'12:46',name:'Groß Wittensee, Timmermeß'},
-            {time:'12:47',name:'Groß Wittensee, Söhr'},{time:'12:49',name:'Groß Wittensee, Damendorfer Straße'},
-            {time:'12:52',name:'Groß Wittensee, Kirchenweg'},{time:'12:53',name:'Groß Wittensee, Kirchhorster Weg'},
-            {time:'12:56',name:'Klein Wittensee'}
-          ]},
-        {id:'p5',linienNr:'737',fahrtNr:'3737034',start:'Holtsee, Schule',end:'Sehestedt, Hauptstraße',startTime:'13:30',endTime:'13:38',
-          stops:[
-            {time:'13:30',name:'Holtsee, Schule',hints:[{typ:'G',linie:'737',dest:'Gettorf, Grundschule',fp:0}]},{time:'13:31',name:'Holtsee, Gettorfer Straße',hints:[{typ:'A',linie:'730',dest:'Gettorf, Bahnhof',fp:5}]},
-            {time:'13:32',name:'Holtsee, Neuholtsee',hints:[{typ:'G',linie:'737',dest:'Eckernförde, Kreiskrankenhaus',fp:0}]},{time:'13:34',name:'Holtsee, Habyer Straße',letter:'D'},
-            {time:'13:38',name:'Sehestedt, Hauptstraße'}
-          ]},
-        {id:'p6',linienNr:'714',fahrtNr:'3714005',start:'Eckernförde, Schulzentrum Süd',end:'Rieseby, Bahnhof',startTime:'14:25',endTime:'15:21',
-          stops:[
-            {time:'14:25',name:'Eckernförde, Schulzentrum Süd',letter:'D'},{time:'14:37',name:'Eckernförde, Bahnhof/ZOB',letter:'A'},
-            {time:'14:38',name:'Eckernförde, Rathaus'},{time:'14:42',name:'Eckernförde, Gaehtjestraße'},
-            {time:'14:43',name:'Eckernförde, Mühlenberg'},{time:'14:43',name:'Eckernförde, J.-H.-Fehrs-Weg'},
-            {time:'14:44',name:'Eckernförde, Gorch-Fock-Straße'},{time:'14:44',name:'Eckernförde, Friedhof Schleswiger Straße'},
-            {time:'14:45',name:'Eckernförde, Kreiskrankenhaus'},{time:'14:49',name:'Barkelsby, Westerschauer Weg'},
-            {time:'14:52',name:'Rieseby, Hummelweeth'},{time:'14:53',name:'Rieseby, Moorholz'},
-            {time:'14:55',name:'Rieseby, Basdorf'},{time:'15:01',name:'Rieseby, Bahnhof'},
-            {time:'15:04',name:'Rieseby, Buchholz'},{time:'15:05',name:'Rieseby, Gut Büchenau'},
-            {time:'15:06',name:'Rieseby, Zimmert'},{time:'15:08',name:'Rieseby, Boholm'},
-            {time:'15:11',name:'Rieseby, Bösby'},{time:'15:13',name:'Rieseby, Kriesebyau'},
-            {time:'15:14',name:'Rieseby, Krieseby'},{time:'15:15',name:'Rieseby, Steckswiese'},
-            {time:'15:16',name:'Rieseby, Patermeß'},{time:'15:21',name:'Rieseby, Bahnhof'}
           ]}
       ]
     },
@@ -3236,7 +3236,7 @@ function _startSessionMonitor(userId, token) {
     var r = await sb.from('users').select('session_token').eq('id', userId).single();
     if (r.data && r.data.session_token !== token) {
       clearInterval(_sessionInterval);
-      sessionStorage.removeItem('kp_user');
+      localStorage.removeItem('kp_user');
       alert('Du wurdest auf einem anderen Gerät eingeloggt und hier automatisch abgemeldet.');
       location.reload();
     }
@@ -3245,7 +3245,7 @@ function _startSessionMonitor(userId, token) {
 
 // Session-Monitor bei bestehender Session sofort starten
 if (currentUser) {
-  var _savedToken = sessionStorage.getItem('kp_token');
+  var _savedToken = localStorage.getItem('kp_token');
   if (_savedToken) _startSessionMonitor(currentUser.id, _savedToken);
 }
 
@@ -3320,8 +3320,8 @@ async function _finalizeLogin(user) {
   await sb.from('login_log').insert({ user_id: user.id, user_name: user.name, user_agent: (navigator.userAgent||'').substring(0,200) });
   currentUser = user;
   currentUser.session_token = token;
-  sessionStorage.setItem('kp_user', JSON.stringify(currentUser));
-  sessionStorage.setItem('kp_token', token);
+  localStorage.setItem('kp_user', JSON.stringify(currentUser));
+  localStorage.setItem('kp_token', token);
   _startSessionMonitor(user.id, token);
   if (user.must_change_pin) { _showForcePinChange(); return; }
   _openApp();
@@ -3360,7 +3360,7 @@ async function _saveForcedPin() {
   var hash = await sha256(p1);
   await sb.from('users').update({ pin_hash: hash, must_change_pin: false }).eq('id', currentUser.id);
   currentUser.must_change_pin = false;
-  sessionStorage.setItem('kp_user', JSON.stringify(currentUser));
+  localStorage.setItem('kp_user', JSON.stringify(currentUser));
   _openApp();
 }
 
@@ -3655,8 +3655,8 @@ function openKeypad() {
     if (choice) { openPinChange(); }
     else {
       if (confirm('Wirklich abmelden?')) {
-        sessionStorage.removeItem('kp_user');
-        sessionStorage.removeItem('kp_token');
+        localStorage.removeItem('kp_user');
+        localStorage.removeItem('kp_token');
         location.reload();
       }
     }
@@ -3687,7 +3687,7 @@ async function kpPress(digit) {
       var res = await sb.from('users').select('id,name,is_admin').eq('pin_hash', hash).eq('is_admin', true).single();
       if (!res.error && res.data) {
         currentUser = res.data;
-        sessionStorage.setItem('kp_user', JSON.stringify(currentUser));
+        localStorage.setItem('kp_user', JSON.stringify(currentUser));
         isAdmin = true;
         setAdminMode(true);
         document.getElementById('lockBtn').textContent = '🔓';
