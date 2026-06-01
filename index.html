@@ -278,6 +278,7 @@ main{padding:12px 16px 100px;}
 <header>
   <div class="logo" style="font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;color:#fff;background:var(--acc);border-radius:10px;width:42px;height:42px;display:flex;align-items:center;justify-content:center;">MR</div>
   <div class="htxt"><h1>KURSPLAN <span style="font-size:13px;font-weight:400;color:var(--mut);letter-spacing:1px;vertical-align:middle">v52r</span></h1><p id="hd"></p></div>
+  <span id="userNameDisplay" style="font-size:12px;color:var(--mut);font-weight:600;white-space:nowrap;"></span>
   <button class="lock-btn" id="lockBtn" onclick="openKeypad()" title="Admin">🔒</button>
   <button class="lock-btn" id="themeBtn" onclick="toggleTheme()" title="Hell/Dunkel">🌙</button>
   <button id="gpsBtn" onclick="toggleGps()">
@@ -3329,9 +3330,11 @@ async function _finalizeLogin(user) {
 
 function _openApp() {
   document.getElementById('loginOv').style.display = 'none';
-  isAdmin = !!currentUser.is_admin;
-  setAdminMode(isAdmin);
-  document.getElementById('lockBtn').textContent = isAdmin ? '🔓' : '👤';
+  isAdmin = false;
+  setAdminMode(false);
+  document.getElementById('lockBtn').textContent = currentUser.is_admin ? '🔒' : '👤';
+  var uDisp = document.getElementById('userNameDisplay');
+  if (uDisp) uDisp.textContent = currentUser.name || '';
   loadFromSupabase(true);
   _loadUserSettings();
 }
@@ -3584,9 +3587,11 @@ async function loadFromSupabase(silent) {
 window.addEventListener('load', function() {
   if (currentUser) {
     // Bereits eingeloggt via Session
-    isAdmin = !!currentUser.is_admin;
-    setAdminMode(isAdmin);
-    document.getElementById('lockBtn').textContent = isAdmin ? '🔓' : '👤';
+    isAdmin = false;
+    setAdminMode(false);
+    document.getElementById('lockBtn').textContent = currentUser.is_admin ? '🔒' : '👤';
+    var uDisp = document.getElementById('userNameDisplay');
+    if (uDisp) uDisp.textContent = currentUser.name || '';
     setTimeout(function(){ loadFromSupabase(true); }, 1000);
     setTimeout(function(){ _loadUserSettings(); }, 1800);
   } else {
@@ -3646,7 +3651,7 @@ function openKeypad() {
     // Admin: Admin-Modus ein/ausschalten
     isAdmin = !isAdmin;
     setAdminMode(isAdmin);
-    document.getElementById('lockBtn').textContent = isAdmin ? '🔓' : '👤';
+    document.getElementById('lockBtn').textContent = isAdmin ? '🔓' : '🔒';
     return;
   }
   if (currentUser && !currentUser.is_admin) {
