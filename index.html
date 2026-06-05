@@ -253,6 +253,33 @@ main{padding:12px 16px 100px;}
 .um-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--brd);}
 .um-name{flex:1;font-weight:600;}
 .um-badge{font-size:10px;background:var(--acc);color:#0f1117;border-radius:6px;padding:2px 6px;font-weight:700;}
+/* ── NOTICES ── */
+.notice-banner{background:rgba(255,152,0,.12);border:1.5px solid #ff9800;border-left:4px solid #ff9800;border-radius:12px;padding:12px 16px;margin:8px 12px 4px;}
+.notice-banner-title{font-weight:700;font-size:14px;margin-bottom:4px;display:flex;justify-content:space-between;align-items:flex-start;gap:8px;color:#e67e00;}
+.notice-banner-valid{font-size:11px;font-weight:400;color:var(--mut);white-space:nowrap;flex-shrink:0;}
+.notice-banner-text{font-size:13px;line-height:1.5;color:var(--txt);}
+#noticeOv{display:none;position:fixed;inset:0;background:rgba(0,0,0,.72);z-index:1000;align-items:flex-end;justify-content:center;}
+#noticeOv.open{display:flex;}
+.notice-sheet{background:var(--bg);border-radius:20px 20px 0 0;padding:24px 24px 40px;width:min(520px,100vw);max-height:85vh;overflow-y:auto;}
+.notice-sheet h2{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;margin:0 0 16px;}
+.notice-drop{border:2px dashed var(--brd);border-radius:14px;padding:32px 16px;text-align:center;cursor:pointer;transition:border-color .2s;}
+.notice-drop:hover,.notice-drop.drag{border-color:var(--acc);}
+.notice-drop-icon{font-size:36px;margin-bottom:8px;}
+.notice-fld{margin:10px 0;}
+.notice-fld label{font-size:11px;color:var(--mut);text-transform:uppercase;letter-spacing:.5px;display:block;margin-bottom:4px;}
+.notice-fld input,.notice-fld textarea{width:100%;background:var(--s2);border:1.5px solid var(--brd);border-radius:10px;padding:10px 12px;color:var(--txt);font-family:inherit;font-size:14px;box-sizing:border-box;}
+.notice-fld textarea{resize:vertical;min-height:80px;}
+.notice-tag{display:inline-block;background:rgba(255,152,0,.15);color:#e67e00;border:1px solid rgba(255,152,0,.4);border-radius:8px;padding:3px 8px;font-size:12px;font-weight:700;margin:2px;}
+.notice-item{background:var(--s2);border:1.5px solid var(--brd);border-radius:12px;padding:12px;margin:8px 0;display:flex;gap:10px;align-items:flex-start;}
+.notice-item-body{flex:1;min-width:0;}
+.notice-item-title{font-weight:700;font-size:14px;margin-bottom:2px;}
+.notice-item-meta{font-size:12px;color:var(--mut);}
+.notice-del-btn{background:none;border:1px solid #c0392b;color:#c0392b;border-radius:8px;padding:5px 10px;font-size:13px;cursor:pointer;white-space:nowrap;flex-shrink:0;}
+.notice-btn-row{display:flex;gap:10px;margin-top:16px;}
+.notice-btn-row button{flex:1;padding:13px;border-radius:12px;border:none;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;}
+.notice-primary{background:var(--acc);color:#0f1117;}
+.notice-secondary{background:var(--s2);color:var(--txt);border:1.5px solid var(--brd) !important;}
+.notice-spin{text-align:center;padding:32px;font-size:32px;}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 </head>
@@ -311,6 +338,7 @@ main{padding:12px 16px 100px;}
   <button class="sync-btn" style="background:var(--s2);color:var(--txt);border:1.5px solid var(--brd)" onclick="loadFromSupabase(false)">🔄 Laden</button>
   <button class="sync-btn" style="background:var(--s2);color:var(--txt);border:1.5px solid var(--brd)" onclick="openUserManager()">👥 Fahrer</button>
   <button class="sync-btn" style="background:var(--s2);color:var(--txt);border:1.5px solid var(--brd)" onclick="adminLogout()">🚪 Abmelden</button>
+  <button class="sync-btn" style="background:var(--s2);color:var(--txt);border:1.5px solid var(--brd)" onclick="openNoticeOv('upload')">📋 Hinweis</button>
   <span class="sync-status" id="syncStatus">Nicht synchronisiert</span>
 </div>
 <main>
@@ -2545,8 +2573,28 @@ function renderLines() {
       }
     }
 
+    // Notice-Banner prüfen
+    var matchingNotice = null;
+    for (var ni = 0; ni < notices.length; ni++) {
+      if (noticeMatchesLine(notices[ni], l)) { matchingNotice = notices[ni]; break; }
+    }
+
     var panel = document.createElement('div');
     panel.className = 'sp';
+
+    if (matchingNotice) {
+      var validStr = '';
+      if (matchingNotice.valid_until) {
+        var vd = new Date(matchingNotice.valid_until);
+        validStr = 'bis ' + vd.toLocaleDateString('de-DE',{day:'2-digit',month:'2-digit'}) + ' ' + vd.toLocaleTimeString('de-DE',{hour:'2-digit',minute:'2-digit'}) + ' Uhr';
+      }
+      var nb = document.createElement('div');
+      nb.className = 'notice-banner';
+      nb.innerHTML = '<div class="notice-banner-title">⚠️ ' + esc(matchingNotice.titel) + '<span class="notice-banner-valid">' + validStr + '</span></div>' +
+        '<div class="notice-banner-text">' + esc(matchingNotice.summary) + '</div>';
+      panel.appendChild(nb);
+    }
+
     panel.appendChild(stopsDiv);
 
     // Build header
@@ -3337,6 +3385,7 @@ function _openApp() {
   var uDisp = document.getElementById('userNameDisplay');
   if (uDisp) uDisp.textContent = currentUser.name || '';
   loadFromSupabase(true);
+  loadNotices();
   _loadUserSettings();
 }
 
@@ -3584,6 +3633,189 @@ async function loadFromSupabase(silent) {
   renderLines();
 }
 
+// ── NOTICE SYSTEM ─────────────────────────────────────
+var notices = [];
+var EDGE_URL = SUPABASE_URL + '/functions/v1/notice-extract';
+var _noticeExtractedData = null;
+
+async function loadNotices() {
+  var res = await sb.from('notices').select('*').order('created_at', { ascending: false });
+  if (!res.error && res.data) {
+    notices = res.data;
+    renderLines();
+  }
+}
+
+function noticeMatchesLine(notice, line) {
+  var now = new Date();
+  if (notice.valid_until && new Date(notice.valid_until) < now) return false;
+  if (notice.valid_from && new Date(notice.valid_from) > now) return false;
+  var lf = notice.linien_fahrten || [];
+  for (var i = 0; i < lf.length; i++) {
+    if (lf[i].linie === line.linienNr) {
+      if (!lf[i].fahrten || lf[i].fahrten.length === 0) return true;
+      var short = (line.fahrtNr || '').slice(-3);
+      return lf[i].fahrten.indexOf(short) !== -1;
+    }
+  }
+  return false;
+}
+
+function openNoticeOv(mode) {
+  document.getElementById('noticeOv').classList.add('open');
+  if (mode === 'list') _noticeShowList();
+  else _noticeShowUpload();
+}
+function closeNoticeOv() { document.getElementById('noticeOv').classList.remove('open'); }
+
+function _noticeShowUpload() {
+  document.getElementById('noticeSheetContent').innerHTML =
+    '<h2>📋 HINWEIS HOCHLADEN</h2>' +
+    '<div class="notice-drop" id="noticeDrop" onclick="document.getElementById(\'noticeFilePicker\').click()">' +
+      '<div class="notice-drop-icon">📄</div>' +
+      '<div style="font-weight:600;margin-bottom:4px">Bild oder PDF hochladen</div>' +
+      '<div style="font-size:12px;color:var(--mut)">Dienstanweisung, Sperrung, Umleitung…</div>' +
+    '</div>' +
+    '<div class="notice-btn-row">' +
+      '<button class="notice-secondary" style="border:1.5px solid var(--brd)!important" onclick="closeNoticeOv()">Abbrechen</button>' +
+      '<button class="notice-secondary" style="border:1.5px solid var(--brd)!important" onclick="openNoticeOv(\'list\')">🗂 Vorhandene</button>' +
+    '</div>';
+  var picker = document.getElementById('noticeFilePicker');
+  picker.value = '';
+  picker.onchange = function(e) {
+    if (e.target.files[0]) _noticeProcessFile(e.target.files[0]);
+  };
+}
+
+async function _noticeProcessFile(file) {
+  document.getElementById('noticeSheetContent').innerHTML = '<h2>📋 WIRD AUSGEWERTET</h2><div class="notice-spin">⏳</div><div style="text-align:center;color:var(--mut);font-size:13px">KI liest das Dokument…</div>';
+
+  try {
+    var reader = new FileReader();
+    var base64 = await new Promise(function(resolve, reject) {
+      reader.onload = function(e) { resolve(e.target.result.split(',')[1]); };
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+
+    var resp = await fetch(EDGE_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + SUPABASE_KEY
+      },
+      body: JSON.stringify({ fileBase64: base64, mimeType: file.type })
+    });
+
+    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    var data = await resp.json();
+    if (data.error) throw new Error(data.error);
+
+    _noticeShowPreview(data);
+  } catch(e) {
+    document.getElementById('noticeSheetContent').innerHTML =
+      '<h2>📋 FEHLER</h2>' +
+      '<div style="background:rgba(192,57,43,.15);border:1.5px solid #c0392b;border-radius:12px;padding:16px;color:#c0392b;margin-bottom:16px">' +
+        esc(e.message) +
+      '</div>' +
+      '<div class="notice-btn-row"><button class="notice-secondary" style="border:1.5px solid var(--brd)!important" onclick="_noticeShowUpload()">↩ Zurück</button></div>';
+  }
+}
+
+function _noticeShowPreview(data) {
+  _noticeExtractedData = data;
+  var lf = data.linien_fahrten || [];
+  var tagsHtml = lf.map(function(entry) {
+    var label = 'Linie ' + entry.linie;
+    if (entry.fahrten && entry.fahrten.length) label += ' · ' + entry.fahrten.join(', ');
+    else label += ' · alle Fahrten';
+    return '<span class="notice-tag">' + esc(label) + '</span>';
+  }).join('');
+
+  var fromVal = data.valid_from ? data.valid_from.replace('T', ' ').slice(0,16) : '';
+  var untilVal = data.valid_until ? data.valid_until.replace('T', ' ').slice(0,16) : '';
+
+  document.getElementById('noticeSheetContent').innerHTML =
+    '<h2>📋 GEFUNDEN</h2>' +
+    '<div class="notice-fld"><label>Titel</label><input id="nTitel" value="' + esc(data.titel || '') + '"></div>' +
+    '<div class="notice-fld"><label>Betrifft</label><div id="nTags">' + tagsHtml + '</div></div>' +
+    '<div style="display:flex;gap:10px">' +
+      '<div class="notice-fld" style="flex:1"><label>Gültig ab</label><input id="nFrom" type="datetime-local" value="' + fromVal + '"></div>' +
+      '<div class="notice-fld" style="flex:1"><label>Gültig bis</label><input id="nUntil" type="datetime-local" value="' + untilVal + '"></div>' +
+    '</div>' +
+    '<div class="notice-fld"><label>Zusammenfassung</label><textarea id="nSummary">' + esc(data.summary || '') + '</textarea></div>' +
+    '<div class="notice-btn-row">' +
+      '<button class="notice-secondary" style="border:1.5px solid var(--brd)!important" onclick="_noticeShowUpload()">↩ Neu</button>' +
+      '<button class="notice-primary" onclick="_noticeSave()">✅ Speichern</button>' +
+    '</div>';
+}
+
+async function _noticeSave() {
+  var lf = (_noticeExtractedData && _noticeExtractedData.linien_fahrten) ? _noticeExtractedData.linien_fahrten : [];
+  var titel = (document.getElementById('nTitel').value || '').trim();
+  var summary = (document.getElementById('nSummary').value || '').trim();
+  var fromStr = document.getElementById('nFrom').value;
+  var untilStr = document.getElementById('nUntil').value;
+
+  if (!titel || !summary) { alert('Titel und Zusammenfassung werden benötigt.'); return; }
+
+  var payload = {
+    linien_fahrten: lf,
+    titel: titel,
+    summary: summary,
+    valid_from: fromStr ? new Date(fromStr).toISOString() : null,
+    valid_until: untilStr ? new Date(untilStr).toISOString() : null,
+    created_by: currentUser ? currentUser.id : null
+  };
+
+  var res = await sb.from('notices').insert(payload);
+  if (res.error) { alert('Fehler: ' + res.error.message); return; }
+
+  await loadNotices();
+  closeNoticeOv();
+  setSyncStatus('✅ Hinweis gespeichert', 'ok');
+}
+
+async function _noticeShowList() {
+  var res = await sb.from('notices').select('*').order('created_at', { ascending: false });
+  var list = (res.data || []);
+
+  var html = '<h2>🗂 AKTIVE HINWEISE</h2>';
+  if (!list.length) {
+    html += '<div style="text-align:center;color:var(--mut);padding:24px">Keine Hinweise vorhanden</div>';
+  } else {
+    list.forEach(function(n) {
+      var tags = (n.linien_fahrten || []).map(function(e) {
+        return '<span class="notice-tag">' + esc('L' + e.linie + (e.fahrten ? ' ' + e.fahrten.join('/') : '')) + '</span>';
+      }).join('');
+      var meta = '';
+      if (n.valid_until) meta = 'bis ' + new Date(n.valid_until).toLocaleString('de-DE',{day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'});
+      html += '<div class="notice-item">' +
+        '<div class="notice-item-body">' +
+          '<div class="notice-item-title">' + esc(n.titel) + '</div>' +
+          '<div style="margin:4px 0">' + tags + '</div>' +
+          '<div class="notice-item-meta">' + esc(meta) + '</div>' +
+        '</div>' +
+        '<button class="notice-del-btn" onclick="_noticeDelete(\'' + n.id + '\')">🗑</button>' +
+      '</div>';
+    });
+  }
+
+  html += '<div class="notice-btn-row">' +
+    '<button class="notice-secondary" style="border:1.5px solid var(--brd)!important" onclick="closeNoticeOv()">Schließen</button>' +
+    '<button class="notice-primary" onclick="_noticeShowUpload()">📋 Neu hochladen</button>' +
+  '</div>';
+
+  document.getElementById('noticeSheetContent').innerHTML = html;
+}
+
+async function _noticeDelete(id) {
+  if (!confirm('Hinweis löschen?')) return;
+  await sb.from('notices').delete().eq('id', id);
+  await loadNotices();
+  _noticeShowList();
+}
+
 async function adminLogout() {
   if (!confirm('Wirklich abmelden?')) return;
   if (currentUser) {
@@ -3604,6 +3836,7 @@ window.addEventListener('load', function() {
     var uDisp = document.getElementById('userNameDisplay');
     if (uDisp) uDisp.textContent = currentUser.name || '';
     setTimeout(function(){ loadFromSupabase(true); }, 1000);
+    setTimeout(function(){ loadNotices(); }, 1500);
     setTimeout(function(){ _loadUserSettings(); }, 1800);
     // Automatischer Fahrplan-Abgleich alle 5 Minuten
     setInterval(function() { loadFromSupabase(true); }, 5 * 60 * 1000);
@@ -3909,5 +4142,12 @@ function openMapWithHistory(kursId, lineId) {
   </div>
 </div>
 
+<!-- Notice-System -->
+<div id="noticeOv">
+  <div class="notice-sheet">
+    <div id="noticeSheetContent"></div>
+  </div>
+</div>
+<input type="file" id="noticeFilePicker" accept="image/*,application/pdf" style="display:none">
 </body>
 </html>
