@@ -3707,7 +3707,11 @@ async function _noticeProcessFile(file) {
       body: JSON.stringify({ fileBase64: base64, mimeType: file.type })
     });
 
-    if (!resp.ok) throw new Error('HTTP ' + resp.status);
+    if (!resp.ok) {
+      var errBody = {};
+      try { errBody = await resp.json(); } catch(_){}
+      throw new Error((errBody.error || 'HTTP ' + resp.status));
+    }
     var data = await resp.json();
     if (data.error) throw new Error(data.error);
 
