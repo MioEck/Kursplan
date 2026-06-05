@@ -310,6 +310,7 @@ main{padding:12px 16px 100px;}
   <button class="sync-btn" id="syncBtn" onclick="syncToSupabase()">☁️ Speichern</button>
   <button class="sync-btn" style="background:var(--s2);color:var(--txt);border:1.5px solid var(--brd)" onclick="loadFromSupabase(false)">🔄 Laden</button>
   <button class="sync-btn" style="background:var(--s2);color:var(--txt);border:1.5px solid var(--brd)" onclick="openUserManager()">👥 Fahrer</button>
+  <button class="sync-btn" style="background:var(--s2);color:var(--txt);border:1.5px solid var(--brd)" onclick="adminLogout()">🚪 Abmelden</button>
   <span class="sync-status" id="syncStatus">Nicht synchronisiert</span>
 </div>
 <main>
@@ -3583,6 +3584,16 @@ async function loadFromSupabase(silent) {
   renderLines();
 }
 
+async function adminLogout() {
+  if (!confirm('Wirklich abmelden?')) return;
+  if (currentUser) {
+    await sb.from('users').update({ session_token: null }).eq('id', currentUser.id);
+  }
+  localStorage.removeItem('kp_user');
+  localStorage.removeItem('kp_token');
+  location.reload();
+}
+
 // ── BEIM START ────────────────────────────────────────
 window.addEventListener('load', function() {
   if (currentUser) {
@@ -3594,6 +3605,8 @@ window.addEventListener('load', function() {
     if (uDisp) uDisp.textContent = currentUser.name || '';
     setTimeout(function(){ loadFromSupabase(true); }, 1000);
     setTimeout(function(){ _loadUserSettings(); }, 1800);
+    // Automatischer Fahrplan-Abgleich alle 5 Minuten
+    setInterval(function() { loadFromSupabase(true); }, 5 * 60 * 1000);
   } else {
     // Login anzeigen
     initLogin();
@@ -3775,9 +3788,14 @@ setAdminMode(isAdmin);
 </script>
 <script>
 if ('serviceWorker' in navigator) {
+  var _swRefreshing = false;
+  navigator.serviceWorker.addEventListener('controllerchange', function() {
+    if (_swRefreshing) return;
+    _swRefreshing = true;
+    window.location.reload();
+  });
   window.addEventListener('load', function() {
     navigator.serviceWorker.register('sw.js')
-      .then(function(r){ console.log('SW OK'); })
       .catch(function(e){ console.log('SW Fehler:', e); });
   });
 }
