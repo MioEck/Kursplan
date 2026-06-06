@@ -77,7 +77,8 @@ JSON-Schema:
   ],
   "valid_from": "2024-01-15T00:00:00" oder null,
   "valid_until": "2024-01-20T23:59:00" oder null,
-  "summary": "2-4 Sätze Zusammenfassung für den Busfahrer: Umleitungsinfos, gesperrte Haltestellen, besondere Hinweise."
+  "umleitung": "Genaue Umleitungsstrecke: welche Straßen/Wege fahren, welche Haltestellen ausgelassen oder verlegt werden, wo ein-/aussteigen. Maximal 3 Sätze, sehr konkret." oder null,
+  "summary": "1-2 Sätze: Was ist gesperrt/betroffen und warum (Grund der Sperrung)."
 }
 
 Hinweise:
@@ -85,7 +86,9 @@ Hinweise:
 - "fahrten" sind die letzten 3 Stellen der Fahrt-Nummern (z.B. ["014","016"]). Wenn ALLE Fahrten einer Linie betroffen sind, setze fahrten auf null oder leeres Array.
 - Datumsangaben im ISO 8601 Format (ohne Zeitzone-Suffix wenn nicht angegeben)
 - Wenn kein Datum erkennbar: null
-- summary auf Deutsch, präzise und praktisch für den Fahrer`,
+- "umleitung": nur die konkrete Fahrstrecke/Alternativroute. Wenn keine Umleitung angegeben: null
+- "summary": kurze Erklärung was/warum gesperrt ist
+- Alles auf Deutsch, präzise und praktisch für den Fahrer`,
     });
 
     const anthropicResponse = await fetch("https://api.anthropic.com/v1/messages", {
