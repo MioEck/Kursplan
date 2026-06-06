@@ -1,4 +1,4 @@
-const CACHE='kp-v59';
+const CACHE='kp-v60';
 const STATIC=['/Kursplan/manifest.json','/Kursplan/icon-192.png','/Kursplan/icon-512.png'];
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(STATIC)));self.skipWaiting();});
 self.addEventListener('activate',e=>e.waitUntil(caches.keys().then(ks=>Promise.all(ks.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
