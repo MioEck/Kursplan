@@ -3754,7 +3754,8 @@ function _noticeShowPreview(data) {
       '<div class="notice-fld" style="flex:1"><label>Gültig ab</label><input id="nFrom" type="datetime-local" value="' + fromVal + '"></div>' +
       '<div class="notice-fld" style="flex:1"><label>Gültig bis</label><input id="nUntil" type="datetime-local" value="' + untilVal + '"></div>' +
     '</div>' +
-    '<div class="notice-fld"><label>Zusammenfassung</label><textarea id="nSummary">' + esc(data.summary || '') + '</textarea></div>' +
+    '<div class="notice-fld"><label>🔀 Umleitungsstrecke</label><textarea id="nUmleitung" style="min-height:100px">' + esc(data.umleitung || '') + '</textarea></div>' +
+    '<div class="notice-fld"><label>ℹ️ Grund / Zusammenfassung</label><textarea id="nSummary">' + esc(data.summary || '') + '</textarea></div>' +
     '<div class="notice-btn-row">' +
       '<button class="notice-secondary" style="border:1.5px solid var(--brd)!important" onclick="_noticeShowUpload()">↩ Neu</button>' +
       '<button class="notice-primary" onclick="_noticeSave()">✅ Speichern</button>' +
@@ -3764,6 +3765,7 @@ function _noticeShowPreview(data) {
 async function _noticeSave() {
   var lf = (_noticeExtractedData && _noticeExtractedData.linien_fahrten) ? _noticeExtractedData.linien_fahrten : [];
   var titel = (document.getElementById('nTitel').value || '').trim();
+  var umleitung = (document.getElementById('nUmleitung').value || '').trim();
   var summary = (document.getElementById('nSummary').value || '').trim();
   var fromStr = document.getElementById('nFrom').value;
   var untilStr = document.getElementById('nUntil').value;
@@ -3773,6 +3775,7 @@ async function _noticeSave() {
   var payload = {
     linien_fahrten: lf,
     titel: titel,
+    umleitung: umleitung || null,
     summary: summary,
     valid_from: fromStr ? new Date(fromStr).toISOString() : null,
     valid_until: untilStr ? new Date(untilStr).toISOString() : null,
