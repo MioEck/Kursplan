@@ -3395,7 +3395,7 @@ function _openApp() {
   loadFromSupabase(true);
   loadNotices();
   _loadUserSettings();
-  setTimeout(function(){ _startUsageSession(); }, 1500);
+  setTimeout(function(){ _startUsageSession(); _requestWakeLock(); }, 1500);
 }
 
 // ── PIN ÄNDERN (erzwungen beim ersten Login) ──────────
@@ -3861,9 +3861,20 @@ async function _endUsageSession() {
 
 document.addEventListener('visibilitychange', function() {
   if (document.visibilityState === 'hidden') { _endUsageSession(); }
-  else if (document.visibilityState === 'visible' && currentUser) { _startUsageSession(); }
+  else if (document.visibilityState === 'visible' && currentUser) { _startUsageSession(); _requestWakeLock(); }
 });
 window.addEventListener('beforeunload', function() { _endUsageSession(); });
+
+// ── WAKE LOCK (Bildschirm an lassen) ─────────────────
+var _wakeLock = null;
+async function _requestWakeLock() {
+  if (!currentUser || !('wakeLock' in navigator)) return;
+  try {
+    if (_wakeLock) return;
+    _wakeLock = await navigator.wakeLock.request('screen');
+    _wakeLock.addEventListener('release', function() { _wakeLock = null; });
+  } catch(_) {}
+}
 
 async function openUsageOv() {
   var ov = document.getElementById('usageOv');
@@ -3945,7 +3956,7 @@ window.addEventListener('load', function() {
     setTimeout(function(){ loadFromSupabase(true); }, 1000);
     setTimeout(function(){ loadNotices(); }, 1500);
     setTimeout(function(){ _loadUserSettings(); }, 1800);
-    setTimeout(function(){ _startUsageSession(); }, 2000);
+    setTimeout(function(){ _startUsageSession(); _requestWakeLock(); }, 2000);
     // Automatischer Fahrplan-Abgleich alle 5 Minuten
     setInterval(function() { loadFromSupabase(true); }, 5 * 60 * 1000);
     setInterval(function() { _pingUsageSession(); }, 5 * 60 * 1000);
