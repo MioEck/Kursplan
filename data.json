@@ -469,7 +469,11 @@
             },
             {
               "time": "07:30",
-              "name": "Holtsee, Neuholtsee",
+              "name": "Holtsee, Neuholtsee"
+            },
+            {
+              "time": "07:32",
+              "name": "Holtsee, Habyer Straße",
               "hints": [
                 {
                   "typ": "A",
@@ -484,10 +488,6 @@
                   "fp": 0
                 }
               ]
-            },
-            {
-              "time": "07:32",
-              "name": "Holtsee, Habyer Straße"
             },
             {
               "time": "07:35",
