@@ -282,10 +282,16 @@ main{padding:12px 16px 100px;}
 .notice-primary{background:var(--acc);color:#0f1117;}
 .notice-secondary{background:var(--s2);color:var(--txt);border:1.5px solid var(--brd) !important;}
 .notice-spin{text-align:center;padding:32px;font-size:32px;}
+#swUpdateBanner{display:none;position:fixed;bottom:72px;left:50%;transform:translateX(-50%);background:#ec0016;color:#fff;padding:10px 16px;border-radius:10px;align-items:center;gap:12px;z-index:9999;box-shadow:0 4px 16px rgba(0,0,0,.4);white-space:nowrap;}
+#swUpdateBanner button{background:#fff;color:#ec0016;border:none;border-radius:6px;padding:6px 14px;font-weight:700;font-size:.9rem;cursor:pointer;}
+#swUpdatedToast{display:none;position:fixed;bottom:72px;left:50%;transform:translateX(-50%);background:#1a7a3f;color:#fff;padding:10px 22px;border-radius:10px;z-index:9999;box-shadow:0 4px 16px rgba(0,0,0,.4);font-weight:600;transition:opacity .5s;}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 </head>
 <body>
+<div id="swUpdateBanner"><span>🔄 Update verfügbar</span><button onclick="_applySwUpdate()">Jetzt aktualisieren</button></div>
+<div id="swUpdatedToast">✓ App wurde aktualisiert</div>
+
 <!-- ── LOGIN OVERLAY ── -->
 <div id="loginOv" class="login-ov">
   <div class="login-logo">MR</div>
@@ -4140,17 +4146,63 @@ setAdminMode(isAdmin);
 
 </script>
 <script>
+var _swReg = null;
+var _swUpdating = false;
+
+function _applySwUpdate() {
+  if (_swReg && _swReg.waiting) {
+    _swUpdating = true;
+    _swReg.waiting.postMessage({type:'SKIP_WAITING'});
+  }
+}
+
+function _showSwUpdatedToast() {
+  var t = document.getElementById('swUpdatedToast');
+  if (!t) return;
+  t.style.display = 'block';
+  t.style.opacity = '1';
+  setTimeout(function() {
+    t.style.opacity = '0';
+    setTimeout(function() { t.style.display = 'none'; }, 500);
+  }, 3500);
+}
+
 if ('serviceWorker' in navigator) {
-  var _swRefreshing = false;
   navigator.serviceWorker.addEventListener('controllerchange', function() {
-    if (_swRefreshing) return;
-    _swRefreshing = true;
-    window.location.reload();
+    if (_swUpdating) {
+      sessionStorage.setItem('swJustUpdated','1');
+      window.location.reload();
+    }
   });
+
   window.addEventListener('load', function() {
-    navigator.serviceWorker.register('sw.js')
-      .catch(function(e){ console.log('SW Fehler:', e); });
+    navigator.serviceWorker.register('sw.js').then(function(reg) {
+      _swReg = reg;
+
+      function checkWaiting() {
+        if (reg.waiting && navigator.serviceWorker.controller) {
+          document.getElementById('swUpdateBanner').style.display = 'flex';
+        }
+      }
+
+      reg.addEventListener('updatefound', function() {
+        var nw = reg.installing;
+        nw.addEventListener('statechange', function() {
+          if (nw.state === 'installed') checkWaiting();
+        });
+      });
+
+      checkWaiting();
+      // Periodisch auf Updates prüfen (alle 60 s)
+      setInterval(function() { reg.update(); }, 60000);
+
+    }).catch(function(e){ console.log('SW Fehler:', e); });
   });
+
+  if (sessionStorage.getItem('swJustUpdated')) {
+    sessionStorage.removeItem('swJustUpdated');
+    window.addEventListener('DOMContentLoaded', _showSwUpdatedToast);
+  }
 }
 </script>
 
