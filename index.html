@@ -897,7 +897,7 @@ const SEED = {
           stops:[
             {time:'12:26',name:'Eckernförde, Bahnhof/ZOB',letter:'F'},{time:'12:28',name:'Eckernförde, Admiral-Scheer-Straße'},
             {time:'12:30',name:'Eckernförde, Bismarckstraße'},{time:'12:31',name:'Eckernförde, Auf der Höhe'},
-            {time:'12:32',name:'Eckernförde, Lütthörn',hints:[{typ:'Z',linie:'745',dest:'Kiel, Falckensteiner Strand',fp:5}]},{time:'12:35',name:'Eckernförde, Schulzentrum Süd',letter:'B',hints:[{typ:'Z',linie:'730',dest:'Rendsburg, Bahnhofstraße/ZOB',fp:5}]},
+            {time:'12:32',name:'Eckernförde, Lütthörn'},{time:'12:35',name:'Eckernförde, Schulzentrum Süd',letter:'B'},
             {time:'12:37',name:'Goosefeld, Gut Marienthal'},{time:'12:38',name:'Goosefeld, Hoffnungstal'},
             {time:'12:39',name:'Holtsee, Lehmsiek'},{time:'12:40',name:'Haby, Stillbek'},
             {time:'12:44',name:'Haby, Ortsmitte'},{time:'12:46',name:'Holtsee, Habyer Straße',letter:'B'},
@@ -905,7 +905,7 @@ const SEED = {
             {time:'12:51',name:'Holtsee, Schule'},{time:'12:52',name:'Holtsee, Kiek Ut'},
             {time:'12:53',name:'Holtsee, Harfe'},{time:'12:54',name:'Hohenlieth, Eichenbaum'},
             {time:'12:55',name:'Hohenlieth, Hof'},{time:'12:56',name:'Stratenbrook'},
-            {time:'12:57',name:'Altenhof, Hofholz'},{time:'12:59',name:'Bornstein, West',hints:[{typ:'A',linie:'730',dest:'Gettorf, Bahnhof',fp:5}]},
+            {time:'12:57',name:'Altenhof, Hofholz'},{time:'12:59',name:'Bornstein, West'},
             {time:'13:01',name:'Bornstein, Ort'},{time:'13:03',name:'Neudorf, Sprenger Weg'},
             {time:'13:04',name:'Neudorf, Unterführung',letter:'C'}
           ]},
@@ -913,7 +913,7 @@ const SEED = {
           stops:[
             {time:'13:53',name:'Gettorf, Schulzentrum'},{time:'13:54',name:'Gettorf, Lindentor'},
             {time:'13:56',name:'Gettorf, Tierpark'},{time:'13:58',name:'Gettorf, Meierhof'},
-            {time:'13:59',name:'Gettorf, Grundschule'},{time:'14:03',name:'Gettorf, Bahnhof'},
+            {time:'13:59',name:'Gettorf, Grundschule'},{time:'14:03',name:'Gettorf, Bahnhof',hints:[{typ:'Z',linie:'745',dest:'Kiel, Falckensteiner Strand',fp:5},{typ:'Z',linie:'730',dest:'Rendsburg, Bahnhofstraße/ZOB',fp:5}]},
             {time:'14:04',name:'Gettorf, Am Brook'},{time:'14:09',name:'Neudorf, Unterführung'},
             {time:'14:10',name:'Neudorf, Sprenger Weg'},{time:'14:12',name:'Bornstein, Ort'},
             {time:'14:14',name:'Bornstein, West'},{time:'14:16',name:'Altenhof, Hofholz'},
@@ -928,7 +928,7 @@ const SEED = {
           ]},
         {id:'r3',linienNr:'710',fahrtNr:'3710031',start:'Eckernförde, Bahnhof/ZOB',end:'Kappeln, ZOB',startTime:'15:00',endTime:'16:00',
           stops:[
-            {time:'15:00',name:'Eckernförde, Bahnhof/ZOB',letter:'A'},{time:'15:01',name:'Eckernförde, Rathaus'},
+            {time:'15:00',name:'Eckernförde, Bahnhof/ZOB',letter:'A',hints:[{typ:'Z',linie:'725',dest:'Kropp, Schule/ZOB',fp:5}]},{time:'15:01',name:'Eckernförde, Rathaus'},
             {time:'15:05',name:'Eckernförde, Gaehtjestraße'},{time:'15:07',name:'Eckernförde, Vogelsang'},
             {time:'15:08',name:'Eckernförde, Feldweg'},{time:'15:08',name:'Eckernförde, Liliencronweg'},
             {time:'15:09',name:'Eckernförde, Cäcilienstraße'},{time:'15:10',name:'Eckernförde, Prinzenstraße'},
@@ -940,15 +940,15 @@ const SEED = {
             {time:'15:29',name:'Vogelsang-Grünholz, Sankt-Johannes-Stift'},{time:'15:33',name:'Vogelsang-Grünholz, ZOB',letter:'B'},
             {time:'15:35',name:'Vogelsang-Grünholz, Kummersholz'},{time:'15:37',name:'Dörphof, Grüntal'},
             {time:'15:38',name:'Dörphof, Schuby'},{time:'15:40',name:'Dörphof, Karlberger Straße'},
-            {time:'15:44',name:'Karby, Am Ring'},{time:'15:45',name:'Karby, Südhang'},
+            {time:'15:44',name:'Karby, Am Ring',hints:[{typ:'Z',linie:'712',dest:'Kappeln, ZOB',fp:5}]},{time:'15:45',name:'Karby, Südhang'},
             {time:'15:47',name:'Kopperby, Heidesiedlung'},{time:'15:48',name:'Kopperby, Uferweg'},
             {time:'15:49',name:'Kopperby, Boysenkoppel'},{time:'15:50',name:'Loitmark, Lüttfeld'},
             {time:'15:52',name:'Ellenberg, Jugendherberge'},{time:'15:53',name:'Kappeln, Hafen'},
-            {time:'16:00',name:'Kappeln, ZOB',hints:[{typ:'Z',linie:'600',dest:'Schleswig, Bahnhof',fp:5},{typ:'Z',linie:'712',dest:'Kappeln, ZOB',fp:5}]}
+            {time:'16:00',name:'Kappeln, ZOB'}
           ]},
         {id:'r4',linienNr:'710',fahrtNr:'3710038',start:'Kappeln, ZOB',end:'Eckernförde, Bahnhof/ZOB',startTime:'16:00',endTime:'17:00',
           stops:[
-            {time:'16:00',name:'Kappeln, ZOB'},{time:'16:02',name:'Kappeln, Hafen'},
+            {time:'16:00',name:'Kappeln, ZOB',hints:[{typ:'Z',linie:'600',dest:'Schleswig, Bahnhof',fp:5}]},{time:'16:02',name:'Kappeln, Hafen'},
             {time:'16:03',name:'Ellenberg, Jugendherberge'},{time:'16:04',name:'Loitmark, Lüttfeld'},
             {time:'16:05',name:'Kopperby, Boysenkoppel'},{time:'16:07',name:'Kopperby, Uferweg'},
             {time:'16:08',name:'Kopperby, Heidesiedlung'},{time:'16:10',name:'Karby, Südhang'},
@@ -966,13 +966,13 @@ const SEED = {
           ]},
         {id:'r5',linienNr:'737',fahrtNr:'3737023',start:'Eckernförde, Bahnhof/ZOB',end:'Neudorf, B76',startTime:'18:02',endTime:'18:39',
           stops:[
-            {time:'18:02',name:'Eckernförde, Bahnhof/ZOB',letter:'F'},{time:'18:04',name:'Eckernförde, Admiral-Scheer-Straße'},
+            {time:'18:02',name:'Eckernförde, Bahnhof/ZOB',letter:'F',hints:[{typ:'Z',linie:'710',dest:'Kappeln, ZOB',fp:5},{typ:'Z',linie:'721',dest:'Missunde',fp:5}]},{time:'18:04',name:'Eckernförde, Admiral-Scheer-Straße'},
             {time:'18:06',name:'Eckernförde, Bismarckstraße'},{time:'18:07',name:'Eckernförde, Auf der Höhe'},
             {time:'18:08',name:'Eckernförde, Lütthörn'},{time:'18:10',name:'Goosefeld, Gut Marienthal'},
             {time:'18:11',name:'Goosefeld, Hoffnungstal'},{time:'18:12',name:'Holtsee, Lehmsiek'},
             {time:'18:13',name:'Haby, Stillbek'},{time:'18:17',name:'Haby, Ortsmitte'},
             {time:'18:19',name:'Holtsee, Habyer Straße'},{time:'18:20',name:'Holtsee, Neuholtsee'},
-            {time:'18:22',name:'Holtsee, Gettorfer Straße'},{time:'18:24',name:'Holtsee, Schule'},
+            {time:'18:22',name:'Holtsee, Gettorfer Straße',hints:[{typ:'Z',linie:'730',dest:'Gettorf, Bahnhof',fp:5}]},{time:'18:24',name:'Holtsee, Schule'},
             {time:'18:25',name:'Holtsee, Kiek Ut'},{time:'18:26',name:'Holtsee, Harfe'},
             {time:'18:27',name:'Hohenlieth, Eichenbaum'},{time:'18:28',name:'Hohenlieth, Hof'},
             {time:'18:29',name:'Stratenbrook'},{time:'18:30',name:'Altenhof, Hofholz'},
@@ -989,7 +989,7 @@ const SEED = {
           ]},
         {id:'r7',linienNr:'725',fahrtNr:'3725024',start:'Eckernförde, Bahnhof/ZOB',end:'Kropp, Schule/ZOB',startTime:'19:02',endTime:'19:58',
           stops:[
-            {time:'19:02',name:'Eckernförde, Bahnhof/ZOB',letter:'G'},{time:'19:04',name:'Eckernförde, Windebyer Weg'},
+            {time:'19:02',name:'Eckernförde, Bahnhof/ZOB',letter:'G',hints:[{typ:'Z',linie:'710',dest:'Kappeln, ZOB',fp:5}]},{time:'19:04',name:'Eckernförde, Windebyer Weg'},
             {time:'19:05',name:'Eckernförde, Bornbrook'},{time:'19:06',name:'Eckernförde, Karl-Samwer-Ring'},
             {time:'19:08',name:'Windeby, Siedlung'},{time:'19:09',name:'Windeby, Kapelle Westerthal'},
             {time:'19:10',name:'Windeby, Friedland'},{time:'19:12',name:'Osterby (Eckernförde), Deweik'},
@@ -1023,11 +1023,11 @@ const SEED = {
             {time:'20:45',name:'Windeby, Friedland'},{time:'20:46',name:'Windeby, Kapelle Westerthal'},
             {time:'20:47',name:'Windeby, Siedlung'},{time:'20:49',name:'Eckernförde, Karl-Samwer-Ring'},
             {time:'20:50',name:'Eckernförde, Bornbrook'},{time:'20:51',name:'Eckernförde, Windebyer Weg'},
-            {time:'20:56',name:'Eckernförde, Bahnhof/ZOB',letter:'J'}
+            {time:'20:56',name:'Eckernförde, Bahnhof/ZOB',letter:'J',hints:[{typ:'A',linie:'710',dest:'Kappeln, ZOB',fp:5}]}
           ]},
         {id:'r9',linienNr:'700',fahrtNr:'3700043',start:'Eckernförde, Bahnhof/ZOB',end:'Rendsburg, Stadttheater/ZOB',startTime:'21:02',endTime:'21:44',
           stops:[
-            {time:'21:02',name:'Eckernförde, Bahnhof/ZOB',letter:'E'},{time:'21:04',name:'Eckernförde, Admiral-Scheer-Straße'},
+            {time:'21:02',name:'Eckernförde, Bahnhof/ZOB',letter:'E',hints:[{typ:'Z',linie:'710',dest:'Kappeln, ZOB',fp:5}]},{time:'21:04',name:'Eckernförde, Admiral-Scheer-Straße'},
             {time:'21:05',name:'Eckernförde, Rendsburger Straße'},{time:'21:07',name:'Eckernförde, Domsland B 203'},
             {time:'21:08',name:'Friedensthal, An der Bundesstraße'},{time:'21:09',name:'Goosefeld, Landkrug'},
             {time:'21:10',name:'Groß Wittensee, Wohldmaas'},{time:'21:11',name:'Groß Wittensee, Timmermeß'},
