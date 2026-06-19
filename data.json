@@ -3522,7 +3522,7 @@
                 {
                   "typ": "Z",
                   "linie": "745",
-                  "dest": "Kiel, Falckensteiner Strand",
+                  "dest": "Kiel, Falckensteiner Straße",
                   "fp": 5
                 },
                 {
@@ -3616,7 +3616,15 @@
             {
               "time": "14:40",
               "name": "Eckernförde, Schulzentrum Süd",
-              "letter": "B"
+              "letter": "B",
+              "hints": [
+                {
+                  "typ": "A",
+                  "linie": "730",
+                  "dest": "Gettorf, Bahnhof",
+                  "fp": 5
+                }
+              ]
             }
           ]
         },
@@ -3686,12 +3694,20 @@
               "name": "Waabs, Gast"
             },
             {
+              "time": "15:16",
+              "name": "Waabs, Abzweig nach Karlsminde"
+            },
+            {
               "time": "15:17",
               "name": "Waabs, Gut Ludwigsburg"
             },
             {
               "time": "15:19",
               "name": "Waabs, Kummerteich"
+            },
+            {
+              "time": "15:20",
+              "name": "Waabs, Abzweig nach Langholz"
             },
             {
               "time": "15:22",
@@ -3873,8 +3889,20 @@
               "name": "Waabs, Mühlenstraße"
             },
             {
+              "time": "16:34",
+              "name": "Waabs, Abzweig nach Langholz"
+            },
+            {
+              "time": "16:35",
+              "name": "Waabs, Kummerteich"
+            },
+            {
               "time": "16:37",
               "name": "Waabs, Gut Ludwigsburg"
+            },
+            {
+              "time": "16:38",
+              "name": "Waabs, Abzweig nach Karlsminde"
             },
             {
               "time": "16:39",
@@ -3961,7 +3989,7 @@
                 {
                   "typ": "Z",
                   "linie": "721",
-                  "dest": "Missunde",
+                  "dest": "Missunde, Alter Schulweg",
                   "fp": 5
                 }
               ]
@@ -4291,7 +4319,7 @@
                 {
                   "typ": "Z",
                   "linie": "771",
-                  "dest": "Rendsburg, Stadttheater/ZOB",
+                  "dest": "Rendsburg, Bahnhofstraße/ZOB",
                   "fp": 5
                 }
               ]
