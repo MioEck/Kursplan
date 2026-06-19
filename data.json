@@ -3400,27 +3400,11 @@
             },
             {
               "time": "12:32",
-              "name": "Eckernförde, Lütthörn",
-              "hints": [
-                {
-                  "typ": "Z",
-                  "linie": "745",
-                  "dest": "Kiel, Falckensteiner Strand",
-                  "fp": 5
-                }
-              ]
+              "name": "Eckernförde, Lütthörn"
             },
             {
               "time": "12:35",
-              "name": "Eckernförde, Schulzentrum Süd",
-              "hints": [
-                {
-                  "typ": "Z",
-                  "linie": "730",
-                  "dest": "Rendsburg, Bahnhofstraße/ZOB",
-                  "fp": 5
-                }
-              ]
+              "name": "Eckernförde, Schulzentrum Süd"
             },
             {
               "time": "12:37",
@@ -3485,15 +3469,7 @@
             },
             {
               "time": "12:59",
-              "name": "Bornstein, West",
-              "hints": [
-                {
-                  "typ": "A",
-                  "linie": "730",
-                  "dest": "Gettorf, Bahnhof",
-                  "fp": 5
-                }
-              ]
+              "name": "Bornstein, West"
             },
             {
               "time": "13:01",
@@ -3541,7 +3517,21 @@
             },
             {
               "time": "14:03",
-              "name": "Gettorf, Bahnhof"
+              "name": "Gettorf, Bahnhof",
+              "hints": [
+                {
+                  "typ": "Z",
+                  "linie": "745",
+                  "dest": "Kiel, Falckensteiner Strand",
+                  "fp": 5
+                },
+                {
+                  "typ": "Z",
+                  "linie": "730",
+                  "dest": "Rendsburg, Bahnhofstraße/ZOB",
+                  "fp": 5
+                }
+              ]
             },
             {
               "time": "14:04",
@@ -3641,7 +3631,15 @@
           "stops": [
             {
               "time": "15:00",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "hints": [
+                {
+                  "typ": "Z",
+                  "linie": "725",
+                  "dest": "Kropp, Schule/ZOB",
+                  "fp": 5
+                }
+              ]
             },
             {
               "time": "15:01",
@@ -3737,7 +3735,15 @@
             },
             {
               "time": "15:44",
-              "name": "Karby, Am Ring"
+              "name": "Karby, Am Ring",
+              "hints": [
+                {
+                  "typ": "Z",
+                  "linie": "712",
+                  "dest": "Kappeln, ZOB",
+                  "fp": 5
+                }
+              ]
             },
             {
               "time": "15:45",
@@ -3769,21 +3775,7 @@
             },
             {
               "time": "16:00",
-              "name": "Kappeln, ZOB",
-              "hints": [
-                {
-                  "typ": "Z",
-                  "linie": "600",
-                  "dest": "Schleswig, Bahnhof",
-                  "fp": 5
-                },
-                {
-                  "typ": "Z",
-                  "linie": "712",
-                  "dest": "Kappeln, ZOB",
-                  "fp": 5
-                }
-              ]
+              "name": "Kappeln, ZOB"
             }
           ]
         },
@@ -3798,7 +3790,15 @@
           "stops": [
             {
               "time": "16:00",
-              "name": "Kappeln, ZOB"
+              "name": "Kappeln, ZOB",
+              "hints": [
+                {
+                  "typ": "Z",
+                  "linie": "600",
+                  "dest": "Schleswig, Bahnhof",
+                  "fp": 5
+                }
+              ]
             },
             {
               "time": "16:02",
@@ -3950,7 +3950,21 @@
             {
               "time": "18:02",
               "name": "Eckernförde, Bahnhof/ZOB",
-              "letter": "F"
+              "letter": "F",
+              "hints": [
+                {
+                  "typ": "Z",
+                  "linie": "710",
+                  "dest": "Kappeln, ZOB",
+                  "fp": 5
+                },
+                {
+                  "typ": "Z",
+                  "linie": "721",
+                  "dest": "Missunde",
+                  "fp": 5
+                }
+              ]
             },
             {
               "time": "18:04",
@@ -3998,7 +4012,15 @@
             },
             {
               "time": "18:22",
-              "name": "Holtsee, Gettorfer Straße"
+              "name": "Holtsee, Gettorfer Straße",
+              "hints": [
+                {
+                  "typ": "Z",
+                  "linie": "730",
+                  "dest": "Gettorf, Bahnhof",
+                  "fp": 5
+                }
+              ]
             },
             {
               "time": "18:24",
@@ -4104,7 +4126,15 @@
           "stops": [
             {
               "time": "19:02",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "hints": [
+                {
+                  "typ": "Z",
+                  "linie": "710",
+                  "dest": "Kappeln, ZOB",
+                  "fp": 5
+                }
+              ]
             },
             {
               "time": "19:04",
@@ -4392,7 +4422,15 @@
             },
             {
               "time": "20:56",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "hints": [
+                {
+                  "typ": "A",
+                  "linie": "710",
+                  "dest": "Kappeln, ZOB",
+                  "fp": 5
+                }
+              ]
             }
           ]
         },
@@ -4407,7 +4445,15 @@
           "stops": [
             {
               "time": "21:02",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "hints": [
+                {
+                  "typ": "Z",
+                  "linie": "710",
+                  "dest": "Kappeln, ZOB",
+                  "fp": 5
+                }
+              ]
             },
             {
               "time": "21:04",
