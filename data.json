@@ -1654,7 +1654,7 @@
       "id": "kurs213",
       "name": "Kurs 213",
       "typ": "schule",
-      "datum": "2026-04-13",
+      "datum": "2026-05-18",
       "schichtdauer": "09:04",
       "gesamtkm": "167,05",
       "lines": [
@@ -1689,7 +1689,22 @@
             },
             {
               "time": "06:52",
-              "name": "Vogelsang-Grünholz, ZOB"
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A",
+              "hints": [
+                {
+                  "typ": "Z",
+                  "linie": "X710",
+                  "dest": "Kappeln, ZOB",
+                  "fp": 5
+                },
+                {
+                  "typ": "Z",
+                  "linie": "711",
+                  "dest": "Eckernförde, Bahnhof/ZOB",
+                  "fp": 5
+                }
+              ]
             },
             {
               "time": "06:54",
@@ -1765,7 +1780,8 @@
             },
             {
               "time": "07:28",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "H"
             },
             {
               "time": "07:35",
@@ -1773,7 +1789,8 @@
             },
             {
               "time": "07:40",
-              "name": "Eckernförde, Schulzentrum Süd"
+              "name": "Eckernförde, Schulzentrum Süd",
+              "letter": "A"
             }
           ]
         },
@@ -1789,24 +1806,12 @@
             {
               "time": "08:02",
               "name": "Eckernförde, Bahnhof/ZOB",
-              "letter": "H",
+              "letter": "D",
               "hints": [
                 {
                   "typ": "Z",
                   "linie": "737",
                   "dest": "Neudorf, B76",
-                  "fp": 5
-                },
-                {
-                  "typ": "Z",
-                  "linie": "X710",
-                  "dest": "Kappeln, ZOB",
-                  "fp": 5
-                },
-                {
-                  "typ": "Z",
-                  "linie": "711",
-                  "dest": "Eckernförde, Schulzentrum Süd",
                   "fp": 5
                 }
               ]
@@ -1914,7 +1919,8 @@
             },
             {
               "time": "11:31",
-              "name": "Surendorf, Ortsmitte"
+              "name": "Surendorf, Ortsmitte",
+              "letter": "C"
             },
             {
               "time": "11:33",
@@ -1930,7 +1936,8 @@
             },
             {
               "time": "11:36",
-              "name": "Noer, Schloss"
+              "name": "Noer, Schloss",
+              "letter": "A"
             },
             {
               "time": "11:37",
@@ -1982,7 +1989,8 @@
             },
             {
               "time": "11:58",
-              "name": "Eckernförde, Bahnhof/ZOB"
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
             }
           ]
         },
@@ -2009,16 +2017,9 @@
               "name": "Eckernförde, Sprottenschule"
             },
             {
-              "time": "12:31",
-              "name": "Eckernförde, Rendsburger Straße"
-            },
-            {
-              "time": "12:33",
-              "name": "Eckernförde, Sauerstraße"
-            },
-            {
               "time": "12:35",
-              "name": "Eckernförde, Schulzentrum Süd"
+              "name": "Eckernförde, Schulzentrum Süd",
+              "letter": "C"
             },
             {
               "time": "12:36",
@@ -2109,7 +2110,12 @@
             },
             {
               "time": "13:32",
-              "name": "Holtsee, Neuholtsee",
+              "name": "Holtsee, Neuholtsee"
+            },
+            {
+              "time": "13:34",
+              "name": "Holtsee, Habyer Straße",
+              "letter": "D",
               "hints": [
                 {
                   "typ": "G",
@@ -2118,11 +2124,6 @@
                   "fp": 0
                 }
               ]
-            },
-            {
-              "time": "13:34",
-              "name": "Holtsee, Habyer Straße",
-              "letter": "D"
             },
             {
               "time": "13:38",
