@@ -9807,6 +9807,3684 @@
           ]
         }
       ]
+    },
+    {
+      "id": "kurs411",
+      "name": "Kurs 411",
+      "typ": "ferien",
+      "datum": "2026-07-06",
+      "schichtdauer": "06:07",
+      "gesamtkm": "187,816",
+      "lines": [
+        {
+          "id": "l1",
+          "linienNr": "711",
+          "fahrtNr": "3711002",
+          "start": "Vogelsang-Grünholz, ZOB",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "05:10",
+          "endTime": "05:43",
+          "stops": [
+            {
+              "time": "05:10",
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A"
+            },
+            {
+              "time": "05:13",
+              "name": "Kratt"
+            },
+            {
+              "time": "05:14",
+              "name": "Söby, Brücke"
+            },
+            {
+              "time": "05:15",
+              "name": "Söby, Neu-Seeholz"
+            },
+            {
+              "time": "05:16",
+              "name": "Holzdorf, Dorfstraße"
+            },
+            {
+              "time": "05:17",
+              "name": "Holzdorf, Moorbrücke"
+            },
+            {
+              "time": "05:19",
+              "name": "Loose"
+            },
+            {
+              "time": "05:22",
+              "name": "Barkelsby, Schwansenstraße"
+            },
+            {
+              "time": "05:23",
+              "name": "Barkelsby, Rommelsworth"
+            },
+            {
+              "time": "05:24",
+              "name": "Barkelsby, Grundschule"
+            },
+            {
+              "time": "05:25",
+              "name": "Barkelsby, Westerschauer Weg"
+            },
+            {
+              "time": "05:29",
+              "name": "Eckernförde, Kreiskrankenhaus"
+            },
+            {
+              "time": "05:30",
+              "name": "Eckernförde, Friedhof Schleswiger Straße"
+            },
+            {
+              "time": "05:31",
+              "name": "Eckernförde, Gorch-Fock-Straße"
+            },
+            {
+              "time": "05:31",
+              "name": "Eckernförde, J.-H.-Fehrs-Weg"
+            },
+            {
+              "time": "05:32",
+              "name": "Eckernförde, Mühlenberg"
+            },
+            {
+              "time": "05:33",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "05:37",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "05:43",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
+            }
+          ]
+        },
+        {
+          "id": "l2",
+          "linienNr": "737",
+          "fahrtNr": "3737401",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Neudorf, B76",
+          "startTime": "06:02",
+          "endTime": "06:39",
+          "stops": [
+            {
+              "time": "06:02",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "F",
+              "hints": [
+                {
+                  "typ": "Z",
+                  "linie": "721",
+                  "dest": "Missunde, Alter Schulweg",
+                  "fp": 5
+                },
+                {
+                  "typ": "Z",
+                  "linie": "710",
+                  "dest": "Waabs, Mühlenstraße",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "06:04",
+              "name": "Eckernförde, Admiral-Scheer-Straße"
+            },
+            {
+              "time": "06:06",
+              "name": "Eckernförde, Bismarckstraße"
+            },
+            {
+              "time": "06:07",
+              "name": "Eckernförde, Auf der Höhe"
+            },
+            {
+              "time": "06:08",
+              "name": "Eckernförde, Lütthörn"
+            },
+            {
+              "time": "06:10",
+              "name": "Goosefeld, Gut Marienthal"
+            },
+            {
+              "time": "06:11",
+              "name": "Goosefeld, Hoffnungstal"
+            },
+            {
+              "time": "06:12",
+              "name": "Holtsee, Lehmsiek"
+            },
+            {
+              "time": "06:13",
+              "name": "Haby, Stillbek"
+            },
+            {
+              "time": "06:17",
+              "name": "Haby, Ortsmitte"
+            },
+            {
+              "time": "06:19",
+              "name": "Holtsee, Habyer Straße",
+              "letter": "A"
+            },
+            {
+              "time": "06:20",
+              "name": "Holtsee, Neuholtsee"
+            },
+            {
+              "time": "06:22",
+              "name": "Holtsee, Gettorfer Straße",
+              "hints": [
+                {
+                  "typ": "Z",
+                  "linie": "730",
+                  "dest": "Gettorf, Bahnhof",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "06:24",
+              "name": "Holtsee, Schule"
+            },
+            {
+              "time": "06:25",
+              "name": "Holtsee, Kiek Ut"
+            },
+            {
+              "time": "06:26",
+              "name": "Holtsee, Harfe"
+            },
+            {
+              "time": "06:27",
+              "name": "Hohenlieth, Eichenbaum"
+            },
+            {
+              "time": "06:28",
+              "name": "Hohenlieth, Hof"
+            },
+            {
+              "time": "06:29",
+              "name": "Stratenbrook"
+            },
+            {
+              "time": "06:30",
+              "name": "Altenhof, Hofholz"
+            },
+            {
+              "time": "06:32",
+              "name": "Bornstein, West"
+            },
+            {
+              "time": "06:34",
+              "name": "Bornstein, Ort"
+            },
+            {
+              "time": "06:36",
+              "name": "Neudorf, Sprenger Weg"
+            },
+            {
+              "time": "06:37",
+              "name": "Neudorf, Unterführung",
+              "letter": "B"
+            },
+            {
+              "time": "06:39",
+              "name": "Neudorf, B76"
+            }
+          ]
+        },
+        {
+          "id": "l3",
+          "linienNr": "736",
+          "fahrtNr": "3736401",
+          "start": "Neudorf, B76",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "06:40",
+          "endTime": "06:55",
+          "stops": [
+            {
+              "time": "06:40",
+              "name": "Neudorf, B76"
+            },
+            {
+              "time": "06:42",
+              "name": "Altenhof, Grüner Jäger"
+            },
+            {
+              "time": "06:43",
+              "name": "Altenhof, Jordanschule"
+            },
+            {
+              "time": "06:44",
+              "name": "Altenhof, Kiekut"
+            },
+            {
+              "time": "06:45",
+              "name": "Altenhof, Alter Bahnhof"
+            },
+            {
+              "time": "06:47",
+              "name": "Eckernförde, Sandkrug"
+            },
+            {
+              "time": "06:49",
+              "name": "Eckernförde, Berliner Straße"
+            },
+            {
+              "time": "06:55",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
+            }
+          ]
+        },
+        {
+          "id": "l4",
+          "linienNr": "710",
+          "fahrtNr": "4710055",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Kappeln, ZOB",
+          "startTime": "07:49",
+          "endTime": "08:28",
+          "stops": [
+            {
+              "time": "07:49",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "A"
+            },
+            {
+              "time": "07:50",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "07:56",
+              "name": "Barkelsby, Schwansenstraße"
+            },
+            {
+              "time": "07:59",
+              "name": "Loose"
+            },
+            {
+              "time": "08:02",
+              "name": "Söby, Neu-Seeholz"
+            },
+            {
+              "time": "08:10",
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "B",
+              "wait": 2,
+              "arr": "08:10",
+              "dep": "08:12"
+            },
+            {
+              "time": "08:12",
+              "name": "Vogelsang-Grünholz, ZOB (ab)",
+              "letter": "B"
+            },
+            {
+              "time": "08:23",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "08:28",
+              "name": "Kappeln, ZOB",
+              "letter": "3"
+            }
+          ]
+        },
+        {
+          "id": "l5",
+          "linienNr": "710",
+          "fahrtNr": "4710056",
+          "start": "Kappeln, ZOB",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "08:32",
+          "endTime": "09:12",
+          "stops": [
+            {
+              "time": "08:32",
+              "name": "Kappeln, ZOB",
+              "letter": "3"
+            },
+            {
+              "time": "08:34",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "08:47",
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A",
+              "wait": 2,
+              "arr": "08:47",
+              "dep": "08:49"
+            },
+            {
+              "time": "08:49",
+              "name": "Vogelsang-Grünholz, ZOB (ab)",
+              "letter": "A"
+            },
+            {
+              "time": "08:55",
+              "name": "Söby, Neu-Seeholz"
+            },
+            {
+              "time": "08:59",
+              "name": "Loose"
+            },
+            {
+              "time": "09:02",
+              "name": "Barkelsby, Schwansenstraße"
+            },
+            {
+              "time": "09:08",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "09:12",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
+            }
+          ]
+        },
+        {
+          "id": "l6",
+          "linienNr": "720",
+          "fahrtNr": "3720012",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Schleswig, Stadtfeld/ZOB",
+          "startTime": "09:15",
+          "endTime": "09:59",
+          "stops": [
+            {
+              "time": "09:15",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "C",
+              "hints": [
+                {
+                  "typ": "T",
+                  "linie": "",
+                  "dest": "Zuganschluss abwarten",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "09:16",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "09:20",
+              "name": "Eckernförde, Carlshöhe"
+            },
+            {
+              "time": "09:20",
+              "name": "Eckernförde, Grasholz"
+            },
+            {
+              "time": "09:22",
+              "name": "Gammelby, Birkensee"
+            },
+            {
+              "time": "09:24",
+              "name": "Kosel, Koselfeld",
+              "letter": "A"
+            },
+            {
+              "time": "09:26",
+              "name": "Götheby-Holm, Kreisstraße"
+            },
+            {
+              "time": "09:30",
+              "name": "Fleckeby, Schmiederedder"
+            },
+            {
+              "time": "09:32",
+              "name": "Güby, Ahrensberg"
+            },
+            {
+              "time": "09:33",
+              "name": "Güby, Bundesstraße"
+            },
+            {
+              "time": "09:34",
+              "name": "Borgwedel, Abzw."
+            },
+            {
+              "time": "09:35",
+              "name": "Stexwig, Abzw."
+            },
+            {
+              "time": "09:37",
+              "name": "Fahrdorf, Mühlenberg"
+            },
+            {
+              "time": "09:38",
+              "name": "Fahrdorf, Abzw. Loopstedt"
+            },
+            {
+              "time": "09:39",
+              "name": "Haithabu, Wikinger Museum"
+            },
+            {
+              "time": "09:43",
+              "name": "Schleswig, Bugenhagenschule"
+            },
+            {
+              "time": "09:44",
+              "name": "Schleswig, Mansteinstraße"
+            },
+            {
+              "time": "09:47",
+              "name": "Schleswig, Bahnhof"
+            },
+            {
+              "time": "09:48",
+              "name": "Schleswig, Bahnhofstraße"
+            },
+            {
+              "time": "09:49",
+              "name": "Schleswig, Landesarchiv"
+            },
+            {
+              "time": "09:49",
+              "name": "Schleswig, Oberlandesgericht"
+            },
+            {
+              "time": "09:51",
+              "name": "Schleswig, Schleihallenbrücke"
+            },
+            {
+              "time": "09:53",
+              "name": "Schleswig, Domschule"
+            },
+            {
+              "time": "09:55",
+              "name": "Schleswig, Alter ZOB"
+            },
+            {
+              "time": "09:59",
+              "name": "Schleswig, Stadtfeld/ZOB",
+              "letter": "C1"
+            }
+          ]
+        },
+        {
+          "id": "l7",
+          "linienNr": "720",
+          "fahrtNr": "3720011",
+          "start": "Schleswig, Stadtfeld/ZOB",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "10:00",
+          "endTime": "10:45",
+          "stops": [
+            {
+              "time": "10:00",
+              "name": "Schleswig, Stadtfeld/ZOB",
+              "letter": "C1"
+            },
+            {
+              "time": "10:01",
+              "name": "Schleswig, Capitolplatz"
+            },
+            {
+              "time": "10:03",
+              "name": "Schleswig, Strandweg"
+            },
+            {
+              "time": "10:04",
+              "name": "Schleswig, Domziegelhof"
+            },
+            {
+              "time": "10:05",
+              "name": "Schleswig, Schleihallenbrücke"
+            },
+            {
+              "time": "10:07",
+              "name": "Schleswig, Oberlandesgericht"
+            },
+            {
+              "time": "10:08",
+              "name": "Schleswig, Bahnhofstraße"
+            },
+            {
+              "time": "10:12",
+              "name": "Schleswig, Bahnhof",
+              "hints": [
+                {
+                  "typ": "T",
+                  "linie": "",
+                  "dest": "Zuganschluss abwarten",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "10:12",
+              "name": "Schleswig, Mansteinstraße"
+            },
+            {
+              "time": "10:13",
+              "name": "Schleswig, Bugenhagenschule"
+            },
+            {
+              "time": "10:15",
+              "name": "Haithabu, Wikinger Museum"
+            },
+            {
+              "time": "10:16",
+              "name": "Fahrdorf, Abzw. Loopstedt"
+            },
+            {
+              "time": "10:18",
+              "name": "Fahrdorf, Mühlenberg"
+            },
+            {
+              "time": "10:20",
+              "name": "Stexwig, Abzw."
+            },
+            {
+              "time": "10:21",
+              "name": "Borgwedel, Abzw."
+            },
+            {
+              "time": "10:22",
+              "name": "Güby, Bundesstraße"
+            },
+            {
+              "time": "10:23",
+              "name": "Güby, Ahrensberg"
+            },
+            {
+              "time": "10:26",
+              "name": "Fleckeby, Schmiederedder"
+            },
+            {
+              "time": "10:28",
+              "name": "Götheby-Holm, Mühlenweg"
+            },
+            {
+              "time": "10:30",
+              "name": "Kosel, Koselfeld",
+              "letter": "B"
+            },
+            {
+              "time": "10:32",
+              "name": "Gammelby, Birkensee"
+            },
+            {
+              "time": "10:34",
+              "name": "Eckernförde, Carlshöhe"
+            },
+            {
+              "time": "10:40",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "10:45",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kurs412",
+      "name": "Kurs 412",
+      "typ": "ferien",
+      "datum": "2026-07-06",
+      "schichtdauer": "09:35",
+      "gesamtkm": "244,418",
+      "lines": [
+        {
+          "id": "l1",
+          "linienNr": "721",
+          "fahrtNr": "3721010",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Missunde, Alter Schulweg",
+          "startTime": "09:00",
+          "endTime": "09:29",
+          "stops": [
+            {
+              "time": "09:00",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "F",
+              "hints": [
+                {
+                  "typ": "Z",
+                  "linie": "710",
+                  "dest": "Waabs, Mühlenstraße",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "09:01",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "09:05",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "09:06",
+              "name": "Eckernförde, Mühlenberg"
+            },
+            {
+              "time": "09:07",
+              "name": "Eckernförde, J.-H.-Fehrs-Weg"
+            },
+            {
+              "time": "09:07",
+              "name": "Eckernförde, Gorch-Fock-Straße"
+            },
+            {
+              "time": "09:08",
+              "name": "Eckernförde, Friedhof Schleswiger Straße"
+            },
+            {
+              "time": "09:08",
+              "name": "Eckernförde, Kreiskrankenhaus"
+            },
+            {
+              "time": "09:10",
+              "name": "Eckernförde, Carlshöhe"
+            },
+            {
+              "time": "09:10",
+              "name": "Eckernförde, Grasholz"
+            },
+            {
+              "time": "09:14",
+              "name": "Gammelby, Ort"
+            },
+            {
+              "time": "09:15",
+              "name": "Gammelby, Kummel"
+            },
+            {
+              "time": "09:18",
+              "name": "Kosel, Haarmoor"
+            },
+            {
+              "time": "09:19",
+              "name": "Kosel, Alte Landstraße"
+            },
+            {
+              "time": "09:23",
+              "name": "Missunde, Ornumer Weg"
+            },
+            {
+              "time": "09:29",
+              "name": "Missunde, Alter Schulweg"
+            }
+          ]
+        },
+        {
+          "id": "l2",
+          "linienNr": "721",
+          "fahrtNr": "3721009",
+          "start": "Missunde, Alter Schulweg",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "09:29",
+          "endTime": "10:00",
+          "stops": [
+            {
+              "time": "09:29",
+              "name": "Missunde, Alter Schulweg"
+            },
+            {
+              "time": "09:31",
+              "name": "Missunde, Ornumer Weg"
+            },
+            {
+              "time": "09:34",
+              "name": "Kosel, Alte Landstraße"
+            },
+            {
+              "time": "09:35",
+              "name": "Kosel, Haarmoor"
+            },
+            {
+              "time": "09:38",
+              "name": "Gammelby, Kummel"
+            },
+            {
+              "time": "09:40",
+              "name": "Gammelby, Ort"
+            },
+            {
+              "time": "09:44",
+              "name": "Eckernförde, Carlshöhe"
+            },
+            {
+              "time": "09:45",
+              "name": "Eckernförde, Kreiskrankenhaus"
+            },
+            {
+              "time": "09:46",
+              "name": "Eckernförde, Friedhof Schleswiger Straße"
+            },
+            {
+              "time": "09:47",
+              "name": "Eckernförde, Gorch-Fock-Straße"
+            },
+            {
+              "time": "09:48",
+              "name": "Eckernförde, J.-H.-Fehrs-Weg"
+            },
+            {
+              "time": "09:48",
+              "name": "Eckernförde, Mühlenberg"
+            },
+            {
+              "time": "09:49",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "09:53",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "10:00",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J",
+              "hints": [
+                {
+                  "typ": "A",
+                  "linie": "700",
+                  "dest": "Rendsburg, Stadttheater/ZOB",
+                  "fp": 5
+                },
+                {
+                  "typ": "A",
+                  "linie": "710",
+                  "dest": "Waabs, Mühlenstraße",
+                  "fp": 5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l3",
+          "linienNr": "710",
+          "fahrtNr": "4710061",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Kappeln, ZOB",
+          "startTime": "10:49",
+          "endTime": "11:28",
+          "stops": [
+            {
+              "time": "10:49",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "A"
+            },
+            {
+              "time": "10:50",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "10:56",
+              "name": "Barkelsby, Schwansenstraße"
+            },
+            {
+              "time": "10:59",
+              "name": "Loose"
+            },
+            {
+              "time": "11:02",
+              "name": "Söby, Neu-Seeholz"
+            },
+            {
+              "time": "11:10",
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "B",
+              "wait": 2,
+              "arr": "11:10",
+              "dep": "11:12"
+            },
+            {
+              "time": "11:12",
+              "name": "Vogelsang-Grünholz, ZOB (ab)",
+              "letter": "B"
+            },
+            {
+              "time": "11:23",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "11:28",
+              "name": "Kappeln, ZOB",
+              "letter": "3"
+            }
+          ]
+        },
+        {
+          "id": "l4",
+          "linienNr": "710",
+          "fahrtNr": "4710062",
+          "start": "Kappeln, ZOB",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "11:32",
+          "endTime": "12:12",
+          "stops": [
+            {
+              "time": "11:32",
+              "name": "Kappeln, ZOB",
+              "letter": "3"
+            },
+            {
+              "time": "11:34",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "11:47",
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A",
+              "wait": 2,
+              "arr": "11:47",
+              "dep": "11:49"
+            },
+            {
+              "time": "11:49",
+              "name": "Vogelsang-Grünholz, ZOB (ab)",
+              "letter": "A"
+            },
+            {
+              "time": "11:55",
+              "name": "Söby, Neu-Seeholz"
+            },
+            {
+              "time": "11:59",
+              "name": "Loose"
+            },
+            {
+              "time": "12:02",
+              "name": "Barkelsby, Schwansenstraße"
+            },
+            {
+              "time": "12:08",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "12:12",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
+            }
+          ]
+        },
+        {
+          "id": "l5",
+          "linienNr": "710",
+          "fahrtNr": "4710065",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Kappeln, ZOB",
+          "startTime": "12:49",
+          "endTime": "13:28",
+          "stops": [
+            {
+              "time": "12:49",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "A"
+            },
+            {
+              "time": "12:50",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "12:56",
+              "name": "Barkelsby, Schwansenstraße"
+            },
+            {
+              "time": "12:59",
+              "name": "Loose"
+            },
+            {
+              "time": "13:02",
+              "name": "Söby, Neu-Seeholz"
+            },
+            {
+              "time": "13:10",
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "B",
+              "wait": 2,
+              "arr": "13:10",
+              "dep": "13:12"
+            },
+            {
+              "time": "13:12",
+              "name": "Vogelsang-Grünholz, ZOB (ab)",
+              "letter": "B"
+            },
+            {
+              "time": "13:23",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "13:28",
+              "name": "Kappeln, ZOB",
+              "letter": "3"
+            }
+          ]
+        },
+        {
+          "id": "l6",
+          "linienNr": "710",
+          "fahrtNr": "4710066",
+          "start": "Kappeln, ZOB",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "13:32",
+          "endTime": "14:12",
+          "stops": [
+            {
+              "time": "13:32",
+              "name": "Kappeln, ZOB",
+              "letter": "3"
+            },
+            {
+              "time": "13:34",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "13:47",
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A",
+              "wait": 2,
+              "arr": "13:47",
+              "dep": "13:49",
+              "hints": [
+                {
+                  "typ": "A",
+                  "linie": "711",
+                  "dest": "Damp, Ostseehotel",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "13:49",
+              "name": "Vogelsang-Grünholz, ZOB (ab)",
+              "letter": "A"
+            },
+            {
+              "time": "13:55",
+              "name": "Söby, Neu-Seeholz"
+            },
+            {
+              "time": "13:59",
+              "name": "Loose"
+            },
+            {
+              "time": "14:02",
+              "name": "Barkelsby, Schwansenstraße"
+            },
+            {
+              "time": "14:08",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "14:12",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
+            }
+          ]
+        },
+        {
+          "id": "l7",
+          "linienNr": "721",
+          "fahrtNr": "3721022",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Missunde, Alter Schulweg",
+          "startTime": "15:00",
+          "endTime": "15:29",
+          "stops": [
+            {
+              "time": "15:00",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "F",
+              "hints": [
+                {
+                  "typ": "Z",
+                  "linie": "710",
+                  "dest": "Waabs, Mühlenstraße",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "15:01",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "15:05",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "15:06",
+              "name": "Eckernförde, Mühlenberg"
+            },
+            {
+              "time": "15:07",
+              "name": "Eckernförde, J.-H.-Fehrs-Weg"
+            },
+            {
+              "time": "15:07",
+              "name": "Eckernförde, Gorch-Fock-Straße"
+            },
+            {
+              "time": "15:08",
+              "name": "Eckernförde, Friedhof Schleswiger Straße"
+            },
+            {
+              "time": "15:08",
+              "name": "Eckernförde, Kreiskrankenhaus"
+            },
+            {
+              "time": "15:10",
+              "name": "Eckernförde, Carlshöhe"
+            },
+            {
+              "time": "15:10",
+              "name": "Eckernförde, Grasholz"
+            },
+            {
+              "time": "15:14",
+              "name": "Gammelby, Ort"
+            },
+            {
+              "time": "15:15",
+              "name": "Gammelby, Kummel"
+            },
+            {
+              "time": "15:18",
+              "name": "Kosel, Haarmoor"
+            },
+            {
+              "time": "15:19",
+              "name": "Kosel, Alte Landstraße"
+            },
+            {
+              "time": "15:23",
+              "name": "Missunde, Ornumer Weg"
+            },
+            {
+              "time": "15:29",
+              "name": "Missunde, Alter Schulweg"
+            }
+          ]
+        },
+        {
+          "id": "l8",
+          "linienNr": "721",
+          "fahrtNr": "3721417",
+          "start": "Missunde, Alter Schulweg",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "15:29",
+          "endTime": "16:00",
+          "stops": [
+            {
+              "time": "15:29",
+              "name": "Missunde, Alter Schulweg"
+            },
+            {
+              "time": "15:31",
+              "name": "Missunde, Ornumer Weg"
+            },
+            {
+              "time": "15:34",
+              "name": "Kosel, Alte Landstraße"
+            },
+            {
+              "time": "15:35",
+              "name": "Kosel, Haarmoor"
+            },
+            {
+              "time": "15:38",
+              "name": "Gammelby, Kummel"
+            },
+            {
+              "time": "15:40",
+              "name": "Gammelby, Ort"
+            },
+            {
+              "time": "15:44",
+              "name": "Eckernförde, Carlshöhe"
+            },
+            {
+              "time": "15:45",
+              "name": "Eckernförde, Kreiskrankenhaus"
+            },
+            {
+              "time": "15:46",
+              "name": "Eckernförde, Friedhof Schleswiger Straße"
+            },
+            {
+              "time": "15:47",
+              "name": "Eckernförde, Gorch-Fock-Straße"
+            },
+            {
+              "time": "15:48",
+              "name": "Eckernförde, J.-H.-Fehrs-Weg"
+            },
+            {
+              "time": "15:48",
+              "name": "Eckernförde, Mühlenberg"
+            },
+            {
+              "time": "15:49",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "15:53",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "16:00",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J",
+              "hints": [
+                {
+                  "typ": "A",
+                  "linie": "700",
+                  "dest": "Rendsburg, Stadttheater/ZOB",
+                  "fp": 5
+                },
+                {
+                  "typ": "A",
+                  "linie": "710",
+                  "dest": "Waabs, Mühlenstraße",
+                  "fp": 5
+                },
+                {
+                  "typ": "A",
+                  "linie": "746",
+                  "dest": "Surendorf, Ortsmitte",
+                  "fp": 5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l9",
+          "linienNr": "737",
+          "fahrtNr": "3737021",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Neudorf, B76",
+          "startTime": "16:02",
+          "endTime": "16:39",
+          "stops": [
+            {
+              "time": "16:02",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "F",
+              "hints": [
+                {
+                  "typ": "Z",
+                  "linie": "710",
+                  "dest": "Waabs, Mühlenstraße",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "16:04",
+              "name": "Eckernförde, Admiral-Scheer-Straße"
+            },
+            {
+              "time": "16:06",
+              "name": "Eckernförde, Bismarckstraße"
+            },
+            {
+              "time": "16:07",
+              "name": "Eckernförde, Auf der Höhe"
+            },
+            {
+              "time": "16:08",
+              "name": "Eckernförde, Lütthörn"
+            },
+            {
+              "time": "16:10",
+              "name": "Goosefeld, Gut Marienthal"
+            },
+            {
+              "time": "16:11",
+              "name": "Goosefeld, Hoffnungstal"
+            },
+            {
+              "time": "16:12",
+              "name": "Holtsee, Lehmsiek"
+            },
+            {
+              "time": "16:13",
+              "name": "Haby, Stillbek"
+            },
+            {
+              "time": "16:17",
+              "name": "Haby, Ortsmitte"
+            },
+            {
+              "time": "16:19",
+              "name": "Holtsee, Habyer Straße",
+              "letter": "A"
+            },
+            {
+              "time": "16:20",
+              "name": "Holtsee, Neuholtsee"
+            },
+            {
+              "time": "16:22",
+              "name": "Holtsee, Gettorfer Straße",
+              "hints": [
+                {
+                  "typ": "Z",
+                  "linie": "730",
+                  "dest": "Gettorf, Bahnhof",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "16:24",
+              "name": "Holtsee, Schule"
+            },
+            {
+              "time": "16:25",
+              "name": "Holtsee, Kiek Ut"
+            },
+            {
+              "time": "16:26",
+              "name": "Holtsee, Harfe"
+            },
+            {
+              "time": "16:27",
+              "name": "Hohenlieth, Eichenbaum"
+            },
+            {
+              "time": "16:28",
+              "name": "Hohenlieth, Hof"
+            },
+            {
+              "time": "16:29",
+              "name": "Stratenbrook"
+            },
+            {
+              "time": "16:30",
+              "name": "Altenhof, Hofholz"
+            },
+            {
+              "time": "16:32",
+              "name": "Bornstein, West"
+            },
+            {
+              "time": "16:34",
+              "name": "Bornstein, Ort"
+            },
+            {
+              "time": "16:36",
+              "name": "Neudorf, Sprenger Weg"
+            },
+            {
+              "time": "16:37",
+              "name": "Neudorf, Unterführung",
+              "letter": "B"
+            },
+            {
+              "time": "16:39",
+              "name": "Neudorf, B76"
+            }
+          ]
+        },
+        {
+          "id": "l10",
+          "linienNr": "736",
+          "fahrtNr": "3736009",
+          "start": "Neudorf, B76",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "16:40",
+          "endTime": "16:55",
+          "stops": [
+            {
+              "time": "16:40",
+              "name": "Neudorf, B76"
+            },
+            {
+              "time": "16:42",
+              "name": "Altenhof, Grüner Jäger"
+            },
+            {
+              "time": "16:43",
+              "name": "Altenhof, Jordanschule"
+            },
+            {
+              "time": "16:44",
+              "name": "Altenhof, Kiekut"
+            },
+            {
+              "time": "16:45",
+              "name": "Altenhof, Alter Bahnhof"
+            },
+            {
+              "time": "16:47",
+              "name": "Eckernförde, Sandkrug"
+            },
+            {
+              "time": "16:49",
+              "name": "Eckernförde, Berliner Straße"
+            },
+            {
+              "time": "16:55",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
+            }
+          ]
+        },
+        {
+          "id": "l11",
+          "linienNr": "721",
+          "fahrtNr": "3721032",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Missunde, Alter Schulweg",
+          "startTime": "17:00",
+          "endTime": "17:29",
+          "stops": [
+            {
+              "time": "17:00",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "F",
+              "hints": [
+                {
+                  "typ": "Z",
+                  "linie": "710",
+                  "dest": "Waabs, Mühlenstraße",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "17:01",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "17:05",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "17:06",
+              "name": "Eckernförde, Mühlenberg"
+            },
+            {
+              "time": "17:07",
+              "name": "Eckernförde, J.-H.-Fehrs-Weg"
+            },
+            {
+              "time": "17:07",
+              "name": "Eckernförde, Gorch-Fock-Straße"
+            },
+            {
+              "time": "17:08",
+              "name": "Eckernförde, Friedhof Schleswiger Straße"
+            },
+            {
+              "time": "17:08",
+              "name": "Eckernförde, Kreiskrankenhaus"
+            },
+            {
+              "time": "17:10",
+              "name": "Eckernförde, Carlshöhe"
+            },
+            {
+              "time": "17:10",
+              "name": "Eckernförde, Grasholz"
+            },
+            {
+              "time": "17:14",
+              "name": "Gammelby, Ort"
+            },
+            {
+              "time": "17:15",
+              "name": "Gammelby, Kummel"
+            },
+            {
+              "time": "17:18",
+              "name": "Kosel, Haarmoor"
+            },
+            {
+              "time": "17:19",
+              "name": "Kosel, Alte Landstraße"
+            },
+            {
+              "time": "17:23",
+              "name": "Missunde, Ornumer Weg"
+            },
+            {
+              "time": "17:29",
+              "name": "Missunde, Alter Schulweg"
+            }
+          ]
+        },
+        {
+          "id": "l12",
+          "linienNr": "721",
+          "fahrtNr": "3721021",
+          "start": "Missunde, Alter Schulweg",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "17:29",
+          "endTime": "18:00",
+          "stops": [
+            {
+              "time": "17:29",
+              "name": "Missunde, Alter Schulweg"
+            },
+            {
+              "time": "17:31",
+              "name": "Missunde, Ornumer Weg"
+            },
+            {
+              "time": "17:34",
+              "name": "Kosel, Alte Landstraße"
+            },
+            {
+              "time": "17:35",
+              "name": "Kosel, Haarmoor"
+            },
+            {
+              "time": "17:38",
+              "name": "Gammelby, Kummel"
+            },
+            {
+              "time": "17:40",
+              "name": "Gammelby, Ort"
+            },
+            {
+              "time": "17:44",
+              "name": "Eckernförde, Carlshöhe"
+            },
+            {
+              "time": "17:45",
+              "name": "Eckernförde, Kreiskrankenhaus"
+            },
+            {
+              "time": "17:46",
+              "name": "Eckernförde, Friedhof Schleswiger Straße"
+            },
+            {
+              "time": "17:47",
+              "name": "Eckernförde, Gorch-Fock-Straße"
+            },
+            {
+              "time": "17:48",
+              "name": "Eckernförde, J.-H.-Fehrs-Weg"
+            },
+            {
+              "time": "17:48",
+              "name": "Eckernförde, Mühlenberg"
+            },
+            {
+              "time": "17:49",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "17:53",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "18:00",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J",
+              "hints": [
+                {
+                  "typ": "A",
+                  "linie": "700",
+                  "dest": "Rendsburg, Stadttheater/ZOB",
+                  "fp": 5
+                },
+                {
+                  "typ": "A",
+                  "linie": "710",
+                  "dest": "Waabs, Mühlenstraße",
+                  "fp": 5
+                },
+                {
+                  "typ": "A",
+                  "linie": "737",
+                  "dest": "Neudorf, B76",
+                  "fp": 5
+                },
+                {
+                  "typ": "A",
+                  "linie": "746",
+                  "dest": "Surendorf, Ortsmitte",
+                  "fp": 5
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kurs413",
+      "name": "Kurs 413",
+      "typ": "ferien",
+      "datum": "2026-07-06",
+      "schichtdauer": "10:51",
+      "gesamtkm": "323,738",
+      "lines": [
+        {
+          "id": "l1",
+          "linienNr": "710",
+          "fahrtNr": "3710020",
+          "start": "Kappeln, ZOB",
+          "end": "Vogelsang-Grünholz, ZOB",
+          "startTime": "08:06",
+          "endTime": "08:30",
+          "stops": [
+            {
+              "time": "08:06",
+              "name": "Kappeln, ZOB",
+              "letter": "3",
+              "hints": [
+                {
+                  "typ": "Z",
+                  "linie": "600",
+                  "dest": "Schleswig, Bahnhof",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "08:08",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "08:09",
+              "name": "Ellenberg, Jugendherberge"
+            },
+            {
+              "time": "08:10",
+              "name": "Loitmark, Lüttfeld"
+            },
+            {
+              "time": "08:11",
+              "name": "Kopperby, Boysenkoppel"
+            },
+            {
+              "time": "08:13",
+              "name": "Kopperby, Uferweg"
+            },
+            {
+              "time": "08:14",
+              "name": "Kopperby, Heidesiedlung"
+            },
+            {
+              "time": "08:16",
+              "name": "Karby, Südhang"
+            },
+            {
+              "time": "08:19",
+              "name": "Karby, Am Ring"
+            },
+            {
+              "time": "08:20",
+              "name": "Dörphof, Karlberger Straße"
+            },
+            {
+              "time": "08:22",
+              "name": "Dörphof, Schuby"
+            },
+            {
+              "time": "08:24",
+              "name": "Dörphof, Grüntal"
+            },
+            {
+              "time": "08:26",
+              "name": "Vogelsang-Grünholz, Kummersholz"
+            },
+            {
+              "time": "08:30",
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A"
+            }
+          ]
+        },
+        {
+          "id": "l2",
+          "linienNr": "710",
+          "fahrtNr": "3710207",
+          "start": "Vogelsang-Grünholz, ZOB",
+          "end": "Kappeln, ZOB",
+          "startTime": "08:31",
+          "endTime": "08:58",
+          "stops": [
+            {
+              "time": "08:31",
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "B"
+            },
+            {
+              "time": "08:33",
+              "name": "Vogelsang-Grünholz, Kummersholz"
+            },
+            {
+              "time": "08:35",
+              "name": "Dörphof, Grüntal"
+            },
+            {
+              "time": "08:36",
+              "name": "Dörphof, Schuby"
+            },
+            {
+              "time": "08:38",
+              "name": "Dörphof, Karlberger Straße"
+            },
+            {
+              "time": "08:42",
+              "name": "Karby, Am Ring"
+            },
+            {
+              "time": "08:43",
+              "name": "Karby, Südhang"
+            },
+            {
+              "time": "08:45",
+              "name": "Kopperby, Heidesiedlung"
+            },
+            {
+              "time": "08:46",
+              "name": "Kopperby, Uferweg"
+            },
+            {
+              "time": "08:47",
+              "name": "Kopperby, Boysenkoppel"
+            },
+            {
+              "time": "08:48",
+              "name": "Loitmark, Lüttfeld"
+            },
+            {
+              "time": "08:50",
+              "name": "Ellenberg, Jugendherberge"
+            },
+            {
+              "time": "08:51",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "08:58",
+              "name": "Kappeln, ZOB",
+              "letter": "3"
+            }
+          ]
+        },
+        {
+          "id": "l3",
+          "linienNr": "710",
+          "fahrtNr": "3710024",
+          "start": "Kappeln, ZOB",
+          "end": "Vogelsang-Grünholz, ZOB",
+          "startTime": "10:06",
+          "endTime": "10:30",
+          "stops": [
+            {
+              "time": "10:06",
+              "name": "Kappeln, ZOB",
+              "letter": "3",
+              "hints": [
+                {
+                  "typ": "Z",
+                  "linie": "600",
+                  "dest": "Schleswig, Bahnhof",
+                  "fp": 5
+                },
+                {
+                  "typ": "Z",
+                  "linie": "800",
+                  "dest": "Flensburg, Bahnhof",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "10:08",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "10:09",
+              "name": "Ellenberg, Jugendherberge"
+            },
+            {
+              "time": "10:10",
+              "name": "Loitmark, Lüttfeld"
+            },
+            {
+              "time": "10:11",
+              "name": "Kopperby, Boysenkoppel"
+            },
+            {
+              "time": "10:13",
+              "name": "Kopperby, Uferweg"
+            },
+            {
+              "time": "10:14",
+              "name": "Kopperby, Heidesiedlung"
+            },
+            {
+              "time": "10:16",
+              "name": "Karby, Südhang"
+            },
+            {
+              "time": "10:19",
+              "name": "Karby, Am Ring"
+            },
+            {
+              "time": "10:20",
+              "name": "Dörphof, Karlberger Straße"
+            },
+            {
+              "time": "10:22",
+              "name": "Dörphof, Schuby"
+            },
+            {
+              "time": "10:24",
+              "name": "Dörphof, Grüntal"
+            },
+            {
+              "time": "10:26",
+              "name": "Vogelsang-Grünholz, Kummersholz"
+            },
+            {
+              "time": "10:30",
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A"
+            }
+          ]
+        },
+        {
+          "id": "l4",
+          "linienNr": "710",
+          "fahrtNr": "3710211",
+          "start": "Vogelsang-Grünholz, ZOB",
+          "end": "Kappeln, ZOB",
+          "startTime": "10:31",
+          "endTime": "10:58",
+          "stops": [
+            {
+              "time": "10:31",
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "B"
+            },
+            {
+              "time": "10:33",
+              "name": "Vogelsang-Grünholz, Kummersholz"
+            },
+            {
+              "time": "10:35",
+              "name": "Dörphof, Grüntal"
+            },
+            {
+              "time": "10:36",
+              "name": "Dörphof, Schuby"
+            },
+            {
+              "time": "10:38",
+              "name": "Dörphof, Karlberger Straße"
+            },
+            {
+              "time": "10:42",
+              "name": "Karby, Am Ring"
+            },
+            {
+              "time": "10:43",
+              "name": "Karby, Südhang"
+            },
+            {
+              "time": "10:45",
+              "name": "Kopperby, Heidesiedlung"
+            },
+            {
+              "time": "10:46",
+              "name": "Kopperby, Uferweg"
+            },
+            {
+              "time": "10:47",
+              "name": "Kopperby, Boysenkoppel"
+            },
+            {
+              "time": "10:48",
+              "name": "Loitmark, Lüttfeld"
+            },
+            {
+              "time": "10:50",
+              "name": "Ellenberg, Jugendherberge"
+            },
+            {
+              "time": "10:51",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "10:58",
+              "name": "Kappeln, ZOB",
+              "letter": "3"
+            }
+          ]
+        },
+        {
+          "id": "l5",
+          "linienNr": "737",
+          "fahrtNr": "3737007",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Neudorf, B76",
+          "startTime": "12:02",
+          "endTime": "12:39",
+          "stops": [
+            {
+              "time": "12:02",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "F",
+              "hints": [
+                {
+                  "typ": "Z",
+                  "linie": "710",
+                  "dest": "Waabs, Mühlenstraße",
+                  "fp": 5
+                },
+                {
+                  "typ": "Z",
+                  "linie": "721",
+                  "dest": "Missunde, Alter Schulweg",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "12:04",
+              "name": "Eckernförde, Admiral-Scheer-Straße"
+            },
+            {
+              "time": "12:06",
+              "name": "Eckernförde, Bismarckstraße"
+            },
+            {
+              "time": "12:07",
+              "name": "Eckernförde, Auf der Höhe"
+            },
+            {
+              "time": "12:08",
+              "name": "Eckernförde, Lütthörn"
+            },
+            {
+              "time": "12:10",
+              "name": "Goosefeld, Gut Marienthal"
+            },
+            {
+              "time": "12:11",
+              "name": "Goosefeld, Hoffnungstal"
+            },
+            {
+              "time": "12:12",
+              "name": "Holtsee, Lehmsiek"
+            },
+            {
+              "time": "12:13",
+              "name": "Haby, Stillbek"
+            },
+            {
+              "time": "12:17",
+              "name": "Haby, Ortsmitte"
+            },
+            {
+              "time": "12:19",
+              "name": "Holtsee, Habyer Straße",
+              "letter": "A"
+            },
+            {
+              "time": "12:20",
+              "name": "Holtsee, Neuholtsee"
+            },
+            {
+              "time": "12:22",
+              "name": "Holtsee, Gettorfer Straße",
+              "hints": [
+                {
+                  "typ": "Z",
+                  "linie": "730",
+                  "dest": "Gettorf, Bahnhof",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "12:24",
+              "name": "Holtsee, Schule"
+            },
+            {
+              "time": "12:25",
+              "name": "Holtsee, Kiek Ut"
+            },
+            {
+              "time": "12:26",
+              "name": "Holtsee, Harfe"
+            },
+            {
+              "time": "12:27",
+              "name": "Hohenlieth, Eichenbaum"
+            },
+            {
+              "time": "12:28",
+              "name": "Hohenlieth, Hof"
+            },
+            {
+              "time": "12:29",
+              "name": "Stratenbrook"
+            },
+            {
+              "time": "12:30",
+              "name": "Altenhof, Hofholz"
+            },
+            {
+              "time": "12:32",
+              "name": "Bornstein, West"
+            },
+            {
+              "time": "12:34",
+              "name": "Bornstein, Ort"
+            },
+            {
+              "time": "12:36",
+              "name": "Neudorf, Sprenger Weg"
+            },
+            {
+              "time": "12:37",
+              "name": "Neudorf, Unterführung",
+              "letter": "B"
+            },
+            {
+              "time": "12:39",
+              "name": "Neudorf, B76"
+            }
+          ]
+        },
+        {
+          "id": "l6",
+          "linienNr": "736",
+          "fahrtNr": "3736005",
+          "start": "Neudorf, B76",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "12:40",
+          "endTime": "12:55",
+          "stops": [
+            {
+              "time": "12:40",
+              "name": "Neudorf, B76"
+            },
+            {
+              "time": "12:42",
+              "name": "Altenhof, Grüner Jäger"
+            },
+            {
+              "time": "12:43",
+              "name": "Altenhof, Jordanschule"
+            },
+            {
+              "time": "12:44",
+              "name": "Altenhof, Kiekut"
+            },
+            {
+              "time": "12:45",
+              "name": "Altenhof, Alter Bahnhof"
+            },
+            {
+              "time": "12:47",
+              "name": "Eckernförde, Sandkrug"
+            },
+            {
+              "time": "12:49",
+              "name": "Eckernförde, Berliner Straße"
+            },
+            {
+              "time": "12:55",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
+            }
+          ]
+        },
+        {
+          "id": "l7",
+          "linienNr": "710",
+          "fahrtNr": "4710467",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Kappeln, ZOB",
+          "startTime": "13:49",
+          "endTime": "14:28",
+          "stops": [
+            {
+              "time": "13:49",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "A"
+            },
+            {
+              "time": "13:50",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "13:56",
+              "name": "Barkelsby, Schwansenstraße"
+            },
+            {
+              "time": "13:59",
+              "name": "Loose"
+            },
+            {
+              "time": "14:02",
+              "name": "Söby, Neu-Seeholz"
+            },
+            {
+              "time": "14:10",
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "B",
+              "wait": 2,
+              "arr": "14:10",
+              "dep": "14:12"
+            },
+            {
+              "time": "14:12",
+              "name": "Vogelsang-Grünholz, ZOB (ab)",
+              "letter": "B"
+            },
+            {
+              "time": "14:23",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "14:28",
+              "name": "Kappeln, ZOB",
+              "letter": "3"
+            }
+          ]
+        },
+        {
+          "id": "l8",
+          "linienNr": "710",
+          "fahrtNr": "4710068",
+          "start": "Kappeln, ZOB",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "14:32",
+          "endTime": "15:12",
+          "stops": [
+            {
+              "time": "14:32",
+              "name": "Kappeln, ZOB",
+              "letter": "3"
+            },
+            {
+              "time": "14:34",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "14:47",
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A",
+              "wait": 2,
+              "arr": "14:47",
+              "dep": "14:49",
+              "hints": [
+                {
+                  "typ": "A",
+                  "linie": "711",
+                  "dest": "Damp, Ostseehotel",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "14:49",
+              "name": "Vogelsang-Grünholz, ZOB (ab)",
+              "letter": "A"
+            },
+            {
+              "time": "14:55",
+              "name": "Söby, Neu-Seeholz"
+            },
+            {
+              "time": "14:59",
+              "name": "Loose"
+            },
+            {
+              "time": "15:02",
+              "name": "Barkelsby, Schwansenstraße"
+            },
+            {
+              "time": "15:08",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "15:12",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
+            }
+          ]
+        },
+        {
+          "id": "l9",
+          "linienNr": "711",
+          "fahrtNr": "3711421",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Damp, Ostseehotel",
+          "startTime": "15:19",
+          "endTime": "15:56",
+          "stops": [
+            {
+              "time": "15:19",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "A"
+            },
+            {
+              "time": "15:20",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "15:24",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "15:25",
+              "name": "Eckernförde, Mühlenberg"
+            },
+            {
+              "time": "15:25",
+              "name": "Eckernförde, J.-H.-Fehrs-Weg"
+            },
+            {
+              "time": "15:26",
+              "name": "Eckernförde, Gorch-Fock-Straße"
+            },
+            {
+              "time": "15:26",
+              "name": "Eckernförde, Friedhof Schleswiger Straße"
+            },
+            {
+              "time": "15:27",
+              "name": "Eckernförde, Kreiskrankenhaus"
+            },
+            {
+              "time": "15:31",
+              "name": "Barkelsby, Westerschauer Weg"
+            },
+            {
+              "time": "15:32",
+              "name": "Barkelsby, Grundschule"
+            },
+            {
+              "time": "15:33",
+              "name": "Barkelsby, Rommelsworth"
+            },
+            {
+              "time": "15:36",
+              "name": "Loose"
+            },
+            {
+              "time": "15:38",
+              "name": "Holzdorf, Moorbrücke"
+            },
+            {
+              "time": "15:39",
+              "name": "Holzdorf, Dorfstraße"
+            },
+            {
+              "time": "15:40",
+              "name": "Söby, Neu-Seeholz"
+            },
+            {
+              "time": "15:41",
+              "name": "Söby, Brücke"
+            },
+            {
+              "time": "15:42",
+              "name": "Kratt"
+            },
+            {
+              "time": "15:50",
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "B",
+              "hints": [
+                {
+                  "typ": "Z",
+                  "linie": "X710",
+                  "dest": "Kappeln, ZOB",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "15:52",
+              "name": "Damp, Hegenholz"
+            },
+            {
+              "time": "15:54",
+              "name": "Damp, Werkhof"
+            },
+            {
+              "time": "15:56",
+              "name": "Damp, Ostseehotel"
+            }
+          ]
+        },
+        {
+          "id": "l10",
+          "linienNr": "711",
+          "fahrtNr": "3711024",
+          "start": "Damp, Ostseehotel",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "15:57",
+          "endTime": "16:43",
+          "stops": [
+            {
+              "time": "15:57",
+              "name": "Damp, Ostseehotel"
+            },
+            {
+              "time": "16:00",
+              "name": "Damp, Ostseeklinik"
+            },
+            {
+              "time": "16:02",
+              "name": "Damp, Werkhof"
+            },
+            {
+              "time": "16:04",
+              "name": "Damp, Hegenholz"
+            },
+            {
+              "time": "16:10",
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A"
+            },
+            {
+              "time": "16:13",
+              "name": "Kratt"
+            },
+            {
+              "time": "16:14",
+              "name": "Söby, Brücke"
+            },
+            {
+              "time": "16:15",
+              "name": "Söby, Neu-Seeholz"
+            },
+            {
+              "time": "16:16",
+              "name": "Holzdorf, Dorfstraße"
+            },
+            {
+              "time": "16:17",
+              "name": "Holzdorf, Moorbrücke"
+            },
+            {
+              "time": "16:19",
+              "name": "Loose"
+            },
+            {
+              "time": "16:22",
+              "name": "Barkelsby, Schwansenstraße"
+            },
+            {
+              "time": "16:23",
+              "name": "Barkelsby, Rommelsworth"
+            },
+            {
+              "time": "16:24",
+              "name": "Barkelsby, Grundschule"
+            },
+            {
+              "time": "16:25",
+              "name": "Barkelsby, Westerschauer Weg"
+            },
+            {
+              "time": "16:29",
+              "name": "Eckernförde, Kreiskrankenhaus"
+            },
+            {
+              "time": "16:30",
+              "name": "Eckernförde, Friedhof Schleswiger Straße"
+            },
+            {
+              "time": "16:31",
+              "name": "Eckernförde, Gorch-Fock-Straße"
+            },
+            {
+              "time": "16:31",
+              "name": "Eckernförde, J.-H.-Fehrs-Weg"
+            },
+            {
+              "time": "16:32",
+              "name": "Eckernförde, Mühlenberg"
+            },
+            {
+              "time": "16:33",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "16:37",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "16:43",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
+            }
+          ]
+        },
+        {
+          "id": "l11",
+          "linienNr": "710",
+          "fahrtNr": "4710073",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Kappeln, ZOB",
+          "startTime": "16:49",
+          "endTime": "17:28",
+          "stops": [
+            {
+              "time": "16:49",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "A"
+            },
+            {
+              "time": "16:50",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "16:56",
+              "name": "Barkelsby, Schwansenstraße"
+            },
+            {
+              "time": "16:59",
+              "name": "Loose"
+            },
+            {
+              "time": "17:02",
+              "name": "Söby, Neu-Seeholz"
+            },
+            {
+              "time": "17:10",
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "B",
+              "wait": 2,
+              "arr": "17:10",
+              "dep": "17:12"
+            },
+            {
+              "time": "17:12",
+              "name": "Vogelsang-Grünholz, ZOB (ab)",
+              "letter": "B"
+            },
+            {
+              "time": "17:23",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "17:28",
+              "name": "Kappeln, ZOB",
+              "letter": "3"
+            }
+          ]
+        },
+        {
+          "id": "l12",
+          "linienNr": "710",
+          "fahrtNr": "4710074",
+          "start": "Kappeln, ZOB",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "17:32",
+          "endTime": "18:12",
+          "stops": [
+            {
+              "time": "17:32",
+              "name": "Kappeln, ZOB",
+              "letter": "3"
+            },
+            {
+              "time": "17:34",
+              "name": "Kappeln, Hafen"
+            },
+            {
+              "time": "17:47",
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A",
+              "wait": 2,
+              "arr": "17:47",
+              "dep": "17:49"
+            },
+            {
+              "time": "17:49",
+              "name": "Vogelsang-Grünholz, ZOB (ab)",
+              "letter": "A"
+            },
+            {
+              "time": "17:55",
+              "name": "Söby, Neu-Seeholz"
+            },
+            {
+              "time": "17:59",
+              "name": "Loose"
+            },
+            {
+              "time": "18:02",
+              "name": "Barkelsby, Schwansenstraße"
+            },
+            {
+              "time": "18:08",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "18:12",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kurs414",
+      "name": "Kurs 414",
+      "typ": "ferien",
+      "datum": "2026-07-06",
+      "schichtdauer": "10:01",
+      "gesamtkm": "271,377",
+      "lines": [
+        {
+          "id": "l1",
+          "linienNr": "711",
+          "fahrtNr": "3711013",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Damp, Ostseehotel",
+          "startTime": "11:19",
+          "endTime": "11:56",
+          "stops": [
+            {
+              "time": "11:19",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "A"
+            },
+            {
+              "time": "11:20",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "11:24",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "11:25",
+              "name": "Eckernförde, Mühlenberg"
+            },
+            {
+              "time": "11:25",
+              "name": "Eckernförde, J.-H.-Fehrs-Weg"
+            },
+            {
+              "time": "11:26",
+              "name": "Eckernförde, Gorch-Fock-Straße"
+            },
+            {
+              "time": "11:26",
+              "name": "Eckernförde, Friedhof Schleswiger Straße"
+            },
+            {
+              "time": "11:27",
+              "name": "Eckernförde, Kreiskrankenhaus"
+            },
+            {
+              "time": "11:31",
+              "name": "Barkelsby, Westerschauer Weg"
+            },
+            {
+              "time": "11:32",
+              "name": "Barkelsby, Grundschule"
+            },
+            {
+              "time": "11:33",
+              "name": "Barkelsby, Rommelsworth"
+            },
+            {
+              "time": "11:36",
+              "name": "Loose"
+            },
+            {
+              "time": "11:38",
+              "name": "Holzdorf, Moorbrücke"
+            },
+            {
+              "time": "11:39",
+              "name": "Holzdorf, Dorfstraße"
+            },
+            {
+              "time": "11:40",
+              "name": "Söby, Neu-Seeholz"
+            },
+            {
+              "time": "11:41",
+              "name": "Söby, Brücke"
+            },
+            {
+              "time": "11:42",
+              "name": "Kratt"
+            },
+            {
+              "time": "11:50",
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "B"
+            },
+            {
+              "time": "11:52",
+              "name": "Damp, Hegenholz"
+            },
+            {
+              "time": "11:54",
+              "name": "Damp, Werkhof"
+            },
+            {
+              "time": "11:56",
+              "name": "Damp, Ostseehotel"
+            }
+          ]
+        },
+        {
+          "id": "l2",
+          "linienNr": "711",
+          "fahrtNr": "3711016",
+          "start": "Damp, Ostseehotel",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "11:57",
+          "endTime": "12:43",
+          "stops": [
+            {
+              "time": "11:57",
+              "name": "Damp, Ostseehotel"
+            },
+            {
+              "time": "12:00",
+              "name": "Damp, Ostseeklinik"
+            },
+            {
+              "time": "12:02",
+              "name": "Damp, Werkhof"
+            },
+            {
+              "time": "12:04",
+              "name": "Damp, Hegenholz"
+            },
+            {
+              "time": "12:10",
+              "name": "Vogelsang-Grünholz, ZOB",
+              "letter": "A"
+            },
+            {
+              "time": "12:13",
+              "name": "Kratt"
+            },
+            {
+              "time": "12:14",
+              "name": "Söby, Brücke"
+            },
+            {
+              "time": "12:15",
+              "name": "Söby, Neu-Seeholz"
+            },
+            {
+              "time": "12:16",
+              "name": "Holzdorf, Dorfstraße"
+            },
+            {
+              "time": "12:17",
+              "name": "Holzdorf, Moorbrücke"
+            },
+            {
+              "time": "12:19",
+              "name": "Loose"
+            },
+            {
+              "time": "12:22",
+              "name": "Barkelsby, Schwansenstraße"
+            },
+            {
+              "time": "12:23",
+              "name": "Barkelsby, Rommelsworth"
+            },
+            {
+              "time": "12:24",
+              "name": "Barkelsby, Grundschule"
+            },
+            {
+              "time": "12:25",
+              "name": "Barkelsby, Westerschauer Weg"
+            },
+            {
+              "time": "12:29",
+              "name": "Eckernförde, Kreiskrankenhaus"
+            },
+            {
+              "time": "12:30",
+              "name": "Eckernförde, Friedhof Schleswiger Straße"
+            },
+            {
+              "time": "12:31",
+              "name": "Eckernförde, Gorch-Fock-Straße"
+            },
+            {
+              "time": "12:31",
+              "name": "Eckernförde, J.-H.-Fehrs-Weg"
+            },
+            {
+              "time": "12:32",
+              "name": "Eckernförde, Mühlenberg"
+            },
+            {
+              "time": "12:33",
+              "name": "Eckernförde, Gaehtjestraße"
+            },
+            {
+              "time": "12:37",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "12:43",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
+            }
+          ]
+        },
+        {
+          "id": "l3",
+          "linienNr": "725",
+          "fahrtNr": "3725014",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Kropp, Schule/ZOB",
+          "startTime": "13:02",
+          "endTime": "13:58",
+          "stops": [
+            {
+              "time": "13:02",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "G"
+            },
+            {
+              "time": "13:04",
+              "name": "Eckernförde, Windebyer Weg"
+            },
+            {
+              "time": "13:05",
+              "name": "Eckernförde, Bornbrook"
+            },
+            {
+              "time": "13:06",
+              "name": "Eckernförde, Karl-Samwer-Ring"
+            },
+            {
+              "time": "13:08",
+              "name": "Windeby, Siedlung"
+            },
+            {
+              "time": "13:09",
+              "name": "Windeby, Kapelle Westerthal"
+            },
+            {
+              "time": "13:10",
+              "name": "Windeby, Friedland"
+            },
+            {
+              "time": "13:12",
+              "name": "Osterby (Eckernförde), Deweik"
+            },
+            {
+              "time": "13:14",
+              "name": "Osterby (Eckernförde), Schulstraße"
+            },
+            {
+              "time": "13:15",
+              "name": "Osterby (Eckernförde), Bäckerkoppel"
+            },
+            {
+              "time": "13:17",
+              "name": "Oberhütten, Ost"
+            },
+            {
+              "time": "13:18",
+              "name": "Damendorf, Alter Bahnhof",
+              "letter": "B"
+            },
+            {
+              "time": "13:19",
+              "name": "Damendorf, Ortsmitte"
+            },
+            {
+              "time": "13:20",
+              "name": "Damendorf, Alter Bahnhof",
+              "letter": "A"
+            },
+            {
+              "time": "13:22",
+              "name": "Ascheffel, Dorfstraße"
+            },
+            {
+              "time": "13:23",
+              "name": "Ascheffel, An der Forta"
+            },
+            {
+              "time": "13:25",
+              "name": "Ascheffel, Oberschoothorst"
+            },
+            {
+              "time": "13:26",
+              "name": "Brekendorf, Tirol"
+            },
+            {
+              "time": "13:27",
+              "name": "Brekendorf, Forsthaus"
+            },
+            {
+              "time": "13:29",
+              "name": "Brekendorf, Krögersgang"
+            },
+            {
+              "time": "13:32",
+              "name": "Brekendorf, Am Hang"
+            },
+            {
+              "time": "13:33",
+              "name": "Brekendorf, Op de Barg"
+            },
+            {
+              "time": "13:34",
+              "name": "Owschlag, Westermoor"
+            },
+            {
+              "time": "13:35",
+              "name": "Ramsdorf, West"
+            },
+            {
+              "time": "13:37",
+              "name": "Owschlag, Orchideenstraße"
+            },
+            {
+              "time": "13:41",
+              "name": "Owschlag, ZOB/Bahnhof",
+              "letter": "A",
+              "wait": 6,
+              "arr": "13:41",
+              "dep": "13:47",
+              "hints": [
+                {
+                  "typ": "T",
+                  "linie": "",
+                  "dest": "Zuganschluss abwarten",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "13:47",
+              "name": "Owschlag, ZOB/Bahnhof (ab)",
+              "letter": "A"
+            },
+            {
+              "time": "13:48",
+              "name": "Owschlag, Orchideenstraße"
+            },
+            {
+              "time": "13:51",
+              "name": "Owschlag, Obsthof Klein Salow"
+            },
+            {
+              "time": "13:55",
+              "name": "Kropp, Industriestraße"
+            },
+            {
+              "time": "13:58",
+              "name": "Kropp, Schule/ZOB",
+              "letter": "D"
+            }
+          ]
+        },
+        {
+          "id": "l4",
+          "linienNr": "725",
+          "fahrtNr": "3725019",
+          "start": "Kropp, Schule/ZOB",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "14:02",
+          "endTime": "14:56",
+          "stops": [
+            {
+              "time": "14:02",
+              "name": "Kropp, Schule/ZOB",
+              "letter": "D"
+            },
+            {
+              "time": "14:04",
+              "name": "Kropp, Industriestraße"
+            },
+            {
+              "time": "14:08",
+              "name": "Owschlag, Obsthof Klein Salow"
+            },
+            {
+              "time": "14:11",
+              "name": "Owschlag, Bahnhof West"
+            },
+            {
+              "time": "14:14",
+              "name": "Owschlag, ZOB/Bahnhof",
+              "letter": "A",
+              "wait": 1,
+              "arr": "14:14",
+              "dep": "14:15",
+              "hints": [
+                {
+                  "typ": "T",
+                  "linie": "",
+                  "dest": "Zuganschluss abwarten",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "14:15",
+              "name": "Owschlag, ZOB/Bahnhof (ab)",
+              "letter": "A"
+            },
+            {
+              "time": "14:16",
+              "name": "Owschlag, Orchideenstraße"
+            },
+            {
+              "time": "14:18",
+              "name": "Ramsdorf, West"
+            },
+            {
+              "time": "14:19",
+              "name": "Owschlag, Westermoor"
+            },
+            {
+              "time": "14:20",
+              "name": "Brekendorf, Op de Barg"
+            },
+            {
+              "time": "14:21",
+              "name": "Brekendorf, Am Hang"
+            },
+            {
+              "time": "14:23",
+              "name": "Brekendorf, Krögersgang"
+            },
+            {
+              "time": "14:24",
+              "name": "Brekendorf, Forsthaus"
+            },
+            {
+              "time": "14:26",
+              "name": "Brekendorf, Tirol"
+            },
+            {
+              "time": "14:28",
+              "name": "Ascheffel, Oberschoothorst"
+            },
+            {
+              "time": "14:30",
+              "name": "Ascheffel, An der Forta"
+            },
+            {
+              "time": "14:32",
+              "name": "Ascheffel, Dorfstraße"
+            },
+            {
+              "time": "14:34",
+              "name": "Damendorf, Alter Bahnhof",
+              "letter": "B"
+            },
+            {
+              "time": "14:35",
+              "name": "Damendorf, Ortsmitte"
+            },
+            {
+              "time": "14:37",
+              "name": "Damendorf, Alter Bahnhof",
+              "letter": "A"
+            },
+            {
+              "time": "14:38",
+              "name": "Oberhütten, Ost"
+            },
+            {
+              "time": "14:40",
+              "name": "Osterby (Eckernförde), Bäckerkoppel"
+            },
+            {
+              "time": "14:41",
+              "name": "Osterby (Eckernförde), Schulstraße"
+            },
+            {
+              "time": "14:43",
+              "name": "Osterby (Eckernförde), Deweik"
+            },
+            {
+              "time": "14:45",
+              "name": "Windeby, Friedland"
+            },
+            {
+              "time": "14:46",
+              "name": "Windeby, Kapelle Westerthal"
+            },
+            {
+              "time": "14:47",
+              "name": "Windeby, Siedlung"
+            },
+            {
+              "time": "14:49",
+              "name": "Eckernförde, Karl-Samwer-Ring"
+            },
+            {
+              "time": "14:50",
+              "name": "Eckernförde, Bornbrook"
+            },
+            {
+              "time": "14:51",
+              "name": "Eckernförde, Windebyer Weg"
+            },
+            {
+              "time": "14:56",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J",
+              "hints": [
+                {
+                  "typ": "A",
+                  "linie": "710",
+                  "dest": "Waabs, Mühlenstraße",
+                  "fp": 5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l5",
+          "linienNr": "736",
+          "fahrtNr": "3736010",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Neudorf, B76",
+          "startTime": "15:02",
+          "endTime": "15:13",
+          "stops": [
+            {
+              "time": "15:02",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "D",
+              "hints": [
+                {
+                  "typ": "Z",
+                  "linie": "710",
+                  "dest": "Waabs, Mühlenstraße",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "15:04",
+              "name": "Eckernförde, Berliner Straße"
+            },
+            {
+              "time": "15:05",
+              "name": "Eckernförde, Sandkrug"
+            },
+            {
+              "time": "15:07",
+              "name": "Altenhof, Alter Bahnhof"
+            },
+            {
+              "time": "15:08",
+              "name": "Altenhof, Jordanschule"
+            },
+            {
+              "time": "15:10",
+              "name": "Altenhof, Grüner Jäger"
+            },
+            {
+              "time": "15:13",
+              "name": "Neudorf, B76"
+            }
+          ]
+        },
+        {
+          "id": "l6",
+          "linienNr": "737",
+          "fahrtNr": "3737020",
+          "start": "Neudorf, B76",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "15:14",
+          "endTime": "15:53",
+          "stops": [
+            {
+              "time": "15:14",
+              "name": "Neudorf, B76"
+            },
+            {
+              "time": "15:15",
+              "name": "Neudorf, Sprenger Weg"
+            },
+            {
+              "time": "15:17",
+              "name": "Bornstein, Ort"
+            },
+            {
+              "time": "15:19",
+              "name": "Bornstein, West"
+            },
+            {
+              "time": "15:21",
+              "name": "Altenhof, Hofholz"
+            },
+            {
+              "time": "15:22",
+              "name": "Stratenbrook"
+            },
+            {
+              "time": "15:23",
+              "name": "Hohenlieth, Hof"
+            },
+            {
+              "time": "15:24",
+              "name": "Hohenlieth, Eichenbaum"
+            },
+            {
+              "time": "15:25",
+              "name": "Holtsee, Harfe"
+            },
+            {
+              "time": "15:26",
+              "name": "Holtsee, Kiek Ut"
+            },
+            {
+              "time": "15:28",
+              "name": "Holtsee, Schule"
+            },
+            {
+              "time": "15:29",
+              "name": "Holtsee, Gettorfer Straße",
+              "hints": [
+                {
+                  "typ": "A",
+                  "linie": "730",
+                  "dest": "Gettorf, Bahnhof",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "15:30",
+              "name": "Holtsee, Neuholtsee"
+            },
+            {
+              "time": "15:32",
+              "name": "Holtsee, Habyer Straße",
+              "letter": "B"
+            },
+            {
+              "time": "15:35",
+              "name": "Haby, Ortsmitte"
+            },
+            {
+              "time": "15:36",
+              "name": "Haby, Stillbek"
+            },
+            {
+              "time": "15:38",
+              "name": "Holtsee, Lehmsiek"
+            },
+            {
+              "time": "15:39",
+              "name": "Goosefeld, Hoffnungstal"
+            },
+            {
+              "time": "15:40",
+              "name": "Goosefeld, Gut Marienthal"
+            },
+            {
+              "time": "15:41",
+              "name": "Eckernförde, Lütthörn"
+            },
+            {
+              "time": "15:43",
+              "name": "Eckernförde, Auf der Höhe"
+            },
+            {
+              "time": "15:44",
+              "name": "Eckernförde, Bismarckstraße"
+            },
+            {
+              "time": "15:45",
+              "name": "Eckernförde, Rendsburger Straße"
+            },
+            {
+              "time": "15:46",
+              "name": "Eckernförde, Admiral-Scheer-Straße"
+            },
+            {
+              "time": "15:53",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J",
+              "hints": [
+                {
+                  "typ": "A",
+                  "linie": "700",
+                  "dest": "Rendsburg, Stadttheater/ZOB",
+                  "fp": 5
+                },
+                {
+                  "typ": "A",
+                  "linie": "710",
+                  "dest": "Waabs, Mühlenstraße",
+                  "fp": 5
+                },
+                {
+                  "typ": "A",
+                  "linie": "746",
+                  "dest": "Surendorf, Ortsmitte",
+                  "fp": 5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "l7",
+          "linienNr": "720",
+          "fahrtNr": "3720028",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Schleswig, Stadtfeld/ZOB",
+          "startTime": "17:15",
+          "endTime": "17:59",
+          "stops": [
+            {
+              "time": "17:15",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "C",
+              "hints": [
+                {
+                  "typ": "T",
+                  "linie": "",
+                  "dest": "Zuganschluss abwarten",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "17:16",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "17:20",
+              "name": "Eckernförde, Carlshöhe"
+            },
+            {
+              "time": "17:20",
+              "name": "Eckernförde, Grasholz"
+            },
+            {
+              "time": "17:22",
+              "name": "Gammelby, Birkensee"
+            },
+            {
+              "time": "17:24",
+              "name": "Kosel, Koselfeld",
+              "letter": "A"
+            },
+            {
+              "time": "17:26",
+              "name": "Götheby-Holm, Kreisstraße"
+            },
+            {
+              "time": "17:30",
+              "name": "Fleckeby, Schmiederedder"
+            },
+            {
+              "time": "17:32",
+              "name": "Güby, Ahrensberg"
+            },
+            {
+              "time": "17:33",
+              "name": "Güby, Bundesstraße"
+            },
+            {
+              "time": "17:34",
+              "name": "Borgwedel, Abzw."
+            },
+            {
+              "time": "17:35",
+              "name": "Stexwig, Abzw."
+            },
+            {
+              "time": "17:37",
+              "name": "Fahrdorf, Mühlenberg"
+            },
+            {
+              "time": "17:38",
+              "name": "Fahrdorf, Abzw. Loopstedt"
+            },
+            {
+              "time": "17:39",
+              "name": "Haithabu, Wikinger Museum"
+            },
+            {
+              "time": "17:43",
+              "name": "Schleswig, Bugenhagenschule"
+            },
+            {
+              "time": "17:44",
+              "name": "Schleswig, Mansteinstraße"
+            },
+            {
+              "time": "17:47",
+              "name": "Schleswig, Bahnhof"
+            },
+            {
+              "time": "17:48",
+              "name": "Schleswig, Bahnhofstraße"
+            },
+            {
+              "time": "17:49",
+              "name": "Schleswig, Landesarchiv"
+            },
+            {
+              "time": "17:49",
+              "name": "Schleswig, Oberlandesgericht"
+            },
+            {
+              "time": "17:51",
+              "name": "Schleswig, Schleihallenbrücke"
+            },
+            {
+              "time": "17:53",
+              "name": "Schleswig, Domschule"
+            },
+            {
+              "time": "17:55",
+              "name": "Schleswig, Alter ZOB"
+            },
+            {
+              "time": "17:59",
+              "name": "Schleswig, Stadtfeld/ZOB",
+              "letter": "C1"
+            }
+          ]
+        },
+        {
+          "id": "l8",
+          "linienNr": "720",
+          "fahrtNr": "3720027",
+          "start": "Schleswig, Stadtfeld/ZOB",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "18:00",
+          "endTime": "18:45",
+          "stops": [
+            {
+              "time": "18:00",
+              "name": "Schleswig, Stadtfeld/ZOB",
+              "letter": "C1"
+            },
+            {
+              "time": "18:01",
+              "name": "Schleswig, Capitolplatz"
+            },
+            {
+              "time": "18:03",
+              "name": "Schleswig, Strandweg"
+            },
+            {
+              "time": "18:04",
+              "name": "Schleswig, Domziegelhof"
+            },
+            {
+              "time": "18:05",
+              "name": "Schleswig, Schleihallenbrücke"
+            },
+            {
+              "time": "18:07",
+              "name": "Schleswig, Oberlandesgericht"
+            },
+            {
+              "time": "18:08",
+              "name": "Schleswig, Bahnhofstraße"
+            },
+            {
+              "time": "18:12",
+              "name": "Schleswig, Bahnhof",
+              "hints": [
+                {
+                  "typ": "T",
+                  "linie": "",
+                  "dest": "Zuganschluss abwarten",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "18:12",
+              "name": "Schleswig, Mansteinstraße"
+            },
+            {
+              "time": "18:13",
+              "name": "Schleswig, Bugenhagenschule"
+            },
+            {
+              "time": "18:15",
+              "name": "Haithabu, Wikinger Museum"
+            },
+            {
+              "time": "18:16",
+              "name": "Fahrdorf, Abzw. Loopstedt"
+            },
+            {
+              "time": "18:18",
+              "name": "Fahrdorf, Mühlenberg"
+            },
+            {
+              "time": "18:20",
+              "name": "Stexwig, Abzw."
+            },
+            {
+              "time": "18:21",
+              "name": "Borgwedel, Abzw."
+            },
+            {
+              "time": "18:22",
+              "name": "Güby, Bundesstraße"
+            },
+            {
+              "time": "18:23",
+              "name": "Güby, Ahrensberg"
+            },
+            {
+              "time": "18:26",
+              "name": "Fleckeby, Schmiederedder"
+            },
+            {
+              "time": "18:28",
+              "name": "Götheby-Holm, Mühlenweg"
+            },
+            {
+              "time": "18:30",
+              "name": "Kosel, Koselfeld",
+              "letter": "B"
+            },
+            {
+              "time": "18:32",
+              "name": "Gammelby, Birkensee"
+            },
+            {
+              "time": "18:34",
+              "name": "Eckernförde, Carlshöhe"
+            },
+            {
+              "time": "18:40",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "18:45",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
+            }
+          ]
+        },
+        {
+          "id": "l9",
+          "linienNr": "720",
+          "fahrtNr": "3720032",
+          "start": "Eckernförde, Bahnhof/ZOB",
+          "end": "Schleswig, Stadtfeld/ZOB",
+          "startTime": "19:15",
+          "endTime": "19:59",
+          "stops": [
+            {
+              "time": "19:15",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "C",
+              "hints": [
+                {
+                  "typ": "T",
+                  "linie": "",
+                  "dest": "Zuganschluss abwarten",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "19:16",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "19:20",
+              "name": "Eckernförde, Carlshöhe"
+            },
+            {
+              "time": "19:20",
+              "name": "Eckernförde, Grasholz"
+            },
+            {
+              "time": "19:22",
+              "name": "Gammelby, Birkensee"
+            },
+            {
+              "time": "19:24",
+              "name": "Kosel, Koselfeld",
+              "letter": "A"
+            },
+            {
+              "time": "19:26",
+              "name": "Götheby-Holm, Kreisstraße"
+            },
+            {
+              "time": "19:30",
+              "name": "Fleckeby, Schmiederedder"
+            },
+            {
+              "time": "19:32",
+              "name": "Güby, Ahrensberg"
+            },
+            {
+              "time": "19:33",
+              "name": "Güby, Bundesstraße"
+            },
+            {
+              "time": "19:34",
+              "name": "Borgwedel, Abzw."
+            },
+            {
+              "time": "19:35",
+              "name": "Stexwig, Abzw."
+            },
+            {
+              "time": "19:37",
+              "name": "Fahrdorf, Mühlenberg"
+            },
+            {
+              "time": "19:38",
+              "name": "Fahrdorf, Abzw. Loopstedt"
+            },
+            {
+              "time": "19:39",
+              "name": "Haithabu, Wikinger Museum"
+            },
+            {
+              "time": "19:43",
+              "name": "Schleswig, Bugenhagenschule"
+            },
+            {
+              "time": "19:44",
+              "name": "Schleswig, Mansteinstraße"
+            },
+            {
+              "time": "19:47",
+              "name": "Schleswig, Bahnhof"
+            },
+            {
+              "time": "19:48",
+              "name": "Schleswig, Bahnhofstraße"
+            },
+            {
+              "time": "19:49",
+              "name": "Schleswig, Landesarchiv"
+            },
+            {
+              "time": "19:49",
+              "name": "Schleswig, Oberlandesgericht"
+            },
+            {
+              "time": "19:51",
+              "name": "Schleswig, Schleihallenbrücke"
+            },
+            {
+              "time": "19:53",
+              "name": "Schleswig, Domschule"
+            },
+            {
+              "time": "19:55",
+              "name": "Schleswig, Alter ZOB"
+            },
+            {
+              "time": "19:59",
+              "name": "Schleswig, Stadtfeld/ZOB",
+              "letter": "C1"
+            }
+          ]
+        },
+        {
+          "id": "l10",
+          "linienNr": "720",
+          "fahrtNr": "3720031",
+          "start": "Schleswig, Stadtfeld/ZOB",
+          "end": "Eckernförde, Bahnhof/ZOB",
+          "startTime": "20:00",
+          "endTime": "20:45",
+          "stops": [
+            {
+              "time": "20:00",
+              "name": "Schleswig, Stadtfeld/ZOB",
+              "letter": "C1"
+            },
+            {
+              "time": "20:01",
+              "name": "Schleswig, Capitolplatz"
+            },
+            {
+              "time": "20:03",
+              "name": "Schleswig, Strandweg"
+            },
+            {
+              "time": "20:04",
+              "name": "Schleswig, Domziegelhof"
+            },
+            {
+              "time": "20:05",
+              "name": "Schleswig, Schleihallenbrücke"
+            },
+            {
+              "time": "20:07",
+              "name": "Schleswig, Oberlandesgericht"
+            },
+            {
+              "time": "20:08",
+              "name": "Schleswig, Bahnhofstraße"
+            },
+            {
+              "time": "20:12",
+              "name": "Schleswig, Bahnhof",
+              "hints": [
+                {
+                  "typ": "T",
+                  "linie": "",
+                  "dest": "Zuganschluss abwarten",
+                  "fp": 5
+                }
+              ]
+            },
+            {
+              "time": "20:12",
+              "name": "Schleswig, Mansteinstraße"
+            },
+            {
+              "time": "20:13",
+              "name": "Schleswig, Bugenhagenschule"
+            },
+            {
+              "time": "20:15",
+              "name": "Haithabu, Wikinger Museum"
+            },
+            {
+              "time": "20:16",
+              "name": "Fahrdorf, Abzw. Loopstedt"
+            },
+            {
+              "time": "20:18",
+              "name": "Fahrdorf, Mühlenberg"
+            },
+            {
+              "time": "20:20",
+              "name": "Stexwig, Abzw."
+            },
+            {
+              "time": "20:21",
+              "name": "Borgwedel, Abzw."
+            },
+            {
+              "time": "20:22",
+              "name": "Güby, Bundesstraße"
+            },
+            {
+              "time": "20:23",
+              "name": "Güby, Ahrensberg"
+            },
+            {
+              "time": "20:26",
+              "name": "Fleckeby, Schmiederedder"
+            },
+            {
+              "time": "20:28",
+              "name": "Götheby-Holm, Mühlenweg"
+            },
+            {
+              "time": "20:30",
+              "name": "Kosel, Koselfeld",
+              "letter": "B"
+            },
+            {
+              "time": "20:32",
+              "name": "Gammelby, Birkensee"
+            },
+            {
+              "time": "20:34",
+              "name": "Eckernförde, Carlshöhe"
+            },
+            {
+              "time": "20:40",
+              "name": "Eckernförde, Rathaus"
+            },
+            {
+              "time": "20:45",
+              "name": "Eckernförde, Bahnhof/ZOB",
+              "letter": "J"
+            }
+          ]
+        }
+      ]
     }
   ],
   "activeKurs": "kurs217",
