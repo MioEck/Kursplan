@@ -50,6 +50,8 @@ header{display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px s
 .tab-filter.active-schule .tn,.tab-filter.active-schule .tl{color:#fff;}
 .tab-filter.active-we{background:var(--acc);border-color:var(--acc);}
 .tab-filter.active-we .tn,.tab-filter.active-we .tl{color:#fff;}
+.tab-filter.active-ferien{background:#2a7a3b;border-color:#2a7a3b;}
+.tab-filter.active-ferien .tn,.tab-filter.active-ferien .tl{color:#fff;}
 main{padding:12px 16px 100px;}
 .kh{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px;}
 .kt{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:2px;}
@@ -332,6 +334,10 @@ main{padding:12px 16px 100px;}
   <div class="tab-filter" id="filterWe" onclick="setFilter('we')">
     <span class="tn">📅 WE</span>
     <span class="tl">Sa / So</span>
+  </div>
+  <div class="tab-filter" id="filterFerien" onclick="setFilter('ferien')">
+    <span class="tn">🌴 Ferien</span>
+    <span class="tl">Mo-Fr</span>
   </div>
   <div class="tab-filter" id="filterSchule" onclick="setFilter('schule')">
     <span class="tn">🏫 Schule</span>
@@ -4208,6 +4214,7 @@ function setFilter(f) {
   activeFilter = f;
   // Update button styles
   document.getElementById('filterWe').className = 'tab-filter' + (f==='we' ? ' active-we' : '');
+  document.getElementById('filterFerien').className = 'tab-filter' + (f==='ferien' ? ' active-ferien' : '');
   document.getElementById('filterSchule').className = 'tab-filter' + (f==='schule' ? ' active-schule' : '');
   // Switch to first kurs of this filter
   var filtered = getFilteredKurse();
@@ -4222,6 +4229,7 @@ function setFilter(f) {
 function getFilteredKurse() {
   return D.kurse.filter(function(k) {
     if (activeFilter === 'schule') return k.typ === 'schule';
+    if (activeFilter === 'ferien') return k.typ === 'ferien';
     return k.typ === 'sa' || k.typ === 'so';
   });
 }
