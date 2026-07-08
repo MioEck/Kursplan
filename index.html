@@ -314,7 +314,7 @@ main{padding:12px 16px 100px;}
 </script>
 <header>
   <div class="logo" style="font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;color:#fff;background:var(--acc);border-radius:10px;width:42px;height:42px;display:flex;align-items:center;justify-content:center;">MR</div>
-  <div class="htxt"><h1>KURSPLAN <span style="font-size:13px;font-weight:400;color:var(--mut);letter-spacing:1px;vertical-align:middle">v62r</span></h1><p id="hd"></p></div>
+  <div class="htxt"><h1>KURSPLAN <span style="font-size:13px;font-weight:400;color:var(--mut);letter-spacing:1px;vertical-align:middle">v63r</span></h1><p id="hd"></p></div>
   <span id="userNameDisplay" style="font-size:12px;color:var(--mut);font-weight:600;white-space:nowrap;"></span>
   <button class="lock-btn" id="lockBtn" onclick="openKeypad()" title="Admin">🔒</button>
   <button class="lock-btn" id="themeBtn" onclick="toggleTheme()" title="Hell/Dunkel">🌙</button>
@@ -1716,6 +1716,8 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v63r', date:'08.07.2026', desc:'GPS: aktuelle Haltestelle bleibt automatisch sichtbar – Liste scrollt mit (kein manuelles Hochschieben mehr)'},
+  {v:'v62r', date:'06.07.2026', desc:'Wochenende Kurse 611/612/613/811: Waabs-Detour entfernt, Fahrzeiten aktualisiert, gültig ab 06.07.2026'},
   {v:'v56', date:'28.05.2026', desc:'Fix: GitHub-Daten überschreiben keine Haltestellenliste mehr – SEED-Stops haben immer Vorrang'},
   {v:'v55', date:'28.05.2026', desc:'Kurs 217: Linie 710 – Waabs, Abzweig nach Karlsminde + Abzweig nach Langholz in allen 5 Fahrten ergänzt'},
   {v:'v54d', date:'28.05.2026', desc:'Distanzanzeige: unterwegs = Distanz zum Ziel (über Haltestelle), an Haltestelle = Distanz zur nächsten (unter Haltestelle)'},
@@ -2390,6 +2392,16 @@ function luStops() {
     }
   }
 
+  // Aktuelle Haltestelle immer sichtbar halten: scroll nur wenn sich curI geändert hat
+  if (curI >= 0) {
+    if (!window._gpsScrollI) window._gpsScrollI = {};
+    if (window._gpsScrollI[line.id] !== curI) {
+      window._gpsScrollI[line.id] = curI;
+      var curEl = document.getElementById('sx' + line.id + curI);
+      if (curEl) curEl.scrollIntoView({behavior: 'smooth', block: 'center'});
+    }
+  }
+
   // Distanzanzeige: unterwegs → Distanz zum Ziel (über grüner Haltestelle)
   //                 an der Haltestelle → Distanz zur nächsten (unter grüner Haltestelle)
   for (var i = 0; i < line.stops.length - 1; i++) {
@@ -2764,7 +2776,11 @@ function renderLines() {
   if (typeof isAdmin !== 'undefined' && !window._skipAdminUpdate) setAdminMode(isAdmin);
 }
 
-function toggleStops(id) { expId = (expId === id) ? null : id; renderLines(); }
+function toggleStops(id) {
+  if (window._gpsScrollI) delete window._gpsScrollI[id];
+  expId = (expId === id) ? null : id;
+  renderLines();
+}
 
 // LINE CRUD
 function openLineModal() {
