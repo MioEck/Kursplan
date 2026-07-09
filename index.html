@@ -2392,13 +2392,21 @@ function luStops() {
     }
   }
 
-  // Aktuelle Haltestelle immer sichtbar halten: scroll nur wenn sich curI geändert hat
+  // Aktuelle Haltestelle immer sichtbar halten
   if (curI >= 0) {
     if (!window._gpsScrollI) window._gpsScrollI = {};
     if (window._gpsScrollI[line.id] !== curI) {
       window._gpsScrollI[line.id] = curI;
       var curEl = document.getElementById('sx' + line.id + curI);
-      if (curEl) curEl.scrollIntoView({behavior: 'smooth', block: 'center'});
+      if (curEl) {
+        var rect = curEl.getBoundingClientRect();
+        var viewH = window.innerHeight;
+        // Nur scrollen wenn Stop aus dem Bild läuft (oben oder unten) oder unteren 30% erreicht
+        if (rect.top < 0 || rect.bottom > viewH || rect.top > viewH * 0.72) {
+          // Stop auf ~55% von oben setzen: zeigt ca. 2-3 Folgehaltestellen darunter
+          window.scrollBy({top: rect.top - viewH * 0.55, behavior: 'smooth'});
+        }
+      }
     }
   }
 
