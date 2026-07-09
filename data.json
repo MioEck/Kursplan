@@ -9936,9 +9936,9 @@
       "service_blocks": [
         {
           "after": "3720011",
-          "icon": "🚗",
-          "label": "PKW · Eckernförde → Rieseby",
-          "time": "11:09–11:24"
+          "icon": "⚠️",
+          "label": "Ablöser Schulweg",
+          "time": "⚠️ 🚍 11:09"
         }
       ]
     },
