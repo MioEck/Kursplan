@@ -9932,6 +9932,14 @@
             }
           ]
         }
+      ],
+      "service_blocks": [
+        {
+          "after": "3720011",
+          "icon": "⚠️",
+          "label": "Ablöser Schulweg",
+          "time": "⚠️ 🚍 11:09"
+        }
       ]
     },
     {
@@ -10867,6 +10875,14 @@
               ]
             }
           ]
+        }
+      ],
+      "service_blocks": [
+        {
+          "after": "3721021",
+          "icon": "🚿🛢️🧹",
+          "label": "Waschen · Tanken · Innenreinigung",
+          "time": "18:15–18:45"
         }
       ]
     },
@@ -12982,6 +12998,14 @@
               "letter": "J"
             }
           ]
+        }
+      ],
+      "service_blocks": [
+        {
+          "after": "3720031",
+          "icon": "🚿🛢️🧹",
+          "label": "Waschen · Tanken · Innenreinigung",
+          "time": "21:00–21:30"
         }
       ]
     }
