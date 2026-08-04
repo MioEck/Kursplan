@@ -16,7 +16,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0d1117;--s1:#161b22;--s2:#21262d;--acc:#4caf50;--txt:#e6edf3;--mut:#7d8590;--brd:#30363d;--red:#f85149;--grn:#3fb950;}
-:root.light{--bg:#f3f0eb;--s1:#ffffff;--s2:#ede8e0;--acc:#dc0018;--txt:#1c1917;--mut:#78716c;--brd:#e5e0d8;--red:#dc0018;--grn:#3d8040;}
+:root.light{--bg:#e2dbd0;--s1:#f0ebe0;--s2:#d6cfc4;--acc:#dc0018;--txt:#1c1917;--mut:#6e6458;--brd:#c2b490;--red:#dc0018;--grn:#3d8040;}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-height:100vh;}
 header{display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px solid var(--brd);position:sticky;top:0;z-index:100;background:var(--bg);}
@@ -144,7 +144,7 @@ main{padding:12px 16px 100px;}
 .sync-btn:disabled{opacity:.5;cursor:not-allowed;}
 /* ── LIGHT MODE ─────────────────────────────── */
 /* Header */
-:root.light header{background:#fff;border-bottom:none;box-shadow:0 2px 12px rgba(0,0,0,.08);display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;}
+:root.light header{background:var(--s1);border-bottom:1px solid var(--brd);box-shadow:0 2px 10px rgba(0,0,0,.08);display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;}
 :root.light .htxt{text-align:center;flex:unset;}
 :root.light .htxt h1{display:flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap;}
 :root.light .hline{display:flex;flex:1;height:1px;min-width:16px;max-width:52px;background:linear-gradient(to right,transparent,#c9a96e);}
@@ -155,9 +155,9 @@ main{padding:12px 16px 100px;}
 :root.light #gpsBar{background:linear-gradient(to right,#f0ece2,#e8e2d6);border-bottom:1px solid #d4c9b0;color:#5a5040;font-style:italic;}
 :root.light .gps-dot{display:none;}
 /* Karten */
-:root.light .lc{border-color:transparent;box-shadow:0 2px 12px rgba(0,0,0,.08),0 0 0 1px rgba(0,0,0,.05);}
-:root.light .lc.exp{box-shadow:0 4px 20px rgba(0,0,0,.12),0 0 0 1.5px #7d0e1e;}
-:root.light .lc.exp .lch{box-shadow:0 3px 12px rgba(0,0,0,.08);}
+:root.light .lc{border:1.5px solid var(--brd);box-shadow:0 2px 10px rgba(0,0,0,.1);}
+:root.light .lc.exp{border-color:#7d0e1e;box-shadow:0 4px 20px rgba(0,0,0,.14);}
+:root.light .lc.exp .lch{box-shadow:0 3px 10px rgba(0,0,0,.07);}
 :root.light .lb{background:linear-gradient(160deg,#262320 0%,#1a1714 100%);color:#fff;box-shadow:0 4px 16px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.06);border:1px solid rgba(201,169,110,.2);}
 :root.light .bl{color:#9a9088;}
 :root.light .bn{color:#c9a96e;}
@@ -362,7 +362,7 @@ main{padding:12px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v67r</span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v68r</span><span class="hline hline-r"></span></h1>
     <p id="hd"></p>
     <span id="userNameDisplay" style="font-size:12px;color:var(--mut);font-weight:600;white-space:nowrap;"></span>
   </div>
@@ -1771,6 +1771,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v68r', date:'04.08.2026', desc:'Light-Mode: Hintergrundfarbe warmes Sand/Pergament, sichtbare goldene Kartenumrandung, Header warm angepasst'},
   {v:'v67r', date:'04.08.2026', desc:'Light-Mode Feinschliff: Linienbadge-Variante golden, Premium-Schatten auf Linienbadge, Label-Farben auf dunklem Hintergrund korrigiert'},
   {v:'v66r', date:'04.08.2026', desc:'Light-Mode Luxus-Redesign: Pill-Tabs (navy/bordeaux), zentrierter Header mit Goldlinie, Perl-Kugeln Haltestellenliste, LED-Uhr'},
   {v:'v65r', date:'02.08.2026', desc:'Helles Design überarbeitet: wärmere Farbtöne, elegante Karten-Schatten, weißer Header, sauberere Haltestellenliste'},
