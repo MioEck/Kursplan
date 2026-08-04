@@ -2784,7 +2784,7 @@ function renderLines() {
       '<div class="lb"><span class="bl">Linie</span><span class="bn">' + esc(l.linienNr) + '</span>' + (AB[l.fahrtNr] ? '<span style="font-family:Bebas Neue,sans-serif;font-size:24px;color:var(--acc);letter-spacing:1px;line-height:1">' + AB[l.fahrtNr] + '</span>' : '') + '<span class="bfl">Fahrt-Nr.</span><span class="bf">' + esc(l.fahrtNr || '—') + '</span></div>' +
       '<div class="li">' +
         '<div class="lr"><span>' + esc(l.start) + '</span><span class="ar">→</span><span>' + esc(l.end) + '</span></div>' +
-        '<div class="lt"><span>🕐 ' + esc(l.startTime) + '</span><span>🕓 ' + esc(l.endTime) + '</span></div>' +
+        '<div class="lt"><span>🔴 ' + esc(l.startTime) + '</span><span>🟢 ' + esc(l.endTime) + '</span></div>' +
         '<button class="mbtn">🗺️ Karte</button>' +
         '<div class="ca">' +
           '<button class="ebtn">✏️ Bearbeiten</button>' +
