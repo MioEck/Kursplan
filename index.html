@@ -158,9 +158,10 @@ main{padding:12px 16px 100px;}
 :root.light .lc{border-color:transparent;box-shadow:0 2px 12px rgba(0,0,0,.08),0 0 0 1px rgba(0,0,0,.05);}
 :root.light .lc.exp{box-shadow:0 4px 20px rgba(0,0,0,.12),0 0 0 1.5px #7d0e1e;}
 :root.light .lc.exp .lch{box-shadow:0 3px 12px rgba(0,0,0,.08);}
-:root.light .lb{background:#1c1917;color:#fff;}
-:root.light .bn{color:#fff;}
-:root.light .bfl{color:#9ca3af;}
+:root.light .lb{background:linear-gradient(160deg,#262320 0%,#1a1714 100%);color:#fff;box-shadow:0 4px 16px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.06);border:1px solid rgba(201,169,110,.2);}
+:root.light .bl{color:#9a9088;}
+:root.light .bn{color:#c9a96e;}
+:root.light .bfl{color:#8a8278;}
 :root.light .bf{color:#fff;}
 :root.light .kh{border-bottom:2px solid #7d0e1e;}
 :root.light .dp{background:#fde8ea;color:#b91c1c;font-weight:600;}
@@ -361,7 +362,7 @@ main{padding:12px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v66r</span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v67r</span><span class="hline hline-r"></span></h1>
     <p id="hd"></p>
     <span id="userNameDisplay" style="font-size:12px;color:var(--mut);font-weight:600;white-space:nowrap;"></span>
   </div>
@@ -1770,6 +1771,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v67r', date:'04.08.2026', desc:'Light-Mode Feinschliff: Linienbadge-Variante golden, Premium-Schatten auf Linienbadge, Label-Farben auf dunklem Hintergrund korrigiert'},
   {v:'v66r', date:'04.08.2026', desc:'Light-Mode Luxus-Redesign: Pill-Tabs (navy/bordeaux), zentrierter Header mit Goldlinie, Perl-Kugeln Haltestellenliste, LED-Uhr'},
   {v:'v65r', date:'02.08.2026', desc:'Helles Design überarbeitet: wärmere Farbtöne, elegante Karten-Schatten, weißer Header, sauberere Haltestellenliste'},
   {v:'v64r', date:'09.07.2026', desc:'Ferien Kurs 412+414: Waschen·Tanken·Innenreinigung ergänzt; Kurs 411: PKW-Ablöser Eckernförde→Rieseby ergänzt'},
