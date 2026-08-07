@@ -149,24 +149,27 @@ main{padding:12px 16px 100px;}
 :root.light .htxt h1{display:flex;align-items:center;justify-content:center;gap:8px;white-space:nowrap;}
 :root.light .hline{display:flex;flex:1;height:1px;min-width:16px;max-width:52px;background:linear-gradient(to right,transparent,#c9a96e);}
 :root.light .hline-r{background:linear-gradient(to left,transparent,#c9a96e);}
-:root.light .logo{background:#1c1917;}
+:root.light .logo{background:linear-gradient(145deg,#565250,#484440);}
 :root.light #gpsBtn.on{border-radius:20px;}
+:root.light .lock-btn{background:var(--s1);border:1px solid var(--brd);border-radius:10px;padding:5px 8px;box-shadow:0 1px 4px rgba(0,0,0,.1);}
 /* GPS bar */
-:root.light #gpsBar{background:linear-gradient(to right,#f0ece2,#e8e2d6);border-bottom:1px solid #d4c9b0;color:#5a5040;font-style:italic;}
+:root.light #gpsBar{background:linear-gradient(to right,#f0ece2,#e8e2d6);border-bottom:1px solid #d4c9b0;color:#5a5040;font-style:italic;position:relative;}
+:root.light #gpsBar::after{content:'';position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);border:8px solid transparent;border-top-color:#d4c9b0;}
 :root.light .gps-dot{display:none;}
 /* Karten */
 :root.light .lc{border:1.5px solid var(--brd);box-shadow:0 2px 10px rgba(0,0,0,.1);}
-:root.light .lc.exp{border-color:#7d0e1e;box-shadow:0 4px 20px rgba(0,0,0,.14);}
+:root.light .lc.exp{border-color:#c9a96e;box-shadow:0 4px 20px rgba(0,0,0,.14);}
 :root.light .lc.exp .lch{box-shadow:0 3px 10px rgba(0,0,0,.07);}
-:root.light .lb{background:linear-gradient(160deg,#262320 0%,#1a1714 100%);color:#fff;box-shadow:0 4px 16px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.06);border:1px solid rgba(201,169,110,.2);}
+:root.light .lb{background:linear-gradient(160deg,#484440 0%,#3a3632 100%);color:#fff;box-shadow:0 4px 16px rgba(0,0,0,.32),inset 0 1px 0 rgba(255,255,255,.06);border:1px solid rgba(201,169,110,.55);}
 :root.light .bl{color:#9a9088;}
 :root.light .bn{color:#c9a96e;}
 :root.light .bfl{color:#8a8278;}
 :root.light .bf{color:#fff;}
-:root.light .kh{border-bottom:2px solid #7d0e1e;}
+:root.light .kh{border-bottom:2.5px solid #c9a96e;}
 :root.light .dp{background:#fde8ea;color:#b91c1c;font-weight:600;}
 /* Uhr: LED-Stil */
-:root.light .lch-clock{background:#3c3830;border:1.5px solid var(--brd);color:#ddd5b0;text-shadow:0 0 6px rgba(220,213,176,.3);font-size:28px;padding:6px 12px;}
+:root.light .lch-clock{background:#3c3830;border:1.5px solid var(--brd);color:#ddd5b0;text-shadow:0 0 6px rgba(220,213,176,.3);font-size:22px;padding:6px 12px;}
+:root.light .lch-clock-sub{position:absolute;top:52px;right:14px;font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:2px;color:#c9a96e;text-align:center;}
 /* Tabs: Pillenform */
 :root.light .tab,:root.light .tab-filter{border-radius:999px;}
 /* Kurs-Tabs: dunkelblau inaktiv */
@@ -362,7 +365,7 @@ main{padding:12px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v68r</span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v69r</span><span class="hline hline-r"></span></h1>
     <p id="hd"></p>
     <span id="userNameDisplay" style="font-size:12px;color:var(--mut);font-weight:600;white-space:nowrap;"></span>
   </div>
@@ -370,7 +373,7 @@ main{padding:12px 16px 100px;}
     <button class="lock-btn" id="lockBtn" onclick="openKeypad()" title="Admin">🔒</button>
     <button class="lock-btn" id="themeBtn" onclick="toggleTheme()" title="Hell/Dunkel">🌙</button>
     <button id="gpsBtn" onclick="toggleGps()">
-      <span style="font-size:20px;line-height:1">📍</span>
+      <span style="font-size:18px;line-height:1">🌐</span>
       <span id="gpsLbl">GPS AUS</span>
     </button>
   </div>
@@ -388,11 +391,11 @@ main{padding:12px 16px 100px;}
     <span class="tl">Sa / So</span>
   </div>
   <div class="tab-filter" id="filterFerien" onclick="setFilter('ferien')">
-    <span class="tn">🌴 Ferien</span>
+    <span class="tn">🌴 FERIEN</span>
     <span class="tl">Mo-Fr</span>
   </div>
   <div class="tab-filter" id="filterSchule" onclick="setFilter('schule')">
-    <span class="tn">🏫 Schule</span>
+    <span class="tn">SCHULE</span>
     <span class="tl">Mo-Fr</span>
   </div>
 </div>
@@ -1771,6 +1774,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v69r', date:'07.08.2026', desc:'Light-Mode Feinschliff: Badges heller grau, goldene Umrandungen, Uhr mit Sekunden + Fahrtdauer, GPS-Chevron, Tab-Texte, Sticky-Header GPS-Fix'},
   {v:'v68r', date:'04.08.2026', desc:'Light-Mode: Hintergrundfarbe warmes Sand/Pergament, sichtbare goldene Kartenumrandung, Header warm angepasst'},
   {v:'v67r', date:'04.08.2026', desc:'Light-Mode Feinschliff: Linienbadge-Variante golden, Premium-Schatten auf Linienbadge, Label-Farben auf dunklem Hintergrund korrigiert'},
   {v:'v66r', date:'04.08.2026', desc:'Light-Mode Luxus-Redesign: Pill-Tabs (navy/bordeaux), zentrierter Header mit Goldlinie, Perl-Kugeln Haltestellenliste, LED-Uhr'},
@@ -2204,12 +2208,14 @@ function toggleGps() {
     btn.classList.remove('on','searching');
     lbl.textContent = 'GPS AUS';
     bar.classList.remove('visible');
+    setHeaderHeight();
     luStops();
   } else {
     if (!navigator.geolocation) { alert('GPS nicht verfügbar'); return; }
     btn.classList.add('searching');
     lbl.textContent = 'SUCHE...';
     bar.classList.add('visible');
+    setHeaderHeight();
     dot.className = 'gps-dot searching';
     status.textContent = '🧭 Suche Standort...';
     // watchPosition speichert NUR die Position - kein schwerer Code hier!
@@ -2811,6 +2817,13 @@ function renderLines() {
     clockDiv.id = 'clock-' + l.id;
     clockDiv.textContent = getCurrentTime();
     hdr.appendChild(clockDiv);
+    var durMin = dMin(l.startTime, l.endTime);
+    if (durMin > 0) {
+      var durDiv = document.createElement('div');
+      durDiv.className = 'lch-clock-sub';
+      durDiv.textContent = durMin + ' MIN';
+      hdr.appendChild(durDiv);
+    }
 
     var card = document.createElement('div');
     card.className = 'lc' + (isExp ? ' exp' : '');
@@ -4155,7 +4168,10 @@ var isDark = localStorage.getItem('kp_theme') !== 'light';
 
 function setHeaderHeight() {
   var h = document.querySelector('header');
-  if (h) document.documentElement.style.setProperty('--hh', h.offsetHeight + 'px');
+  var g = document.getElementById('gpsBar');
+  var hh = h ? h.offsetHeight : 60;
+  if (g && g.classList.contains('visible')) hh += g.offsetHeight;
+  document.documentElement.style.setProperty('--hh', hh + 'px');
 }
 
 function applyTheme() {
