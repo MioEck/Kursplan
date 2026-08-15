@@ -337,6 +337,147 @@ main{padding:12px 16px 100px;}
 #swUpdateBanner{display:none;position:fixed;bottom:72px;left:50%;transform:translateX(-50%);background:#ec0016;color:#fff;padding:10px 16px;border-radius:10px;align-items:center;gap:12px;z-index:9999;box-shadow:0 4px 16px rgba(0,0,0,.4);white-space:nowrap;}
 #swUpdateBanner button{background:#fff;color:#ec0016;border:none;border-radius:6px;padding:6px 14px;font-weight:700;font-size:.9rem;cursor:pointer;}
 #swUpdatedToast{display:none;position:fixed;bottom:72px;left:50%;transform:translateX(-50%);background:#1a7a3f;color:#fff;padding:10px 22px;border-radius:10px;z-index:9999;box-shadow:0 4px 16px rgba(0,0,0,.4);font-weight:600;transition:opacity .5s;}
+
+/* ══════════════════════════════════════════════════════
+   LIQUID GLASS REDESIGN — nur Heller Modus (:root.light)
+   ══════════════════════════════════════════════════════ */
+:root.light{
+  --lg-navy:#1B2244;--lg-navy2:#2E3468;--lg-violet:#7C6FB0;
+  --lg-lilac:#B9A6DC;--lg-lilacl:#D9CDEE;--lg-lilacp:#ECE6F8;--lg-gold:#C9A15C;
+  --lg-ink-soft:#5B5470;
+}
+
+/* Grundverlauf über die ganze Seite */
+:root.light body{
+  background:
+    radial-gradient(circle at 85% 0%, rgba(217,205,238,.35), transparent 45%),
+    linear-gradient(180deg,
+      var(--lg-navy) 0%, var(--lg-navy2) 9%, var(--lg-violet) 20%,
+      var(--lg-lilac) 32%, var(--lg-lilacl) 46%, var(--lg-lilacl) 68%,
+      var(--lg-lilacp) 92%, var(--lg-lilacp) 100%);
+  background-attachment: fixed;
+}
+
+/* Header wird transparent, damit der Verlauf durchscheint */
+:root.light header{background:transparent;box-shadow:none;border-bottom:none;}
+:root.light .htxt h1,:root.light .htxt p,:root.light .hv{color:#F3ECE1;}
+:root.light .hline{background:linear-gradient(to right,transparent,rgba(243,236,225,.5));}
+:root.light .hline-r{background:linear-gradient(to left,transparent,rgba(243,236,225,.5));}
+:root.light .logo{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(6px);}
+:root.light #gpsBtn{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(6px);}
+:root.light #gpsLbl{color:rgba(243,236,225,.8);}
+:root.light .lock-btn{background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.35);backdrop-filter:blur(6px);}
+
+/* Suchleiste / GPS-Statuszeile als Glas-Pille */
+:root.light #gpsBar{
+  background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.32);
+  backdrop-filter:blur(10px);border-radius:999px;margin:10px 16px 0;
+  color:rgba(243,236,225,.9);box-shadow:inset 0 1px 0 rgba(255,255,255,.3);
+}
+:root.light #gpsBar::after{display:none;}
+:root.light .gps-dot{display:block;}
+
+/* Versionshistorie-Button */
+:root.light button[onclick="openChangelog()"]{
+  background:rgba(233,224,250,.42) !important;
+  border:1px solid rgba(255,255,255,.7) !important;
+  color:var(--lg-ink-soft) !important;
+  backdrop-filter:blur(10px);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.6);
+}
+
+/* ── Liquid-Glass-Basis für alle Pillen-Buttons (Tabs) ── */
+:root.light .tab,:root.light .tab-filter{
+  position:relative;overflow:hidden;
+  backdrop-filter:blur(14px) saturate(180%);
+  border:1px solid rgba(255,255,255,.7);
+}
+:root.light .tab::before,:root.light .tab-filter::before{
+  content:"";position:absolute;top:0;left:-30%;width:40%;height:100%;
+  background:linear-gradient(115deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.85) 42%,rgba(255,255,255,.85) 58%,rgba(255,255,255,0) 100%);
+  transform:skewX(-18deg);pointer-events:none;
+}
+:root.light .tab::after,:root.light .tab-filter::after{
+  content:"";position:absolute;top:0;left:0;right:0;height:48%;
+  background:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,0) 100%);
+  pointer-events:none;opacity:.9;
+}
+:root.light .tab .tn,:root.light .tab .tl,:root.light .tab-filter .tn,:root.light .tab-filter .tl{position:relative;z-index:1;}
+
+/* WE / Ferien / Schule — inaktiv: helles Lila-Glas */
+:root.light .tab-filter{
+  background:linear-gradient(150deg,rgba(233,224,250,.65),rgba(217,205,238,.5));
+  box-shadow:inset 0 1.5px 0 rgba(255,255,255,.9),inset 0 -3px 6px rgba(124,111,176,.15),0 10px 22px -12px rgba(124,111,176,.5);
+}
+:root.light .tab-filter .tn,:root.light .tab-filter .tl{color:var(--lg-ink-soft);}
+
+/* WE / Schule — aktiv: Bordeaux-Glas */
+:root.light .tab-filter.active-we,:root.light .tab-filter.active-schule{
+  background:linear-gradient(135deg,rgba(180,66,93,.85),rgba(224,101,128,.72));
+  box-shadow:inset 0 1.5px 0 rgba(255,255,255,.85),inset 0 -3px 6px rgba(120,30,50,.2),0 10px 26px -12px rgba(180,66,93,.7);
+}
+:root.light .tab-filter.active-we .tn,:root.light .tab-filter.active-we .tl,
+:root.light .tab-filter.active-schule .tn,:root.light .tab-filter.active-schule .tl{color:#fff;}
+
+/* Ferien — aktiv: Grün-Glas */
+:root.light .tab-filter.active-ferien{
+  background:linear-gradient(135deg,rgba(42,90,58,.82),rgba(79,174,142,.68));
+  box-shadow:inset 0 1.5px 0 rgba(255,255,255,.8),inset 0 -3px 6px rgba(20,60,35,.25),0 10px 26px -12px rgba(42,90,58,.6);
+}
+:root.light .tab-filter.active-ferien .tn,:root.light .tab-filter.active-ferien .tl{color:#fff;}
+
+/* Kurs-Tabs (211, 212 …) — inaktiv: dunkelblaues Glas */
+:root.light .tab{
+  background:linear-gradient(135deg,rgba(34,42,84,.82) 0%,rgba(58,66,128,.75) 50%,rgba(148,132,204,.72) 130%);
+  box-shadow:inset 0 1.5px 0 rgba(255,255,255,.7),inset 0 -3px 6px rgba(20,24,50,.25),0 10px 26px -12px rgba(46,52,104,.65);
+}
+:root.light .tab .tn,:root.light .tab .tl{color:#F3ECE1;}
+
+/* Kurs-Tab aktiv: Bordeaux-Glas */
+:root.light .tab.active{
+  background:linear-gradient(135deg,rgba(180,66,93,.85),rgba(224,101,128,.72));
+  box-shadow:inset 0 1.5px 0 rgba(255,255,255,.85),inset 0 -3px 6px rgba(120,30,50,.2),0 10px 26px -12px rgba(180,66,93,.7);
+}
+:root.light .tab.active .tn,:root.light .tab.active .tl{color:#fff;}
+
+/* Kurs-Überschrift / Statuszeile */
+:root.light .kh{border-bottom:2px solid rgba(124,111,176,.4);}
+:root.light .kt{color:var(--txt);}
+:root.light .ks{color:var(--lg-ink-soft);}
+
+/* Fahrten-Kacheln (.lc) — lila-blaues Glas statt Weiß */
+:root.light .lc{
+  background:rgba(233,224,250,.4);
+  backdrop-filter:blur(14px) saturate(160%);
+  border:1px solid rgba(255,255,255,.65);
+  box-shadow:0 14px 30px -18px rgba(27,34,68,.35);
+}
+:root.light .lc.exp{border-color:rgba(255,255,255,.85);box-shadow:0 16px 34px -16px rgba(27,34,68,.4);}
+:root.light .lc.exp .lch{background:rgba(233,224,250,.55);backdrop-filter:blur(14px);box-shadow:none;border-bottom:1px solid rgba(255,255,255,.4);}
+
+/* Linien-Badge (721, 710 …) — dunkelblau-lila Glas mit Glanz */
+:root.light .lb{
+  position:relative;overflow:hidden;
+  background:linear-gradient(160deg,rgba(27,34,68,.88) 0%,rgba(46,52,104,.8) 55%,rgba(124,111,176,.72) 130%);
+  backdrop-filter:blur(10px);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.3),0 8px 18px -12px rgba(27,34,68,.4);
+  border:1px solid rgba(255,255,255,.35);
+}
+:root.light .lb::before{
+  content:"";position:absolute;top:0;left:0;right:0;height:45%;
+  background:linear-gradient(180deg,rgba(255,255,255,.35),rgba(255,255,255,0) 100%);
+  pointer-events:none;
+}
+:root.light .bl{color:rgba(243,236,225,.7);}
+:root.light .bn{color:#E4D6F5;}
+:root.light .bfl{color:rgba(243,236,225,.6);}
+:root.light .bf{color:#fff;}
+
+/* Dauer-Badge (rechts, z.B. "29 min") — Gold-Ton statt Rosa */
+:root.light .dp{
+  background:linear-gradient(135deg,var(--lg-gold),#DCB878);
+  color:#3A2A12;font-weight:700;
+}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 </head>
