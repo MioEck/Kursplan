@@ -361,8 +361,12 @@ main{padding:4px 16px 100px;}
   background-attachment: fixed;
 }
 
-/* Header wird transparent, damit der Verlauf durchscheint */
-:root.light header{background:transparent;box-shadow:none;border-bottom:none;}
+/* Header: halbtransparentes Navy-Glas — Verlauf scheint durch, Content dahinter wird verdeckt */
+:root.light header{
+  background:linear-gradient(180deg,rgba(27,34,68,.94),rgba(46,52,104,.90));
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  box-shadow:none;border-bottom:none;
+}
 :root.light .htxt h1,:root.light .htxt p,:root.light .hv{color:#F3ECE1;}
 :root.light .hline{background:linear-gradient(to right,transparent,rgba(243,236,225,.5));}
 :root.light .hline-r{background:linear-gradient(to left,transparent,rgba(243,236,225,.5));}
