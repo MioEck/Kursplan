@@ -40,6 +40,7 @@ header{display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px s
 @keyframes pulse{from{opacity:.4}to{opacity:1}}
 .tabs{padding:12px 16px 6px;overflow-x:auto;display:flex;gap:8px;scrollbar-width:none;-webkit-overflow-scrolling:touch;flex-wrap:nowrap;}
 .tabs::-webkit-scrollbar{display:none;}
+#subhdr{position:sticky;top:var(--hh,0);z-index:91;background:var(--bg);box-shadow:0 2px 10px rgba(0,0,0,.15);}
 .tab{flex-shrink:0;cursor:pointer;padding:9px 13px;background:var(--s1);border:1.5px solid var(--brd);border-radius:12px;display:flex;flex-direction:column;align-items:center;gap:2px;transition:all .2s;user-select:none;}
 .tab .tn{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:1px;color:var(--txt);line-height:1;}
 .tab .tl{font-size:10px;color:var(--mut);}
@@ -55,8 +56,8 @@ header{display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px s
 .tab-filter.active-we .tn,.tab-filter.active-we .tl{color:#fff;}
 .tab-filter.active-ferien{background:#2a7a3b;border-color:#2a7a3b;}
 .tab-filter.active-ferien .tn,.tab-filter.active-ferien .tl{color:#fff;}
-main{padding:12px 16px 100px;}
-.kh{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:8px;}
+main{padding:4px 16px 100px;}
+.kh{display:flex;align-items:center;justify-content:space-between;margin-bottom:0;padding:6px 16px 12px;flex-wrap:wrap;gap:8px;}
 .kt{font-family:'Bebas Neue',sans-serif;font-size:30px;letter-spacing:2px;}
 .ks{display:flex;gap:12px;font-size:12px;color:var(--mut);flex-wrap:wrap;margin-top:2px;}
 .ll{display:flex;flex-direction:column;gap:10px;}
@@ -64,7 +65,7 @@ main{padding:12px 16px 100px;}
 
 .lc.exp{border-color:var(--acc);}
 .lch{display:grid;grid-template-columns:94px 1fr auto;gap:10px;align-items:center;padding:12px 14px;cursor:pointer;user-select:none;border-radius:16px;}
-.lc.exp .lch{position:sticky;top:var(--hh,60px);z-index:50;background:var(--s1);border-radius:16px 16px 0 0;border-bottom:1px solid var(--brd);box-shadow:0 3px 10px rgba(0,0,0,.2);}
+.lc.exp .lch{position:sticky;top:var(--subhh,60px);z-index:50;background:var(--s1);border-radius:16px 16px 0 0;border-bottom:1px solid var(--brd);box-shadow:0 3px 10px rgba(0,0,0,.2);}
 
 .lb{width:90px;min-height:54px;border-radius:10px;background:var(--s2);border:1.5px solid var(--brd);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;padding:4px;}
 .bl{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:1px;font-weight:600;}
@@ -473,10 +474,22 @@ main{padding:12px 16px 100px;}
 :root.light .bfl{color:rgba(243,236,225,.6);}
 :root.light .bf{color:#fff;}
 
-/* Dauer-Badge (rechts, z.B. "29 min") — Gold-Ton statt Rosa */
+/* Dauer-Badge — Glas-Weiß mit Navy-Text */
 :root.light .dp{
-  background:linear-gradient(135deg,var(--lg-gold),#DCB878);
-  color:#3A2A12;font-weight:700;
+  background:rgba(255,255,255,.35);border:1px solid rgba(255,255,255,.55);
+  backdrop-filter:blur(8px);color:var(--lg-navy);font-weight:700;
+}
+/* Uhrzeit-Zeile — Glas-Pille */
+:root.light .lt{
+  display:inline-flex;background:rgba(255,255,255,.22);
+  border:1px solid rgba(255,255,255,.38);backdrop-filter:blur(6px);
+  border-radius:10px;padding:3px 10px;color:var(--lg-navy);
+  align-self:flex-start;
+}
+/* Sticky Subheader */
+:root.light #subhdr{
+  background:linear-gradient(180deg,var(--lg-lilac) 0%,var(--lg-lilacl) 100%);
+  box-shadow:0 4px 16px rgba(27,34,68,.18);
 }
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
@@ -506,7 +519,7 @@ main{padding:12px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v70r</span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v71r</span><span class="hline hline-r"></span></h1>
     <p id="hd"></p>
     <span id="userNameDisplay" style="font-size:12px;color:var(--mut);font-weight:600;white-space:nowrap;"></span>
   </div>
@@ -526,6 +539,7 @@ main{padding:12px 16px 100px;}
 <div style="padding:4px 16px 0;">
   <button onclick="openChangelog()" style="background:var(--s2);border:1.5px solid var(--brd);border-radius:10px;padding:7px 14px;font-size:13px;color:var(--txt);cursor:pointer;display:inline-flex;align-items:center;gap:6px;">📋 Versionshistorie</button>
 </div>
+<div id="subhdr">
 <div class="tabs" id="tabs">
   <div class="tab-filter" id="filterWe" onclick="setFilter('we')">
     <span class="tn">📅 WE</span>
@@ -541,7 +555,7 @@ main{padding:12px 16px 100px;}
   </div>
 </div>
 <div class="export-bar admin-only" id="exportBar">
-  
+
 </div>
 <div class="sync-bar admin-only" id="syncBar">
   <button class="sync-btn" id="syncBtn" onclick="syncToSupabase()">☁️ Speichern</button>
@@ -552,11 +566,12 @@ main{padding:12px 16px 100px;}
   <button class="sync-btn" style="background:var(--s2);color:var(--txt);border:1.5px solid var(--brd)" onclick="openUsageOv()">📊 Nutzung</button>
   <span class="sync-status" id="syncStatus">Nicht synchronisiert</span>
 </div>
-<main>
   <div id="kh" class="kh" style="display:none">
     <div><div class="kt" id="ktn"></div><div class="ks" id="ks"></div></div>
     <button class="bs admin-btn-inline" id="kursEditBtn" onclick="openKursEdit()" style="border-radius:10px;padding:6px 12px;font-size:13px">✏️ Bearbeiten</button>
   </div>
+</div>
+<main>
   <div class="ll" id="ll"></div>
   <div class="empty" id="em"><div class="bi">🚌</div><p>Kurs auswählen oder neu anlegen</p></div>
 </main>
@@ -1265,6 +1280,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v71r', date:'15.08.2026', desc:'Sticky Subheader (Kurs-Filter + Kurs-Titel bleiben beim Scrollen sichtbar), Dauer-Badge und Uhrzeit im Glass-Design'},
   {v:'v70r', date:'10.08.2026', desc:'Schulzeit-Kurspläne 2026/27 aktualisiert (gültig ab 17.08.2026): Kurse 211–217 komplett überarbeitet'},
   {v:'v69r', date:'07.08.2026', desc:'Light-Mode Feinschliff: Badges heller grau, goldene Umrandungen, Uhr mit Sekunden + Fahrtdauer, GPS-Chevron, Tab-Texte, Sticky-Header GPS-Fix'},
   {v:'v68r', date:'04.08.2026', desc:'Light-Mode: Hintergrundfarbe warmes Sand/Pergament, sichtbare goldene Kartenumrandung, Header warm angepasst'},
@@ -2141,7 +2157,7 @@ function renderLines() {
   var em = document.getElementById('em');
   var ll = document.getElementById('ll');
 
-  if (!kurs) { kh.style.display = 'none'; em.style.display = 'block'; ll.innerHTML = ''; return; }
+  if (!kurs) { kh.style.display = 'none'; em.style.display = 'block'; ll.innerHTML = ''; setHeaderHeight(); return; }
 
   kh.style.display = 'flex'; em.style.display = 'none';
   document.getElementById('ktn').textContent = kurs.name;
@@ -2161,6 +2177,7 @@ function renderLines() {
     (seedKurs && seedKurs.service && seedKurs.service.length ? seedKurs.service.map(function(s){
       return '<span class="svc-badge" title="' + s.label + ' · ' + s.time + '">' + s.icon + '</span>';
     }).join('') : '');
+  setHeaderHeight();
 
   ll.innerHTML = '';
 
@@ -3661,9 +3678,12 @@ var isDark = localStorage.getItem('kp_theme') !== 'light';
 function setHeaderHeight() {
   var h = document.querySelector('header');
   var g = document.getElementById('gpsBar');
+  var s = document.getElementById('subhdr');
   var hh = h ? h.offsetHeight : 60;
   if (g && g.classList.contains('visible')) hh += g.offsetHeight;
   document.documentElement.style.setProperty('--hh', hh + 'px');
+  var sh = s ? s.offsetHeight : 0;
+  document.documentElement.style.setProperty('--subhh', (hh + sh) + 'px');
 }
 
 function applyTheme() {
