@@ -280,6 +280,8 @@ main{padding:4px 16px 100px;}
 .lch{position:relative;}
 .lch-clock{display:none;position:absolute;top:10px;right:14px;background:var(--s2);border:1.5px solid var(--brd);border-radius:12px;padding:8px 14px;font-family:'Bebas Neue',sans-serif;font-size:34px;letter-spacing:2px;color:var(--txt);line-height:1;pointer-events:none;z-index:5;}
 .lc.exp .lch-clock{display:block;}
+.lch-clock-sub{display:none;}
+.lc.exp .lch-clock-sub{display:block;}
 
 .svc-badge{font-size:16px;cursor:default;}
 .svc-block{display:flex;align-items:center;gap:12px;background:var(--s1);border:1.5px solid var(--brd);border-radius:16px;padding:12px 16px;margin:4px 0;box-shadow:0 1px 4px rgba(0,0,0,.08);}
@@ -488,7 +490,7 @@ main{padding:4px 16px 100px;}
 }
 /* Sticky Subheader */
 :root.light #subhdr{
-  background:linear-gradient(180deg,var(--lg-lilac) 0%,var(--lg-lilacl) 100%);
+  background:linear-gradient(180deg,var(--lg-violet) 0%,var(--lg-lilac) 45%,var(--lg-lilacl) 100%);
   box-shadow:0 4px 16px rgba(27,34,68,.18);
 }
 </style>
@@ -532,6 +534,7 @@ main{padding:4px 16px 100px;}
     </button>
   </div>
 </header>
+<div id="subhdr">
 <div id="gpsBar">
   <div class="gps-dot" id="gpsDot"></div>
   <span id="gpsStatus">🧭 Suche Standort...</span>
@@ -539,7 +542,6 @@ main{padding:4px 16px 100px;}
 <div style="padding:4px 16px 0;">
   <button onclick="openChangelog()" style="background:var(--s2);border:1.5px solid var(--brd);border-radius:10px;padding:7px 14px;font-size:13px;color:var(--txt);cursor:pointer;display:inline-flex;align-items:center;gap:6px;">📋 Versionshistorie</button>
 </div>
-<div id="subhdr">
 <div class="tabs" id="tabs">
   <div class="tab-filter" id="filterWe" onclick="setFilter('we')">
     <span class="tn">📅 WE</span>
@@ -3677,10 +3679,8 @@ var isDark = localStorage.getItem('kp_theme') !== 'light';
 
 function setHeaderHeight() {
   var h = document.querySelector('header');
-  var g = document.getElementById('gpsBar');
   var s = document.getElementById('subhdr');
   var hh = h ? h.offsetHeight : 60;
-  if (g && g.classList.contains('visible')) hh += g.offsetHeight;
   document.documentElement.style.setProperty('--hh', hh + 'px');
   var sh = s ? s.offsetHeight : 0;
   document.documentElement.style.setProperty('--subhh', (hh + sh) + 'px');
