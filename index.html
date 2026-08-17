@@ -497,6 +497,21 @@ main{padding:4px 16px 100px;}
   background:linear-gradient(180deg,var(--lg-violet) 0%,var(--lg-lilac) 45%,var(--lg-lilacl) 100%);
   box-shadow:0 4px 16px rgba(27,34,68,.18);
 }
+/* Auswahlscreen */
+#tabs{display:none!important;}
+#kursSelect{padding:16px;display:none;}
+.ks-section{margin-bottom:28px;}
+.ks-cat-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:var(--acc);margin-bottom:10px;padding-left:2px;}
+.ks-grid{display:flex;flex-wrap:wrap;gap:10px;}
+.ks-btn{background:var(--s1);border:1.5px solid var(--brd);border-radius:14px;padding:12px 16px;cursor:pointer;min-width:130px;flex:1 0 130px;display:flex;flex-direction:column;gap:3px;transition:all .2s;}
+.ks-btn:active{transform:scale(.97);}
+.ks-btn .ks-name{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;color:var(--txt);}
+.ks-btn .ks-sub{font-size:11px;color:var(--mut);}
+:root.light .ks-btn{background:rgba(233,224,250,.45);border:1px solid rgba(255,255,255,.6);backdrop-filter:blur(10px);}
+:root.light .ks-btn .ks-name{color:var(--lg-navy);}
+:root.light .ks-cat-title{color:var(--lg-navy2);}
+#backBtn{background:none;border:none;cursor:pointer;padding:4px 8px 4px 0;font-size:20px;color:var(--mut);line-height:1;}
+#backBtn:hover{color:var(--txt);}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 </head>
@@ -525,7 +540,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v71r</span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v72r</span><span class="hline hline-r"></span></h1>
     <p id="hd"></p>
     <span id="userNameDisplay" style="font-size:12px;color:var(--mut);font-weight:600;white-space:nowrap;"></span>
   </div>
@@ -573,11 +588,13 @@ main{padding:4px 16px 100px;}
   <span class="sync-status" id="syncStatus">Nicht synchronisiert</span>
 </div>
   <div id="kh" class="kh" style="display:none">
+    <button id="backBtn" onclick="showSelectScreen()" title="Zurück">‹</button>
     <div><div class="kt" id="ktn"></div><div class="ks" id="ks"></div></div>
     <button class="bs admin-btn-inline" id="kursEditBtn" onclick="openKursEdit()" style="border-radius:10px;padding:6px 12px;font-size:13px">✏️ Bearbeiten</button>
   </div>
 </div>
 <main>
+  <div id="kursSelect" style="display:none"></div>
   <div class="ll" id="ll"></div>
   <div class="empty" id="em"><div class="bi">🚌</div><p>Kurs auswählen oder neu anlegen</p></div>
 </main>
@@ -1286,6 +1303,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v72r', date:'17.08.2026', desc:'Neuer Auswahlscreen beim Start: Kategorien Schulzeit / Ferienzeit / Wochenende mit Kurs-Buttons; Vollbild-Kursansicht mit Zurück-Button'},
   {v:'v71r', date:'15.08.2026', desc:'Sticky Subheader (Kurs-Filter + Kurs-Titel bleiben beim Scrollen sichtbar), Dauer-Badge und Uhrzeit im Glass-Design'},
   {v:'v70r', date:'10.08.2026', desc:'Schulzeit-Kurspläne 2026/27 aktualisiert (gültig ab 17.08.2026): Kurse 211–217 komplett überarbeitet'},
   {v:'v69r', date:'07.08.2026', desc:'Light-Mode Feinschliff: Badges heller grau, goldene Umrandungen, Uhr mit Sekunden + Fahrtdauer, GPS-Chevron, Tab-Texte, Sticky-Header GPS-Fix'},
@@ -2163,7 +2181,7 @@ function renderLines() {
   var em = document.getElementById('em');
   var ll = document.getElementById('ll');
 
-  if (!kurs) { kh.style.display = 'none'; em.style.display = 'block'; ll.innerHTML = ''; setHeaderHeight(); return; }
+  if (!kurs) { showSelectScreen(); return; }
 
   kh.style.display = 'flex'; em.style.display = 'none';
   document.getElementById('ktn').textContent = kurs.name;
@@ -3823,6 +3841,75 @@ applyTheme();
 setHeaderHeight();
 window.addEventListener('resize', setHeaderHeight);
 
+// ── AUSWAHLSCREEN ─────────────────────────────────────
+function showSelectScreen() {
+  expId = null;
+  document.getElementById('kh').style.display = 'none';
+  document.getElementById('kursSelect').style.display = 'block';
+  document.getElementById('ll').innerHTML = '';
+  document.getElementById('em').style.display = 'none';
+  setHeaderHeight();
+  renderSelectScreen();
+}
+
+function renderSelectScreen() {
+  var el = document.getElementById('kursSelect');
+  el.innerHTML = '';
+  var cats = [
+    { filter:'schule', label:'🏫 Schulzeit' },
+    { filter:'ferien', label:'🌴 Ferienzeit' },
+    { filter:'we',     label:'📅 Wochenende' }
+  ];
+  cats.forEach(function(cat) {
+    var kurse = D.kurse.filter(function(k) {
+      if (cat.filter === 'schule') return k.typ === 'schule';
+      if (cat.filter === 'ferien') return k.typ === 'ferien';
+      return k.typ === 'sa' || k.typ === 'so';
+    });
+    if (!kurse.length && !isAdmin) return;
+    var sec = document.createElement('div');
+    sec.className = 'ks-section';
+    var title = document.createElement('div');
+    title.className = 'ks-cat-title';
+    title.textContent = cat.label;
+    sec.appendChild(title);
+    var grid = document.createElement('div');
+    grid.className = 'ks-grid';
+    kurse.forEach(function(k) {
+      var seedK = null;
+      for (var si = 0; si < SEED.kurse.length; si++) { if (SEED.kurse[si].id === k.id) { seedK = SEED.kurse[si]; break; } }
+      var sub = k.typ === 'sa' ? 'Samstag'
+              : k.typ === 'so' ? 'Sonn-/Feiertag'
+              : (seedK && seedK.datum) ? fDate(seedK.datum) : '—';
+      var btn = document.createElement('div');
+      btn.className = 'ks-btn';
+      btn.innerHTML = '<span class="ks-name">' + esc(k.name) + '</span>'
+                    + '<span class="ks-sub">' + sub + '</span>';
+      (function(kid) { btn.onclick = function() { showDetailView(kid); }; })(k.id);
+      grid.appendChild(btn);
+    });
+    if (isAdmin) {
+      var addBtn = document.createElement('div');
+      addBtn.className = 'ks-btn admin-btn-inline visible';
+      addBtn.innerHTML = '<span class="ks-name" style="font-size:26px">+</span>'
+                       + '<span class="ks-sub">Neuer Kurs</span>';
+      addBtn.onclick = function() { eKid = null; openKursModal(); };
+      grid.appendChild(addBtn);
+    }
+    sec.appendChild(grid);
+    el.appendChild(sec);
+  });
+}
+
+function showDetailView(kursId) {
+  D.activeKurs = kursId;
+  expId = null;
+  persist();
+  document.getElementById('kursSelect').style.display = 'none';
+  document.getElementById('em').style.display = 'none';
+  renderLines();
+}
+
 // ── FILTER (Schule / Wochenende) ──────────────────────
 var activeFilter = 'we'; // Standard: Wochenende
 
@@ -3851,7 +3938,10 @@ function getFilteredKurse() {
 }
 
 
-setFilter('schule');
+(function(){
+  var ok = D.activeKurs && D.kurse.some(function(k){ return k.id === D.activeKurs; });
+  if (ok) { showDetailView(D.activeKurs); } else { showSelectScreen(); }
+})();
 
 setAdminMode(isAdmin);
 
