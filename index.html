@@ -497,17 +497,25 @@ main{padding:4px 16px 100px;}
   background:linear-gradient(180deg,var(--lg-violet) 0%,var(--lg-lilac) 45%,var(--lg-lilacl) 100%);
   box-shadow:0 4px 16px rgba(27,34,68,.18);
 }
+/* Kursinfo im Header */
+#hKurs{margin-top:5px;display:none;}
+.hkn{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;line-height:1;display:flex;align-items:center;gap:5px;}
+.hks{font-size:11px;color:var(--mut);display:flex;gap:10px;flex-wrap:wrap;margin-top:2px;}
+#userNameDisplay{font-size:13px!important;font-weight:700!important;color:var(--acc)!important;}
+:root.light .hkn{color:rgba(255,255,255,.95);}
+:root.light .hks{color:rgba(255,255,255,.72);}
+:root.light #userNameDisplay{color:rgba(255,255,255,.92)!important;}
 /* Auswahlscreen */
 #tabs{display:none!important;}
 #kursSelect{padding:16px;display:none;}
 .ks-section{margin-bottom:28px;}
 .ks-cat-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:var(--acc);margin-bottom:10px;padding-left:2px;}
 .ks-grid{display:flex;flex-wrap:wrap;gap:10px;}
-.ks-btn{background:var(--s1);border:1.5px solid var(--brd);border-radius:14px;padding:12px 16px;cursor:pointer;min-width:130px;flex:1 0 130px;display:flex;flex-direction:column;gap:3px;transition:all .2s;}
+.ks-btn{background:linear-gradient(135deg,var(--s1) 0%,var(--s2) 100%);border:1.5px solid var(--brd);border-radius:14px;padding:12px 16px;cursor:pointer;min-width:130px;flex:1 0 130px;display:flex;flex-direction:column;gap:3px;transition:all .2s;}
 .ks-btn:active{transform:scale(.97);}
 .ks-btn .ks-name{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:1px;color:var(--txt);}
 .ks-btn .ks-sub{font-size:11px;color:var(--mut);}
-:root.light .ks-btn{background:rgba(233,224,250,.45);border:1px solid rgba(255,255,255,.6);backdrop-filter:blur(10px);}
+:root.light .ks-btn{background:linear-gradient(135deg,rgba(233,224,250,.6) 0%,rgba(195,180,240,.45) 100%);border:1px solid rgba(255,255,255,.65);backdrop-filter:blur(10px);}
 :root.light .ks-btn .ks-name{color:var(--lg-navy);}
 :root.light .ks-cat-title{color:var(--lg-navy2);}
 #backBtn{background:none;border:none;cursor:pointer;padding:4px 8px 4px 0;font-size:20px;color:var(--mut);line-height:1;}
@@ -540,9 +548,13 @@ main{padding:4px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v72r</span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v73r</span><span class="hline hline-r"></span></h1>
     <p id="hd"></p>
-    <span id="userNameDisplay" style="font-size:12px;color:var(--mut);font-weight:600;white-space:nowrap;"></span>
+    <span id="userNameDisplay" style="white-space:nowrap;"></span>
+    <div id="hKurs">
+      <div class="hkn"><button id="backBtn" onclick="showSelectScreen()" title="Zurück" style="background:none;border:none;cursor:pointer;font-size:16px;color:var(--mut);padding:0 2px 0 0;line-height:1;">‹</button><span id="hKtn"></span></div>
+      <div class="hks" id="hKs"></div>
+    </div>
   </div>
   <div class="hbtns">
     <button class="lock-btn" id="lockBtn" onclick="openKeypad()" title="Admin">🔒</button>
@@ -557,9 +569,6 @@ main{padding:4px 16px 100px;}
 <div id="gpsBar">
   <div class="gps-dot" id="gpsDot"></div>
   <span id="gpsStatus">🧭 Suche Standort...</span>
-</div>
-<div style="padding:4px 16px 0;">
-  <button onclick="openChangelog()" style="background:var(--s2);border:1.5px solid var(--brd);border-radius:10px;padding:7px 14px;font-size:13px;color:var(--txt);cursor:pointer;display:inline-flex;align-items:center;gap:6px;">📋 Versionshistorie</button>
 </div>
 <div class="tabs" id="tabs">
   <div class="tab-filter" id="filterWe" onclick="setFilter('we')">
@@ -587,11 +596,7 @@ main{padding:4px 16px 100px;}
   <button class="sync-btn" style="background:var(--s2);color:var(--txt);border:1.5px solid var(--brd)" onclick="openUsageOv()">📊 Nutzung</button>
   <span class="sync-status" id="syncStatus">Nicht synchronisiert</span>
 </div>
-  <div id="kh" class="kh" style="display:none">
-    <button id="backBtn" onclick="showSelectScreen()" title="Zurück">‹</button>
-    <div><div class="kt" id="ktn"></div><div class="ks" id="ks"></div></div>
-    <button class="bs admin-btn-inline" id="kursEditBtn" onclick="openKursEdit()" style="border-radius:10px;padding:6px 12px;font-size:13px">✏️ Bearbeiten</button>
-  </div>
+  <button id="kursEditBtn" class="bs admin-btn-inline" onclick="openKursEdit()" style="display:none;border-radius:10px;padding:6px 12px;font-size:13px">✏️</button>
 </div>
 <main>
   <div id="kursSelect" style="display:none"></div>
@@ -1303,6 +1308,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v73r', date:'17.08.2026', desc:'Kursinfo (Name + Stats) direkt im Header unter dem Benutzernamen; Versionshistorie auf Auswahlscreen; Kurs-Buttons mit Farbverlauf'},
   {v:'v72r', date:'17.08.2026', desc:'Neuer Auswahlscreen beim Start: Kategorien Schulzeit / Ferienzeit / Wochenende mit Kurs-Buttons; Vollbild-Kursansicht mit Zurück-Button'},
   {v:'v71r', date:'15.08.2026', desc:'Sticky Subheader (Kurs-Filter + Kurs-Titel bleiben beim Scrollen sichtbar), Dauer-Badge und Uhrzeit im Glass-Design'},
   {v:'v70r', date:'10.08.2026', desc:'Schulzeit-Kurspläne 2026/27 aktualisiert (gültig ab 17.08.2026): Kurse 211–217 komplett überarbeitet'},
@@ -2177,14 +2183,13 @@ function renderTabs() {
 function renderLines() {
   var kurs = null;
   for (var i = 0; i < D.kurse.length; i++) { if (D.kurse[i].id === D.activeKurs) { kurs = D.kurse[i]; break; } }
-  var kh = document.getElementById('kh');
   var em = document.getElementById('em');
   var ll = document.getElementById('ll');
 
   if (!kurs) { showSelectScreen(); return; }
 
-  kh.style.display = 'flex'; em.style.display = 'none';
-  document.getElementById('ktn').textContent = kurs.name;
+  document.getElementById('hKurs').style.display = 'block'; em.style.display = 'none';
+  document.getElementById('hKtn').textContent = kurs.name;
 
   var lines = kurs.lines || [];
   var tot = 0;
@@ -2194,7 +2199,7 @@ function renderLines() {
   for (var si = 0; si < SEED.kurse.length; si++) {
     if (SEED.kurse[si].id === kurs.id) { seedKurs = SEED.kurse[si]; break; }
   }
-  document.getElementById('ks').innerHTML =
+  document.getElementById('hKs').innerHTML =
     '<span>🚌 ' + lines.length + ' Linie' + (lines.length !== 1 ? 'n' : '') + '</span>' +
     '<span>⏱ ' + (seedKurs && seedKurs.schichtdauer ? seedKurs.schichtdauer + ' Std' : fDur(tot)) + '</span>' +
     (seedKurs && seedKurs.gesamtkm ? '<span>🛣 ' + seedKurs.gesamtkm + ' km</span>' : '') +
@@ -3844,7 +3849,7 @@ window.addEventListener('resize', setHeaderHeight);
 // ── AUSWAHLSCREEN ─────────────────────────────────────
 function showSelectScreen() {
   expId = null;
-  document.getElementById('kh').style.display = 'none';
+  document.getElementById('hKurs').style.display = 'none';
   document.getElementById('kursSelect').style.display = 'block';
   document.getElementById('ll').innerHTML = '';
   document.getElementById('em').style.display = 'none';
@@ -3855,6 +3860,10 @@ function showSelectScreen() {
 function renderSelectScreen() {
   var el = document.getElementById('kursSelect');
   el.innerHTML = '';
+  var vBtn = document.createElement('div');
+  vBtn.style.cssText = 'padding:0 0 16px;';
+  vBtn.innerHTML = '<button onclick="openChangelog()" style="background:var(--s2);border:1.5px solid var(--brd);border-radius:10px;padding:7px 14px;font-size:13px;color:var(--txt);cursor:pointer;display:inline-flex;align-items:center;gap:6px;">📋 Versionshistorie</button>';
+  el.appendChild(vBtn);
   var cats = [
     { filter:'schule', label:'🏫 Schulzeit' },
     { filter:'ferien', label:'🌴 Ferienzeit' },
