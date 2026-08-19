@@ -497,9 +497,14 @@ main{padding:4px 16px 100px;}
   background:linear-gradient(180deg,var(--lg-violet) 0%,var(--lg-lilac) 45%,var(--lg-lilacl) 100%);
   box-shadow:0 4px 16px rgba(27,34,68,.18);
 }
-/* Kursinfo im Header */
-#hKurs{margin-top:5px;display:none;}
-.hkn{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;line-height:1;display:flex;align-items:center;gap:5px;}
+/* Kursinfo im Header — Navigations-Chip */
+#hKurs{display:none;margin-top:6px;cursor:pointer;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:6px 12px;transition:background .15s,transform .1s;-webkit-tap-highlight-color:transparent;}
+#hKurs:active{background:rgba(255,255,255,.20);transform:scale(.97);}
+:root.light #hKurs{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.42);}
+:root.light #hKurs:active{background:rgba(255,255,255,.32);}
+.hk-hint{font-size:10px;color:rgba(255,255,255,.55);letter-spacing:.5px;margin-bottom:3px;}
+:root.light .hk-hint{color:rgba(255,255,255,.6);}
+.hkn{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;line-height:1;}
 .hks{font-size:11px;color:var(--mut);display:flex;gap:10px;flex-wrap:wrap;margin-top:2px;}
 #userNameDisplay{font-size:13px!important;font-weight:700!important;color:var(--acc)!important;}
 :root.light .hkn{color:rgba(255,255,255,.95);}
@@ -548,11 +553,12 @@ main{padding:4px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v73r</span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v74r</span><span class="hline hline-r"></span></h1>
     <p id="hd"></p>
     <span id="userNameDisplay" style="white-space:nowrap;"></span>
-    <div id="hKurs">
-      <div class="hkn"><button id="backBtn" onclick="showSelectScreen()" title="Zurück" style="background:none;border:none;cursor:pointer;font-size:16px;color:var(--mut);padding:0 2px 0 0;line-height:1;">‹</button><span id="hKtn"></span></div>
+    <div id="hKurs" onclick="showSelectScreen()">
+      <div class="hk-hint">← Zur Kursauswahl</div>
+      <div class="hkn" id="hKtn"></div>
       <div class="hks" id="hKs"></div>
     </div>
   </div>
@@ -1308,6 +1314,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v74r', date:'19.08.2026', desc:'Kursauswahl-Chip im Header als sichtbarer Navigations-Button gestaltet: Glas-Hintergrund, \"← Zur Kursauswahl\"-Hinweis, Tap-Feedback'},
   {v:'v73r', date:'17.08.2026', desc:'Kursinfo (Name + Stats) direkt im Header unter dem Benutzernamen; Versionshistorie auf Auswahlscreen; Kurs-Buttons mit Farbverlauf'},
   {v:'v72r', date:'17.08.2026', desc:'Neuer Auswahlscreen beim Start: Kategorien Schulzeit / Ferienzeit / Wochenende mit Kurs-Buttons; Vollbild-Kursansicht mit Zurück-Button'},
   {v:'v71r', date:'15.08.2026', desc:'Sticky Subheader (Kurs-Filter + Kurs-Titel bleiben beim Scrollen sichtbar), Dauer-Badge und Uhrzeit im Glass-Design'},
