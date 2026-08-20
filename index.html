@@ -555,7 +555,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v76r</span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v77r</span><span class="hline hline-r"></span></h1>
     <div id="hdRow">
       <p id="hd"></p>
       <span id="userNameDisplay" style="white-space:nowrap;"></span>
@@ -708,7 +708,7 @@ const SEED = {
     {
       id:'kurs214',name:'Kurs 214',typ:'schule',datum:'2026-08-17',
       schichtdauer:'10:27',gesamtkm:'199,895',
-      service_blocks:[{after:'3712006',icon:'🧹',label:'Innenreinigung',time:'08:13–09:03'},{after:'3714007',icon:'🛢️',label:'Tanken',time:'14:42–15:05'}],
+      service_blocks:[{after:'3714007',icon:'🛢️',label:'Tanken',time:'14:42–15:05'}],
       lines:[
         {id:'n1',linienNr:'714',fahrtNr:'3714001',start:'Rieseby, Bahnhof',end:'Rieseby, Bahnhof',startTime:'06:25',endTime:'06:45',
           stops:[{time:'06:25',name:'Rieseby, Bahnhof'},{time:'06:28',name:'Rieseby, Buchholz'},{time:'06:29',name:'Rieseby, Gut Büchenau'},{time:'06:30',name:'Rieseby, Zimmert'},{time:'06:32',name:'Rieseby, Boholm'},{time:'06:35',name:'Rieseby, Bösby'},{time:'06:37',name:'Rieseby, Kriesebyau'},{time:'06:38',name:'Rieseby, Krieseby'},{time:'06:39',name:'Rieseby, Steckswiese'},{time:'06:40',name:'Rieseby, Patermeß'},{time:'06:45',name:'Rieseby, Bahnhof'}]},
@@ -1327,6 +1327,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v77r', date:'20.08.2026', desc:'Kurs 214: Innenreinigung-Serviceblock entfernt'},
   {v:'v76r', date:'20.08.2026', desc:'Samstag-Kurspläne 611, 612, 613 aus PDFs aktualisiert (Daten aus Dienstplan neu eingelesen)'},
   {v:'v75r', date:'20.08.2026', desc:'Kompakter Header für Android: kleineres Logo, Datum + Username in einer Zeile, GPS-Button kompakter, 100dvh-Fix'},
   {v:'v74r', date:'19.08.2026', desc:'Kursauswahl-Chip im Header als sichtbarer Navigations-Button gestaltet: Glas-Hintergrund, \"← Zur Kursauswahl\"-Hinweis, Tap-Feedback'},
