@@ -18,16 +18,18 @@
 :root{--bg:#0d1117;--s1:#161b22;--s2:#21262d;--acc:#4caf50;--txt:#e6edf3;--mut:#7d8590;--brd:#30363d;--red:#f85149;--grn:#3fb950;}
 :root.light{--bg:#e2dbd0;--s1:#f0ebe0;--s2:#d6cfc4;--acc:#dc0018;--txt:#1c1917;--mut:#6e6458;--brd:#c2b490;--red:#dc0018;--grn:#3d8040;}
 *{box-sizing:border-box;margin:0;padding:0;}
-body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-height:100vh;}
-header{display:flex;align-items:center;gap:12px;padding:16px;border-bottom:1px solid var(--brd);position:sticky;top:0;z-index:100;background:var(--bg);}
-.logo{width:42px;height:42px;background:var(--acc);border-radius:10px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;color:#fff;flex-shrink:0;}
-.htxt{flex:1;}
-.htxt h1{font-family:'Bebas Neue',sans-serif;font-size:26px;letter-spacing:2px;}
-.htxt p{font-size:12px;color:var(--mut);}
-.hbtns{display:flex;align-items:center;gap:8px;flex-shrink:0;}
-.hv{font-size:13px;font-weight:400;color:var(--mut);letter-spacing:1px;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-height:100dvh;}
+header{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--brd);position:sticky;top:0;z-index:100;background:var(--bg);}
+.logo{width:36px;height:36px;background:var(--acc);border-radius:9px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:2px;color:#fff;flex-shrink:0;}
+.htxt{flex:1;min-width:0;}
+.htxt h1{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;}
+.htxt p{font-size:11px;color:var(--mut);}
+#hdRow{display:flex;align-items:baseline;gap:5px;flex-wrap:wrap;}
+#hdRow p{margin:0;}
+.hbtns{display:flex;align-items:center;gap:6px;flex-shrink:0;}
+.hv{font-size:12px;font-weight:400;color:var(--mut);letter-spacing:1px;}
 .hline{display:none;}
-#gpsBtn{display:flex;flex-direction:column;align-items:center;gap:2px;background:var(--s2);border:1.5px solid var(--brd);border-radius:10px;padding:6px 10px;cursor:pointer;min-width:60px;flex-shrink:0;transition:all .2s;}
+#gpsBtn{display:flex;flex-direction:column;align-items:center;gap:2px;background:var(--s2);border:1.5px solid var(--brd);border-radius:10px;padding:4px 8px;cursor:pointer;min-width:50px;flex-shrink:0;transition:all .2s;}
 #gpsBtn.on{background:var(--grn);border-color:var(--grn);}
 #gpsBtn.searching{background:#f59e0b;border-color:#f59e0b;}
 #gpsLbl{font-size:9px;font-weight:700;letter-spacing:1px;color:var(--mut);font-family:'DM Sans',sans-serif;}
@@ -498,14 +500,14 @@ main{padding:4px 16px 100px;}
   box-shadow:0 4px 16px rgba(27,34,68,.18);
 }
 /* Kursinfo im Header — Navigations-Chip */
-#hKurs{display:none;margin-top:6px;cursor:pointer;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);border-radius:12px;padding:6px 12px;transition:background .15s,transform .1s;-webkit-tap-highlight-color:transparent;}
+#hKurs{display:none;margin-top:4px;cursor:pointer;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.22);border-radius:10px;padding:4px 10px;transition:background .15s,transform .1s;-webkit-tap-highlight-color:transparent;}
 #hKurs:active{background:rgba(255,255,255,.20);transform:scale(.97);}
 :root.light #hKurs{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.42);}
 :root.light #hKurs:active{background:rgba(255,255,255,.32);}
-.hk-hint{font-size:10px;color:rgba(255,255,255,.55);letter-spacing:.5px;margin-bottom:3px;}
+.hk-hint{font-size:9px;color:rgba(255,255,255,.55);letter-spacing:.5px;margin-bottom:2px;}
 :root.light .hk-hint{color:rgba(255,255,255,.6);}
-.hkn{font-family:'Bebas Neue',sans-serif;font-size:20px;letter-spacing:2px;line-height:1;}
-.hks{font-size:11px;color:var(--mut);display:flex;gap:10px;flex-wrap:wrap;margin-top:2px;}
+.hkn{font-family:'Bebas Neue',sans-serif;font-size:18px;letter-spacing:2px;line-height:1;}
+.hks{font-size:10px;color:var(--mut);display:flex;gap:8px;flex-wrap:wrap;margin-top:1px;}
 #userNameDisplay{font-size:13px!important;font-weight:700!important;color:var(--acc)!important;}
 :root.light .hkn{color:rgba(255,255,255,.95);}
 :root.light .hks{color:rgba(255,255,255,.72);}
@@ -553,9 +555,11 @@ main{padding:4px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v74r</span><span class="hline hline-r"></span></h1>
-    <p id="hd"></p>
-    <span id="userNameDisplay" style="white-space:nowrap;"></span>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v75r</span><span class="hline hline-r"></span></h1>
+    <div id="hdRow">
+      <p id="hd"></p>
+      <span id="userNameDisplay" style="white-space:nowrap;"></span>
+    </div>
     <div id="hKurs" onclick="showSelectScreen()">
       <div class="hk-hint">← Zur Kursauswahl</div>
       <div class="hkn" id="hKtn"></div>
@@ -1314,6 +1318,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v75r', date:'20.08.2026', desc:'Kompakter Header für Android: kleineres Logo, Datum + Username in einer Zeile, GPS-Button kompakter, 100dvh-Fix'},
   {v:'v74r', date:'19.08.2026', desc:'Kursauswahl-Chip im Header als sichtbarer Navigations-Button gestaltet: Glas-Hintergrund, \"← Zur Kursauswahl\"-Hinweis, Tap-Feedback'},
   {v:'v73r', date:'17.08.2026', desc:'Kursinfo (Name + Stats) direkt im Header unter dem Benutzernamen; Versionshistorie auf Auswahlscreen; Kurs-Buttons mit Farbverlauf'},
   {v:'v72r', date:'17.08.2026', desc:'Neuer Auswahlscreen beim Start: Kategorien Schulzeit / Ferienzeit / Wochenende mit Kurs-Buttons; Vollbild-Kursansicht mit Zurück-Button'},
