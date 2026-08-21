@@ -360,7 +360,6 @@ main{padding:4px 16px 100px;}
       var(--lg-navy) 0%, var(--lg-navy2) 9%, var(--lg-violet) 20%,
       var(--lg-lilac) 32%, var(--lg-lilacl) 46%, var(--lg-lilacl) 68%,
       var(--lg-lilacp) 92%, var(--lg-lilacp) 100%);
-  background-attachment: fixed;
 }
 
 /* Header: halbtransparentes Navy-Glas — Verlauf scheint durch, Content dahinter wird verdeckt */
@@ -457,12 +456,12 @@ main{padding:4px 16px 100px;}
 /* Fahrten-Kacheln (.lc) — lila-blaues Glas statt Weiß */
 :root.light .lc{
   background:rgba(233,224,250,.4);
-  backdrop-filter:blur(14px) saturate(160%);
+  backdrop-filter:blur(6px);
   border:1px solid rgba(255,255,255,.65);
   box-shadow:0 14px 30px -18px rgba(27,34,68,.35);
 }
 :root.light .lc.exp{border-color:rgba(255,255,255,.85);box-shadow:0 16px 34px -16px rgba(27,34,68,.4);}
-:root.light .lc.exp .lch{background:rgba(233,224,250,.55);backdrop-filter:blur(14px);box-shadow:none;border-bottom:1px solid rgba(255,255,255,.4);}
+:root.light .lc.exp .lch{background:rgba(233,224,250,.55);backdrop-filter:blur(6px);box-shadow:none;border-bottom:1px solid rgba(255,255,255,.4);}
 
 /* Linien-Badge (721, 710 …) — dunkelblau-lila Glas mit Glanz */
 :root.light .lb{
@@ -555,7 +554,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v77r</span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v78r</span><span class="hline hline-r"></span></h1>
     <div id="hdRow">
       <p id="hd"></p>
       <span id="userNameDisplay" style="white-space:nowrap;"></span>
@@ -1327,6 +1326,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v78r', date:'21.08.2026', desc:'Scroll-Performance verbessert (Samsung Tab): background-attachment:fixed entfernt, backdrop-filter auf Linie-Cards reduziert'},
   {v:'v77r', date:'20.08.2026', desc:'Kurs 214: Innenreinigung-Serviceblock entfernt'},
   {v:'v76r', date:'20.08.2026', desc:'Samstag-Kurspläne 611, 612, 613 aus PDFs aktualisiert (Daten aus Dienstplan neu eingelesen)'},
   {v:'v75r', date:'20.08.2026', desc:'Kompakter Header für Android: kleineres Logo, Datum + Username in einer Zeile, GPS-Button kompakter, 100dvh-Fix'},
