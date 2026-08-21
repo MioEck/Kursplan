@@ -554,7 +554,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v78r</span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v79r</span><span class="hline hline-r"></span></h1>
     <div id="hdRow">
       <p id="hd"></p>
       <span id="userNameDisplay" style="white-space:nowrap;"></span>
@@ -1227,10 +1227,6 @@ var LINE_SHAPES={'l1':[[54.466646,9.836316],[54.466572,9.83683],[54.466013,9.837
 
 // STATE
 const VER = 'v64';
-// Harten Reset erzwingen - löscht alten Cache komplett
-localStorage.removeItem('kp_data');
-localStorage.removeItem('kp_ver');
-localStorage.removeItem('kp_coords');
 (function() {
   try {
     var sd = localStorage.getItem('kp_data');
@@ -1315,7 +1311,7 @@ function persist() {
   localStorage.setItem('kp_data', JSON.stringify(D));
   // Auto-save active kurs per user
   if (window._userSettingsTimer) clearTimeout(window._userSettingsTimer);
-  window._userSettingsTimer = setTimeout(saveUserSettings, 3000);
+  window._userSettingsTimer = setTimeout(saveUserSettings, 500);
   // Admin: Auto-sync to Supabase after 10 seconds
   if (isAdmin) {
     if (window._autoSyncTimer) clearTimeout(window._autoSyncTimer);
@@ -1326,6 +1322,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v79r', date:'21.08.2026', desc:'Fix: Aktiver Kurs springt nicht mehr auf Kurs 611 zurück (localStorage-Reset-Bug entfernt)'},
   {v:'v78r', date:'21.08.2026', desc:'Scroll-Performance verbessert (Samsung Tab): background-attachment:fixed entfernt, backdrop-filter auf Linie-Cards reduziert'},
   {v:'v77r', date:'20.08.2026', desc:'Kurs 214: Innenreinigung-Serviceblock entfernt'},
   {v:'v76r', date:'20.08.2026', desc:'Samstag-Kurspläne 611, 612, 613 aus PDFs aktualisiert (Daten aus Dienstplan neu eingelesen)'},
@@ -1901,7 +1898,7 @@ function luStops() {
   var kurs = null;
   var filteredK = getFilteredKurse();
   var inFilter = filteredK.some(function(k){ return k.id === D.activeKurs; });
-  if (!inFilter && filteredK.length > 0) D.activeKurs = filteredK[0].id;
+  if (!inFilter && filteredK.length > 0) { D.activeKurs = filteredK[0].id; persist(); }
   for (var i = 0; i < D.kurse.length; i++) { if (D.kurse[i].id === D.activeKurs) { kurs = D.kurse[i]; break; } }
   if (!kurs || !expId) return;
   var line = null;
