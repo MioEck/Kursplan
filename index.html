@@ -554,7 +554,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v80r</span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v81r</span><span class="hline hline-r"></span></h1>
     <div id="hdRow">
       <p id="hd"></p>
       <span id="userNameDisplay" style="white-space:nowrap;"></span>
@@ -1322,6 +1322,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v81r', date:'21.08.2026', desc:'Fix: GPS-Punkt hängt nicht mehr an verpassten Haltestellen fest (nearI-Rescue-Fallback in luStops)'},
   {v:'v80r', date:'21.08.2026', desc:'Fix: Kurs springt nicht mehr zurück + GPS-Haltestellenfortschreibung funktioniert wieder (luStops-Filterprüfung korrigiert)'},
   {v:'v79r', date:'21.08.2026', desc:'Fix: Aktiver Kurs springt nicht mehr auf Kurs 611 zurück (localStorage-Reset-Bug entfernt)'},
   {v:'v78r', date:'21.08.2026', desc:'Scroll-Performance verbessert (Samsung Tab): background-attachment:fixed entfernt, backdrop-filter auf Linie-Cards reduziert'},
@@ -1991,6 +1992,9 @@ function luStops() {
         curI = 0; window._gpsInZone[line.id] = true;
       }
     }
+    // Rescue: wenn nearI (nächste Haltestelle per Distanz) weiter vorne liegt, vorspringen
+    // Verhindert Feststecken wenn GPS-Start zu spät war und mehrere Zonen schon verpasst wurden
+    if (nearI > curI) { curI = nearI; window._gpsInZone[line.id] = false; }
   }
   // Kein Math.max(curI, timeI) → GPS hat Vorrecht, Zeit greift nur ohne GPS-Zustand
   if (curI >= 0) window._gpsStopI[line.id] = curI;
