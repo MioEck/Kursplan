@@ -554,7 +554,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v79r</span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v80r</span><span class="hline hline-r"></span></h1>
     <div id="hdRow">
       <p id="hd"></p>
       <span id="userNameDisplay" style="white-space:nowrap;"></span>
@@ -1322,6 +1322,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v80r', date:'21.08.2026', desc:'Fix: Kurs springt nicht mehr zurück + GPS-Haltestellenfortschreibung funktioniert wieder (luStops-Filterprüfung korrigiert)'},
   {v:'v79r', date:'21.08.2026', desc:'Fix: Aktiver Kurs springt nicht mehr auf Kurs 611 zurück (localStorage-Reset-Bug entfernt)'},
   {v:'v78r', date:'21.08.2026', desc:'Scroll-Performance verbessert (Samsung Tab): background-attachment:fixed entfernt, backdrop-filter auf Linie-Cards reduziert'},
   {v:'v77r', date:'20.08.2026', desc:'Kurs 214: Innenreinigung-Serviceblock entfernt'},
@@ -1896,9 +1897,8 @@ function timeState(allStops, idx) {
 
 function luStops() {
   var kurs = null;
-  var filteredK = getFilteredKurse();
-  var inFilter = filteredK.some(function(k){ return k.id === D.activeKurs; });
-  if (!inFilter && filteredK.length > 0) { D.activeKurs = filteredK[0].id; persist(); }
+  var inAll = D.kurse.some(function(k){ return k.id === D.activeKurs; });
+  if (!inAll && D.kurse.length > 0) { D.activeKurs = D.kurse[0].id; persist(); }
   for (var i = 0; i < D.kurse.length; i++) { if (D.kurse[i].id === D.activeKurs) { kurs = D.kurse[i]; break; } }
   if (!kurs || !expId) return;
   var line = null;
@@ -2188,7 +2188,7 @@ function renderTabs() {
     var typLabel = k.typ==='sa'?'Samstag':k.typ==='so'?'Sonn-/Feiertag':k.datum?fDate(k.datum):'—';
     t.innerHTML = '<span class="tn">' + esc(k.name) + '</span><span class="tl">' + typLabel + '</span>';
     (function(kid) {
-      t.onclick = function() { D.activeKurs = kid; expId = null; persist(); renderTabs(); renderLines(); };
+      t.onclick = function() { D.activeKurs = kid; expId = null; persist(); saveUserSettings(); renderTabs(); renderLines(); };
     })(k.id);
     el.appendChild(t);
   }
@@ -3709,7 +3709,7 @@ window.addEventListener('load', function() {
     if (uDisp) uDisp.textContent = currentUser.name || '';
     setTimeout(function(){ loadFromSupabase(true); }, 1000);
     setTimeout(function(){ loadNotices(); }, 1500);
-    setTimeout(function(){ _loadUserSettings(); }, 1800);
+    setTimeout(function(){ _loadUserSettings(); }, 5000);
     setTimeout(function(){ _startUsageSession(); _requestWakeLock(); }, 2000);
     // Automatischer Fahrplan-Abgleich alle 5 Minuten
     setInterval(function() { loadFromSupabase(true); }, 5 * 60 * 1000);
@@ -3934,6 +3934,7 @@ function showDetailView(kursId) {
   D.activeKurs = kursId;
   expId = null;
   persist();
+  saveUserSettings();
   document.getElementById('kursSelect').style.display = 'none';
   document.getElementById('em').style.display = 'none';
   renderLines();
