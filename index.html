@@ -554,7 +554,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v85r</span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v86r</span><span class="hline hline-r"></span></h1>
     <div id="hdRow">
       <p id="hd"></p>
       <span id="userNameDisplay" style="white-space:nowrap;"></span>
@@ -1322,6 +1322,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v86r', date:'24.08.2026', desc:'Fix: GPS-Punkt springt nicht mehr zu wiederholten Haltestellen auf Rundrouten (Rescue A mit Zonenschutz + Vorschaufenster)'},
   {v:'v85r', date:'24.08.2026', desc:'Fix: GPS-Punkt überspringt keine Zwischenhaltestellen mehr (Rescue A nur noch Direktsprung wenn Uhr bestätigt)'},
   {v:'v84r', date:'24.08.2026', desc:'Fix: Haltestellenname Lindhöft, In\'t Holt — Apostroph korrekt escapt (JS-Syntaxfehler behoben)'},
   {v:'v83r', date:'24.08.2026', desc:'Fix: Haltestellenname Lindhöft, In\'t Holt — Apostroph korrigiert (Kurs 213, Li 746)'},
@@ -1996,8 +1997,9 @@ function luStops() {
         curI = 0; window._gpsInZone[line.id] = true;
       }
     }
-    // Rescue A: GPS-nächste weiter vorne — nur direkt springen wenn Zeit bestätigt (sonst +1 um Stops nicht zu überspringen)
-    if (nearI > curI) { if (timeI >= nearI) { curI = nearI; } else { curI = curI + 1; } window._gpsInZone[line.id] = false; }
+    // Rescue A: GPS-nächste weiter vorne — direkt springen wenn Zeit bestätigt, sonst +1
+    // Bedingung: nicht in Zone + nearI nicht weiter als max(timeI,curI)+4 (verhindert Sprung zu Rückrouten-Stops)
+    if (nearI > curI && !window._gpsInZone[line.id] && nearI <= Math.max(timeI >= 0 ? timeI : curI, curI) + 4) { if (timeI >= nearI) { curI = nearI; } else { curI = curI + 1; } window._gpsInZone[line.id] = false; }
     // Rescue B: Uhr voraus + GPS bestätigt Position ≥ curI → sanft +1 pro Cycle
     else if (timeI > curI && nearI >= curI && !window._gpsInZone[line.id]) { curI++; window._gpsInZone[line.id] = false; }
   }
