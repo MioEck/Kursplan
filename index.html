@@ -554,7 +554,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v86r</span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v87r</span><span class="hline hline-r"></span></h1>
     <div id="hdRow">
       <p id="hd"></p>
       <span id="userNameDisplay" style="white-space:nowrap;"></span>
@@ -1322,6 +1322,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v87r', date:'24.08.2026', desc:'Fix: GPS-Haltestellen-Suche beginnt jetzt ab der aktuellen Position — kein Rücksprung zu bereits verpassten Stops mehr möglich'},
   {v:'v86r', date:'24.08.2026', desc:'Fix: GPS-Punkt springt nicht mehr zu wiederholten Haltestellen auf Rundrouten (Rescue A mit Zonenschutz + Vorschaufenster)'},
   {v:'v85r', date:'24.08.2026', desc:'Fix: GPS-Punkt überspringt keine Zwischenhaltestellen mehr (Rescue A nur noch Direktsprung wenn Uhr bestätigt)'},
   {v:'v84r', date:'24.08.2026', desc:'Fix: Haltestellenname Lindhöft, In\'t Holt — Apostroph korrekt escapt (JS-Syntaxfehler behoben)'},
@@ -1916,7 +1917,8 @@ function luStops() {
   if (gPos) {
     var C = getCoords();
     var nearD = Infinity;
-    for (var j = 0; j < line.stops.length; j++) {
+    var nearStart = (window._gpsStopI && window._gpsStopI[line.id] >= 0) ? window._gpsStopI[line.id] : 0;
+    for (var j = nearStart; j < line.stops.length; j++) {
       var sn = line.stops[j].name;
       var c = C[sn];
       if (!c && window._normCache) { var nm = normName(sn); c = window._normCache[nm]; }
