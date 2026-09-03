@@ -554,7 +554,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v89r</span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v90r</span><span class="hline hline-r"></span></h1>
     <div id="hdRow">
       <p id="hd"></p>
       <span id="userNameDisplay" style="white-space:nowrap;"></span>
@@ -1322,6 +1322,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v90r', date:'03.09.2026', desc:'Fix: GPS folgt immer der Fahrplanreihenfolge — kein Überspringen von Haltestellen durch geografisch nähere Folgestops (nearI auf curI+1 begrenzt)'},
   {v:'v89r', date:'31.08.2026', desc:'Fix: GPS-Punkt springt nicht mehr zur nächsten Haltestelle wenn Bus noch weit entfernt — Anzeige wechselt erst wenn Bus < 500m nähert'},
   {v:'v88r', date:'31.08.2026', desc:'Fix: GPS hat jetzt echten Vorrang — bei Verspätung läuft Anzeige nicht mehr mit der Uhr vor (Rescue B entfernt)'},
   {v:'v87r', date:'24.08.2026', desc:'Fix: GPS-Haltestellen-Suche beginnt jetzt ab der aktuellen Position — kein Rücksprung zu bereits verpassten Stops mehr möglich'},
@@ -1920,7 +1921,7 @@ function luStops() {
     var C = getCoords();
     var nearD = Infinity;
     var nearStart = (window._gpsStopI && window._gpsStopI[line.id] >= 0) ? window._gpsStopI[line.id] : 0;
-    for (var j = nearStart; j < line.stops.length; j++) {
+    for (var j = nearStart; j <= nearStart + 1 && j < line.stops.length; j++) {
       var sn = line.stops[j].name;
       var c = C[sn];
       if (!c && window._normCache) { var nm = normName(sn); c = window._normCache[nm]; }
@@ -2001,10 +2002,9 @@ function luStops() {
         curI = 0; window._gpsInZone[line.id] = true;
       }
     }
-    // Rescue A: GPS-nächste weiter vorne — direkt springen wenn Zeit bestätigt, sonst +1
-    // Bedingung: nicht in Zone + nearI nicht weiter als max(timeI,curI)+4 (verhindert Sprung zu Rückrouten-Stops)
-    // Rescue B entfernt (v88r): GPS hat Vorrecht — zeitbasierter Vorschub nur wenn kein GPS aktiv
-    if (nearI > curI && !window._gpsInZone[line.id] && nearI <= Math.max(timeI >= 0 ? timeI : curI, curI) + 4 && (nearD <= 500 || nearI > curI + 1)) { curI = curI + 1; window._gpsInZone[line.id] = false; }
+    // Rescue A: nächster Stop (curI+1) ist näher als curI → Bus hat Mittelpunkt passiert → sanft +1
+    // nearI ist auf curI/curI+1 begrenzt → Fahrplanreihenfolge strukturell eingehalten
+    if (nearI > curI && !window._gpsInZone[line.id] && nearD <= 500) { curI = curI + 1; window._gpsInZone[line.id] = false; }
   }
   // Kein Math.max(curI, timeI) → GPS hat Vorrecht, Zeit greift nur ohne GPS-Zustand
   if (curI >= 0) window._gpsStopI[line.id] = curI;
