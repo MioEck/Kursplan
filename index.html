@@ -554,7 +554,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v90r</span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v91r</span><span class="hline hline-r"></span></h1>
     <div id="hdRow">
       <p id="hd"></p>
       <span id="userNameDisplay" style="white-space:nowrap;"></span>
@@ -1209,6 +1209,7 @@ const STOP_COORDS = {
   "Vogelsang-Grünholz, ZOB":[54.5713851,9.95576],
   "Waabs, Abzweig nach Karlsminde":[54.5099345,9.9199593],
   "Waabs, Abzweig nach Langholz":[54.526547,9.9685526],
+  "Waabs, Fuchsberg":[54.560313,9.984408],
   "Waabs, Gast":[54.5048629,9.9139721],
   "Waabs, Großwaabs":[54.552802,9.990971],
   "Waabs, Gut Ludwigsburg":[54.513765,9.9347818],
@@ -1322,6 +1323,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v91r', date:'04.09.2026', desc:'Fix: Koordinate für Haltestelle "Waabs, Fuchsberg" ergänzt (GPS-Tracking auf Linie 710 / Fahrt 3710008 war defekt)'},
   {v:'v90r', date:'03.09.2026', desc:'Fix: GPS folgt immer der Fahrplanreihenfolge — kein Überspringen von Haltestellen durch geografisch nähere Folgestops (nearI auf curI+1 begrenzt)'},
   {v:'v89r', date:'31.08.2026', desc:'Fix: GPS-Punkt springt nicht mehr zur nächsten Haltestelle wenn Bus noch weit entfernt — Anzeige wechselt erst wenn Bus < 500m nähert'},
   {v:'v88r', date:'31.08.2026', desc:'Fix: GPS hat jetzt echten Vorrang — bei Verspätung läuft Anzeige nicht mehr mit der Uhr vor (Rescue B entfernt)'},
@@ -2764,6 +2766,7 @@ var KURS_STOPS = [
   'Vogelsang-Grünholz, ZOB',
   'Waabs, Abzweig nach Karlsminde',
   'Waabs, Abzweig nach Langholz',
+  'Waabs, Fuchsberg',
   'Waabs, Gast',
   'Waabs, Großwaabs',
   'Waabs, Gut Ludwigsburg',
