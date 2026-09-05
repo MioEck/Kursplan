@@ -554,7 +554,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v95r</span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v96r</span><span class="hline hline-r"></span></h1>
     <div id="hdRow">
       <p id="hd"></p>
       <span id="userNameDisplay" style="white-space:nowrap;"></span>
@@ -1324,6 +1324,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v96r', date:'05.09.2026', desc:'Fix: Haltestellenname "Holtsee, Strijord" wird nach Supabase-Sync automatisch korrigiert und in der Datenbank aktualisiert'},
   {v:'v95r', date:'05.09.2026', desc:'Fix: Haltestellenname "Holtsee, Strijord" wird beim App-Start automatisch im lokalen Speicher korrigiert (war im Browser-Cache noch als alter Name gespeichert)'},
   {v:'v94r', date:'05.09.2026', desc:'Fix: Haltestellenname "Holtsee, Strijord" auch in gespeicherten Kursdaten korrigiert — Kartenanzeige und GPS-Tracking auf Linie 737 jetzt vollständig'},
   {v:'v93r', date:'05.09.2026', desc:'Linie 737: Haltestelle gemäß GTFS auf "Holtsee, Strijord" korrigiert [54.4145/9.8794]'},
@@ -3409,6 +3410,9 @@ async function loadFromSupabase(silent) {
   }
   if (data.kurse && data.kurse.length > 0) {
     D.kurse = data.kurse;
+    var _sbFix = false;
+    D.kurse.forEach(function(k){ (k.lines||[]).forEach(function(l){ (l.stops||[]).forEach(function(s){ if(s.name==='Hohenlieth, Eichenbaum'){s.name='Holtsee, Strijord';_sbFix=true;} }); }); });
+    if (_sbFix) sb.from('schedule').upsert({id:1,version:VER,kurse:D.kurse});
     localStorage.setItem('kp_data', JSON.stringify(D));
   }
   if (data.notizen) { localStorage.setItem('kp_notizen', JSON.stringify(data.notizen)); notizen = data.notizen; }
