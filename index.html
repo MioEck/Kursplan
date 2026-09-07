@@ -554,7 +554,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v97r</span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v98r</span><span class="hline hline-r"></span></h1>
     <div id="hdRow">
       <p id="hd"></p>
       <span id="userNameDisplay" style="white-space:nowrap;"></span>
@@ -989,6 +989,8 @@ const SEED = {
 
 
 const STOP_COORDS = {
+  "Ahlefeld, Katerberg":[54.403110,9.680211],
+  "Ahlefeld, Poggensiek":[54.402027,9.688122],
   "Altenhof, Alter Bahnhof":[54.447396,9.8645834],
   "Altenhof, Aschau":[54.4509187,9.9300018],
   "Altenhof, Grüner Jäger":[54.442904,9.911909],
@@ -1002,6 +1004,9 @@ const STOP_COORDS = {
   "Barkelsby, Rommelsworth":[54.5001002,9.8451001],
   "Barkelsby, Schwansenstraße":[54.4994858,9.8473737],
   "Barkelsby, Westerschauer Weg":[54.5010631,9.8361041],
+  "Bistensee, Dixrader Weg":[54.398339,9.701947],
+  "Bistensee, Mühlenweg":[54.396427,9.705015],
+  "Bistensee, Seekamp":[54.401329,9.696922],
   "Bohnert, Dorfstraße":[54.5333899,9.7695644],
   "Bohnert, Ortsmitte":[54.5331412,9.7639272],
   "Borgstedt, Rossahlredder":[54.3365262,9.6968435],
@@ -1324,6 +1329,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v98r', date:'07.09.2026', desc:'Koordinaten ergänzt: Ahlefeld Katerberg/Poggensiek, Bistensee Seekamp/Dixrader Weg/Mühlenweg (Linie 727) — GPS-Tracking und Kartenanzeige jetzt vollständig'},
   {v:'v97r', date:'07.09.2026', desc:'Fix: Koordinate für "Rieseby, Bösby" korrigiert (war fälschlich auf Buchholz-Position, jetzt korrekt [54.5748/9.8615])'},
   {v:'v96r', date:'05.09.2026', desc:'Fix: Haltestellenname "Holtsee, Strijord" wird nach Supabase-Sync automatisch korrigiert und in der Datenbank aktualisiert'},
   {v:'v95r', date:'05.09.2026', desc:'Fix: Haltestellenname "Holtsee, Strijord" wird beim App-Start automatisch im lokalen Speicher korrigiert (war im Browser-Cache noch als alter Name gespeichert)'},
@@ -2573,6 +2579,8 @@ setInterval(function() {
 })();
 // ── HALTESTELLEN ABGLEICH ─────────────────────────────
 var KURS_STOPS = [
+  'Ahlefeld, Katerberg',
+  'Ahlefeld, Poggensiek',
   'Altenhof, Alter Bahnhof',
   'Altenhof, Aschau',
   'Altenhof, Grüner Jäger',
@@ -2586,6 +2594,9 @@ var KURS_STOPS = [
   'Barkelsby, Rommelsworth',
   'Barkelsby, Schwansenstraße',
   'Barkelsby, Westerschauer Weg',
+  'Bistensee, Dixrader Weg',
+  'Bistensee, Mühlenweg',
+  'Bistensee, Seekamp',
   'Bohnert, Dorfstraße',
   'Bohnert, Ortsmitte',
   'Borgstedt, Rossahlredder',
