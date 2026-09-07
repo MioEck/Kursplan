@@ -554,7 +554,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v98r</span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v99r</span><span class="hline hline-r"></span></h1>
     <div id="hdRow">
       <p id="hd"></p>
       <span id="userNameDisplay" style="white-space:nowrap;"></span>
@@ -989,6 +989,7 @@ const SEED = {
 
 
 const STOP_COORDS = {
+  "Ahlefeld, Hörst":[54.400623,9.666057],
   "Ahlefeld, Katerberg":[54.403110,9.680211],
   "Ahlefeld, Poggensiek":[54.402027,9.688122],
   "Altenhof, Alter Bahnhof":[54.447396,9.8645834],
@@ -999,6 +1000,7 @@ const STOP_COORDS = {
   "Altenhof, Kiekut":[54.4474832,9.8700551],
   "Ascheffel, An der Forta":[54.4313,9.69702],
   "Ascheffel, Dorfstraße":[54.4301175,9.705701],
+  "Ascheffel, Schule":[54.429756,9.698668],
   "Ascheffel, Oberschoothorst":[54.429803,9.674513],
   "Barkelsby, Grundschule":[54.50139,9.83881],
   "Barkelsby, Rommelsworth":[54.5001002,9.8451001],
@@ -1329,6 +1331,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v99r', date:'07.09.2026', desc:'Fix GPS: Rescue A und Backup nur nach Fahrplanzeit (timeI > curI) — kein Überspringen von Schulzentrum Süd oder Damendorf Ortsmitte mehr; Koordinaten für Ahlefeld Hörst und Ascheffel Schule ergänzt'},
   {v:'v98r', date:'07.09.2026', desc:'Koordinaten ergänzt: Ahlefeld Katerberg/Poggensiek, Bistensee Seekamp/Dixrader Weg/Mühlenweg (Linie 727) — GPS-Tracking und Kartenanzeige jetzt vollständig'},
   {v:'v97r', date:'07.09.2026', desc:'Fix: Koordinate für "Rieseby, Bösby" korrigiert (war fälschlich auf Buchholz-Position, jetzt korrekt [54.5748/9.8615])'},
   {v:'v96r', date:'05.09.2026', desc:'Fix: Haltestellenname "Holtsee, Strijord" wird nach Supabase-Sync automatisch korrigiert und in der Datenbank aktualisiert'},
@@ -2000,7 +2003,7 @@ function luStops() {
         if (curI + 1 < line.stops.length) {
           var nxName = line.stops[curI + 1].name;
           var nxCoord = Cgps[nxName] || (window._normCache && window._normCache[normName(nxName)]);
-          if (nxCoord && haversine(gPos.lat, gPos.lon, nxCoord[0], nxCoord[1]) <= SNAP) {
+          if (nxCoord && timeI > curI && haversine(gPos.lat, gPos.lon, nxCoord[0], nxCoord[1]) <= SNAP) {
             curI++;
             window._gpsInZone[line.id] = true;
           }
@@ -2018,8 +2021,8 @@ function luStops() {
       }
     }
     // Rescue A: nächster Stop (curI+1) ist näher als curI → Bus hat Mittelpunkt passiert → sanft +1
-    // nearI ist auf curI/curI+1 begrenzt → Fahrplanreihenfolge strukturell eingehalten
-    if (nearI > curI && !window._gpsInZone[line.id] && nearD <= 500) { curI = curI + 1; window._gpsInZone[line.id] = false; }
+    // nearI auf curI/curI+1 begrenzt; timeI > curI verhindert Vorsprung vor Fahrplanzeit
+    if (nearI > curI && !window._gpsInZone[line.id] && nearD <= 500 && timeI > curI) { curI = curI + 1; window._gpsInZone[line.id] = false; }
   }
   // Kein Math.max(curI, timeI) → GPS hat Vorrecht, Zeit greift nur ohne GPS-Zustand
   if (curI >= 0) window._gpsStopI[line.id] = curI;
@@ -2579,6 +2582,7 @@ setInterval(function() {
 })();
 // ── HALTESTELLEN ABGLEICH ─────────────────────────────
 var KURS_STOPS = [
+  'Ahlefeld, Hörst',
   'Ahlefeld, Katerberg',
   'Ahlefeld, Poggensiek',
   'Altenhof, Alter Bahnhof',
@@ -2589,6 +2593,7 @@ var KURS_STOPS = [
   'Altenhof, Kiekut',
   'Ascheffel, An der Forta',
   'Ascheffel, Dorfstraße',
+  'Ascheffel, Schule',
   'Ascheffel, Oberschoothorst',
   'Barkelsby, Grundschule',
   'Barkelsby, Rommelsworth',
