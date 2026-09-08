@@ -18,6 +18,7 @@
 :root{--bg:#0d1117;--s1:#161b22;--s2:#21262d;--acc:#4caf50;--txt:#e6edf3;--mut:#7d8590;--brd:#30363d;--red:#f85149;--grn:#3fb950;}
 :root.light{--bg:#e2dbd0;--s1:#f0ebe0;--s2:#d6cfc4;--acc:#dc0018;--txt:#1c1917;--mut:#6e6458;--brd:#c2b490;--red:#dc0018;--grn:#3d8040;}
 :root.timeflow{--bg:#0a1525;--s1:#112038;--s2:#1a2e4a;--acc:#2196f3;--txt:#e8f0fe;--mut:#7fb3d3;--brd:#1e3d5c;--red:#ef5350;--grn:#4caf50;}
+:root.olive{--bg:#0c1a08;--s1:#142810;--s2:#1e3818;--acc:#7cb342;--txt:#e8f5e0;--mut:#8db87a;--brd:#2a4020;--red:#ef5350;--grn:#aed581;}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-height:100dvh;}
 header{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--brd);position:sticky;top:0;z-index:100;background:var(--bg);}
@@ -219,6 +220,19 @@ main{padding:4px 16px 100px;}
 :root.timeflow .lb{background:linear-gradient(160deg,#1565c0 0%,#0d47a1 100%);border:1px solid rgba(33,150,243,.5);}
 :root.timeflow .bn{color:#90caf9;font-weight:800;}
 :root.timeflow .dp{background:#1565c0;color:#e8f0fe;}
+:root.olive .sr.first .sd{background:radial-gradient(circle at 35% 32%,#c5e1a5,#7cb342 54%,#33691e);border:none;box-shadow:0 2px 6px rgba(124,179,66,.4);}
+:root.olive .sr.last .sd{background:radial-gradient(circle at 35% 32%,#dcedc8,#aed581 54%,#558b2f);border:none;box-shadow:0 2px 6px rgba(174,213,129,.4);}
+:root.olive .sr.cur .sd{background:radial-gradient(circle at 35% 32%,#c5e1a5,#7cb342 54%,#33691e);border:none;box-shadow:0 0 8px #7cb342aa,0 0 18px #7cb34244;}
+:root.olive .sr.next .sd{background:radial-gradient(circle at 35% 32%,#f9fbe7,#cddc39 54%,#827717);border:none;box-shadow:0 2px 5px rgba(205,220,57,.4);}
+:root.olive .sr.past .sd{background:#1e3018;border:none;box-shadow:none;}
+:root.olive .sr.cur .st,:root.olive .sr.cur .sn{color:#c5e1a5;}
+:root.olive .sr.next .st,:root.olive .sr.next .sn{color:#e6ee9c;}
+:root.olive .sr.past .st,:root.olive .sr.past .sn{color:#2e4a20;}
+:root.olive .dist-row{color:#aed581;}
+:root.olive .lch{background:linear-gradient(135deg,#0e2008 0%,#1e3818 100%);}
+:root.olive .lb{background:linear-gradient(160deg,#33691e 0%,#1b5e20 100%);border:1px solid rgba(124,179,66,.5);}
+:root.olive .bn{color:#c5e1a5;font-weight:800;}
+:root.olive .dp{background:#33691e;color:#e8f5e0;}
 
 .map-inline-btn{background:transparent;border:1px solid var(--brd);border-radius:8px;padding:2px 7px;font-size:16px;cursor:pointer;margin-right:4px;}
 .map-inline-btn:active{background:var(--acc);}
@@ -569,7 +583,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v100r</span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v101r</span><span class="hline hline-r"></span></h1>
     <div id="hdRow">
       <p id="hd"></p>
       <span id="userNameDisplay" style="white-space:nowrap;"></span>
@@ -1346,6 +1360,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v101r', date:'08.09.2026', desc:'Neues Olive-Green-Theme 🌿 — 4. Farbthema im Stil des TimeFlow-Blau, jetzt in dunklem Waldgrün mit Oliv-Akzenten'},
   {v:'v100r', date:'08.09.2026', desc:'Neues TimeFlow-Theme (Navy-Blau) — 3 wählbare Farbthemen: Dunkel 🌙 / Hell ☀️ / TimeFlow 🌊 — Auswahl per Klick auf den Theme-Button'},
   {v:'v99r', date:'07.09.2026', desc:'Fix GPS: Rescue A und Backup nur nach Fahrplanzeit (timeI > curI) — kein Überspringen von Schulzentrum Süd oder Damendorf Ortsmitte mehr; Koordinaten für Ahlefeld Hörst und Ascheffel Schule ergänzt'},
   {v:'v98r', date:'07.09.2026', desc:'Koordinaten ergänzt: Ahlefeld Katerberg/Poggensiek, Bistensee Seekamp/Dixrader Weg/Mühlenweg (Linie 727) — GPS-Tracking und Kartenanzeige jetzt vollständig'},
@@ -3781,8 +3796,8 @@ window.addEventListener('load', function() {
 
 
 // ── THEME UMSCHALTER ──────────────────────────────────
-var THEMES = ['dark', 'light', 'timeflow'];
-var THEME_ICONS = {dark:'🌙', light:'☀️', timeflow:'🌊'};
+var THEMES = ['dark', 'light', 'timeflow', 'olive'];
+var THEME_ICONS = {dark:'🌙', light:'☀️', timeflow:'🌊', olive:'🌿'};
 var currentTheme = localStorage.getItem('kp_theme') || 'dark';
 if (!THEMES.includes(currentTheme)) currentTheme = 'dark';
 
@@ -3796,7 +3811,7 @@ function setHeaderHeight() {
 }
 
 function applyTheme() {
-  document.documentElement.classList.remove('light', 'timeflow');
+  document.documentElement.classList.remove('light', 'timeflow', 'olive');
   if (currentTheme !== 'dark') document.documentElement.classList.add(currentTheme);
   var btn = document.getElementById('themeBtn');
   if (btn) btn.textContent = THEME_ICONS[currentTheme] || '🌙';
