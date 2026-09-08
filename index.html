@@ -19,6 +19,7 @@
 :root.light{--bg:#e2dbd0;--s1:#f0ebe0;--s2:#d6cfc4;--acc:#dc0018;--txt:#1c1917;--mut:#6e6458;--brd:#c2b490;--red:#dc0018;--grn:#3d8040;}
 :root.timeflow{--bg:#0a1525;--s1:#112038;--s2:#1a2e4a;--acc:#2196f3;--txt:#e8f0fe;--mut:#7fb3d3;--brd:#1e3d5c;--red:#ef5350;--grn:#4caf50;}
 :root.olive{--bg:#0c1a08;--s1:#142810;--s2:#1e3818;--acc:#7cb342;--txt:#e8f5e0;--mut:#8db87a;--brd:#2a4020;--red:#ef5350;--grn:#aed581;}
+:root.paper{--bg:#FAFAF7;--s1:#FFFFFF;--s2:#F0F0EC;--acc:#1D4ED8;--txt:#1A1A1A;--mut:#44464B;--brd:#D9D9D4;--red:#B3261E;--grn:#1B5E20;}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-height:100dvh;}
 header{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--brd);position:sticky;top:0;z-index:100;background:var(--bg);}
@@ -233,6 +234,19 @@ main{padding:4px 16px 100px;}
 :root.olive .lb{background:linear-gradient(160deg,#33691e 0%,#1b5e20 100%);border:1px solid rgba(124,179,66,.5);}
 :root.olive .bn{color:#c5e1a5;font-weight:800;}
 :root.olive .dp{background:#33691e;color:#e8f5e0;}
+:root.paper .sr.first .sd{background:radial-gradient(circle at 35% 32%,#93C5FD,#1D4ED8 54%,#1E3A8A);border:none;box-shadow:0 2px 6px rgba(29,78,216,.3);}
+:root.paper .sr.last .sd{background:radial-gradient(circle at 35% 32%,#86EFAC,#1B5E20 54%,#14532D);border:none;box-shadow:0 2px 6px rgba(27,94,32,.3);}
+:root.paper .sr.cur .sd{background:radial-gradient(circle at 35% 32%,#93C5FD,#1D4ED8 54%,#1E3A8A);border:none;box-shadow:0 0 8px rgba(29,78,216,.5),0 0 18px rgba(29,78,216,.2);}
+:root.paper .sr.next .sd{background:radial-gradient(circle at 35% 32%,#BAE6FD,#38BDF8 54%,#0369A1);border:none;box-shadow:0 2px 5px rgba(14,165,233,.3);}
+:root.paper .sr.past .sd{background:#D9D9D4;border:none;box-shadow:none;}
+:root.paper .sr.cur .st,:root.paper .sr.cur .sn{color:#1D4ED8;}
+:root.paper .sr.next .st,:root.paper .sr.next .sn{color:#5A5D63;}
+:root.paper .sr.past .st,:root.paper .sr.past .sn{color:#B0B0A8;}
+:root.paper .dist-row{color:#44464B;}
+:root.paper .lch{background:linear-gradient(135deg,#F0F0EC 0%,#FFFFFF 100%);}
+:root.paper .lb{background:linear-gradient(160deg,#1D4ED8 0%,#1E3A8A 100%);border:1px solid rgba(29,78,216,.4);}
+:root.paper .bn{color:#BFDBFE;font-weight:800;}
+:root.paper .dp{background:#DBEAFE;color:#1D4ED8;}
 
 .map-inline-btn{background:transparent;border:1px solid var(--brd);border-radius:8px;padding:2px 7px;font-size:16px;cursor:pointer;margin-right:4px;}
 .map-inline-btn:active{background:var(--acc);}
@@ -583,7 +597,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v101r</span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v102r</span><span class="hline hline-r"></span></h1>
     <div id="hdRow">
       <p id="hd"></p>
       <span id="userNameDisplay" style="white-space:nowrap;"></span>
@@ -1360,6 +1374,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v102r', date:'08.09.2026', desc:'Neues Paper-Theme 📄 — helles, kontrastreiches 5. Farbthema (WCAG AA/AAA) mit Off-White-Hintergrund und Blau-Akzent'},
   {v:'v101r', date:'08.09.2026', desc:'Neues Olive-Green-Theme 🌿 — 4. Farbthema im Stil des TimeFlow-Blau, jetzt in dunklem Waldgrün mit Oliv-Akzenten'},
   {v:'v100r', date:'08.09.2026', desc:'Neues TimeFlow-Theme (Navy-Blau) — 3 wählbare Farbthemen: Dunkel 🌙 / Hell ☀️ / TimeFlow 🌊 — Auswahl per Klick auf den Theme-Button'},
   {v:'v99r', date:'07.09.2026', desc:'Fix GPS: Rescue A und Backup nur nach Fahrplanzeit (timeI > curI) — kein Überspringen von Schulzentrum Süd oder Damendorf Ortsmitte mehr; Koordinaten für Ahlefeld Hörst und Ascheffel Schule ergänzt'},
@@ -3796,8 +3811,8 @@ window.addEventListener('load', function() {
 
 
 // ── THEME UMSCHALTER ──────────────────────────────────
-var THEMES = ['dark', 'light', 'timeflow', 'olive'];
-var THEME_ICONS = {dark:'🌙', light:'☀️', timeflow:'🌊', olive:'🌿'};
+var THEMES = ['dark', 'light', 'timeflow', 'olive', 'paper'];
+var THEME_ICONS = {dark:'🌙', light:'☀️', timeflow:'🌊', olive:'🌿', paper:'📄'};
 var currentTheme = localStorage.getItem('kp_theme') || 'dark';
 if (!THEMES.includes(currentTheme)) currentTheme = 'dark';
 
@@ -3811,7 +3826,7 @@ function setHeaderHeight() {
 }
 
 function applyTheme() {
-  document.documentElement.classList.remove('light', 'timeflow', 'olive');
+  document.documentElement.classList.remove('light', 'timeflow', 'olive', 'paper');
   if (currentTheme !== 'dark') document.documentElement.classList.add(currentTheme);
   var btn = document.getElementById('themeBtn');
   if (btn) btn.textContent = THEME_ICONS[currentTheme] || '🌙';
