@@ -1,5 +1,5 @@
 {
-  "dataVersion": "2026-09-22",
+  "dataVersion": "2026-09-22b",
   "kurse": [
     {
       "id": "kurs211",
@@ -13915,6 +13915,10 @@
     "Winnemark, Sundsacker": [
       54.6245996,
       9.945097
+    ],
+    "Lindhöft, In't Holt": [
+      54.454919,
+      9.947803
     ]
   }
 }
