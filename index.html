@@ -609,7 +609,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v108r</span><span id="dataVerSpan" class="data-ver"></span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v109r</span><span id="dataVerSpan" class="data-ver"></span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span><span class="hline hline-r"></span></h1>
     <div id="hdRow">
       <p id="hd"></p>
       <span id="userNameDisplay" style="white-space:nowrap;"></span>
@@ -721,6 +721,7 @@ const DATA_JSON_KEY = 'kp_data_json';
 function _applyDataBundle(bundle) {
   SEED.kurse = bundle.kurse;
   var k; for (k in bundle.coords) STOP_COORDS[k] = bundle.coords[k];
+  if (typeof invalidateCoordsCache === 'function') invalidateCoordsCache();
   var d;
   try { d = JSON.parse(localStorage.getItem('kp_data') || '{}'); } catch(e) { d = {}; }
   if (!d.kurse || !d.kurse.length) {
@@ -759,6 +760,7 @@ function loadAppData() {
         localStorage.setItem(DATA_VER_KEY, bundle.dataVersion);
         if (typeof D !== 'undefined') {
           D.kurse = bundle.kurse;
+          if (!D.activeKurs && bundle.kurse.length) D.activeKurs = bundle.kurse[0].id;
           if (typeof invalidateCoordsCache === 'function') invalidateCoordsCache();
           if (typeof renderTabs === 'function') renderTabs();
           if (typeof renderLines === 'function') renderLines();
@@ -818,6 +820,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v109r', date:'22.09.2026', desc:'Fix: Koordinaten-Cache nach Supabase-Sync und _applyDataBundle immer geleert; Datenstand-Update erzwungen — Lindhöft In\'t Holt Koordinate auf Linie 746 jetzt sichtbar'},
   {v:'v108r', date:'22.09.2026', desc:'Fix: Koordinaten-Cache wird nach Datenaktualisierung geleert — neue Haltestellen erscheinen sofort auf der Karte; Statusanzeige zeigt Datenstand (z.B. · 22.09.) im Header, grüner Punkt nur bei tatsächlich neuen Daten'},
   {v:'v107r', date:'22.09.2026', desc:'Header: grüner/roter Punkt neben Versionsnummer zeigt ob aktuelle Fahrplandaten geladen (grün) oder Offline-Cache aktiv (rot)'},
   {v:'v106r', date:'22.09.2026', desc:'Fahrplandaten ausgelagert: kursplan-data.json wird beim Start vom Server geladen — Daten sind jetzt ohne Code-Änderung aktualisierbar, Offline-Betrieb via Cache bleibt vollständig erhalten'},
@@ -2922,7 +2925,8 @@ async function loadFromSupabase(silent) {
     localStorage.setItem('kp_data', JSON.stringify(D));
   }
   if (data.notizen) { localStorage.setItem('kp_notizen', JSON.stringify(data.notizen)); notizen = data.notizen; }
-  if (data.coords) { localStorage.setItem('kp_coords', JSON.stringify(data.coords)); _coordsCache = null; }
+  if (data.coords) { localStorage.setItem('kp_coords', JSON.stringify(data.coords)); }
+  _coordsCache = null;
   if (!silent) setSyncStatus('✅ Geladen: ' + new Date().toLocaleTimeString('de-DE'), 'ok');
   renderTabs();
   renderLines();
