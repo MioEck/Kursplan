@@ -609,7 +609,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v109r</span><span id="dataVerSpan" class="data-ver"></span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v110r</span><span id="dataVerSpan" class="data-ver"></span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span><span class="hline hline-r"></span></h1>
     <div id="hdRow">
       <p id="hd"></p>
       <span id="userNameDisplay" style="white-space:nowrap;"></span>
@@ -820,6 +820,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v110r', date:'22.09.2026', desc:'Fix: Kartenanzeige für Haltestellen mit Sonderzeichen (z.B. Apostroph-Varianten) — normName-Cache wird jetzt korrekt befüllt'},
   {v:'v109r', date:'22.09.2026', desc:'Fix: Koordinaten-Cache nach Supabase-Sync und _applyDataBundle immer geleert; Datenstand-Update erzwungen — Lindhöft In\'t Holt Koordinate auf Linie 746 jetzt sichtbar'},
   {v:'v108r', date:'22.09.2026', desc:'Fix: Koordinaten-Cache wird nach Datenaktualisierung geleert — neue Haltestellen erscheinen sofort auf der Karte; Statusanzeige zeigt Datenstand (z.B. · 22.09.) im Header, grüner Punkt nur bei tatsächlich neuen Daten'},
   {v:'v107r', date:'22.09.2026', desc:'Header: grüner/roter Punkt neben Versionsnummer zeigt ob aktuelle Fahrplandaten geladen (grün) oder Offline-Cache aktiv (rot)'},
@@ -928,9 +929,12 @@ function getCoords() {
   }
   // STOP_COORDS hat immer Vorrang
   for (var k in STOP_COORDS) _coordsCache[k] = STOP_COORDS[k];
+  // Normalisierter Lookup-Cache für Sonderzeichen-Varianten (z.B. Apostroph U+2019 vs U+0027)
+  window._normCache = {};
+  for (var k in _coordsCache) window._normCache[normName(k)] = _coordsCache[k];
   return _coordsCache;
 }
-function invalidateCoordsCache() { _coordsCache = null; } // Aufrufen nach GPS-Einmessen
+function invalidateCoordsCache() { _coordsCache = null; window._normCache = null; }
 function haversine(a1, o1, a2, o2) {
   var R = 6371000;
   var dA = (a2-a1) * Math.PI/180;
