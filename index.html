@@ -31,6 +31,9 @@ header{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:
 #hdRow p{margin:0;}
 .hbtns{display:flex;align-items:center;gap:6px;flex-shrink:0;}
 .hv{font-size:12px;font-weight:400;color:var(--mut);letter-spacing:1px;}
+.data-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--mut);margin-left:5px;vertical-align:middle;transition:background .4s;cursor:default;}
+.data-dot.ok{background:var(--grn);}
+.data-dot.err{background:var(--red);}
 .hline{display:none;}
 #gpsBtn{display:flex;flex-direction:column;align-items:center;gap:2px;background:var(--s2);border:1.5px solid var(--brd);border-radius:10px;padding:4px 8px;cursor:pointer;min-width:50px;flex-shrink:0;transition:all .2s;}
 #gpsBtn.on{background:var(--grn);border-color:var(--grn);}
@@ -604,7 +607,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v106r</span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v107r</span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span><span class="hline hline-r"></span></h1>
     <div id="hdRow">
       <p id="hd"></p>
       <span id="userNameDisplay" style="white-space:nowrap;"></span>
@@ -726,6 +729,13 @@ function _applyDataBundle(bundle) {
   localStorage.setItem(DATA_VER_KEY, bundle.dataVersion);
 }
 
+function _setDataDot(state, tip) {
+  var el = document.getElementById('dataStatusDot');
+  if (!el) return;
+  el.className = 'data-dot' + (state ? ' ' + state : '');
+  if (tip) el.title = tip;
+}
+
 function loadAppData() {
   var cachedJson = localStorage.getItem(DATA_JSON_KEY);
   if (cachedJson) {
@@ -750,6 +760,8 @@ function loadAppData() {
           if (typeof renderLines === 'function') renderLines();
         }
       }
+      var now = new Date(); var hm = now.getHours() + ':' + String(now.getMinutes()).padStart(2,'0');
+      _setDataDot('ok', 'Daten: ' + bundle.dataVersion + ' · Bestätigt: ' + hm + ' Uhr');
     })
     .catch(function() {
       if (!cachedJson && typeof D !== 'undefined' && (!D.kurse || !D.kurse.length)) {
@@ -759,6 +771,8 @@ function loadAppData() {
         document.body && document.body.appendChild(t);
         setTimeout(function(){ t.remove(); }, 6000);
       }
+      var ver = localStorage.getItem(DATA_VER_KEY) || '—';
+      _setDataDot('err', 'Offline – letzte Version: ' + ver);
     });
 }
 loadAppData();
@@ -797,6 +811,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v107r', date:'22.09.2026', desc:'Header: grüner/roter Punkt neben Versionsnummer zeigt ob aktuelle Fahrplandaten geladen (grün) oder Offline-Cache aktiv (rot)'},
   {v:'v106r', date:'22.09.2026', desc:'Fahrplandaten ausgelagert: kursplan-data.json wird beim Start vom Server geladen — Daten sind jetzt ohne Code-Änderung aktualisierbar, Offline-Betrieb via Cache bleibt vollständig erhalten'},
   {v:'v105r', date:'10.09.2026', desc:'Fix: Koordinate für "Damendorf, Ortsmitte" korrigiert [54.42349/9.73417] — GPS-Tracking erkennt Haltestelle jetzt korrekt'},
   {v:'v104r', date:'08.09.2026', desc:'Paper-Theme: Linien-Badge hellblau (#DBEAFE→#BFDBFE) mit dunkelblauem Text statt dunklem Blau — bessere Lesbarkeit auf hellem Hintergrund'},
