@@ -31,9 +31,11 @@ header{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:
 #hdRow p{margin:0;}
 .hbtns{display:flex;align-items:center;gap:6px;flex-shrink:0;}
 .hv{font-size:12px;font-weight:400;color:var(--mut);letter-spacing:1px;}
-.data-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--mut);margin-left:5px;vertical-align:middle;transition:background .4s;cursor:default;}
-.data-dot.ok{background:var(--grn);}
+.data-dot{display:inline-block;width:6px;height:6px;border-radius:50%;background:transparent;margin-left:4px;vertical-align:middle;cursor:default;}
+.data-dot.ok{background:var(--grn);animation:dotOkFade 5s forwards;}
 .data-dot.err{background:var(--red);}
+.data-ver{font-size:10px;color:var(--mut);margin-left:5px;vertical-align:middle;letter-spacing:0;}
+@keyframes dotOkFade{0%,60%{opacity:1;}100%{opacity:0;}}
 .hline{display:none;}
 #gpsBtn{display:flex;flex-direction:column;align-items:center;gap:2px;background:var(--s2);border:1.5px solid var(--brd);border-radius:10px;padding:4px 8px;cursor:pointer;min-width:50px;flex-shrink:0;transition:all .2s;}
 #gpsBtn.on{background:var(--grn);border-color:var(--grn);}
@@ -607,7 +609,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div class="logo">MR</div>
   <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v107r</span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span><span class="hline hline-r"></span></h1>
+    <h1><span class="hline"></span>KURSPLAN <span class="hv">v108r</span><span id="dataVerSpan" class="data-ver"></span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span><span class="hline hline-r"></span></h1>
     <div id="hdRow">
       <p id="hd"></p>
       <span id="userNameDisplay" style="white-space:nowrap;"></span>
@@ -745,6 +747,7 @@ function loadAppData() {
     .then(function(r) { return r.json(); })
     .then(function(bundle) {
       var cachedVer = localStorage.getItem(DATA_VER_KEY);
+      var now = new Date(); var hm = now.getHours() + ':' + String(now.getMinutes()).padStart(2,'0');
       if (bundle.dataVersion !== cachedVer) {
         localStorage.setItem(DATA_JSON_KEY, JSON.stringify(bundle));
         SEED.kurse = bundle.kurse;
@@ -756,12 +759,16 @@ function loadAppData() {
         localStorage.setItem(DATA_VER_KEY, bundle.dataVersion);
         if (typeof D !== 'undefined') {
           D.kurse = bundle.kurse;
+          if (typeof invalidateCoordsCache === 'function') invalidateCoordsCache();
           if (typeof renderTabs === 'function') renderTabs();
           if (typeof renderLines === 'function') renderLines();
         }
+        _setDataDot('ok', 'Neue Daten geladen: ' + bundle.dataVersion + ' · ' + hm + ' Uhr');
+      } else {
+        _setDataDot('', 'Stand: ' + bundle.dataVersion + ' · geprüft ' + hm + ' Uhr');
       }
-      var now = new Date(); var hm = now.getHours() + ':' + String(now.getMinutes()).padStart(2,'0');
-      _setDataDot('ok', 'Daten: ' + bundle.dataVersion + ' · Bestätigt: ' + hm + ' Uhr');
+      var dvs = document.getElementById('dataVerSpan');
+      if (dvs) { var m = bundle.dataVersion.match(/\d{4}-(\d{2})-(\d{2})/); dvs.textContent = m ? '· '+m[2]+'.'+m[1]+'.' : '· '+bundle.dataVersion; }
     })
     .catch(function() {
       if (!cachedJson && typeof D !== 'undefined' && (!D.kurse || !D.kurse.length)) {
@@ -811,6 +818,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v108r', date:'22.09.2026', desc:'Fix: Koordinaten-Cache wird nach Datenaktualisierung geleert — neue Haltestellen erscheinen sofort auf der Karte; Statusanzeige zeigt Datenstand (z.B. · 22.09.) im Header, grüner Punkt nur bei tatsächlich neuen Daten'},
   {v:'v107r', date:'22.09.2026', desc:'Header: grüner/roter Punkt neben Versionsnummer zeigt ob aktuelle Fahrplandaten geladen (grün) oder Offline-Cache aktiv (rot)'},
   {v:'v106r', date:'22.09.2026', desc:'Fahrplandaten ausgelagert: kursplan-data.json wird beim Start vom Server geladen — Daten sind jetzt ohne Code-Änderung aktualisierbar, Offline-Betrieb via Cache bleibt vollständig erhalten'},
   {v:'v105r', date:'10.09.2026', desc:'Fix: Koordinate für "Damendorf, Ortsmitte" korrigiert [54.42349/9.73417] — GPS-Tracking erkennt Haltestelle jetzt korrekt'},
