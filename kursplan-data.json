@@ -1,5 +1,5 @@
 {
-  "dataVersion": "2026-09-22c",
+  "dataVersion": "2026-10-08",
   "kurse": [
     {
       "id": "kurs211",
@@ -9255,10 +9255,10 @@
     {
       "id": "kurs411",
       "name": "Kurs 411",
-      "typ": "ferien",
-      "datum": "2026-07-06",
+      "typ": "schule",
+      "datum": "2026-10-12",
       "schichtdauer": "06:07",
-      "gesamtkm": "187,816",
+      "gesamtkm": "187,839",
       "service_blocks": [
         {
           "after": "3720011",
@@ -9890,10 +9890,10 @@
     {
       "id": "kurs412",
       "name": "Kurs 412",
-      "typ": "ferien",
-      "datum": "2026-07-06",
+      "typ": "schule",
+      "datum": "2026-10-12",
       "schichtdauer": "09:35",
-      "gesamtkm": "244,418",
+      "gesamtkm": "244,441",
       "service_blocks": [
         {
           "after": "3721021",
@@ -10834,10 +10834,10 @@
     {
       "id": "kurs413",
       "name": "Kurs 413",
-      "typ": "ferien",
-      "datum": "2026-07-06",
+      "typ": "schule",
+      "datum": "2026-10-12",
       "schichtdauer": "10:51",
-      "gesamtkm": "323,738",
+      "gesamtkm": "323,761",
       "lines": [
         {
           "id": "l1",
@@ -11756,10 +11756,10 @@
     {
       "id": "kurs414",
       "name": "Kurs 414",
-      "typ": "ferien",
-      "datum": "2026-07-06",
+      "typ": "schule",
+      "datum": "2026-10-12",
       "schichtdauer": "10:01",
-      "gesamtkm": "271,377",
+      "gesamtkm": "271,518",
       "service_blocks": [
         {
           "after": "3720031",
