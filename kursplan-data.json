@@ -1,5 +1,5 @@
 {
-  "dataVersion": "2026-09-22c",
+  "dataVersion": "2026-10-25",
   "kurse": [
     {
       "id": "kurs211",
@@ -941,9 +941,9 @@
       "id": "kurs213",
       "name": "Kurs 213",
       "typ": "schule",
-      "datum": "2026-08-17",
-      "schichtdauer": "09:14",
-      "gesamtkm": "173,338",
+      "datum": "2026-10-26",
+      "schichtdauer": "09:08",
+      "gesamtkm": "168,269",
       "lines": [
         {
           "id": "p1",
@@ -951,54 +951,28 @@
           "fahrtNr": "3710008",
           "start": "Karby, Am Ring",
           "end": "Eckernförde, Schulzentrum Süd",
-          "startTime": "06:31",
+          "startTime": "06:37",
           "endTime": "07:40",
           "stops": [
             {
-              "time": "06:31",
+              "time": "06:37",
               "name": "Karby, Am Ring"
             },
             {
-              "time": "06:32",
+              "time": "06:38",
               "name": "Dörphof, Karlberger Straße"
             },
             {
-              "time": "06:34",
+              "time": "06:40",
               "name": "Dörphof, Schuby"
             },
             {
-              "time": "06:36",
+              "time": "06:42",
               "name": "Dörphof, Grüntal"
             },
             {
-              "time": "06:38",
+              "time": "06:44",
               "name": "Vogelsang-Grünholz, Kummersholz"
-            },
-            {
-              "time": "06:45",
-              "name": "Waabs, Fuchsberg"
-            },
-            {
-              "time": "06:47",
-              "name": "Schwastrum"
-            },
-            {
-              "time": "06:48",
-              "name": "Vogelsang-Grünholz, Sankt-Johannes-Stift",
-              "hints": [
-                {
-                  "typ": "Z",
-                  "linie": "X710",
-                  "dest": "Kappeln, ZOB",
-                  "fp": 5
-                },
-                {
-                  "typ": "Z",
-                  "linie": "711",
-                  "dest": "Eckernförde, Bahnhof/ZOB",
-                  "fp": 5
-                }
-              ]
             },
             {
               "time": "06:52",
@@ -9255,10 +9229,10 @@
     {
       "id": "kurs411",
       "name": "Kurs 411",
-      "typ": "ferien",
-      "datum": "2026-07-06",
+      "typ": "schule",
+      "datum": "2026-10-12",
       "schichtdauer": "06:07",
-      "gesamtkm": "187,816",
+      "gesamtkm": "187,839",
       "service_blocks": [
         {
           "after": "3720011",
@@ -9890,10 +9864,10 @@
     {
       "id": "kurs412",
       "name": "Kurs 412",
-      "typ": "ferien",
-      "datum": "2026-07-06",
+      "typ": "schule",
+      "datum": "2026-10-12",
       "schichtdauer": "09:35",
-      "gesamtkm": "244,418",
+      "gesamtkm": "244,441",
       "service_blocks": [
         {
           "after": "3721021",
@@ -10834,10 +10808,10 @@
     {
       "id": "kurs413",
       "name": "Kurs 413",
-      "typ": "ferien",
-      "datum": "2026-07-06",
+      "typ": "schule",
+      "datum": "2026-10-12",
       "schichtdauer": "10:51",
-      "gesamtkm": "323,738",
+      "gesamtkm": "323,761",
       "lines": [
         {
           "id": "l1",
@@ -11756,10 +11730,10 @@
     {
       "id": "kurs414",
       "name": "Kurs 414",
-      "typ": "ferien",
-      "datum": "2026-07-06",
+      "typ": "schule",
+      "datum": "2026-10-12",
       "schichtdauer": "10:01",
-      "gesamtkm": "271,377",
+      "gesamtkm": "271,518",
       "service_blocks": [
         {
           "after": "3720031",
