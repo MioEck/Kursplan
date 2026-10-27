@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
 <title>Busfahrer Kursplan</title>
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#ec0016">
+<meta name="theme-color" content="#1a5cff">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -15,7 +15,7 @@
 <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0a0b1e;--s1:#10133a;--s2:#181c4a;--acc:#4caf50;--txt:#e0e4ff;--mut:#7278b0;--brd:#252868;--red:#f85149;--grn:#3fb950;}
+:root{--bg:#0a0b1e;--s1:#10133a;--s2:#181c4a;--acc:#5e8cff;--txt:#e0e4ff;--mut:#7278b0;--brd:#252868;--red:#f85149;--grn:#3fb950;}
 :root.light{--bg:#e2dbd0;--s1:#f0ebe0;--s2:#d6cfc4;--acc:#dc0018;--txt:#1c1917;--mut:#6e6458;--brd:#c2b490;--red:#dc0018;--grn:#3d8040;}
 :root.timeflow{--bg:#0a1525;--s1:#112038;--s2:#1a2e4a;--acc:#2196f3;--txt:#e8f0fe;--mut:#7fb3d3;--brd:#1e3d5c;--red:#ef5350;--grn:#4caf50;}
 :root.olive{--bg:#0c1a08;--s1:#142810;--s2:#1e3818;--acc:#7cb342;--txt:#e8f5e0;--mut:#8db87a;--brd:#2a4020;--red:#ef5350;--grn:#aed581;}
@@ -77,7 +77,7 @@ main{padding:4px 16px 100px;}
 .lch{display:grid;grid-template-columns:94px 1fr auto;gap:10px;align-items:center;padding:12px 14px;cursor:pointer;user-select:none;border-radius:16px;}
 .lc.exp .lch{position:sticky;top:var(--subhh,60px);z-index:50;background:var(--s1);border-radius:16px 16px 0 0;border-bottom:1px solid var(--brd);box-shadow:0 3px 10px rgba(0,0,0,.2);}
 
-.lb{width:90px;min-height:54px;border-radius:10px;background:var(--s2);border:1.5px solid var(--brd);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;padding:4px;}
+.lb{width:90px;min-height:54px;border-radius:10px;background:linear-gradient(160deg,#1e3fa8 0%,#0f2080 100%);border:1.5px solid rgba(80,130,255,.40);display:flex;flex-direction:column;align-items:center;justify-content:center;flex-shrink:0;padding:4px;}
 .bl{font-size:12px;color:var(--mut);text-transform:uppercase;letter-spacing:1px;font-weight:600;}
 .bn{font-family:'Bebas Neue',sans-serif;font-size:18px;color:var(--acc);line-height:1;}
 .bfl{font-size:11px;color:var(--mut);text-transform:uppercase;margin-top:2px;}
@@ -91,7 +91,7 @@ main{padding:4px 16px 100px;}
 .ca button:hover{background:var(--acc);color:#0f1117;}
 .ca .dbtn:hover{background:var(--red);color:#fff;}
 .ri{text-align:right;flex-shrink:0;display:flex;flex-direction:column;align-items:flex-end;gap:4px;}
-.dp{background:var(--s2);border-radius:8px;padding:6px 12px;font-size:15px;font-weight:500;}
+.dp{background:#1a2d8a;color:#a0c4ff;border-radius:8px;padding:6px 12px;font-size:15px;font-weight:500;}
 .ea{font-size:16px;color:var(--mut);transition:transform .25s;}
 .lc.exp .ea{transform:rotate(180deg);color:var(--acc);}
 .sp{display:none;border-top:1px solid var(--brd);padding:0 14px 14px;}
@@ -624,6 +624,43 @@ main{padding:4px 16px 100px;}
 .h-lock-btn:active{opacity:.9;}
 /* Alte Header-Elemente unsichtbar machen */
 .logo,.htxt,.hbtns{display:none!important;}
+
+/* ── THEME COHESION ───────────────────────────── */
+/* Olive: grüner Header + settingsBar */
+:root.olive header{background:linear-gradient(148deg,#2e6b1c 0%,#1a4d0a 55%,#0f3506 100%);box-shadow:0 4px 20px rgba(0,25,0,.40);}
+:root.olive #hKurs{background:rgba(80,160,40,.22);border-color:rgba(120,210,60,.25);}
+:root.olive .hk-hint{color:rgba(200,250,160,.55);}
+:root.olive #settingsBar{background:linear-gradient(to bottom,#1a4d0a 0%,#0a2204 100%);}
+:root.olive .h-chip{border-color:rgba(124,179,66,.25);background:rgba(60,120,20,.15);color:rgba(197,225,165,.75);}
+:root.olive .h-chip.active{background:rgba(100,180,40,.38);border-color:rgba(160,220,80,.45);color:#c5e1a5;}
+:root.olive .settings-kurse-lbl{color:rgba(180,220,120,.35);}
+/* Timeflow: settingsBar zum Ozean-Blau passend */
+:root.timeflow #settingsBar{background:linear-gradient(to bottom,#0d2544 0%,#061828 100%);}
+:root.timeflow .h-chip.active{background:rgba(33,150,243,.35);border-color:rgba(33,150,243,.50);color:#90caf9;}
+/* Light: warme settingsBar */
+:root.light #settingsBar{background:linear-gradient(to bottom,var(--s1) 0%,var(--bg) 100%);border-bottom:1px solid var(--brd);}
+:root.light .h-sc{background:rgba(0,0,0,.06);border-color:var(--brd);}
+:root.light .h-sc-lbl{color:var(--mut);}
+:root.light .h-sc-val{color:var(--txt);}
+:root.light .h-sc-sub{color:var(--mut);}
+:root.light #settingsBar #userNameDisplay{color:var(--txt)!important;}
+:root.light #settingsBar #gpsBtn{background:rgba(0,0,0,.06);border-color:var(--brd);}
+:root.light #settingsBar #gpsLbl{color:var(--mut);}
+:root.light .h-chip{border-color:var(--brd);background:rgba(0,0,0,.06);color:var(--mut);}
+:root.light .h-chip.active{background:rgba(220,0,24,.12);border-color:rgba(220,0,24,.35);color:#dc0018;}
+:root.light .settings-kurse-lbl{color:var(--mut);}
+/* Paper: saubere weiße settingsBar */
+:root.paper #settingsBar{background:linear-gradient(to bottom,var(--s2) 0%,var(--s1) 100%);border-bottom:1px solid var(--brd);}
+:root.paper .h-sc{background:rgba(29,78,216,.06);border-color:rgba(29,78,216,.18);}
+:root.paper .h-sc-lbl{color:#1D4ED8;}
+:root.paper .h-sc-val{color:var(--txt);}
+:root.paper .h-sc-sub{color:var(--mut);}
+:root.paper #settingsBar #userNameDisplay{color:var(--txt)!important;}
+:root.paper #settingsBar #gpsBtn{background:rgba(29,78,216,.06);border-color:rgba(29,78,216,.18);}
+:root.paper #settingsBar #gpsLbl{color:#1D4ED8;}
+:root.paper .h-chip{border-color:rgba(29,78,216,.22);background:rgba(29,78,216,.06);color:#1D4ED8;}
+:root.paper .h-chip.active{background:rgba(29,78,216,.18);border-color:rgba(29,78,216,.40);color:#1e3a8a;}
+:root.paper .settings-kurse-lbl{color:#1D4ED8;}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 </head>
