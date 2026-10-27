@@ -22,7 +22,7 @@
 :root.paper{--bg:#FAFAF7;--s1:#FFFFFF;--s2:#F0F0EC;--acc:#1D4ED8;--txt:#1A1A1A;--mut:#44464B;--brd:#D9D9D4;--red:#B3261E;--grn:#1B5E20;}
 *{box-sizing:border-box;margin:0;padding:0;}
 body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--txt);min-height:100dvh;}
-header{display:flex;align-items:center;gap:10px;padding:10px 14px;border-bottom:1px solid var(--brd);position:sticky;top:0;z-index:100;background:var(--bg);}
+header{display:flex;flex-direction:column;gap:8px;padding:12px 12px 10px;border-bottom:none;position:sticky;top:0;z-index:100;background:linear-gradient(148deg,#1a5cff 0%,#3422d8 55%,#4a18c0 100%);box-shadow:0 4px 20px rgba(0,0,40,.35);}
 .logo{width:36px;height:36px;background:var(--acc);border-radius:9px;display:flex;align-items:center;justify-content:center;font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:2px;color:#fff;flex-shrink:0;}
 .htxt{flex:1;min-width:0;}
 .htxt h1{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;}
@@ -581,6 +581,46 @@ main{padding:4px 16px 100px;}
 :root.light .ks-cat-title{color:var(--lg-navy2);}
 #backBtn{background:none;border:none;cursor:pointer;padding:4px 8px 4px 0;font-size:20px;color:var(--mut);line-height:1;}
 #backBtn:hover{color:var(--txt);}
+/* ── NEUES HEADER-DESIGN ─────────────────────────────── */
+/* Alle Theme-spezifischen Header-Overrides mit blauem Gradient überschreiben */
+:root header,:root.light header,:root.timeflow header,:root.olive header,:root.paper header{background:linear-gradient(148deg,#1a5cff 0%,#3422d8 55%,#4a18c0 100%)!important;display:flex!important;flex-direction:column!important;gap:8px!important;padding:12px 12px 10px!important;border-bottom:none!important;box-shadow:0 4px 20px rgba(0,0,40,.35)!important;}
+/* App-Titel (kein Kurs gewählt) */
+#hNoKurs{display:flex;align-items:center;gap:7px;padding:1px 2px;}
+.hnk-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:3px;color:#fff;}
+#hNoKurs .hv{color:rgba(255,255,255,.45);font-size:10px;}
+#hNoKurs .data-ver{color:rgba(255,255,255,.35);}
+/* Kurs-Karte (groß, blau) — überschreibt alte #hKurs-Stile */
+#hKurs{display:none;cursor:pointer;background:rgba(100,135,255,.28);border:1px solid rgba(160,200,255,.28);border-radius:18px;padding:11px 14px;margin-top:0;transition:background .15s,transform .1s;-webkit-tap-highlight-color:transparent;}
+#hKurs:active{background:rgba(120,155,255,.42);transform:scale(.98);}
+.hk-hint{font-size:9px;color:rgba(255,255,255,.52);letter-spacing:.8px;margin-bottom:3px;display:flex;align-items:center;gap:4px;}
+.hk-arr{font-size:12px;}
+.hkn{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:2px;line-height:1;color:#fff;}
+.hks{font-size:10px;color:rgba(255,255,255,.70);display:flex;gap:8px;flex-wrap:wrap;margin-top:2px;}
+/* Karten-Grid */
+.h-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;}
+.h-sc{background:rgba(255,255,255,.10);border:1px solid rgba(180,210,255,.18);border-radius:14px;padding:9px 11px;display:flex;flex-direction:column;gap:3px;text-align:left;position:relative;}
+.h-sc-full{grid-column:1/-1;}
+.h-sc-lbl{font-size:7.5px;font-weight:700;letter-spacing:1.5px;color:rgba(255,255,255,.38);text-transform:uppercase;}
+.h-sc-val{font-size:13px;font-weight:600;color:#fff;display:flex;align-items:center;gap:5px;min-height:20px;}
+.h-sc-sub{font-size:9px;color:rgba(255,255,255,.42);}
+.h-sc-sub .hv{color:rgba(255,255,255,.45);font-size:9px;letter-spacing:.5px;}
+header #userNameDisplay{color:#fff!important;font-size:13px!important;font-weight:600!important;}
+/* GPS als Karte */
+header #gpsBtn{background:rgba(255,255,255,.10);border:1px solid rgba(180,210,255,.18);border-radius:14px;padding:9px 11px;min-width:unset;flex-direction:column;align-items:flex-start;gap:3px;cursor:pointer;transition:background .15s,transform .1s;}
+header #gpsBtn.on{background:rgba(0,180,80,.28);border-color:rgba(80,255,150,.30);}
+header #gpsBtn.searching{background:rgba(245,158,11,.28);border-color:rgba(250,200,0,.25);}
+header #gpsBtn:active{transform:scale(.97);}
+header #gpsLbl{font-size:11px;font-weight:700;letter-spacing:.3px;color:#fff;}
+/* Theme-Chips */
+.h-chips{display:flex;gap:5px;flex-wrap:wrap;margin-top:2px;}
+.h-chip{font-size:9px;font-weight:700;padding:3px 9px;border-radius:20px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.10);color:rgba(255,255,255,.62);cursor:pointer;font-family:'DM Sans',sans-serif;letter-spacing:.3px;transition:background .15s,border-color .15s;}
+.h-chip.active{background:rgba(100,145,255,.40);border-color:rgba(155,190,255,.45);color:#fff;}
+.h-chip:active{transform:scale(.96);}
+/* Admin-Schloss (klein, in Fahrer-Karte) */
+.h-lock-btn{position:absolute;top:8px;right:9px;background:none;border:none;font-size:13px;cursor:pointer;opacity:.3;padding:2px;line-height:1;}
+.h-lock-btn:active{opacity:.9;}
+/* Alte Header-Elemente unsichtbar machen */
+.logo,.htxt,.hbtns{display:none!important;}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 </head>
@@ -607,27 +647,41 @@ main{padding:4px 16px 100px;}
 })();
 </script>
 <header>
-  <div class="logo">MR</div>
-  <div class="htxt">
-    <h1><span class="hline"></span>KURSPLAN <span class="hv">v112r</span><span id="dataVerSpan" class="data-ver"></span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span><span class="hline hline-r"></span></h1>
-    <div id="hdRow">
-      <p id="hd"></p>
-      <span id="userNameDisplay" style="white-space:nowrap;"></span>
-    </div>
-    <div id="hKurs" onclick="showSelectScreen()">
-      <div class="hk-hint">← Zur Kursauswahl</div>
-      <div class="hkn" id="hKtn"></div>
-      <div class="hks" id="hKs"></div>
-    </div>
+  <div id="hNoKurs">
+    <span class="hnk-title">KURSPLAN</span>
+    <span class="hv">v112r</span><span id="dataVerSpan" class="data-ver"></span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span>
   </div>
-  <div class="hbtns">
-    <button class="lock-btn" id="lockBtn" onclick="openKeypad()" title="Admin">🔒</button>
-    <button class="lock-btn" id="themeBtn" onclick="toggleTheme()" title="Hell/Dunkel">🌙</button>
-    <button id="gpsBtn" onclick="toggleGps()">
-      <span style="font-size:18px;line-height:1">🌐</span>
-      <span id="gpsLbl">GPS AUS</span>
+  <div id="hKurs" onclick="showSelectScreen()">
+    <div class="hk-hint"><span class="hk-arr">←</span> ZUR KURSAUSWAHL</div>
+    <div class="hkn" id="hKtn"></div>
+    <div class="hks" id="hKs"></div>
+  </div>
+  <div class="h-grid">
+    <div class="h-sc">
+      <button class="h-lock-btn" id="lockBtn" onclick="openKeypad()" title="Admin">🔒</button>
+      <div class="h-sc-lbl">FAHRER</div>
+      <div class="h-sc-val"><span id="userNameDisplay"></span></div>
+      <div class="h-sc-sub"><span class="hv">v112r</span> · <span id="hd"></span></div>
+    </div>
+    <button id="gpsBtn" onclick="toggleGps()" class="h-sc">
+      <div class="h-sc-lbl">GPS</div>
+      <div class="h-sc-val">
+        <span style="font-size:15px;line-height:1">🌐</span>
+        <span id="gpsLbl">GPS AUS</span>
+      </div>
     </button>
+    <div class="h-sc h-sc-full">
+      <div class="h-sc-lbl">DESIGN</div>
+      <div id="hThemeChips" class="h-chips">
+        <button class="h-chip" onclick="applyThemeChoice('dark')">🌙 Dunkel</button>
+        <button class="h-chip" onclick="applyThemeChoice('light')">☀️ Hell</button>
+        <button class="h-chip" onclick="applyThemeChoice('timeflow')">🌊 Flow</button>
+        <button class="h-chip" onclick="applyThemeChoice('olive')">🌿 Olive</button>
+        <button class="h-chip" onclick="applyThemeChoice('paper')">📄 Papier</button>
+      </div>
+    </div>
   </div>
+  <button id="themeBtn" onclick="toggleTheme()" hidden></button>
 </header>
 <div id="subhdr">
 <div id="gpsBar">
@@ -1738,7 +1792,9 @@ function renderLines() {
 
   if (!kurs) { showSelectScreen(); return; }
 
-  document.getElementById('hKurs').style.display = 'block'; em.style.display = 'none';
+  document.getElementById('hKurs').style.display = 'block';
+  document.getElementById('hNoKurs').style.display = 'none';
+  em.style.display = 'none';
   document.getElementById('hKtn').textContent = kurs.name;
 
   var lines = kurs.lines || [];
@@ -3283,12 +3339,21 @@ function applyTheme() {
   if (currentTheme !== 'dark') document.documentElement.classList.add(currentTheme);
   var btn = document.getElementById('themeBtn');
   if (btn) btn.textContent = THEME_ICONS[currentTheme] || '🌙';
+  document.querySelectorAll('.h-chip').forEach(function(c) {
+    c.classList.toggle('active', c.getAttribute('onclick') === "applyThemeChoice('" + currentTheme + "')");
+  });
 }
 
 function toggleTheme() {
   var idx = THEMES.indexOf(currentTheme);
   currentTheme = THEMES[(idx + 1) % THEMES.length];
   localStorage.setItem('kp_theme', currentTheme);
+  applyTheme();
+}
+
+function applyThemeChoice(name) {
+  currentTheme = name;
+  localStorage.setItem('kp_theme', name);
   applyTheme();
 }
 
@@ -3413,6 +3478,7 @@ window.addEventListener('resize', setHeaderHeight);
 function showSelectScreen() {
   expId = null;
   document.getElementById('hKurs').style.display = 'none';
+  document.getElementById('hNoKurs').style.display = 'flex';
   document.getElementById('kursSelect').style.display = 'block';
   document.getElementById('ll').innerHTML = '';
   document.getElementById('em').style.display = 'none';
