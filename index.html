@@ -15,7 +15,7 @@
 <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#0d1117;--s1:#161b22;--s2:#21262d;--acc:#4caf50;--txt:#e6edf3;--mut:#7d8590;--brd:#30363d;--red:#f85149;--grn:#3fb950;}
+:root{--bg:#0a0b1e;--s1:#10133a;--s2:#181c4a;--acc:#4caf50;--txt:#e0e4ff;--mut:#7278b0;--brd:#252868;--red:#f85149;--grn:#3fb950;}
 :root.light{--bg:#e2dbd0;--s1:#f0ebe0;--s2:#d6cfc4;--acc:#dc0018;--txt:#1c1917;--mut:#6e6458;--brd:#c2b490;--red:#dc0018;--grn:#3d8040;}
 :root.timeflow{--bg:#0a1525;--s1:#112038;--s2:#1a2e4a;--acc:#2196f3;--txt:#e8f0fe;--mut:#7fb3d3;--brd:#1e3d5c;--red:#ef5350;--grn:#4caf50;}
 :root.olive{--bg:#0c1a08;--s1:#142810;--s2:#1e3818;--acc:#7cb342;--txt:#e8f5e0;--mut:#8db87a;--brd:#2a4020;--red:#ef5350;--grn:#aed581;}
@@ -604,13 +604,16 @@ main{padding:4px 16px 100px;}
 .h-sc-val{font-size:13px;font-weight:600;color:#fff;display:flex;align-items:center;gap:5px;min-height:20px;}
 .h-sc-sub{font-size:9px;color:rgba(255,255,255,.42);}
 .h-sc-sub .hv{color:rgba(255,255,255,.45);font-size:9px;letter-spacing:.5px;}
-header #userNameDisplay{color:#fff!important;font-size:13px!important;font-weight:600!important;}
-/* GPS als Karte */
-header #gpsBtn{background:rgba(255,255,255,.10);border:1px solid rgba(180,210,255,.18);border-radius:14px;padding:9px 11px;min-width:unset;flex-direction:column;align-items:flex-start;gap:3px;cursor:pointer;transition:background .15s,transform .1s;}
-header #gpsBtn.on{background:rgba(0,180,80,.28);border-color:rgba(80,255,150,.30);}
-header #gpsBtn.searching{background:rgba(245,158,11,.28);border-color:rgba(250,200,0,.25);}
-header #gpsBtn:active{transform:scale(.97);}
-header #gpsLbl{font-size:11px;font-weight:700;letter-spacing:.3px;color:#fff;}
+#settingsBar #userNameDisplay{color:#fff!important;font-size:13px!important;font-weight:600!important;}
+/* GPS als Karte (in settingsBar) */
+#settingsBar #gpsBtn{background:rgba(255,255,255,.10);border:1px solid rgba(180,210,255,.18);border-radius:14px;padding:9px 11px;min-width:unset;flex-direction:column;align-items:flex-start;gap:3px;cursor:pointer;transition:background .15s,transform .1s;}
+#settingsBar #gpsBtn.on{background:rgba(0,180,80,.28);border-color:rgba(80,255,150,.30);}
+#settingsBar #gpsBtn.searching{background:rgba(245,158,11,.28);border-color:rgba(250,200,0,.25);}
+#settingsBar #gpsBtn:active{transform:scale(.97);}
+#settingsBar #gpsLbl{font-size:11px;font-weight:700;letter-spacing:.3px;color:#fff;}
+/* settingsBar (Auswahl- und Einstellungsseite) */
+#settingsBar{display:none;background:linear-gradient(to bottom,#4318b8 0%,#1c0a60 100%);padding:0 12px 12px;}
+.settings-kurse-lbl{font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:2px;color:rgba(255,255,255,.32);padding:10px 2px 2px;}
 /* Theme-Chips */
 .h-chips{display:flex;gap:5px;flex-wrap:wrap;margin-top:2px;}
 .h-chip{font-size:9px;font-weight:700;padding:3px 9px;border-radius:20px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.10);color:rgba(255,255,255,.62);cursor:pointer;font-family:'DM Sans',sans-serif;letter-spacing:.3px;transition:background .15s,border-color .15s;}
@@ -656,31 +659,6 @@ header #gpsLbl{font-size:11px;font-weight:700;letter-spacing:.3px;color:#fff;}
     <div class="hkn" id="hKtn"></div>
     <div class="hks" id="hKs"></div>
   </div>
-  <div class="h-grid">
-    <div class="h-sc">
-      <button class="h-lock-btn" id="lockBtn" onclick="openKeypad()" title="Admin">🔒</button>
-      <div class="h-sc-lbl">FAHRER</div>
-      <div class="h-sc-val"><span id="userNameDisplay"></span></div>
-      <div class="h-sc-sub"><span class="hv">v112r</span> · <span id="hd"></span></div>
-    </div>
-    <button id="gpsBtn" onclick="toggleGps()" class="h-sc">
-      <div class="h-sc-lbl">GPS</div>
-      <div class="h-sc-val">
-        <span style="font-size:15px;line-height:1">🌐</span>
-        <span id="gpsLbl">GPS AUS</span>
-      </div>
-    </button>
-    <div class="h-sc h-sc-full">
-      <div class="h-sc-lbl">DESIGN</div>
-      <div id="hThemeChips" class="h-chips">
-        <button class="h-chip" onclick="applyThemeChoice('dark')">🌙 Dunkel</button>
-        <button class="h-chip" onclick="applyThemeChoice('light')">☀️ Hell</button>
-        <button class="h-chip" onclick="applyThemeChoice('timeflow')">🌊 Flow</button>
-        <button class="h-chip" onclick="applyThemeChoice('olive')">🌿 Olive</button>
-        <button class="h-chip" onclick="applyThemeChoice('paper')">📄 Papier</button>
-      </div>
-    </div>
-  </div>
   <button id="themeBtn" onclick="toggleTheme()" hidden></button>
 </header>
 <div id="subhdr">
@@ -715,6 +693,34 @@ header #gpsLbl{font-size:11px;font-weight:700;letter-spacing:.3px;color:#fff;}
   <span class="sync-status" id="syncStatus">Nicht synchronisiert</span>
 </div>
   <button id="kursEditBtn" class="bs admin-btn-inline" onclick="openKursEdit()" style="display:none;border-radius:10px;padding:6px 12px;font-size:13px">✏️</button>
+</div>
+<div id="settingsBar">
+  <div class="h-grid">
+    <div class="h-sc">
+      <button class="h-lock-btn" id="lockBtn" onclick="openKeypad()" title="Admin">🔒</button>
+      <div class="h-sc-lbl">FAHRER</div>
+      <div class="h-sc-val"><span id="userNameDisplay"></span></div>
+      <div class="h-sc-sub"><span class="hv">v112r</span> · <span id="hd"></span></div>
+    </div>
+    <button id="gpsBtn" onclick="toggleGps()" class="h-sc">
+      <div class="h-sc-lbl">GPS</div>
+      <div class="h-sc-val">
+        <span style="font-size:15px;line-height:1">🌐</span>
+        <span id="gpsLbl">GPS AUS</span>
+      </div>
+    </button>
+    <div class="h-sc h-sc-full">
+      <div class="h-sc-lbl">DESIGN</div>
+      <div id="hThemeChips" class="h-chips">
+        <button class="h-chip" onclick="applyThemeChoice('dark')">🌙 Dunkel</button>
+        <button class="h-chip" onclick="applyThemeChoice('light')">☀️ Hell</button>
+        <button class="h-chip" onclick="applyThemeChoice('timeflow')">🌊 Flow</button>
+        <button class="h-chip" onclick="applyThemeChoice('olive')">🌿 Olive</button>
+        <button class="h-chip" onclick="applyThemeChoice('paper')">📄 Papier</button>
+      </div>
+    </div>
+  </div>
+  <div class="settings-kurse-lbl">KURSE</div>
 </div>
 <main>
   <div id="kursSelect" style="display:none"></div>
@@ -1794,6 +1800,7 @@ function renderLines() {
 
   document.getElementById('hKurs').style.display = 'block';
   document.getElementById('hNoKurs').style.display = 'none';
+  document.getElementById('settingsBar').style.display = 'none';
   em.style.display = 'none';
   document.getElementById('hKtn').textContent = kurs.name;
 
@@ -3479,6 +3486,7 @@ function showSelectScreen() {
   expId = null;
   document.getElementById('hKurs').style.display = 'none';
   document.getElementById('hNoKurs').style.display = 'flex';
+  document.getElementById('settingsBar').style.display = 'block';
   document.getElementById('kursSelect').style.display = 'block';
   document.getElementById('ll').innerHTML = '';
   document.getElementById('em').style.display = 'none';
