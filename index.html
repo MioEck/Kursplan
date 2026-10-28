@@ -813,6 +813,41 @@ main{padding:4px 16px 100px;}
 :root.leuchtblau .empty{color:#8FA6D6;}
 :root.leuchtblau #swUpdateBanner{background:var(--lb-grad);border-radius:14px;box-shadow:0 10px 30px rgba(30,90,255,.5);}
 :root.leuchtblau #swUpdateBanner button{color:#1546E0;}
+
+/* ── Leuchtblau: kompakter Kopf + Fahrt-Kopf (v114r) ── */
+.fk,.hk-clock{display:none;}
+:root.leuchtblau #hKurs[style*="block"]{display:grid!important;grid-template-columns:44px 1fr auto;grid-template-rows:auto auto;column-gap:10px;align-items:center;padding:0;background:none;border:none;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;}
+:root.leuchtblau header{padding:10px 14px;border-radius:0 0 22px 22px;}
+:root.leuchtblau #hKurs .hk-hint{grid-column:1;grid-row:1/3;width:44px;height:44px;margin:0;border-radius:14px;justify-content:center;font-size:0;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);}
+:root.leuchtblau #hKurs .hk-arr{font-size:22px;font-weight:800;color:#fff;}
+:root.leuchtblau #hKurs .hkn{grid-column:2;grid-row:1;font-size:22px;line-height:1.1;align-self:end;}
+:root.leuchtblau #hKurs .hks{grid-column:2;grid-row:2;margin-top:1px;font-size:11px;gap:2px 8px;flex-wrap:wrap;align-self:start;}
+:root.leuchtblau #hKurs .hk-clock{display:block;position:static;grid-column:3;grid-row:1/3;font-size:22px;padding:6px 10px;border-radius:12px;background:rgba(4,18,46,.35);border:none;box-shadow:none;text-shadow:0 0 12px rgba(127,227,255,.6);}
+:root.leuchtblau .lc .lch-clock,:root.leuchtblau .lc .lch-clock-sub{display:none!important;}
+:root.leuchtblau #gpsBar{margin:8px 14px 2px;padding:7px 12px;border-radius:12px;font-size:13px;}
+:root.leuchtblau .lch{display:block;padding:12px 14px;}
+:root.leuchtblau .lch>.lb,:root.leuchtblau .lch>.li,:root.leuchtblau .lch>.ri{display:none;}
+:root.leuchtblau .fk{display:block;}
+:root.leuchtblau .fk-tiles{display:grid;grid-template-columns:1fr 1.25fr;gap:8px;}
+:root.leuchtblau .fk-lin,:root.leuchtblau .fk-fn{border-radius:16px;padding:8px 12px 10px;min-width:0;}
+:root.leuchtblau .fk-lin{position:relative;overflow:hidden;background:var(--lb-grad);border:1px solid rgba(255,255,255,.28);box-shadow:0 10px 24px rgba(30,90,255,.5),inset 0 1px 0 rgba(255,255,255,.4);}
+:root.leuchtblau .fk-lin::before{content:"";position:absolute;right:-30px;top:-30px;width:90px;height:90px;border-radius:50%;background:radial-gradient(circle,rgba(127,227,255,.5),rgba(127,227,255,0) 70%);pointer-events:none;}
+:root.leuchtblau .fk-fn{background:rgba(255,255,255,.06);border:1px solid rgba(127,212,255,.35);}
+:root.leuchtblau .fk-lbl{position:relative;display:block;font-size:10px;font-weight:700;letter-spacing:.18em;color:#CDE6FF;}
+:root.leuchtblau .fk-fn .fk-lbl{color:#8FB6FF;}
+:root.leuchtblau .fk-lv{position:relative;display:flex;align-items:baseline;gap:8px;margin-top:2px;}
+:root.leuchtblau .fk-ln{font-family:var(--lb-mono);font-size:44px;font-weight:700;line-height:1;color:#fff;letter-spacing:-.02em;}
+:root.leuchtblau .fk-ab{font-family:var(--lb-mono);font-size:26px;font-weight:700;line-height:1;color:#7FE3FF;text-shadow:0 0 12px rgba(127,227,255,.7);}
+:root.leuchtblau .fk-fv{display:block;margin-top:6px;font-family:var(--lb-mono);font-size:30px;font-weight:700;line-height:1;color:#fff;letter-spacing:-.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+:root.leuchtblau .fk-route{margin-top:12px;display:grid;grid-template-columns:58px 16px minmax(0,1fr) auto;row-gap:6px;align-items:center;}
+:root.leuchtblau .fk-t{font-family:var(--lb-mono);font-size:18px;font-weight:700;color:#fff;}
+:root.leuchtblau .fk-d{justify-self:center;width:10px;height:10px;border-radius:50%;background:var(--lb-btn);box-shadow:0 0 8px rgba(61,139,255,.8);}
+:root.leuchtblau .fk-d2{border-radius:3px;}
+:root.leuchtblau .fk-s{font-size:17px;font-weight:800;color:#fff;line-height:1.25;overflow-wrap:anywhere;}
+:root.leuchtblau .fk-dur{margin-left:8px;font-family:var(--lb-mono);font-size:13px;font-weight:700;padding:5px 9px;border-radius:10px;color:#BFE6FF;background:rgba(61,139,255,.16);border:1px solid rgba(127,212,255,.35);text-align:center;white-space:nowrap;}
+:root.leuchtblau .fk-map{margin-left:8px;height:36px;padding:0 10px;border-radius:10px;border:1px solid rgba(127,212,255,.35);background:rgba(127,212,255,.1);color:#7FD4FF;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;}
+:root.leuchtblau .fk-ca{margin-top:8px;}
+:root.leuchtblau .sr{padding:3px 0;}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 </head>
@@ -841,12 +876,13 @@ main{padding:4px 16px 100px;}
 <header>
   <div id="hNoKurs">
     <span class="hnk-title">KURSPLAN</span>
-    <span class="hv">v113r</span><span id="dataVerSpan" class="data-ver"></span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span>
+    <span class="hv">v114r</span><span id="dataVerSpan" class="data-ver"></span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span>
   </div>
   <div id="hKurs" onclick="showSelectScreen()">
     <div class="hk-hint"><span class="hk-arr">←</span> ZUR KURSAUSWAHL</div>
     <div class="hkn" id="hKtn"></div>
     <div class="hks" id="hKs"></div>
+    <div class="lch-clock hk-clock" id="hClock"></div>
   </div>
   <button id="themeBtn" onclick="toggleTheme()" hidden></button>
 </header>
@@ -889,7 +925,7 @@ main{padding:4px 16px 100px;}
       <button class="h-lock-btn" id="lockBtn" onclick="openKeypad()" title="Admin">🔒</button>
       <div class="h-sc-lbl">FAHRER</div>
       <div class="h-sc-val"><span id="userNameDisplay"></span></div>
-      <div class="h-sc-sub"><span class="hv">v113r</span> · <span id="hd"></span></div>
+      <div class="h-sc-sub"><span class="hv">v114r</span> · <span id="hd"></span></div>
     </div>
     <button id="gpsBtn" onclick="toggleGps()" class="h-sc">
       <div class="h-sc-lbl">GPS</div>
@@ -1070,6 +1106,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v114r', date:'28.10.2026', desc:'Leuchtblau: kompakter Kopf (Kurs, Infos und Uhr in einer Zeile), neuer Fahrt-Kopf mit großer Linie und Fahrt-Nr., Start/Ziel mit Uhrzeit darunter – mehr Platz für die Haltestellen.'},
   {v:'v113r', date:'28.10.2026', desc:'Neues Design „Leuchtblau“: leuchtender Blau-Verlauf, Glas-Karten, leuchtende Haltestellen-Zeitleiste, neue Schriften (Plus Jakarta Sans / JetBrains Mono). Unter DESIGN umschaltbar.'},
   {v:'v112r', date:'25.10.2026', desc:'Kurs 213: Winterfahrplan 26.10.2026 — p1 startet 06:37 (+6 min), 3 Haltestellen entfallen (Waabs Fuchsberg, Schwastrum, Sankt-Johannes-Stift)'},
   {v:'v111r', date:'08.10.2026', desc:'Kurs 411–414: Winterfahrplan 12.10.2026 aktiviert (typ schule, Datum aktualisiert)'},
@@ -2139,7 +2176,19 @@ function renderLines() {
           '<button class="dbtn">🗑 Löschen</button>' +
         '</div>' +
       '</div>' +
-      '<div class="ri"><div class="dp">' + fDur(dMin(l.startTime, l.endTime)) + '</div><div class="ea">▼</div></div>';
+      '<div class="ri"><div class="dp">' + fDur(dMin(l.startTime, l.endTime)) + '</div><div class="ea">▼</div></div>' +
+      // Fahrt-Kopf (Leuchtblau): Linie + Fahrt-Nr. groß, darunter Start/Ziel
+      '<div class="fk">' +
+        '<div class="fk-tiles">' +
+          '<div class="fk-lin"><span class="fk-lbl">LINIE</span><span class="fk-lv"><span class="fk-ln">' + esc(l.linienNr) + '</span>' + (AB[l.fahrtNr] ? '<span class="fk-ab">' + AB[l.fahrtNr] + '</span>' : '') + '</span></div>' +
+          '<div class="fk-fn"><span class="fk-lbl">FAHRT-NR.</span><span class="fk-fv">' + esc(l.fahrtNr || '—') + '</span></div>' +
+        '</div>' +
+        '<div class="fk-route">' +
+          '<span class="fk-t">' + esc(l.startTime) + '</span><span class="fk-d"></span><span class="fk-s">' + esc(l.start) + '</span><span class="fk-dur">' + fDur(dMin(l.startTime, l.endTime)) + '</span>' +
+          '<span class="fk-t">' + esc(l.endTime) + '</span><span class="fk-d fk-d2"></span><span class="fk-s">' + esc(l.end) + '</span><button class="fk-map">🗺️ Karte</button>' +
+        '</div>' +
+        '<div class="ca fk-ca"><button class="ebtn fk-e">✏️ Bearbeiten</button><button class="dbtn fk-x">🗑 Löschen</button></div>' +
+      '</div>';
 
     // Bind events via closures
     (function(lid, kid, ebtn, dbtn, mbtn, hdrEl) {
@@ -2147,6 +2196,10 @@ function renderLines() {
       ebtn.onclick = function(e) { e.stopPropagation(); editLineF(kid, lid); };
       dbtn.onclick = function(e) { e.stopPropagation(); delLine(kid, lid); };
       if (mbtn) mbtn.onclick = function(e) { e.stopPropagation(); openMap(kid, lid); };
+      var fkm = hdrEl.querySelector('.fk-map'), fke = hdrEl.querySelector('.fk-e'), fkx = hdrEl.querySelector('.fk-x');
+      if (fkm) fkm.onclick = function(e) { e.stopPropagation(); openMap(kid, lid); };
+      if (fke) fke.onclick = function(e) { e.stopPropagation(); editLineF(kid, lid); };
+      if (fkx) fkx.onclick = function(e) { e.stopPropagation(); delLine(kid, lid); };
     })(l.id, kurs.id,
        hdr.querySelector('.ebtn'),
        hdr.querySelector('.dbtn'),
