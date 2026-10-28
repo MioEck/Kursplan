@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" href="icon-512.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0a0b1e;--s1:#10133a;--s2:#181c4a;--acc:#5e8cff;--txt:#e0e4ff;--mut:#7278b0;--brd:#252868;--red:#f85149;--grn:#3fb950;}
 :root.light{--bg:#e2dbd0;--s1:#f0ebe0;--s2:#d6cfc4;--acc:#dc0018;--txt:#1c1917;--mut:#6e6458;--brd:#c2b490;--red:#dc0018;--grn:#3d8040;}
@@ -661,6 +661,158 @@ main{padding:4px 16px 100px;}
 :root.paper .h-chip{border-color:rgba(29,78,216,.22);background:rgba(29,78,216,.06);color:#1D4ED8;}
 :root.paper .h-chip.active{background:rgba(29,78,216,.18);border-color:rgba(29,78,216,.40);color:#1e3a8a;}
 :root.paper .settings-kurse-lbl{color:#1D4ED8;}
+
+/* ══════════════════════════════════════════════════════
+   LEUCHTBLAU — Glow-Design (:root.leuchtblau)
+   ══════════════════════════════════════════════════════ */
+:root.leuchtblau{--bg:#060B1F;--s1:#0E1838;--s2:#16224A;--acc:#3D8BFF;--txt:#EAF2FF;--mut:#8FA6D6;--brd:#22325F;--red:#FF5A6E;--grn:#3DFFA0;
+  --lb-cyan:#7FE3FF;--lb-sky:#7FD4FF;--lb-blue:#2D7BFF;--lb-deep:#1546E0;--lb-navy:#0A1F8F;
+  --lb-grad:linear-gradient(140deg,#2D7BFF 0%,#1546E0 50%,#0A1F8F 100%);
+  --lb-btn:linear-gradient(135deg,#7FE3FF 0%,#3D8BFF 100%);
+  --lb-glass:rgba(255,255,255,.05);--lb-glass-b:rgba(127,170,255,.16);
+  --lb-mono:'JetBrains Mono',ui-monospace,monospace;
+  background:#060B1F;}
+:root.leuchtblau body{background:transparent;font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
+:root.leuchtblau body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;
+  background:radial-gradient(120% 55% at 90% -5%,rgba(28,91,255,.55) 0%,rgba(28,91,255,.18) 40%,rgba(6,11,31,0) 70%),
+             radial-gradient(90% 45% at -10% 105%,rgba(0,194,255,.28) 0%,rgba(6,11,31,0) 60%),#060B1F;}
+:root.leuchtblau button,:root.leuchtblau input,:root.leuchtblau textarea,:root.leuchtblau select{font-family:'Plus Jakarta Sans','DM Sans',sans-serif;}
+/* Schrift: Bebas → Plus Jakarta Sans (fett) */
+:root.leuchtblau .hnk-title,:root.leuchtblau .hkn,:root.leuchtblau .kt,:root.leuchtblau .tab .tn,:root.leuchtblau .tab-filter .tn,
+:root.leuchtblau .mo h2,:root.leuchtblau .map-title,:root.leuchtblau .keypad-title,:root.leuchtblau .notiz-card-title,
+:root.leuchtblau .notiz-edit-modal h3,:root.leuchtblau .match-header h2,:root.leuchtblau .login-title,:root.leuchtblau .notice-sheet h2,
+:root.leuchtblau .ks-cat-title,:root.leuchtblau .ks-btn .ks-name,:root.leuchtblau .settings-kurse-lbl,:root.leuchtblau .login-logo,:root.leuchtblau .kp-btn{
+  font-family:'Plus Jakarta Sans','DM Sans',sans-serif;font-weight:800;letter-spacing:-.01em;}
+:root.leuchtblau .changelog-v,:root.leuchtblau .keypad-display,:root.leuchtblau .lpin-disp,:root.leuchtblau .lch-clock,
+:root.leuchtblau .bn,:root.leuchtblau .bf,:root.leuchtblau .lb span[style]{font-family:var(--lb-mono)!important;font-weight:700;letter-spacing:0;}
+
+/* Header */
+:root.leuchtblau header{background:var(--lb-grad);border-radius:0 0 26px 26px;padding:14px 14px 14px;
+  box-shadow:0 18px 44px rgba(30,90,255,.45),inset 0 -1px 0 rgba(255,255,255,.18);overflow:hidden;}
+:root.leuchtblau header::before{content:"";position:absolute;right:-70px;top:-90px;width:240px;height:240px;border-radius:50%;
+  background:radial-gradient(circle,rgba(127,227,255,.6),rgba(127,227,255,0) 70%);pointer-events:none;}
+:root.leuchtblau header>*{position:relative;}
+:root.leuchtblau .hnk-title{font-size:26px;color:#fff;letter-spacing:-.02em;}
+:root.leuchtblau #hNoKurs .hv{font-family:var(--lb-mono);font-size:11px;color:#BFD3FF;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.2);border-radius:999px;padding:3px 9px;letter-spacing:0;}
+:root.leuchtblau #hKurs{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);border-radius:20px;padding:12px 16px;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);box-shadow:inset 0 1px 0 rgba(255,255,255,.3);}
+:root.leuchtblau .hk-hint{color:#CDE6FF;font-weight:700;letter-spacing:.14em;font-size:10px;}
+:root.leuchtblau .hkn{font-size:34px;line-height:1.05;color:#fff;}
+:root.leuchtblau .hks{color:rgba(234,242,255,.82);font-size:11px;}
+
+/* Sticky-Leiste unter dem Header */
+:root.leuchtblau #subhdr{background:rgba(6,11,31,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:none;}
+:root.leuchtblau #gpsBar{margin:10px 16px 2px;border-radius:16px;background:var(--lb-glass);border:1px solid var(--lb-glass-b);color:#BFD3FF;padding:9px 14px;}
+:root.leuchtblau .gps-dot.found{background:#3DFFA0;box-shadow:0 0 10px #3DFFA0;}
+
+/* Filter: Schule / Ferien / WE */
+:root.leuchtblau .tab-filter{flex:1;border-radius:14px;background:var(--lb-glass);border:1px solid var(--lb-glass-b);}
+:root.leuchtblau .tab-filter .tn{font-size:14px;color:#CFE0FF;}
+:root.leuchtblau .tab-filter .tl{color:#8FA6D6;}
+:root.leuchtblau .tab-filter.active-schule,:root.leuchtblau .tab-filter.active-we{background:var(--lb-btn);border-color:transparent;box-shadow:0 6px 20px rgba(61,139,255,.5);}
+:root.leuchtblau .tab-filter.active-schule .tn,:root.leuchtblau .tab-filter.active-schule .tl,
+:root.leuchtblau .tab-filter.active-we .tn,:root.leuchtblau .tab-filter.active-we .tl{color:#04122E;}
+:root.leuchtblau .tab-filter.active-ferien{background:linear-gradient(135deg,#7DFFC4,#1FBF7A);border-color:transparent;box-shadow:0 6px 20px rgba(31,191,122,.45);}
+:root.leuchtblau .tab-filter.active-ferien .tn,:root.leuchtblau .tab-filter.active-ferien .tl{color:#03281A;}
+
+/* Einstellungen (Fahrer / GPS / Design) */
+:root.leuchtblau #settingsBar{background:transparent;padding:14px 14px 6px;}
+:root.leuchtblau .h-sc,:root.leuchtblau #settingsBar #gpsBtn{background:var(--lb-glass);border:1px solid var(--lb-glass-b);border-radius:18px;padding:11px 13px;}
+:root.leuchtblau #settingsBar #gpsBtn.on{background:rgba(61,255,160,.12);border-color:rgba(61,255,160,.45);box-shadow:0 0 22px rgba(61,255,160,.18);}
+:root.leuchtblau #settingsBar #gpsBtn.on #gpsLbl{color:#6BFFB8;}
+:root.leuchtblau .h-sc-lbl{color:#8FB6FF;font-size:9px;letter-spacing:.18em;}
+:root.leuchtblau .h-sc-val{font-size:14px;}
+:root.leuchtblau .h-sc-sub{color:#8FA6D6;}
+:root.leuchtblau .h-chip{font-size:11px;padding:6px 11px;border-color:var(--lb-glass-b);background:rgba(255,255,255,.04);color:#BFD3FF;}
+:root.leuchtblau .h-chip.active{background:var(--lb-btn);border-color:transparent;color:#04122E;box-shadow:0 4px 14px rgba(61,139,255,.45);}
+:root.leuchtblau .settings-kurse-lbl{color:#8FB6FF;font-size:11px;letter-spacing:.22em;padding-top:16px;}
+
+/* Kursauswahl */
+:root.leuchtblau .ks-cat-title{font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:#8FB6FF;margin:4px 0 12px;}
+:root.leuchtblau .ks-btn{background:var(--lb-glass);border:1px solid var(--lb-glass-b);border-radius:20px;padding:14px 16px;transition:transform .15s,box-shadow .2s,border-color .2s;}
+:root.leuchtblau .ks-btn:hover{border-color:rgba(127,212,255,.5);box-shadow:0 0 24px rgba(61,139,255,.25);}
+:root.leuchtblau .ks-btn:active{background:var(--lb-grad);border-color:transparent;box-shadow:0 12px 30px rgba(30,90,255,.5);}
+:root.leuchtblau .ks-btn .ks-name{font-size:22px;color:#fff;}
+:root.leuchtblau .ks-btn .ks-sub{color:#8FB6FF;font-size:12px;font-weight:600;}
+:root.leuchtblau button[onclick="openChangelog()"]{background:var(--lb-glass)!important;border:1px solid var(--lb-glass-b)!important;border-radius:999px!important;color:#BFD3FF!important;}
+
+/* Fahrten-Karten */
+:root.leuchtblau .kt{color:#fff;}
+:root.leuchtblau .lc{background:rgba(255,255,255,.045);border:1px solid var(--lb-glass-b);border-radius:24px;box-shadow:0 14px 34px -18px rgba(0,0,0,.7);}
+:root.leuchtblau .lch{border-radius:24px;}
+:root.leuchtblau .lc.exp{border-color:rgba(127,212,255,.55);box-shadow:0 0 0 1px rgba(127,212,255,.15),0 22px 50px -10px rgba(30,90,255,.45);}
+:root.leuchtblau .lc.exp .lch{background:rgba(14,24,60,.94);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-radius:24px 24px 0 0;border-bottom:1px solid var(--lb-glass-b);box-shadow:0 8px 20px rgba(0,0,0,.35);}
+:root.leuchtblau .lb{background:var(--lb-grad);border:1px solid rgba(255,255,255,.28);border-radius:16px;position:relative;overflow:hidden;
+  box-shadow:0 10px 26px rgba(30,90,255,.5),inset 0 1px 0 rgba(255,255,255,.4);}
+:root.leuchtblau .lb::before{content:"";position:absolute;right:-30px;top:-30px;width:80px;height:80px;border-radius:50%;background:radial-gradient(circle,rgba(127,227,255,.55),rgba(127,227,255,0) 70%);pointer-events:none;}
+:root.leuchtblau .lb>*{position:relative;}
+:root.leuchtblau .bl,:root.leuchtblau .bfl{color:#CDE6FF;font-size:9px;letter-spacing:.16em;font-weight:700;}
+:root.leuchtblau .bn{color:#fff;font-size:20px;}
+:root.leuchtblau .bf{color:#fff;font-size:15px;}
+:root.leuchtblau .lb span[style]{color:#7FE3FF!important;text-shadow:0 0 10px rgba(127,227,255,.6);}
+:root.leuchtblau .lr{color:#fff;font-weight:800;letter-spacing:-.01em;}
+:root.leuchtblau .ar{color:var(--lb-sky);}
+:root.leuchtblau .lt{font-family:var(--lb-mono);color:#BFD3FF;}
+:root.leuchtblau .mbtn{margin-top:6px;background:rgba(127,212,255,.1);border:1px solid rgba(127,212,255,.35);color:var(--lb-sky);border-radius:12px;padding:7px 12px;font-size:14px;font-weight:700;cursor:pointer;}
+:root.leuchtblau .ca button{background:rgba(255,255,255,.06);color:#BFD3FF;border-radius:10px;}
+:root.leuchtblau .dp{background:rgba(61,139,255,.16);border:1px solid rgba(127,212,255,.35);color:#BFE6FF;font-family:var(--lb-mono);font-weight:700;border-radius:12px;}
+:root.leuchtblau .ea{color:#8FB6FF;}
+:root.leuchtblau .lc.exp .ea{color:var(--lb-sky);}
+:root.leuchtblau .lch-clock{background:#0B1640;border:1px solid rgba(127,212,255,.4);border-radius:14px;color:#fff;font-size:28px;padding:8px 12px;text-shadow:0 0 14px rgba(127,212,255,.6);box-shadow:0 0 24px rgba(61,139,255,.25);}
+
+/* Haltestellen-Zeitleiste */
+:root.leuchtblau .sp{border-top-color:var(--lb-glass-b);}
+:root.leuchtblau .sl::before{background:linear-gradient(to bottom,rgba(127,212,255,.6),rgba(61,139,255,.25) 60%,rgba(61,139,255,.08));}
+:root.leuchtblau .sd{background:#0B1A4A;border:2px solid #5E86D6;}
+:root.leuchtblau .sr.first .sd{background:var(--lb-btn);border-color:transparent;box-shadow:0 0 12px rgba(61,139,255,.6);}
+:root.leuchtblau .sr.last .sd{background:var(--lb-btn);border-color:transparent;border-radius:7px;box-shadow:0 0 12px rgba(61,139,255,.6);}
+:root.leuchtblau .sr.past .sd{background:#1E2A52;border-color:#1E2A52;box-shadow:none;}
+:root.leuchtblau .sr.past .st,:root.leuchtblau .sr.past .sn{color:#4C5C8C;}
+:root.leuchtblau .sr.cur .sd{background:#3DFFA0;border-color:#3DFFA0;box-shadow:0 0 0 5px rgba(61,255,160,.2),0 0 18px #3DFFA0;}
+:root.leuchtblau .sr.cur .st,:root.leuchtblau .sr.cur .sn{color:#6BFFB8;text-shadow:0 0 14px rgba(61,255,160,.35);}
+:root.leuchtblau .sr.next .sd{background:#7FD4FF;border-color:#7FD4FF;box-shadow:0 0 0 4px rgba(127,212,255,.2),0 0 14px rgba(127,212,255,.8);}
+:root.leuchtblau .sr.next .st,:root.leuchtblau .sr.next .sn{color:var(--lb-sky);}
+:root.leuchtblau .st{font-family:var(--lb-mono);font-weight:700;}
+:root.leuchtblau .sn{color:#BFD3FF;}
+:root.leuchtblau .sr.first .sn,:root.leuchtblau .sr.last .sn{color:#fff;font-weight:800;}
+:root.leuchtblau .dist-row{color:#6BFFB8;}
+:root.leuchtblau .sh{background:rgba(255,196,61,.1);border-left:3px solid #FFC43D;border-radius:0 12px 12px 0;}
+:root.leuchtblau .hb{color:#FFD27A;}
+:root.leuchtblau .svc-block{background:var(--lb-glass);border:1px dashed rgba(127,212,255,.3);border-radius:18px;box-shadow:none;}
+:root.leuchtblau .svc-time{font-family:var(--lb-mono);color:#8FB6FF;}
+
+/* Buttons, Dialoge, Overlays */
+:root.leuchtblau .fab{background:var(--lb-btn);color:#04122E;border-radius:18px;font-weight:800;box-shadow:0 10px 30px rgba(61,139,255,.55);}
+:root.leuchtblau .sync-btn{background:var(--lb-btn);color:#04122E;border-radius:12px;}
+:root.leuchtblau .sync-bar,:root.leuchtblau .export-bar{background:transparent;border-bottom:1px solid var(--lb-glass-b);}
+:root.leuchtblau .sync-bar .sync-btn[style]{background:var(--lb-glass)!important;color:#CFE0FF!important;border:1px solid var(--lb-glass-b)!important;}
+:root.leuchtblau .ov,:root.leuchtblau .notiz-edit-overlay,:root.leuchtblau #noticeOv{background:rgba(3,6,20,.72);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);}
+:root.leuchtblau .mo,:root.leuchtblau .notiz-edit-modal,:root.leuchtblau .notice-sheet{background:linear-gradient(180deg,#12204A 0%,#0A1230 100%);border:1px solid var(--lb-glass-b);border-bottom:none;border-radius:28px 28px 0 0;box-shadow:0 -20px 60px rgba(30,90,255,.25);}
+:root.leuchtblau .fg label,:root.leuchtblau .notice-fld label{color:#8FB6FF;letter-spacing:.12em;font-weight:700;}
+:root.leuchtblau .fg input,:root.leuchtblau .notiz-textarea,:root.leuchtblau .setup-inp,:root.leuchtblau .notice-fld input,:root.leuchtblau .notice-fld textarea{background:rgba(255,255,255,.06);border:1px solid var(--lb-glass-b);border-radius:14px;color:#fff;}
+:root.leuchtblau .fg input:focus,:root.leuchtblau .notiz-textarea:focus{border-color:var(--lb-sky);box-shadow:0 0 0 3px rgba(127,212,255,.18);}
+:root.leuchtblau .bp,:root.leuchtblau .notice-primary{background:var(--lb-btn);color:#04122E;border-radius:14px;font-weight:800;box-shadow:0 8px 22px rgba(61,139,255,.45);}
+:root.leuchtblau .bs,:root.leuchtblau .notice-secondary{background:rgba(255,255,255,.06);color:#CFE0FF;border-radius:14px;}
+:root.leuchtblau .asb{background:rgba(127,212,255,.06);border-color:rgba(127,212,255,.35);color:var(--lb-sky);border-radius:12px;}
+:root.leuchtblau .notiz-card{background:var(--lb-btn);border-radius:22px;box-shadow:0 12px 36px rgba(61,139,255,.55);}
+:root.leuchtblau .notiz-card-title,:root.leuchtblau .notiz-card-text{color:#04122E;}
+:root.leuchtblau .keypad-overlay{background:rgba(3,6,20,.85);}
+:root.leuchtblau .keypad-box{background:linear-gradient(180deg,#12204A,#0A1230);border:1px solid rgba(127,212,255,.4);border-radius:26px;box-shadow:0 0 50px rgba(30,90,255,.35);}
+:root.leuchtblau .keypad-display{background:rgba(255,255,255,.05);border-color:var(--lb-glass-b);color:var(--lb-sky);}
+:root.leuchtblau .kp-btn{background:rgba(255,255,255,.06);border:1px solid var(--lb-glass-b);border-radius:16px;}
+:root.leuchtblau .kp-btn:active{background:var(--lb-btn);color:#04122E;}
+:root.leuchtblau .changelog-v{color:var(--lb-sky);}
+:root.leuchtblau .login-ov{background:radial-gradient(100% 50% at 50% 0%,rgba(28,91,255,.5),rgba(6,11,31,0) 70%),#060B1F;}
+:root.leuchtblau .login-logo{background:var(--lb-grad);color:#fff;border-radius:22px;box-shadow:0 14px 40px rgba(30,90,255,.55);}
+:root.leuchtblau .u-btn,:root.leuchtblau .lpin-btn,:root.leuchtblau .setup-box{background:var(--lb-glass);border:1px solid var(--lb-glass-b);border-radius:16px;}
+:root.leuchtblau .u-btn:hover{background:var(--lb-btn);color:#04122E;}
+:root.leuchtblau .map-overlay{background:#060B1F;}
+:root.leuchtblau .map-header{background:var(--lb-grad);border-bottom:none;}
+:root.leuchtblau .map-title{color:#fff;}
+:root.leuchtblau .map-close{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:12px;}
+:root.leuchtblau .match-row{background:var(--lb-glass);border-color:var(--lb-glass-b);border-radius:14px;}
+:root.leuchtblau .empty{color:#8FA6D6;}
+:root.leuchtblau #swUpdateBanner{background:var(--lb-grad);border-radius:14px;box-shadow:0 10px 30px rgba(30,90,255,.5);}
+:root.leuchtblau #swUpdateBanner button{color:#1546E0;}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 </head>
@@ -689,7 +841,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div id="hNoKurs">
     <span class="hnk-title">KURSPLAN</span>
-    <span class="hv">v112r</span><span id="dataVerSpan" class="data-ver"></span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span>
+    <span class="hv">v113r</span><span id="dataVerSpan" class="data-ver"></span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span>
   </div>
   <div id="hKurs" onclick="showSelectScreen()">
     <div class="hk-hint"><span class="hk-arr">←</span> ZUR KURSAUSWAHL</div>
@@ -737,7 +889,7 @@ main{padding:4px 16px 100px;}
       <button class="h-lock-btn" id="lockBtn" onclick="openKeypad()" title="Admin">🔒</button>
       <div class="h-sc-lbl">FAHRER</div>
       <div class="h-sc-val"><span id="userNameDisplay"></span></div>
-      <div class="h-sc-sub"><span class="hv">v112r</span> · <span id="hd"></span></div>
+      <div class="h-sc-sub"><span class="hv">v113r</span> · <span id="hd"></span></div>
     </div>
     <button id="gpsBtn" onclick="toggleGps()" class="h-sc">
       <div class="h-sc-lbl">GPS</div>
@@ -749,6 +901,7 @@ main{padding:4px 16px 100px;}
     <div class="h-sc h-sc-full">
       <div class="h-sc-lbl">DESIGN</div>
       <div id="hThemeChips" class="h-chips">
+        <button class="h-chip" onclick="applyThemeChoice('leuchtblau')">✨ Leuchtblau</button>
         <button class="h-chip" onclick="applyThemeChoice('dark')">🌙 Dunkel</button>
         <button class="h-chip" onclick="applyThemeChoice('light')">☀️ Hell</button>
         <button class="h-chip" onclick="applyThemeChoice('timeflow')">🌊 Flow</button>
@@ -917,6 +1070,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v113r', date:'28.10.2026', desc:'Neues Design „Leuchtblau“: leuchtender Blau-Verlauf, Glas-Karten, leuchtende Haltestellen-Zeitleiste, neue Schriften (Plus Jakarta Sans / JetBrains Mono). Unter DESIGN umschaltbar.'},
   {v:'v112r', date:'25.10.2026', desc:'Kurs 213: Winterfahrplan 26.10.2026 — p1 startet 06:37 (+6 min), 3 Haltestellen entfallen (Waabs Fuchsberg, Schwastrum, Sankt-Johannes-Stift)'},
   {v:'v111r', date:'08.10.2026', desc:'Kurs 411–414: Winterfahrplan 12.10.2026 aktiviert (typ schule, Datum aktualisiert)'},
   {v:'v110r', date:'22.09.2026', desc:'Fix: Kartenanzeige für Haltestellen mit Sonderzeichen (z.B. Apostroph-Varianten) — normName-Cache wird jetzt korrekt befüllt'},
@@ -3364,10 +3518,12 @@ window.addEventListener('load', function() {
 
 
 // ── THEME UMSCHALTER ──────────────────────────────────
-var THEMES = ['dark', 'light', 'timeflow', 'olive', 'paper'];
-var THEME_ICONS = {dark:'🌙', light:'☀️', timeflow:'🌊', olive:'🌿', paper:'📄'};
-var currentTheme = localStorage.getItem('kp_theme') || 'dark';
-if (!THEMES.includes(currentTheme)) currentTheme = 'dark';
+var THEMES = ['leuchtblau', 'dark', 'light', 'timeflow', 'olive', 'paper'];
+var THEME_ICONS = {leuchtblau:'✨', dark:'🌙', light:'☀️', timeflow:'🌊', olive:'🌿', paper:'📄'};
+var currentTheme = localStorage.getItem('kp_theme') || 'leuchtblau';
+// Einmalig auf das neue Leuchtblau-Design umstellen (v113r) – danach gilt wieder die eigene Wahl
+if (!localStorage.getItem('kp_theme_lb')) { currentTheme = 'leuchtblau'; localStorage.setItem('kp_theme', 'leuchtblau'); localStorage.setItem('kp_theme_lb', '1'); }
+if (!THEMES.includes(currentTheme)) currentTheme = 'leuchtblau';
 
 function setHeaderHeight() {
   var h = document.querySelector('header');
@@ -3379,7 +3535,7 @@ function setHeaderHeight() {
 }
 
 function applyTheme() {
-  document.documentElement.classList.remove('light', 'timeflow', 'olive', 'paper');
+  document.documentElement.classList.remove('leuchtblau', 'light', 'timeflow', 'olive', 'paper');
   if (currentTheme !== 'dark') document.documentElement.classList.add(currentTheme);
   var btn = document.getElementById('themeBtn');
   if (btn) btn.textContent = THEME_ICONS[currentTheme] || '🌙';
