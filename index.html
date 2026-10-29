@@ -2896,8 +2896,13 @@ async function saveUserSettings() {
 
 // ── FAHRERVERWALTUNG (Admin) ──────────────────────────
 async function openUserManager() {
+  var existing = document.getElementById('umOverlay');
+  if (existing) existing.remove();
+  try {
   var usersRes = await sb.from('users').select('id,name,is_admin,must_change_pin').order('name');
   var logRes = await sb.from('login_log').select('user_name,logged_in_at,user_agent').order('logged_in_at', { ascending: false }).limit(50);
+  if (usersRes.error) throw new Error('Nutzer: ' + usersRes.error.message);
+  if (logRes.error) throw new Error('Login-Log: ' + logRes.error.message);
   var users = usersRes.data || [];
   var logs = logRes.data || [];
 
@@ -2950,6 +2955,9 @@ async function openUserManager() {
   ov.innerHTML = html;
   ov.addEventListener('click', function(e){ if(e.target===ov) _closeUmModal(); });
   document.body.appendChild(ov);
+  } catch(e) {
+    alert('Fahrerverwaltung: ' + e.message);
+  }
 }
 
 function _closeUmModal() {
@@ -3282,6 +3290,13 @@ async function openUsageOv() {
     .select('started_at,last_seen,ended_at,users(name)')
     .order('started_at', { ascending: false })
     .limit(100);
+
+  if (res.error) {
+    document.getElementById('usageSheetContent').innerHTML =
+      '<h2>📊 NUTZUNG</h2><div style="color:var(--red);padding:24px;text-align:center">Fehler: ' + esc(res.error.message) + '</div>' +
+      '<div class="notice-btn-row"><button class="notice-secondary" style="border:1.5px solid var(--brd)!important" onclick="closeUsageOv()">✕ Schließen</button></div>';
+    return;
+  }
   var rows = res.data || [];
 
   if (!rows.length) {
