@@ -2956,7 +2956,10 @@ async function openUserManager() {
   ov.addEventListener('click', function(e){ if(e.target===ov) _closeUmModal(); });
   document.body.appendChild(ov);
   } catch(e) {
-    alert('Fahrerverwaltung: ' + e.message);
+    var msg = e.message && e.message.indexOf('fetch') >= 0
+      ? 'Keine Verbindung zu Supabase.\nIst das Gerät online? Supabase-Projekt ggf. reaktivieren.'
+      : e.message;
+    alert('Fahrerverwaltung: ' + msg);
   }
 }
 
@@ -3293,7 +3296,7 @@ async function openUsageOv() {
 
   if (res.error) {
     document.getElementById('usageSheetContent').innerHTML =
-      '<h2>📊 NUTZUNG</h2><div style="color:var(--red);padding:24px;text-align:center">Fehler: ' + esc(res.error.message) + '</div>' +
+      '<h2>📊 NUTZUNG</h2><div style="color:var(--red);padding:24px;text-align:center">⚠️ Keine Verbindung zu Supabase.<br><span style="font-size:12px;color:var(--mut)">' + esc(res.error.message) + '</span></div>' +
       '<div class="notice-btn-row"><button class="notice-secondary" style="border:1.5px solid var(--brd)!important" onclick="closeUsageOv()">✕ Schließen</button></div>';
     return;
   }
