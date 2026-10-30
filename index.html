@@ -13,7 +13,7 @@
 <link rel="apple-touch-icon" href="icon-512.png">
 <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&family=Source+Sans+3:wght@400;600;700;900&display=swap" rel="stylesheet">
 <style>
 :root{--bg:#0a0b1e;--s1:#10133a;--s2:#181c4a;--acc:#5e8cff;--txt:#e0e4ff;--mut:#7278b0;--brd:#252868;--red:#f85149;--grn:#3fb950;}
 :root.light{--bg:#e2dbd0;--s1:#f0ebe0;--s2:#d6cfc4;--acc:#dc0018;--txt:#1c1917;--mut:#6e6458;--brd:#c2b490;--red:#dc0018;--grn:#3d8040;}
@@ -848,6 +848,206 @@ main{padding:4px 16px 100px;}
 :root.leuchtblau .fk-map{margin-left:8px;height:36px;padding:0 10px;border-radius:10px;border:1px solid rgba(127,212,255,.35);background:rgba(127,212,255,.1);color:#7FD4FF;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;}
 :root.leuchtblau .fk-ca{margin-top:8px;}
 :root.leuchtblau .sr{padding:3px 0;}
+
+/* Bahn: Struktur (kompakter Kopf + Fahrt-Kopf) */
+
+:root.bahn #hKurs[style*="block"]{display:grid!important;grid-template-columns:44px 1fr auto;grid-template-rows:auto auto;column-gap:10px;align-items:center;padding:0;background:none;border:none;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;}
+:root.bahn header{padding:10px 14px;border-radius:0 0 22px 22px;}
+:root.bahn #hKurs .hk-hint{grid-column:1;grid-row:1/3;width:44px;height:44px;margin:0;border-radius:14px;justify-content:center;font-size:0;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);}
+:root.bahn #hKurs .hk-arr{font-size:22px;font-weight:800;color:#fff;}
+:root.bahn #hKurs .hkn{grid-column:2;grid-row:1;font-size:22px;line-height:1.1;align-self:end;}
+:root.bahn #hKurs .hks{grid-column:2;grid-row:2;margin-top:1px;font-size:11px;gap:2px 8px;flex-wrap:wrap;align-self:start;}
+:root.bahn #hKurs .hk-clock{display:block;position:static;grid-column:3;grid-row:1/3;font-size:22px;padding:6px 10px;border-radius:12px;background:rgba(4,18,46,.35);border:none;box-shadow:none;text-shadow:0 0 12px rgba(127,227,255,.6);}
+:root.bahn .lc .lch-clock,:root.bahn .lc .lch-clock-sub{display:none!important;}
+:root.bahn #gpsBar{margin:8px 14px 2px;padding:7px 12px;border-radius:12px;font-size:13px;}
+:root.bahn .lch{display:block;padding:12px 14px;}
+:root.bahn .lch>.lb,:root.bahn .lch>.li,:root.bahn .lch>.ri{display:none;}
+:root.bahn .fk{display:block;}
+:root.bahn .fk-tiles{display:grid;grid-template-columns:1fr 1.25fr;gap:8px;}
+:root.bahn .fk-lin,:root.bahn .fk-fn{border-radius:16px;padding:8px 12px 10px;min-width:0;}
+:root.bahn .fk-lin{position:relative;overflow:hidden;background:var(--lb-grad);border:1px solid rgba(255,255,255,.28);box-shadow:0 10px 24px rgba(30,90,255,.5),inset 0 1px 0 rgba(255,255,255,.4);}
+:root.bahn .fk-lin::before{content:"";position:absolute;right:-30px;top:-30px;width:90px;height:90px;border-radius:50%;background:radial-gradient(circle,rgba(127,227,255,.5),rgba(127,227,255,0) 70%);pointer-events:none;}
+:root.bahn .fk-fn{background:rgba(255,255,255,.06);border:1px solid rgba(127,212,255,.35);}
+:root.bahn .fk-lbl{position:relative;display:block;font-size:10px;font-weight:700;letter-spacing:.18em;color:#CDE6FF;}
+:root.bahn .fk-fn .fk-lbl{color:#8FB6FF;}
+:root.bahn .fk-lv{position:relative;display:flex;align-items:baseline;gap:8px;margin-top:2px;}
+:root.bahn .fk-ln{font-family:var(--lb-mono);font-size:44px;font-weight:700;line-height:1;color:#fff;letter-spacing:-.02em;}
+:root.bahn .fk-ab{font-family:var(--lb-mono);font-size:26px;font-weight:700;line-height:1;color:#7FE3FF;text-shadow:0 0 12px rgba(127,227,255,.7);}
+:root.bahn .fk-fv{display:block;margin-top:6px;font-family:var(--lb-mono);font-size:30px;font-weight:700;line-height:1;color:#fff;letter-spacing:-.02em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+:root.bahn .fk-route{margin-top:12px;display:grid;grid-template-columns:58px 16px minmax(0,1fr) auto;row-gap:6px;align-items:center;}
+:root.bahn .fk-t{font-family:var(--lb-mono);font-size:18px;font-weight:700;color:#fff;}
+:root.bahn .fk-d{justify-self:center;width:10px;height:10px;border-radius:50%;background:var(--lb-btn);box-shadow:0 0 8px rgba(61,139,255,.8);}
+:root.bahn .fk-d2{border-radius:3px;}
+:root.bahn .fk-s{font-size:17px;font-weight:800;color:#fff;line-height:1.25;overflow-wrap:anywhere;}
+:root.bahn .fk-dur{margin-left:8px;font-family:var(--lb-mono);font-size:13px;font-weight:700;padding:5px 9px;border-radius:10px;color:#BFE6FF;background:rgba(61,139,255,.16);border:1px solid rgba(127,212,255,.35);text-align:center;white-space:nowrap;}
+:root.bahn .fk-map{margin-left:8px;height:36px;padding:0 10px;border-radius:10px;border:1px solid rgba(127,212,255,.35);background:rgba(127,212,255,.1);color:#7FD4FF;font-size:13px;font-weight:700;cursor:pointer;white-space:nowrap;}
+:root.bahn .fk-ca{margin-top:8px;}
+:root.bahn .sr{padding:3px 0;}
+
+/* ══════════════════════════════════════════════════════
+   BAHN — DB-Stil mit glänzendem 3D-Rot (:root.bahn)  v115r
+   ══════════════════════════════════════════════════════ */
+:root.bahn{--bg:#F0F3F5;--s1:#FFFFFF;--s2:#E5E8EB;--acc:#EC0016;--txt:#282D37;--mut:#646973;--brd:#D7DCE1;--red:#EC0016;--grn:#408335;
+  --bh-gloss:linear-gradient(180deg,#FF5466 0%,#EC0016 48%,#C4000F 52%,#A8000D 100%);
+  --bh-gloss-sh:inset 0 1px 0 rgba(255,255,255,.6),inset 0 -2px 3px rgba(80,0,8,.35),0 6px 14px rgba(236,0,22,.3),0 1px 2px rgba(80,0,8,.35);
+  --bh-hl:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,.08));
+  --bh-silver:linear-gradient(180deg,#FFFFFF 0%,#F4F6F8 50%,#E6EAEE 51%,#F0F3F5 100%);
+  --bh-silver-sh:inset 0 1px 0 #FFFFFF,inset 0 -1px 0 rgba(40,45,55,.12),0 2px 6px rgba(40,45,55,.12);
+  --bh-dot:radial-gradient(circle at 35% 30%,#FF9AA4 0%,#EC0016 45%,#8E000B 100%);
+  --bh-mono:'JetBrains Mono',ui-monospace,monospace;
+  --bh-card:0 2px 4px rgba(40,45,55,.08),0 10px 24px rgba(40,45,55,.12);
+  background:#F0F3F5;}
+:root.bahn body{background:#F0F3F5;font-family:'Source Sans 3',Arial,sans-serif;color:#282D37;}
+:root.bahn button,:root.bahn input,:root.bahn textarea,:root.bahn select{font-family:'Source Sans 3',Arial,sans-serif;}
+:root.bahn .hnk-title,:root.bahn .hkn,:root.bahn .kt,:root.bahn .tab .tn,:root.bahn .tab-filter .tn,
+:root.bahn .mo h2,:root.bahn .map-title,:root.bahn .keypad-title,:root.bahn .notiz-card-title,
+:root.bahn .notiz-edit-modal h3,:root.bahn .match-header h2,:root.bahn .login-title,:root.bahn .notice-sheet h2,
+:root.bahn .ks-cat-title,:root.bahn .ks-btn .ks-name,:root.bahn .settings-kurse-lbl,:root.bahn .login-logo,:root.bahn .kp-btn{
+  font-family:'Source Sans 3',Arial,sans-serif;font-weight:900;letter-spacing:0;}
+:root.bahn .changelog-v,:root.bahn .keypad-display,:root.bahn .lpin-disp,:root.bahn .lch-clock,:root.bahn .bn,:root.bahn .bf,:root.bahn .lb span[style]{font-family:var(--bh-mono)!important;font-weight:700;letter-spacing:0;}
+
+/* Glanz-Lichtkante für alle roten 3D-Flächen */
+:root.bahn header::before,:root.bahn .fk-lin::before,:root.bahn .fab::before,:root.bahn .bp::before,:root.bahn .sync-btn::before,
+:root.bahn .h-chip.active::before,:root.bahn .notiz-card::before,:root.bahn .login-logo::before,:root.bahn .map-header::before,:root.bahn .notice-primary::before{
+  content:"";position:absolute;left:4%;right:4%;top:2px;height:46%;border-radius:inherit;background:var(--bh-hl);pointer-events:none;}
+:root.bahn .bp,:root.bahn .sync-btn,:root.bahn .h-chip.active,:root.bahn .notiz-card,:root.bahn .login-logo,:root.bahn .map-header,:root.bahn .notice-primary{position:relative;overflow:hidden;}
+
+/* Kopfleiste */
+:root.bahn header{background:var(--bh-gloss);box-shadow:var(--bh-gloss-sh);border-radius:0 0 18px 18px;padding:10px 14px;overflow:hidden;}
+:root.bahn header>*{position:relative;}
+:root.bahn .hnk-title{color:#fff;font-size:26px;text-shadow:0 1px 2px rgba(80,0,8,.45);}
+:root.bahn #hNoKurs .hv{font-family:var(--bh-mono);font-size:11px;color:#282D37;background:var(--bh-silver);box-shadow:var(--bh-silver-sh);border-radius:999px;padding:3px 9px;letter-spacing:0;}
+:root.bahn #hNoKurs .data-ver{color:rgba(255,255,255,.8);}
+:root.bahn .hkn{color:#fff;text-shadow:0 1px 2px rgba(80,0,8,.45);}
+:root.bahn .hks{color:rgba(255,255,255,.92);}
+:root.bahn .hk-hint{color:#fff;}
+:root.bahn #hKurs .hk-clock{background:var(--bh-silver);box-shadow:var(--bh-silver-sh);color:#282D37;text-shadow:none;}
+:root.bahn #hKurs .hk-hint{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.45);}
+
+/* Leiste unter dem Kopf */
+:root.bahn #subhdr{background:rgba(240,243,245,.94);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:none;}
+:root.bahn #gpsBar{background:#fff;border:none;box-shadow:0 1px 3px rgba(40,45,55,.12);color:#646973;}
+:root.bahn .gps-dot.found{background:#408335;box-shadow:0 0 0 3px rgba(64,131,53,.18);}
+
+/* Filter */
+:root.bahn .tab-filter{background:#fff;border:1px solid #D7DCE1;border-radius:10px;}
+:root.bahn .tab-filter .tn{color:#282D37;}
+:root.bahn .tab-filter .tl{color:#646973;}
+:root.bahn .tab-filter.active-schule,:root.bahn .tab-filter.active-we{background:var(--bh-gloss);border-color:transparent;box-shadow:var(--bh-gloss-sh);}
+:root.bahn .tab-filter.active-ferien{background:linear-gradient(180deg,#6BB35E 0%,#408335 50%,#2E6A25 100%);border-color:transparent;}
+:root.bahn .tab-filter[class*="active"] .tn,:root.bahn .tab-filter[class*="active"] .tl{color:#fff;}
+
+/* Einstellungen */
+:root.bahn #settingsBar{background:transparent;padding:14px 14px 6px;}
+:root.bahn .h-sc,:root.bahn #settingsBar #gpsBtn{background:#fff;border:1px solid #D7DCE1;border-radius:12px;box-shadow:0 1px 3px rgba(40,45,55,.1);padding:11px 13px;}
+:root.bahn #settingsBar #gpsBtn.on{background:#EAF4E7;border-color:#9CC792;}
+:root.bahn .h-sc-lbl{color:#646973;font-size:10px;letter-spacing:.14em;}
+:root.bahn .h-sc-val{color:#282D37;font-size:15px;}
+:root.bahn .h-sc-sub,:root.bahn .h-sc-sub .hv{color:#646973;}
+:root.bahn #settingsBar #userNameDisplay{color:#282D37!important;}
+:root.bahn #settingsBar #gpsLbl{color:#282D37;}
+:root.bahn .h-chip{font-size:13px;padding:7px 13px;border:1px solid #AFB4BB;background:var(--bh-silver);box-shadow:var(--bh-silver-sh);color:#282D37;}
+:root.bahn .h-chip.active{background:var(--bh-gloss);border-color:transparent;color:#fff;box-shadow:var(--bh-gloss-sh);}
+:root.bahn .settings-kurse-lbl{color:#646973;font-size:12px;letter-spacing:.16em;padding-top:16px;}
+
+/* Kursauswahl */
+:root.bahn .ks-cat-title{color:#282D37;font-size:22px;margin:4px 0 10px;}
+:root.bahn .ks-btn{background:#fff;border:1px solid #D7DCE1;border-radius:12px;box-shadow:0 1px 3px rgba(40,45,55,.1);padding:13px 16px;}
+:root.bahn .ks-btn .ks-name{color:#282D37;font-size:22px;}
+:root.bahn .ks-btn .ks-sub{color:#646973;font-size:13px;}
+:root.bahn .ks-btn:active{background:var(--bh-gloss);box-shadow:var(--bh-gloss-sh);border-color:transparent;}
+:root.bahn .ks-btn:active .ks-name,:root.bahn .ks-btn:active .ks-sub{color:#fff;}
+:root.bahn button[onclick="openChangelog()"]{background:var(--bh-silver)!important;box-shadow:var(--bh-silver-sh);border:1px solid #AFB4BB!important;border-radius:999px!important;color:#282D37!important;}
+
+/* Fahrten-Karten */
+:root.bahn .kt{color:#282D37;}
+:root.bahn .lc{background:#fff;border:none;border-top:4px solid #EC0016;border-radius:14px;box-shadow:var(--bh-card);}
+:root.bahn .lc.exp{border-color:#EC0016;box-shadow:0 4px 8px rgba(40,45,55,.1),0 16px 34px rgba(40,45,55,.18);}
+:root.bahn .lc.exp .lch{background:#fff;border-radius:10px 10px 0 0;border-bottom:1px solid #E5E8EB;box-shadow:0 6px 12px rgba(40,45,55,.08);}
+:root.bahn .lch{border-radius:10px;}
+:root.bahn .fk-lin{position:relative;overflow:hidden;background:var(--bh-gloss);border:none;border-radius:12px;box-shadow:var(--bh-gloss-sh);}
+:root.bahn .fk-fn{background:var(--bh-silver);border:1px solid #D7DCE1;border-radius:12px;box-shadow:var(--bh-silver-sh);}
+:root.bahn .fk-lbl{color:rgba(255,255,255,.92);font-size:11px;letter-spacing:.14em;}
+:root.bahn .fk-fn .fk-lbl{color:#646973;}
+:root.bahn .fk-ln{font-family:'Source Sans 3',Arial,sans-serif;font-weight:900;font-size:46px;color:#fff;letter-spacing:0;text-shadow:0 2px 2px rgba(80,0,8,.45);}
+:root.bahn .fk-ab{font-family:'Source Sans 3',Arial,sans-serif;font-weight:900;font-size:26px;color:#EC0016;background:#fff;border-radius:6px;padding:0 6px;text-shadow:none;box-shadow:inset 0 -2px 0 rgba(0,0,0,.1);}
+:root.bahn .fk-fv{font-family:var(--bh-mono);color:#282D37;margin-top:4px;}
+:root.bahn .fk-t{font-family:var(--bh-mono);color:#282D37;}
+:root.bahn .fk-d{background:var(--bh-dot);box-shadow:0 1px 3px rgba(140,0,11,.5);width:11px;height:11px;}
+:root.bahn .fk-d2{background:#282D37;box-shadow:none;border-radius:2px;}
+:root.bahn .fk-s{color:#282D37;font-weight:900;font-size:18px;}
+:root.bahn .fk-dur{font-family:'Source Sans 3',Arial,sans-serif;font-size:14px;color:#fff;background:linear-gradient(180deg,#4A505C,#282D37);border:none;border-radius:6px;box-shadow:inset 0 1px 0 rgba(255,255,255,.25);}
+:root.bahn .fk-map{background:var(--bh-silver);border:1px solid #AFB4BB;border-radius:8px;color:#282D37;box-shadow:var(--bh-silver-sh);font-size:14px;}
+:root.bahn .ca button{background:var(--bh-silver);border:1px solid #D7DCE1;color:#282D37;}
+:root.bahn .ca .dbtn:hover{background:var(--bh-gloss);color:#fff;}
+
+/* Haltestellen */
+:root.bahn .sp{border-top-color:#E5E8EB;}
+:root.bahn .sl::before{background:#D7DCE1;}
+:root.bahn .sd{background:#fff;border:2px solid #878C96;box-shadow:none;}
+:root.bahn .st{font-family:var(--bh-mono);color:#282D37;}
+:root.bahn .sn{color:#282D37;}
+:root.bahn .sr.first .sd{background:var(--bh-dot);border:none;box-shadow:0 1px 3px rgba(140,0,11,.5);}
+:root.bahn .sr.last .sd{background:#282D37;border:none;border-radius:4px;}
+:root.bahn .sr.first .sn,:root.bahn .sr.last .sn{color:#282D37;font-weight:900;}
+:root.bahn .sr.past .sd{background:#D7DCE1;border:none;box-shadow:none;}
+:root.bahn .sr.past .st,:root.bahn .sr.past .sn{color:#A9AEB5;font-weight:400;}
+:root.bahn .sr.cur{background:linear-gradient(90deg,#FDE6E8,#FFF5F6);box-shadow:inset 5px 0 0 #EC0016;margin:2px -14px;padding:6px 14px;}
+:root.bahn .sr.cur .sd{background:var(--bh-dot);border:none;box-shadow:0 0 0 4px rgba(236,0,22,.15),0 2px 5px rgba(140,0,11,.5),inset 0 1px 1px rgba(255,255,255,.7);}
+:root.bahn .sr.cur .st{color:#C50014;}
+:root.bahn .sr.cur .sn{color:#282D37;font-weight:900;}
+:root.bahn .sr.next .sd{background:#fff;border:3px solid #282D37;box-shadow:none;}
+:root.bahn .sr.next .st,:root.bahn .sr.next .sn{color:#282D37;font-weight:900;}
+:root.bahn .dist-row{color:#C50014;}
+:root.bahn .sh{background:#FFF0B3;border-left:3px solid #B38D00;border-radius:0 8px 8px 0;}
+:root.bahn .hb{color:#4A3A00;}
+:root.bahn .svc-block{background:#fff;border:1px dashed #AFB4BB;border-radius:12px;box-shadow:none;}
+:root.bahn .svc-label{color:#282D37;}
+:root.bahn .svc-time{color:#646973;}
+
+/* Buttons, Dialoge, Overlays */
+:root.bahn .fab,:root.bahn .bp,:root.bahn .sync-btn,:root.bahn .notice-primary{background:var(--bh-gloss);color:#fff;border-radius:10px;font-weight:700;box-shadow:var(--bh-gloss-sh);}
+:root.bahn .bs,:root.bahn .notice-secondary{background:var(--bh-silver);color:#282D37;border-radius:10px;box-shadow:var(--bh-silver-sh);}
+:root.bahn .sync-bar,:root.bahn .export-bar{background:transparent;border-bottom:1px solid #D7DCE1;}
+:root.bahn .sync-bar .sync-btn[style]{background:var(--bh-silver)!important;color:#282D37!important;border:1px solid #AFB4BB!important;}
+:root.bahn .sync-bar .sync-btn[style]::before{display:none;}
+:root.bahn .ov,:root.bahn .notiz-edit-overlay,:root.bahn #noticeOv{background:rgba(40,45,55,.55);}
+:root.bahn .mo,:root.bahn .notiz-edit-modal,:root.bahn .notice-sheet{background:#fff;border:none;border-top:4px solid #EC0016;border-radius:18px 18px 0 0;box-shadow:0 -10px 30px rgba(40,45,55,.25);}
+:root.bahn .mo h2,:root.bahn .notiz-edit-modal h3,:root.bahn .notice-sheet h2{color:#282D37;}
+:root.bahn .fg label,:root.bahn .notice-fld label{color:#646973;font-weight:700;}
+:root.bahn .fg input,:root.bahn .notiz-textarea,:root.bahn .setup-inp,:root.bahn .notice-fld input,:root.bahn .notice-fld textarea{background:#F0F3F5;border:1px solid #AFB4BB;border-radius:8px;color:#282D37;}
+:root.bahn .fg input:focus,:root.bahn .notiz-textarea:focus{border-color:#282D37;box-shadow:0 0 0 2px #282D37;}
+:root.bahn .asb{background:#fff;border:1px dashed #AFB4BB;color:#282D37;}
+:root.bahn .notiz-card{background:var(--bh-gloss);box-shadow:var(--bh-gloss-sh);border-radius:14px;}
+:root.bahn .notiz-card-title,:root.bahn .notiz-card-text{color:#fff;}
+:root.bahn .notiz-card-stop{color:rgba(255,255,255,.8);}
+:root.bahn .notiz-card-close{background:rgba(255,255,255,.2);color:#fff;}
+:root.bahn .keypad-overlay{background:rgba(40,45,55,.6);}
+:root.bahn .keypad-box{background:#fff;border:none;border-top:4px solid #EC0016;border-radius:18px;box-shadow:0 20px 50px rgba(40,45,55,.35);}
+:root.bahn .keypad-title{color:#282D37;}
+:root.bahn .keypad-display{background:#F0F3F5;border-color:#D7DCE1;color:#EC0016;}
+:root.bahn .kp-btn{background:var(--bh-silver);border:1px solid #D7DCE1;border-radius:12px;color:#282D37;box-shadow:var(--bh-silver-sh);}
+:root.bahn .kp-btn:active{background:var(--bh-gloss);color:#fff;}
+:root.bahn .kp-del{color:#EC0016;}
+:root.bahn .changelog-v{color:#EC0016;}
+:root.bahn .changelog-desc{color:#282D37;}
+:root.bahn .login-ov{background:#F0F3F5;}
+:root.bahn .login-logo{background:var(--bh-gloss);color:#fff;border-radius:18px;box-shadow:var(--bh-gloss-sh);}
+:root.bahn .login-title{color:#282D37;}
+:root.bahn .u-btn,:root.bahn .setup-box{background:#fff;border:1px solid #D7DCE1;border-radius:12px;color:#282D37;box-shadow:0 1px 3px rgba(40,45,55,.1);}
+:root.bahn .u-btn:hover{background:var(--bh-gloss);color:#fff;}
+:root.bahn .lpin-btn{background:var(--bh-silver);border:1px solid #D7DCE1;color:#282D37;box-shadow:var(--bh-silver-sh);}
+:root.bahn .lpin-disp{color:#282D37;}
+:root.bahn .map-overlay{background:#F0F3F5;}
+:root.bahn .map-header{background:var(--bh-gloss);border-bottom:none;box-shadow:var(--bh-gloss-sh);}
+:root.bahn .map-header>*{position:relative;}
+:root.bahn .map-title{color:#fff;}
+:root.bahn .map-close{background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.5);color:#fff;}
+:root.bahn .match-row{background:#fff;border-color:#D7DCE1;}
+:root.bahn .empty{color:#646973;}
+:root.bahn #swUpdateBanner{background:var(--bh-gloss);box-shadow:var(--bh-gloss-sh);}
+
+:root.bahn .fab{overflow:hidden;}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 </head>
@@ -876,7 +1076,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div id="hNoKurs">
     <span class="hnk-title">KURSPLAN</span>
-    <span class="hv">v114r</span><span id="dataVerSpan" class="data-ver"></span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span>
+    <span class="hv">v115r</span><span id="dataVerSpan" class="data-ver"></span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span>
   </div>
   <div id="hKurs" onclick="showSelectScreen()">
     <div class="hk-hint"><span class="hk-arr">←</span> ZUR KURSAUSWAHL</div>
@@ -925,7 +1125,7 @@ main{padding:4px 16px 100px;}
       <span class="h-lock-btn" id="lockBtn" title="Admin">🔒</span>
       <div class="h-sc-lbl">FAHRER</div>
       <div class="h-sc-val"><span id="userNameDisplay"></span></div>
-      <div class="h-sc-sub"><span class="hv">v114r</span> · <span id="hd"></span></div>
+      <div class="h-sc-sub"><span class="hv">v115r</span> · <span id="hd"></span></div>
     </div>
     <button id="gpsBtn" onclick="toggleGps()" class="h-sc">
       <div class="h-sc-lbl">GPS</div>
@@ -938,11 +1138,7 @@ main{padding:4px 16px 100px;}
       <div class="h-sc-lbl">DESIGN</div>
       <div id="hThemeChips" class="h-chips">
         <button class="h-chip" onclick="applyThemeChoice('leuchtblau')">✨ Leuchtblau</button>
-        <button class="h-chip" onclick="applyThemeChoice('dark')">🌙 Dunkel</button>
-        <button class="h-chip" onclick="applyThemeChoice('light')">☀️ Hell</button>
-        <button class="h-chip" onclick="applyThemeChoice('timeflow')">🌊 Flow</button>
-        <button class="h-chip" onclick="applyThemeChoice('olive')">🌿 Olive</button>
-        <button class="h-chip" onclick="applyThemeChoice('paper')">📄 Papier</button>
+        <button class="h-chip" onclick="applyThemeChoice('bahn')">🚆 Bahn</button>
       </div>
     </div>
   </div>
@@ -1106,6 +1302,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v115r', date:'30.10.2026', desc:'Neues Design „Bahn“: DB-Stil in Weiß/Grau mit glänzendem 3D-Rot. Designs Dunkel, Hell, Flow, Olive und Papier entfernt – Auswahl nur noch Leuchtblau oder Bahn.'},
   {v:'v114r', date:'28.10.2026', desc:'Leuchtblau: kompakter Kopf (Kurs, Infos und Uhr in einer Zeile), neuer Fahrt-Kopf mit großer Linie und Fahrt-Nr., Start/Ziel mit Uhrzeit darunter – mehr Platz für die Haltestellen.'},
   {v:'v113r', date:'28.10.2026', desc:'Neues Design „Leuchtblau“: leuchtender Blau-Verlauf, Glas-Karten, leuchtende Haltestellen-Zeitleiste, neue Schriften (Plus Jakarta Sans / JetBrains Mono). Unter DESIGN umschaltbar.'},
   {v:'v112r', date:'25.10.2026', desc:'Kurs 213: Winterfahrplan 26.10.2026 — p1 startet 06:37 (+6 min), 3 Haltestellen entfallen (Waabs Fuchsberg, Schwastrum, Sankt-Johannes-Stift)'},
@@ -3586,8 +3783,8 @@ window.addEventListener('load', function() {
 
 
 // ── THEME UMSCHALTER ──────────────────────────────────
-var THEMES = ['leuchtblau', 'dark', 'light', 'timeflow', 'olive', 'paper'];
-var THEME_ICONS = {leuchtblau:'✨', dark:'🌙', light:'☀️', timeflow:'🌊', olive:'🌿', paper:'📄'};
+var THEMES = ['leuchtblau', 'bahn'];
+var THEME_ICONS = {leuchtblau:'✨', bahn:'🚆'};
 var currentTheme = localStorage.getItem('kp_theme') || 'leuchtblau';
 // Einmalig auf das neue Leuchtblau-Design umstellen (v113r) – danach gilt wieder die eigene Wahl
 if (!localStorage.getItem('kp_theme_lb')) { currentTheme = 'leuchtblau'; localStorage.setItem('kp_theme', 'leuchtblau'); localStorage.setItem('kp_theme_lb', '1'); }
@@ -3603,8 +3800,9 @@ function setHeaderHeight() {
 }
 
 function applyTheme() {
-  document.documentElement.classList.remove('leuchtblau', 'light', 'timeflow', 'olive', 'paper');
-  if (currentTheme !== 'dark') document.documentElement.classList.add(currentTheme);
+  document.documentElement.classList.remove('leuchtblau', 'bahn', 'light', 'timeflow', 'olive', 'paper');
+  document.documentElement.classList.add(currentTheme);
+  var tcm = document.querySelector('meta[name="theme-color"]'); if (tcm) tcm.setAttribute('content', currentTheme === 'bahn' ? '#EC0016' : '#1a5cff');
   var btn = document.getElementById('themeBtn');
   if (btn) btn.textContent = THEME_ICONS[currentTheme] || '🌙';
   document.querySelectorAll('.h-chip').forEach(function(c) {
