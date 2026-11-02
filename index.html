@@ -1086,7 +1086,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div id="hNoKurs">
     <span class="hnk-title">KURSPLAN</span>
-    <span class="hv">v116r</span><span id="dataVerSpan" class="data-ver"></span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span>
+    <span class="hv">v117r</span><span id="dataVerSpan" class="data-ver"></span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span>
   </div>
   <div id="hKurs" onclick="showSelectScreen()">
     <div class="hk-hint"><span class="hk-arr">←</span> ZUR KURSAUSWAHL</div>
@@ -1135,7 +1135,7 @@ main{padding:4px 16px 100px;}
       <span class="h-lock-btn" id="lockBtn" title="Admin">🔒</span>
       <div class="h-sc-lbl">FAHRER</div>
       <div class="h-sc-val"><span id="userNameDisplay"></span></div>
-      <div class="h-sc-sub"><span class="hv">v116r</span> · <span id="hd"></span></div>
+      <div class="h-sc-sub"><span class="hv">v117r</span> · <span id="hd"></span></div>
     </div>
     <button id="gpsBtn" onclick="toggleGps()" class="h-sc">
       <div class="h-sc-lbl">GPS</div>
@@ -1149,16 +1149,6 @@ main{padding:4px 16px 100px;}
       <div id="hThemeChips" class="h-chips">
         <button class="h-chip" onclick="applyThemeChoice('leuchtblau')">✨ Leuchtblau</button>
         <button class="h-chip" onclick="applyThemeChoice('bahn')">🚆 Bahn</button>
-      </div>
-    </div>
-    <div class="h-sc h-sc-full" id="bridgeTile">
-      <div class="h-sc-lbl">KOPPLUNG MIT STUNDENERFASSUNG</div>
-      <label class="bridge-sw"><input type="checkbox" id="bridgeToggle" onchange="bridgeSetOn(this.checked)"><span id="bridgeLbl">Aus</span></label>
-      <div id="bridgeCfg" style="display:none">
-        <div class="bridge-hint">Gefahrene Kurse werden an deine Stundenerfassung geschickt. Der Token bleibt nur auf diesem Gerät.</div>
-        <div class="fg"><label>GitHub Token</label><input id="bridgeToken" type="password" placeholder="ghp_..." autocomplete="off"></div>
-        <div class="fg"><label>Repo der Stundenerfassung</label><input id="bridgeRepo" type="text" placeholder="MioEck/Stundenerfassunng"></div>
-        <button class="bp" style="width:100%" onclick="bridgeCfgSpeichern()">Speichern</button>
       </div>
     </div>
   </div>
@@ -1336,7 +1326,8 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
-  {v:'v116r', date:'02.11.2026', desc:'Optionale Kopplung mit der Stundenerfassung: In den Einstellungen einschaltbar (Standard: aus). Dann erscheint im Kurs der Button „Kurs gefahren bestätigen“ (schickt Datum und Kursnummer).'},
+  {v:'v117r', date:'02.11.2026', desc:'Kopplung mit Stundenerfassung in Fahrerverwaltung verschoben (nicht mehr auf den ersten Blick sichtbar).'},
+  {v:'v116r', date:'02.11.2026', desc:'Optionale Kopplung mit der Stundenerfassung: In den Einstellungen einschaltbar (Standard: aus). Dann erscheint im Kurs der Button „Kurs gefahren bestätigen” (schickt Datum und Kursnummer).'},
   {v:'v115r', date:'30.10.2026', desc:'Neues Design „Bahn“: DB-Stil in Weiß/Grau mit glänzendem 3D-Rot. Designs Dunkel, Hell, Flow, Olive und Papier entfernt – Auswahl nur noch Leuchtblau oder Bahn.'},
   {v:'v114r', date:'28.10.2026', desc:'Leuchtblau: kompakter Kopf (Kurs, Infos und Uhr in einer Zeile), neuer Fahrt-Kopf mit großer Linie und Fahrt-Nr., Start/Ziel mit Uhrzeit darunter – mehr Platz für die Haltestellen.'},
   {v:'v113r', date:'28.10.2026', desc:'Neues Design „Leuchtblau“: leuchtender Blau-Verlauf, Glas-Karten, leuchtende Haltestellen-Zeitleiste, neue Schriften (Plus Jakarta Sans / JetBrains Mono). Unter DESIGN umschaltbar.'},
@@ -2236,6 +2227,7 @@ function bridgeMsg(text, fehler) {
   clearTimeout(m._t); m._t = setTimeout(function() { m.style.display = 'none'; }, 3500);
 }
 function bridgeUiInit() {
+  if (!document.getElementById('bridgeToggle')) return;
   var on = bridgeOn();
   document.getElementById('bridgeToggle').checked = on;
   document.getElementById('bridgeLbl').textContent = on ? 'An' : 'Aus';
@@ -3477,6 +3469,16 @@ async function openUserManager() {
       '<b style="font-size:13px;color:var(--mut)">LETZTE LOGINS</b>' +
       '<div style="margin-top:8px;">' + logRows + '</div>' +
       '</div>' : '') +
+    '<div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--brd);">' +
+    '<b style="font-size:13px;color:var(--mut)">KOPPLUNG MIT STUNDENERFASSUNG</b>' +
+    '<div style="margin-top:8px;">' +
+    '<label class="bridge-sw"><input type="checkbox" id="bridgeToggle" onchange="bridgeSetOn(this.checked)"><span id="bridgeLbl">Aus</span></label>' +
+    '<div id="bridgeCfg" style="display:none">' +
+    '<div class="bridge-hint">Gefahrene Kurse werden an deine Stundenerfassung geschickt. Der Token bleibt nur auf diesem Gerät.</div>' +
+    '<div class="fg"><label>GitHub Token</label><input id="bridgeToken" type="password" placeholder="ghp_..." autocomplete="off"></div>' +
+    '<div class="fg"><label>Repo der Stundenerfassung</label><input id="bridgeRepo" type="text" placeholder="MioEck/Stundenerfassunng"></div>' +
+    '<button class="bp" style="width:100%" onclick="bridgeCfgSpeichern()">Speichern</button>' +
+    '</div></div></div>' +
     '<button onclick="_closeUmModal()" style="width:100%;margin-top:14px;background:var(--s2);border:1.5px solid var(--brd);border-radius:10px;padding:10px;cursor:pointer;font-family:inherit;color:var(--txt)">Schließen</button>' +
     '</div>';
 
@@ -3486,6 +3488,7 @@ async function openUserManager() {
   ov.innerHTML = html;
   ov.addEventListener('click', function(e){ if(e.target===ov) _closeUmModal(); });
   document.body.appendChild(ov);
+  bridgeUiInit();
   } catch(e) {
     var msg = e.message && e.message.indexOf('fetch') >= 0
       ? 'Keine Verbindung zu Supabase.\nIst das Gerät online? Supabase-Projekt ggf. reaktivieren.'
@@ -4368,7 +4371,7 @@ function openMapWithHistory(kursId, lineId) {
 <input type="file" id="noticeFilePicker" accept="image/*,application/pdf" style="display:none">
 <script>
 // Kopplung mit Stundenerfassung: Einstellungen anzeigen, liegengebliebene Einträge nachsenden
-window.addEventListener('load', function() { try { bridgeUiInit(); bridgeSendeOffene(false); } catch (e) { console.log('Bridge:', e); } });
+window.addEventListener('load', function() { try { bridgeSendeOffene(false); } catch (e) { console.log('Bridge:', e); } });
 document.addEventListener('visibilitychange', function() { if (document.visibilityState === 'visible') { try { bridgeSendeOffene(false); } catch (e) {} } });
 </script>
 </body>
