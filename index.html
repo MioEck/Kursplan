@@ -1048,6 +1048,16 @@ main{padding:4px 16px 100px;}
 :root.bahn #swUpdateBanner{background:var(--bh-gloss);box-shadow:var(--bh-gloss-sh);}
 
 :root.bahn .fab{overflow:hidden;}
+/* Kopplung mit Stundenerfassung */
+.bridge-btn{display:block;width:calc(100% - 24px);margin:12px 12px 4px;padding:14px;border:none;border-radius:12px;background:var(--grn);color:#fff;font-weight:700;font-size:16px;cursor:pointer;font-family:inherit;box-shadow:0 4px 12px rgba(0,0,0,.25);}
+.bridge-btn:active{transform:scale(.98);}
+.bridge-sw{display:flex;align-items:center;gap:10px;margin-top:6px;cursor:pointer;font-size:15px;color:var(--txt);}
+.bridge-sw input{width:22px;height:22px;accent-color:var(--grn);}
+#bridgeCfg{margin-top:10px;}
+#bridgeCfg .fg input{font-size:14px;}
+.bridge-hint{font-size:12px;color:var(--mut);margin:6px 0 10px;line-height:1.4;}
+#bridgeMsg{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);z-index:400;max-width:90%;padding:12px 18px;border-radius:12px;font-weight:700;font-size:14px;color:#fff;background:var(--grn);box-shadow:0 8px 24px rgba(0,0,0,.35);display:none;text-align:center;}
+#bridgeMsg.err{background:var(--red);}
 </style>
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
 </head>
@@ -1076,7 +1086,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div id="hNoKurs">
     <span class="hnk-title">KURSPLAN</span>
-    <span class="hv">v115r</span><span id="dataVerSpan" class="data-ver"></span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span>
+    <span class="hv">v116r</span><span id="dataVerSpan" class="data-ver"></span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span>
   </div>
   <div id="hKurs" onclick="showSelectScreen()">
     <div class="hk-hint"><span class="hk-arr">←</span> ZUR KURSAUSWAHL</div>
@@ -1125,7 +1135,7 @@ main{padding:4px 16px 100px;}
       <span class="h-lock-btn" id="lockBtn" title="Admin">🔒</span>
       <div class="h-sc-lbl">FAHRER</div>
       <div class="h-sc-val"><span id="userNameDisplay"></span></div>
-      <div class="h-sc-sub"><span class="hv">v115r</span> · <span id="hd"></span></div>
+      <div class="h-sc-sub"><span class="hv">v116r</span> · <span id="hd"></span></div>
     </div>
     <button id="gpsBtn" onclick="toggleGps()" class="h-sc">
       <div class="h-sc-lbl">GPS</div>
@@ -1141,11 +1151,22 @@ main{padding:4px 16px 100px;}
         <button class="h-chip" onclick="applyThemeChoice('bahn')">🚆 Bahn</button>
       </div>
     </div>
+    <div class="h-sc h-sc-full" id="bridgeTile">
+      <div class="h-sc-lbl">KOPPLUNG MIT STUNDENERFASSUNG</div>
+      <label class="bridge-sw"><input type="checkbox" id="bridgeToggle" onchange="bridgeSetOn(this.checked)"><span id="bridgeLbl">Aus</span></label>
+      <div id="bridgeCfg" style="display:none">
+        <div class="bridge-hint">Gefahrene Kurse werden an deine Stundenerfassung geschickt. Der Token bleibt nur auf diesem Gerät.</div>
+        <div class="fg"><label>GitHub Token</label><input id="bridgeToken" type="password" placeholder="ghp_..." autocomplete="off"></div>
+        <div class="fg"><label>Repo der Stundenerfassung</label><input id="bridgeRepo" type="text" placeholder="MioEck/Stundenerfassunng"></div>
+        <button class="bp" style="width:100%" onclick="bridgeCfgSpeichern()">Speichern</button>
+      </div>
+    </div>
   </div>
   <div class="settings-kurse-lbl">KURSE</div>
 </div>
 <main>
   <div id="kursSelect" style="display:none"></div>
+  <button id="bridgeBtn" class="bridge-btn" style="display:none" onclick="openBridge()">✓ Kurs gefahren bestätigen</button>
   <div class="ll" id="ll"></div>
   <div class="empty" id="em"><div class="bi">🚌</div><p>Kurs auswählen oder neu anlegen</p></div>
 </main>
@@ -1176,6 +1197,23 @@ main{padding:4px 16px 100px;}
     </div>
   </div>
 </div>
+
+<div class="ov" id="ovBridge" onclick="if(event.target===this)closeOv('ovBridge')">
+  <div class="mo">
+    <h2 id="bridgeTitel">KURS GEFAHREN</h2>
+    <div class="fg"><label>Datum</label><input id="bDatum" type="date"></div>
+    <div class="fr">
+      <div class="fg"><label>Dienstbeginn</label><input id="bBeginn" type="time"></div>
+      <div class="fg"><label>Dienstende</label><input id="bEnde" type="time"></div>
+    </div>
+    <div class="bridge-hint">Wird an die Stundenerfassung geschickt und dort erst nach deiner Bestätigung übernommen.</div>
+    <div class="ma">
+      <button class="bs" onclick="closeOv('ovBridge')">Abbrechen</button>
+      <button class="bp" onclick="bridgeBestaetigen()">Bestätigen</button>
+    </div>
+  </div>
+</div>
+<div id="bridgeMsg"></div>
 
 <div class="ov" id="ovKurs" onclick="if(event.target===this)closeOv('ovKurs')">
   <div class="mo">
@@ -1302,6 +1340,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v116r', date:'02.11.2026', desc:'Optionale Kopplung mit der Stundenerfassung: In den Einstellungen einschaltbar (Standard: aus). Dann erscheint im Kurs der Button „Kurs gefahren bestätigen“.'},
   {v:'v115r', date:'30.10.2026', desc:'Neues Design „Bahn“: DB-Stil in Weiß/Grau mit glänzendem 3D-Rot. Designs Dunkel, Hell, Flow, Olive und Papier entfernt – Auswahl nur noch Leuchtblau oder Bahn.'},
   {v:'v114r', date:'28.10.2026', desc:'Leuchtblau: kompakter Kopf (Kurs, Infos und Uhr in einer Zeile), neuer Fahrt-Kopf mit großer Linie und Fahrt-Nr., Start/Ziel mit Uhrzeit darunter – mehr Platz für die Haltestellen.'},
   {v:'v113r', date:'28.10.2026', desc:'Neues Design „Leuchtblau“: leuchtender Blau-Verlauf, Glas-Karten, leuchtende Haltestellen-Zeitleiste, neue Schriften (Plus Jakarta Sans / JetBrains Mono). Unter DESIGN umschaltbar.'},
@@ -2189,6 +2228,110 @@ function fDur(m) {
 }
 function closeOv(id) { document.getElementById(id).classList.remove('open'); }
 
+// ── KOPPLUNG MIT STUNDENERFASSUNG (optional, Standard: aus) ──
+var BRIDGE_KEY = 'bridge_kursplan_eintraege';
+// Dienstzeiten wie in der Stundenerfassung (Vorschlag, im Dialog änderbar)
+var DIENSTZEITEN = {
+  '211':['04:27','08:53'], '212':['04:38','08:23'], '213':['05:51','15:32'], '214':['06:13','17:00'],
+  '215':['06:40','18:08'], '216':['11:56','23:18'], '217':['12:43','23:40'],
+  '411':['04:38','11:29'], '412':['08:25','18:55'], '413':['07:21','18:37'], '414':['10:49','21:40'],
+  '611':['05:30','14:55'], '612':['06:40','18:25'], '613':['14:40','22:25'], '811':['07:49','20:25']
+};
+function _bGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
+function _bSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+function bridgeOn() { return _bGet('kp_bridge_on') === '1'; }
+function bridgeListe() { try { return JSON.parse(_bGet(BRIDGE_KEY) || '[]'); } catch (e) { return []; } }
+function bridgeMsg(text, fehler) {
+  var m = document.getElementById('bridgeMsg');
+  m.textContent = text; m.className = fehler ? 'err' : ''; m.style.display = 'block';
+  clearTimeout(m._t); m._t = setTimeout(function() { m.style.display = 'none'; }, 3500);
+}
+function bridgeUiInit() {
+  var on = bridgeOn();
+  document.getElementById('bridgeToggle').checked = on;
+  document.getElementById('bridgeLbl').textContent = on ? 'An' : 'Aus';
+  document.getElementById('bridgeCfg').style.display = on ? 'block' : 'none';
+  document.getElementById('bridgeToken').value = _bGet('kp_bridge_token') || '';
+  document.getElementById('bridgeRepo').value = _bGet('kp_bridge_repo') || 'MioEck/Stundenerfassunng';
+}
+function bridgeSetOn(on) { _bSet('kp_bridge_on', on ? '1' : '0'); bridgeUiInit(); }
+function bridgeCfgSpeichern() {
+  var t = document.getElementById('bridgeToken').value.trim();
+  var r = document.getElementById('bridgeRepo').value.trim() || 'MioEck/Stundenerfassunng';
+  if (t && t.indexOf('ghp_') !== 0 && t.indexOf('github_pat_') !== 0) { bridgeMsg('Token sieht nicht richtig aus', true); return; }
+  _bSet('kp_bridge_token', t); _bSet('kp_bridge_repo', r);
+  bridgeMsg('Kopplung gespeichert');
+  bridgeSendeOffene();
+}
+function _bHeute() { var d = new Date(); return d.getFullYear() + '-' + ('0' + (d.getMonth() + 1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2); }
+function _bAktiverKurs() {
+  for (var i = 0; i < D.kurse.length; i++) if (D.kurse[i].id === D.activeKurs) return D.kurse[i];
+  return null;
+}
+function openBridge() {
+  var kurs = _bAktiverKurs(); if (!kurs) return;
+  var nr = String(kurs.id || kurs.name).replace(/\D/g, '');
+  var dz = DIENSTZEITEN[nr];
+  var lines = kurs.lines || [];
+  document.getElementById('bridgeTitel').textContent = 'KURS ' + nr + ' GEFAHREN';
+  document.getElementById('bDatum').value = _bHeute();
+  document.getElementById('bBeginn').value = dz ? dz[0] : (lines.length ? lines[0].startTime : '');
+  document.getElementById('bEnde').value = dz ? dz[1] : (lines.length ? lines[lines.length - 1].endTime : '');
+  document.getElementById('ovBridge').classList.add('open');
+}
+function bridgeBestaetigen() {
+  var kurs = _bAktiverKurs(); if (!kurs) return;
+  var nr = String(kurs.id || kurs.name).replace(/\D/g, '');
+  var datum = document.getElementById('bDatum').value;
+  var beginn = document.getElementById('bBeginn').value;
+  var ende = document.getElementById('bEnde').value;
+  if (!datum || !beginn || !ende) { bridgeMsg('Bitte Datum, Beginn und Ende ausfüllen', true); return; }
+  var liste = bridgeListe();
+  // gleicher Kurs am gleichen Tag noch offen → ersetzen statt doppelt
+  liste = liste.filter(function(e) { return !(e.status === 'offen' && e.datum === datum && e.kurs === 'Kurs ' + nr); });
+  liste.push({ id: nr + '_' + datum + '_' + Date.now().toString(36), datum: datum, kurs: 'Kurs ' + nr,
+    beginn: beginn, ende: ende, erstellt: new Date().toISOString(), status: 'offen', gesendet: false });
+  _bSet(BRIDGE_KEY, JSON.stringify(liste));
+  closeOv('ovBridge');
+  bridgeSendeOffene(true);
+}
+function _bB64(str) { var b = new TextEncoder().encode(str), s = ''; b.forEach(function(x) { s += String.fromCharCode(x); }); return btoa(s); }
+function _bUnB64(b64) { var bin = atob(b64.replace(/\n/g, '')), u = new Uint8Array(bin.length); for (var i = 0; i < bin.length; i++) u[i] = bin.charCodeAt(i); return new TextDecoder('utf-8').decode(u); }
+// Noch nicht gesendete Einträge in bridge.json im Repo der Stundenerfassung ablegen
+async function bridgeSendeOffene(mitMeldung) {
+  if (!bridgeOn()) return;
+  var token = _bGet('kp_bridge_token'), repo = _bGet('kp_bridge_repo') || 'MioEck/Stundenerfassunng';
+  var liste = bridgeListe();
+  var neu = liste.filter(function(e) { return !e.gesendet; });
+  if (!neu.length) return;
+  if (!token) { if (mitMeldung) bridgeMsg('✓ Gespeichert (ohne Token nur auf diesem Gerät)'); return; }
+  var url = 'https://api.github.com/repos/' + repo + '/contents/bridge.json';
+  var headers = { 'Authorization': 'token ' + token, 'Accept': 'application/vnd.github.v3+json' };
+  try {
+    for (var versuch = 1; versuch <= 3; versuch++) {
+      var sha = null, inhalt = { version: 1, eintraege: [] };
+      var g = await fetch(url, { headers: headers, cache: 'no-store' });
+      if (g.ok) { var j = await g.json(); sha = j.sha; inhalt = JSON.parse(_bUnB64(j.content)); inhalt.eintraege = inhalt.eintraege || []; }
+      else if (g.status !== 404) throw new Error('Lesen ' + g.status);
+      var ids = {}; inhalt.eintraege.forEach(function(e) { ids[e.id] = true; });
+      neu.forEach(function(e) { if (!ids[e.id]) inhalt.eintraege.push({ id: e.id, datum: e.datum, kurs: e.kurs, beginn: e.beginn, ende: e.ende, erstellt: e.erstellt, status: 'offen' }); });
+      inhalt.aktualisiert = new Date().toISOString();
+      var body = { message: 'Kursplan: ' + neu.map(function(e) { return e.kurs + ' ' + e.datum; }).join(', '), content: _bB64(JSON.stringify(inhalt, null, 2)) };
+      if (sha) body.sha = sha;
+      var p = await fetch(url, { method: 'PUT', headers: Object.assign({ 'Content-Type': 'application/json' }, headers), body: JSON.stringify(body) });
+      if ((p.status === 409 || p.status === 422) && versuch < 3) { await new Promise(function(r) { setTimeout(r, 800 * versuch); }); continue; }
+      if (!p.ok) throw new Error('Schreiben ' + p.status);
+      break;
+    }
+    var gesendet = {}; neu.forEach(function(e) { gesendet[e.id] = true; });
+    var aktuell = bridgeListe(); aktuell.forEach(function(e) { if (gesendet[e.id]) e.gesendet = true; });
+    _bSet(BRIDGE_KEY, JSON.stringify(aktuell));
+    if (mitMeldung) bridgeMsg('✓ An Stundenerfassung gesendet');
+  } catch (err) {
+    if (mitMeldung) bridgeMsg('Gespeichert, Senden später erneut (' + err.message + ')', true);
+  }
+}
+
 // TABS
 function renderTabs() {
   var el = document.getElementById('tabs');
@@ -2228,6 +2371,7 @@ function renderLines() {
   document.getElementById('settingsBar').style.display = 'none';
   em.style.display = 'none';
   document.getElementById('hKtn').textContent = kurs.name;
+  document.getElementById('bridgeBtn').style.display = bridgeOn() ? 'block' : 'none';
 
   var lines = kurs.lines || [];
   var tot = 0;
@@ -3947,6 +4091,7 @@ function showSelectScreen() {
   document.getElementById('hNoKurs').style.display = 'flex';
   document.getElementById('settingsBar').style.display = 'block';
   document.getElementById('kursSelect').style.display = 'block';
+  document.getElementById('bridgeBtn').style.display = 'none';
   document.getElementById('ll').innerHTML = '';
   document.getElementById('em').style.display = 'none';
   setHeaderHeight();
@@ -4235,5 +4380,10 @@ function openMapWithHistory(kursId, lineId) {
   </div>
 </div>
 <input type="file" id="noticeFilePicker" accept="image/*,application/pdf" style="display:none">
+<script>
+// Kopplung mit Stundenerfassung: Einstellungen anzeigen, liegengebliebene Einträge nachsenden
+window.addEventListener('load', function() { try { bridgeUiInit(); bridgeSendeOffene(false); } catch (e) { console.log('Bridge:', e); } });
+document.addEventListener('visibilitychange', function() { if (document.visibilityState === 'visible') { try { bridgeSendeOffene(false); } catch (e) {} } });
+</script>
 </body>
 </html>
