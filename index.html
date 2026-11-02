@@ -1086,7 +1086,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div id="hNoKurs">
     <span class="hnk-title">KURSPLAN</span>
-    <span class="hv">v117r</span><span id="dataVerSpan" class="data-ver"></span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span>
+    <span class="hv">v118r</span><span id="dataVerSpan" class="data-ver"></span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span>
   </div>
   <div id="hKurs" onclick="showSelectScreen()">
     <div class="hk-hint"><span class="hk-arr">←</span> ZUR KURSAUSWAHL</div>
@@ -1135,7 +1135,7 @@ main{padding:4px 16px 100px;}
       <span class="h-lock-btn" id="lockBtn" title="Admin">🔒</span>
       <div class="h-sc-lbl">FAHRER</div>
       <div class="h-sc-val"><span id="userNameDisplay"></span></div>
-      <div class="h-sc-sub"><span class="hv">v117r</span> · <span id="hd"></span></div>
+      <div class="h-sc-sub"><span class="hv">v118r</span> · <span id="hd"></span></div>
     </div>
     <button id="gpsBtn" onclick="toggleGps()" class="h-sc">
       <div class="h-sc-lbl">GPS</div>
@@ -1326,6 +1326,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v118r', date:'02.11.2026', desc:'Fahrer-Modal öffnet immer (auch offline): Supabase-Fehler nur im Fahrer-Bereich, Kopplung immer sichtbar.'},
   {v:'v117r', date:'02.11.2026', desc:'Kopplung mit Stundenerfassung in Fahrerverwaltung verschoben (nicht mehr auf den ersten Blick sichtbar).'},
   {v:'v116r', date:'02.11.2026', desc:'Optionale Kopplung mit der Stundenerfassung: In den Einstellungen einschaltbar (Standard: aus). Dann erscheint im Kurs der Button „Kurs gefahren bestätigen” (schickt Datum und Kursnummer).'},
   {v:'v115r', date:'30.10.2026', desc:'Neues Design „Bahn“: DB-Stil in Weiß/Grau mit glänzendem 3D-Rot. Designs Dunkel, Hell, Flow, Olive und Papier entfernt – Auswahl nur noch Leuchtblau oder Bahn.'},
@@ -3421,13 +3422,20 @@ async function saveUserSettings() {
 async function openUserManager() {
   var existing = document.getElementById('umOverlay');
   if (existing) existing.remove();
+
+  var users = [], logs = [], sbErr = '';
   try {
-  var usersRes = await sb.from('users').select('id,name,is_admin,must_change_pin').order('name');
-  var logRes = await sb.from('login_log').select('user_name,logged_in_at,user_agent').order('logged_in_at', { ascending: false }).limit(50);
-  if (usersRes.error) throw new Error('Nutzer: ' + usersRes.error.message);
-  if (logRes.error) throw new Error('Login-Log: ' + logRes.error.message);
-  var users = usersRes.data || [];
-  var logs = logRes.data || [];
+    var usersRes = await sb.from('users').select('id,name,is_admin,must_change_pin').order('name');
+    var logRes = await sb.from('login_log').select('user_name,logged_in_at,user_agent').order('logged_in_at', { ascending: false }).limit(50);
+    if (usersRes.error) throw new Error(usersRes.error.message);
+    if (logRes.error) throw new Error(logRes.error.message);
+    users = usersRes.data || [];
+    logs = logRes.data || [];
+  } catch(e) {
+    sbErr = e.message && e.message.indexOf('fetch') >= 0
+      ? 'Keine Verbindung zu Supabase'
+      : (e.message || 'Unbekannter Fehler');
+  }
 
   var rows = users.map(function(u) {
     return '<div class="um-row">' +
@@ -3454,21 +3462,25 @@ async function openUserManager() {
   var html =
     '<div style="background:var(--s1);border:1.5px solid var(--brd);border-radius:18px;padding:20px;width:340px;max-height:80vh;overflow-y:auto;display:flex;flex-direction:column;gap:0;">' +
     '<h3 style="font-family:\'Bebas Neue\',sans-serif;font-size:20px;letter-spacing:2px;margin-bottom:12px;">👥 FAHRERVERWALTUNG</h3>' +
-    rows +
-    '<div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--brd);display:flex;flex-direction:column;gap:8px;">' +
-    '<b style="font-size:13px;color:var(--mut)">NEUER FAHRER</b>' +
-    '<input id="umName" class="setup-inp" type="text" placeholder="Name">' +
-    '<input id="umPin" class="setup-inp" type="text" maxlength="4" placeholder="Temp-PIN (4 Ziffern)" style="letter-spacing:4px;">' +
-    '<label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;"><input type="checkbox" id="umAdmin"> Admin-Rechte</label>' +
-    '<label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;"><input type="checkbox" id="umMustChange" checked> PIN-Änderung beim ersten Login erzwingen</label>' +
-    '<button onclick="_addUser()" style="background:var(--acc);color:#0f1117;border:none;border-radius:10px;padding:10px;font-weight:700;cursor:pointer;font-family:inherit">Fahrer hinzufügen</button>' +
-    '<div class="login-err" id="umErr"></div>' +
-    '</div>' +
-    (logs.length > 0 ?
-      '<div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--brd);">' +
-      '<b style="font-size:13px;color:var(--mut)">LETZTE LOGINS</b>' +
-      '<div style="margin-top:8px;">' + logRows + '</div>' +
-      '</div>' : '') +
+    (sbErr
+      ? '<div style="color:var(--red);font-size:13px;padding:8px 0 12px">⚠️ ' + sbErr + '</div>'
+      : rows +
+        '<div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--brd);display:flex;flex-direction:column;gap:8px;">' +
+        '<b style="font-size:13px;color:var(--mut)">NEUER FAHRER</b>' +
+        '<input id="umName" class="setup-inp" type="text" placeholder="Name">' +
+        '<input id="umPin" class="setup-inp" type="text" maxlength="4" placeholder="Temp-PIN (4 Ziffern)" style="letter-spacing:4px;">' +
+        '<label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;"><input type="checkbox" id="umAdmin"> Admin-Rechte</label>' +
+        '<label style="display:flex;align-items:center;gap:8px;font-size:13px;cursor:pointer;"><input type="checkbox" id="umMustChange" checked> PIN-Änderung beim ersten Login erzwingen</label>' +
+        '<button onclick="_addUser()" style="background:var(--acc);color:#0f1117;border:none;border-radius:10px;padding:10px;font-weight:700;cursor:pointer;font-family:inherit">Fahrer hinzufügen</button>' +
+        '<div class="login-err" id="umErr"></div>' +
+        '</div>' +
+        (logs.length > 0
+          ? '<div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--brd);">' +
+            '<b style="font-size:13px;color:var(--mut)">LETZTE LOGINS</b>' +
+            '<div style="margin-top:8px;">' + logRows + '</div>' +
+            '</div>'
+          : '')
+    ) +
     '<div style="margin-top:14px;padding-top:14px;border-top:1px solid var(--brd);">' +
     '<b style="font-size:13px;color:var(--mut)">KOPPLUNG MIT STUNDENERFASSUNG</b>' +
     '<div style="margin-top:8px;">' +
@@ -3489,12 +3501,6 @@ async function openUserManager() {
   ov.addEventListener('click', function(e){ if(e.target===ov) _closeUmModal(); });
   document.body.appendChild(ov);
   bridgeUiInit();
-  } catch(e) {
-    var msg = e.message && e.message.indexOf('fetch') >= 0
-      ? 'Keine Verbindung zu Supabase.\nIst das Gerät online? Supabase-Projekt ggf. reaktivieren.'
-      : e.message;
-    alert('Fahrerverwaltung: ' + msg);
-  }
 }
 
 function _closeUmModal() {
