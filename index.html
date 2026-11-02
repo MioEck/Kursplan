@@ -1202,11 +1202,7 @@ main{padding:4px 16px 100px;}
   <div class="mo">
     <h2 id="bridgeTitel">KURS GEFAHREN</h2>
     <div class="fg"><label>Datum</label><input id="bDatum" type="date"></div>
-    <div class="fr">
-      <div class="fg"><label>Dienstbeginn</label><input id="bBeginn" type="time"></div>
-      <div class="fg"><label>Dienstende</label><input id="bEnde" type="time"></div>
-    </div>
-    <div class="bridge-hint">Wird an die Stundenerfassung geschickt und dort erst nach deiner Bestätigung übernommen.</div>
+    <div class="bridge-hint">Es werden nur Datum und Kursnummer geschickt. Dienstzeiten und Stunden trägt die Stundenerfassung selbst ein, nach deiner Bestätigung dort.</div>
     <div class="ma">
       <button class="bs" onclick="closeOv('ovBridge')">Abbrechen</button>
       <button class="bp" onclick="bridgeBestaetigen()">Bestätigen</button>
@@ -1340,7 +1336,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
-  {v:'v116r', date:'02.11.2026', desc:'Optionale Kopplung mit der Stundenerfassung: In den Einstellungen einschaltbar (Standard: aus). Dann erscheint im Kurs der Button „Kurs gefahren bestätigen“.'},
+  {v:'v116r', date:'02.11.2026', desc:'Optionale Kopplung mit der Stundenerfassung: In den Einstellungen einschaltbar (Standard: aus). Dann erscheint im Kurs der Button „Kurs gefahren bestätigen“ (schickt Datum und Kursnummer).'},
   {v:'v115r', date:'30.10.2026', desc:'Neues Design „Bahn“: DB-Stil in Weiß/Grau mit glänzendem 3D-Rot. Designs Dunkel, Hell, Flow, Olive und Papier entfernt – Auswahl nur noch Leuchtblau oder Bahn.'},
   {v:'v114r', date:'28.10.2026', desc:'Leuchtblau: kompakter Kopf (Kurs, Infos und Uhr in einer Zeile), neuer Fahrt-Kopf mit großer Linie und Fahrt-Nr., Start/Ziel mit Uhrzeit darunter – mehr Platz für die Haltestellen.'},
   {v:'v113r', date:'28.10.2026', desc:'Neues Design „Leuchtblau“: leuchtender Blau-Verlauf, Glas-Karten, leuchtende Haltestellen-Zeitleiste, neue Schriften (Plus Jakarta Sans / JetBrains Mono). Unter DESIGN umschaltbar.'},
@@ -2230,13 +2226,6 @@ function closeOv(id) { document.getElementById(id).classList.remove('open'); }
 
 // ── KOPPLUNG MIT STUNDENERFASSUNG (optional, Standard: aus) ──
 var BRIDGE_KEY = 'bridge_kursplan_eintraege';
-// Dienstzeiten wie in der Stundenerfassung (Vorschlag, im Dialog änderbar)
-var DIENSTZEITEN = {
-  '211':['04:27','08:53'], '212':['04:38','08:23'], '213':['05:51','15:32'], '214':['06:13','17:00'],
-  '215':['06:40','18:08'], '216':['11:56','23:18'], '217':['12:43','23:40'],
-  '411':['04:38','11:29'], '412':['08:25','18:55'], '413':['07:21','18:37'], '414':['10:49','21:40'],
-  '611':['05:30','14:55'], '612':['06:40','18:25'], '613':['14:40','22:25'], '811':['07:49','20:25']
-};
 function _bGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
 function _bSet(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
 function bridgeOn() { return _bGet('kp_bridge_on') === '1'; }
@@ -2271,26 +2260,20 @@ function _bAktiverKurs() {
 function openBridge() {
   var kurs = _bAktiverKurs(); if (!kurs) return;
   var nr = String(kurs.id || kurs.name).replace(/\D/g, '');
-  var dz = DIENSTZEITEN[nr];
-  var lines = kurs.lines || [];
   document.getElementById('bridgeTitel').textContent = 'KURS ' + nr + ' GEFAHREN';
   document.getElementById('bDatum').value = _bHeute();
-  document.getElementById('bBeginn').value = dz ? dz[0] : (lines.length ? lines[0].startTime : '');
-  document.getElementById('bEnde').value = dz ? dz[1] : (lines.length ? lines[lines.length - 1].endTime : '');
   document.getElementById('ovBridge').classList.add('open');
 }
 function bridgeBestaetigen() {
   var kurs = _bAktiverKurs(); if (!kurs) return;
   var nr = String(kurs.id || kurs.name).replace(/\D/g, '');
   var datum = document.getElementById('bDatum').value;
-  var beginn = document.getElementById('bBeginn').value;
-  var ende = document.getElementById('bEnde').value;
-  if (!datum || !beginn || !ende) { bridgeMsg('Bitte Datum, Beginn und Ende ausfüllen', true); return; }
+  if (!datum) { bridgeMsg('Bitte Datum wählen', true); return; }
   var liste = bridgeListe();
   // gleicher Kurs am gleichen Tag noch offen → ersetzen statt doppelt
   liste = liste.filter(function(e) { return !(e.status === 'offen' && e.datum === datum && e.kurs === 'Kurs ' + nr); });
   liste.push({ id: nr + '_' + datum + '_' + Date.now().toString(36), datum: datum, kurs: 'Kurs ' + nr,
-    beginn: beginn, ende: ende, erstellt: new Date().toISOString(), status: 'offen', gesendet: false });
+    erstellt: new Date().toISOString(), status: 'offen', gesendet: false });
   _bSet(BRIDGE_KEY, JSON.stringify(liste));
   closeOv('ovBridge');
   bridgeSendeOffene(true);
@@ -2314,7 +2297,7 @@ async function bridgeSendeOffene(mitMeldung) {
       if (g.ok) { var j = await g.json(); sha = j.sha; inhalt = JSON.parse(_bUnB64(j.content)); inhalt.eintraege = inhalt.eintraege || []; }
       else if (g.status !== 404) throw new Error('Lesen ' + g.status);
       var ids = {}; inhalt.eintraege.forEach(function(e) { ids[e.id] = true; });
-      neu.forEach(function(e) { if (!ids[e.id]) inhalt.eintraege.push({ id: e.id, datum: e.datum, kurs: e.kurs, beginn: e.beginn, ende: e.ende, erstellt: e.erstellt, status: 'offen' }); });
+      neu.forEach(function(e) { if (!ids[e.id]) inhalt.eintraege.push({ id: e.id, datum: e.datum, kurs: e.kurs, erstellt: e.erstellt, status: 'offen' }); });
       inhalt.aktualisiert = new Date().toISOString();
       var body = { message: 'Kursplan: ' + neu.map(function(e) { return e.kurs + ' ' + e.datum; }).join(', '), content: _bB64(JSON.stringify(inhalt, null, 2)) };
       if (sha) body.sha = sha;
