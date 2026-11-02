@@ -394,8 +394,8 @@ main{padding:4px 16px 100px;}
 .notice-primary{background:var(--acc);color:#0f1117;}
 .notice-secondary{background:var(--s2);color:var(--txt);border:1.5px solid var(--brd) !important;}
 .notice-spin{text-align:center;padding:32px;font-size:32px;}
-#swUpdateBanner{display:none;position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--s2);border:1.5px solid var(--acc);color:var(--txt);padding:10px 16px;border-radius:14px;align-items:center;gap:12px;z-index:9999;box-shadow:0 4px 20px rgba(0,0,0,.45);white-space:nowrap;}
-#swUpdateBanner button{background:var(--acc);color:#fff;border:none;border-radius:8px;padding:6px 14px;font-weight:700;font-size:.9rem;cursor:pointer;}
+#swUpdateBanner{display:none;position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:#1a2550;border:1.5px solid rgba(90,140,255,.5);color:#d8e4ff;padding:10px 16px;border-radius:14px;align-items:center;gap:12px;z-index:9999;box-shadow:0 4px 20px rgba(0,0,0,.55);white-space:nowrap;}
+#swUpdateBanner button{background:#4070e0;color:#fff;border:none;border-radius:8px;padding:6px 14px;font-weight:700;font-size:.9rem;cursor:pointer;}
 #swUpdatedToast{display:none;position:fixed;bottom:72px;left:50%;transform:translateX(-50%);background:#1a7a3f;color:#fff;padding:10px 22px;border-radius:10px;z-index:9999;box-shadow:0 4px 16px rgba(0,0,0,.4);font-weight:600;transition:opacity .5s;}
 
 /* ══════════════════════════════════════════════════════
@@ -811,8 +811,8 @@ main{padding:4px 16px 100px;}
 :root.leuchtblau .map-close{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);color:#fff;border-radius:12px;}
 :root.leuchtblau .match-row{background:var(--lb-glass);border-color:var(--lb-glass-b);border-radius:14px;}
 :root.leuchtblau .empty{color:#8FA6D6;}
-:root.leuchtblau #swUpdateBanner{background:var(--lb-glass);border-color:rgba(127,212,255,.4);box-shadow:0 10px 30px rgba(30,90,255,.4);}
-:root.leuchtblau #swUpdateBanner button{background:var(--lb-btn);color:#0A1F8F;}
+:root.leuchtblau #swUpdateBanner{background:rgba(10,20,60,.9);border-color:rgba(127,212,255,.4);box-shadow:0 10px 30px rgba(30,90,255,.4);}
+:root.leuchtblau #swUpdateBanner button{background:#2060d0;color:#e8f4ff;}
 
 /* ── Leuchtblau: kompakter Kopf + Fahrt-Kopf (v114r) ── */
 .fk,.hk-clock{display:none;}
@@ -1045,7 +1045,8 @@ main{padding:4px 16px 100px;}
 :root.bahn .map-close{background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.5);color:#fff;}
 :root.bahn .match-row{background:#fff;border-color:#D7DCE1;}
 :root.bahn .empty{color:#646973;}
-:root.bahn #swUpdateBanner{background:var(--bh-gloss);box-shadow:var(--bh-gloss-sh);}
+:root.bahn #swUpdateBanner{background:#1a2550;border-color:rgba(90,140,255,.5);color:#d8e4ff;box-shadow:0 4px 20px rgba(0,0,0,.55);}
+:root.bahn #swUpdateBanner button{background:#4070e0;color:#fff;}
 
 :root.bahn .fab{overflow:hidden;}
 /* Kopplung mit Stundenerfassung */
@@ -1086,7 +1087,7 @@ main{padding:4px 16px 100px;}
 <header>
   <div id="hNoKurs">
     <span class="hnk-title">KURSPLAN</span>
-    <span class="hv">v120r</span><span id="dataVerSpan" class="data-ver"></span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span>
+    <span class="hv">v121r</span><span id="dataVerSpan" class="data-ver"></span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span>
   </div>
   <div id="hKurs" onclick="showSelectScreen()">
     <div class="hk-hint"><span class="hk-arr">←</span> ZUR KURSAUSWAHL</div>
@@ -1135,7 +1136,7 @@ main{padding:4px 16px 100px;}
       <span class="h-lock-btn" id="lockBtn" title="Admin">🔒</span>
       <div class="h-sc-lbl">FAHRER</div>
       <div class="h-sc-val"><span id="userNameDisplay"></span></div>
-      <div class="h-sc-sub"><span class="hv">v120r</span> · <span id="hd"></span></div>
+      <div class="h-sc-sub"><span class="hv">v121r</span> · <span id="hd"></span></div>
     </div>
     <button id="gpsBtn" onclick="toggleGps()" class="h-sc">
       <div class="h-sc-lbl">GPS</div>
@@ -1326,6 +1327,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v121r', date:'02.11.2026', desc:'SW-Update-Banner: feste blaue Farbe statt theme-abhängigem --acc (war rot in bahn-/light-Theme).'},
   {v:'v120r', date:'02.11.2026', desc:'GPS-Bar korrekt als Chip (display:none Fix, width:fit-content).'},
   {v:'v119r', date:'02.11.2026', desc:'GPS-Bar als Chip statt Vollbreiten-Streifen; SW-Update-Banner dezent statt knallrot.'},
   {v:'v118r', date:'02.11.2026', desc:'Fahrer-Modal öffnet immer (auch offline): Supabase-Fehler nur im Fahrer-Bereich, Kopplung immer sichtbar.'},
