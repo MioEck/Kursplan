@@ -596,6 +596,11 @@ main{padding:4px 16px 100px;}
 .hk-arr{font-size:12px;}
 .hkn{font-family:'Bebas Neue',sans-serif;font-size:28px;letter-spacing:2px;line-height:1;color:#fff;}
 .hks{font-size:10px;color:rgba(255,255,255,.70);display:flex;gap:8px;flex-wrap:wrap;margin-top:2px;}
+/* Schicht-Fortschrittsbalken */
+#shiftProg{display:none;position:relative;width:100%;height:7px;border-radius:99px;background:linear-gradient(to right,#e53935 0%,#fb8c00 35%,#fdd835 60%,#43a047 100%);margin-top:9px;overflow:visible;}
+#shiftProgShadow{position:absolute;right:0;top:0;bottom:0;border-radius:0 99px 99px 0;background:rgba(0,0,0,.48);transition:width .9s ease;}
+#shiftBus{position:absolute;top:50%;transform:translateY(-130%) translateX(-50%);font-size:16px;line-height:1;transition:left .9s ease;pointer-events:none;filter:drop-shadow(0 1px 4px rgba(0,0,0,.55));}
+:root.leuchtblau #shiftProg,:root.bahn #shiftProg{grid-column:1/-1;margin-top:8px;}
 /* Karten-Grid */
 .h-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px;}
 .h-sc{background:rgba(255,255,255,.10);border:1px solid rgba(180,210,255,.18);border-radius:14px;padding:9px 11px;display:flex;flex-direction:column;gap:3px;text-align:left;position:relative;}
@@ -1086,12 +1091,13 @@ main{padding:4px 16px 100px;}
 <header>
   <div id="hNoKurs">
     <span class="hnk-title">KURSPLAN</span>
-    <span class="hv">v123r</span><span id="dataVerSpan" class="data-ver"></span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span>
+    <span class="hv">v124r</span><span id="dataVerSpan" class="data-ver"></span><span id="dataStatusDot" class="data-dot" title="Fahrplandaten werden geladen…"></span>
   </div>
   <div id="hKurs" onclick="showSelectScreen()">
     <div class="hk-hint"><span class="hk-arr">←</span> ZUR KURSAUSWAHL</div>
     <div class="hkn" id="hKtn"></div>
     <div class="hks" id="hKs"></div>
+    <div id="shiftProg"><div id="shiftProgShadow"></div><div id="shiftBus">🚌</div></div>
     <div class="lch-clock hk-clock" id="hClock"></div>
   </div>
   <button id="themeBtn" onclick="toggleTheme()" hidden></button>
@@ -1136,7 +1142,7 @@ main{padding:4px 16px 100px;}
       <span class="h-lock-btn" id="lockBtn" title="Admin">🔒</span>
       <div class="h-sc-lbl">FAHRER</div>
       <div class="h-sc-val"><span id="userNameDisplay"></span></div>
-      <div class="h-sc-sub"><span class="hv">v123r</span> · <span id="hd"></span></div>
+      <div class="h-sc-sub"><span class="hv">v124r</span> · <span id="hd"></span></div>
     </div>
     <button id="gpsBtn" onclick="toggleGps()" class="h-sc">
       <div class="h-sc-lbl">GPS</div>
@@ -1327,6 +1333,7 @@ function persist() {
 // GPS
 
 var CHANGELOG = [
+  {v:'v124r', date:'03.11.2026', desc:'Schicht-Fortschrittsbalken im Kurs-Header: Verlauf rot→grün mit fahrendem 🚌 Richtung Feierabend.'},
   {v:'v123r', date:'03.11.2026', desc:'Stundenerfassung-Knopf in Knopfleiste; Kopplung-Bereich aus Fahrerverwaltung entfernt.'},
   {v:'v122r', date:'02.11.2026', desc:'SW-Update-Banner: theme-adaptiv — blaues Theme → blauer Strich, rotes Theme → roter Strich.'},
   {v:'v120r', date:'02.11.2026', desc:'GPS-Bar korrekt als Chip (display:none Fix, width:fit-content).'},
@@ -2338,6 +2345,25 @@ function renderTabs() {
   el.appendChild(a);
 }
 
+// SCHICHT-FORTSCHRITTSBALKEN
+var _shiftStart = 0, _shiftEnd = 0;
+function _updateShiftProg() {
+  var bar = document.getElementById('shiftProg');
+  if (!bar || bar.style.display === 'none') return;
+  var now = new Date();
+  var nowMin = now.getHours() * 60 + now.getMinutes();
+  var total = _shiftEnd - _shiftStart;
+  if (total <= 0) return;
+  var pct = Math.max(0, Math.min(1, (nowMin - _shiftStart) / total));
+  var shadow = document.getElementById('shiftProgShadow');
+  var bus = document.getElementById('shiftBus');
+  if (shadow) shadow.style.width = ((1 - pct) * 100) + '%';
+  if (bus) {
+    bus.style.left = (pct * 100) + '%';
+    bus.textContent = pct >= 1 ? '🏁' : '🚌';
+  }
+}
+
 // LINES
 function renderLines() {
   var kurs = null;
@@ -2370,6 +2396,19 @@ function renderLines() {
       return '<span class="svc-badge" title="' + s.label + ' · ' + s.time + '">' + s.icon + '</span>';
     }).join('') : '');
   setHeaderHeight();
+
+  // Schicht-Fortschrittsbalken initialisieren
+  if (lines.length > 0) {
+    var toParse = function(t) { var p = (t||'00:00').split(':'); return parseInt(p[0])*60 + parseInt(p[1]); };
+    var starts = lines.map(function(l){ return toParse(l.startTime); });
+    var ends   = lines.map(function(l){ return toParse(l.endTime); });
+    _shiftStart = Math.min.apply(null, starts);
+    _shiftEnd   = Math.max.apply(null, ends);
+    document.getElementById('shiftProg').style.display = 'block';
+    _updateShiftProg();
+  } else {
+    document.getElementById('shiftProg').style.display = 'none';
+  }
 
   ll.innerHTML = '';
 
@@ -2696,6 +2735,7 @@ setInterval(function() {
   var t = getCurrentTime();
   var clocks = document.querySelectorAll('.lch-clock');
   for (var i = 0; i < clocks.length; i++) clocks[i].textContent = t;
+  _updateShiftProg();
 }, 1000);
 // Direkt prüfen ob kurs212 Haltestellen hat
 (function(){
@@ -4108,6 +4148,7 @@ function showSelectScreen() {
   document.getElementById('settingsBar').style.display = 'block';
   document.getElementById('kursSelect').style.display = 'block';
   document.getElementById('bridgeBtn').style.display = 'none';
+  document.getElementById('shiftProg').style.display = 'none';
   document.getElementById('ll').innerHTML = '';
   document.getElementById('em').style.display = 'none';
   setHeaderHeight();
